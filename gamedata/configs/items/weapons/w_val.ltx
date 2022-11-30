@@ -160,24 +160,22 @@ kill_msg_height                          = 21
 
 
 [wpn_val_hud]:hud_base
-item_visual                              = dynamics\weapons\wpn_val\wpn_val_hud.ogf
+item_visual                              = anomaly_weapons\wpn_val\wpn_val_hud.ogf
 attach_place_idx                         = 0
 zoom_hide_crosshair                      = true   
 
 item_position                            = 0.0, 0.0, 0.0
 item_orientation                         = 0.0, 0.0, 0.0
 
-hands_position				= 0.0,-0.0225,-0.07
-hands_orientation			= 0.0,0.0,0.0
+hands_position                           = -0.062, -0.15, 0.15
+hands_position_16x9                      = -0.062, -0.15, 0.15
+hands_orientation                        = 2, 2, 0
+hands_orientation_16x9                   = 2, 2, 0
 
-hands_position_16x9			= 0.0,-0.0225,-0.07
-hands_orientation_16x9			= 0.0,0.0,0.0
-
-aim_hud_offset_pos = 0.000100,0.017800,-0.020000
-aim_hud_offset_rot = -0.003500,0.000000,0.000000
-
-aim_hud_offset_pos_16x9 = 0.000000,0.018500,-0.020000
-aim_hud_offset_rot_16x9 = -0.003500,0.000000,0.000000
+aim_hud_offset_pos                       = -0.09405, 0.0769, -0.29
+aim_hud_offset_pos_16x9                  = -0.09405, 0.0769, -0.29
+aim_hud_offset_rot                       = 0.0299, 0.034, -0.0061
+aim_hud_offset_rot_16x9                  = 0.0299, 0.034, -0.0061
 
 gl_hud_offset_pos                        = 0, 0, 0
 gl_hud_offset_pos_16x9                   = 0, 0, 0
@@ -187,50 +185,68 @@ gl_hud_offset_rot_16x9                   = 0, 0, 0
 lean_hud_offset_pos                      = 0, 0, 0
 lean_hud_offset_rot                      = 0, 0, 0
 
-anm_hide                                 = val_hide
-anm_idle                                 = vss_idle
-anm_idle_aim                             = vss_aim, idle_aim
-anm_idle_moving                          = vss_walk
-anm_idle_moving_crouch                   = vss_walk_slow_down
-anm_idle_sprint                          = vss_sprint
-anm_reload                               = vss_reload
-anm_reload_empty                         = vss_reload_full
-anm_shots                                = vss_shoot
-anm_shots_aim                            = vss_aim_shoot
-anm_show                                 = val_draw
+anm_hide                                 = vintorez_holster
+anm_idle                                 = vintorez_idle
+anm_idle_aim                             = vintorez_idle_aim
+anm_idle_moving                          = vintorez_idle_moving
+anm_idle_moving_crouch                   = vintorez_idle_moving
+anm_idle_sprint                          = lancew_sr3m_sprint
+anm_reload                               = vintorez_reload, reload
+anm_reload_empty                         = vintorez_reload_empty, reload_empty
+anm_shots                                = vintorez_shoot, shoot
+anm_show                                 = vintorez_draw
 
-;Transition/Intermediate Animations
+shell_bone                               = gilza
+shell_dir                                = 0, 1, 0
+shell_point                              = 0, 0, 0
 
-        anm_walk2sprint             = vss_sprint_start
-        anm_walk2sprint_empty       = vss_sprint_start, vss_idle
-        
-        anm_sprint2walk             = vss_sprint_end
-        anm_sprint2walk_empty       = vss_sprint_end, vss_idle
-	
-         
-		;Transition Definitions
-
-        ts_pattern_walk2sprint      = .+, anm_idle_sprint, anm_walk2sprint, 0.5
-        ts_pattern_sprint2walk      = anm_idle_sprint, ^anm_idle.*, anm_sprint2walk, 1
-        ts_strict_sprint2walk_move  = anm_walk2sprint, anm_idle_moving, anm_sprint2walk
-
-		;--- Aim Motions ---
-
-        anm_idle_aim_start          = val_aim_start
-        anm_idle_aim_start_empty    = val_aim_start,idle_aim
- 
-        anm_idle_aim_end            = val_aim_end
-        anm_idle_aim_end_empty      = val_aim_end,vss_idle
-
-shell_bone                               = bolt
-shell_dir                                = 0.0, 0.0, 0.0
-shell_point                              = 0.0,-9.0,0.0
-
-fire_bone                                = wpn_body
-fire_bone2                               = wpn_body
-fire_point                               = 0.0,-0.01,0.532
-fire_point2                              = 0.0,-0.01,0.532
+fire_bone                                = muzzle
+fire_bone2                               = muzzle
+fire_point                               = 0, 0, 0
+fire_point2                              = 0, 0, 0
 
 grenade_bone                             = grenade
 
 freelook_z_offset_mul					 = 0.6
+
+;------------------------------------------------------------------------------------------------
+[wpn_val_1p29]:wpn_val
+1icon_layer                              = 1p29
+1icon_layer_x                            = 67
+1icon_layer_y                            = 2
+
+inv_weight                               = 3.3
+
+hud                                      = wpn_val_1p29_hud
+visual                                   = dynamics\weapons\wpn_val\wpn_val_1p29.ogf
+
+scope_status                             = 1
+scope_dynamic_zoom                       = off
+scope_texture                            = wpn_crosshair_1p29
+scope_zoom_factor                        = 15
+
+zoom_rotate_time                         = 0.25
+
+
+[wpn_val_1p29_hud]:wpn_val_hud
+item_visual                              = anomaly_weapons\wpn_val\wpn_val_1p29_hud.ogf
+
+aim_hud_offset_pos                       = -0.0927, 0.03275, -0.25
+aim_hud_offset_pos_16x9                  = -0.0927, 0.03275, -0.25
+aim_hud_offset_rot                       = 0.007, 0.0323, -0.01
+aim_hud_offset_rot_16x9                  = 0.007, 0.0323, -0.01
+
+;------------------------------------------------------------------------------------------------
+[wpn_val_kobra]:wpn_val
+1icon_layer                              = kobra
+1icon_layer_x                            = 75
+1icon_layer_y                            = 4
+
+inv_weight                               = 2.9
+
+hud                                      = wpn_val_kobra_hud
+visual                                   = dynamics\weapons\wpn_val\wpn_val_kobra.ogf
+
+
+[wpn_val_kobra_hud]:wpn_val_1p29_hud
+item_visual                              = anomaly_weapons\wpn_val\wpn_val_kobra_hud.ogf

@@ -1,8 +1,5 @@
 ;------------------------------------------------------------------------------------------------
 [wpn_vintorez]:identity_immunities,weapon_probability,default_weapon_params,wpn_vintorez_sounds
-
-hide_bones = tactical_handler
-
 GroupControlSection                      = spawn_group
 $npc                                     = off
 $prefetch                                = 8
@@ -10,7 +7,6 @@ $spawn                                   = "weapons\vintorez"
 scheduled                                = off
 cform                                    = skeleton
 parent_section                           = wpn_vintorez
-
 
 class                                    = WP_AK74
 slot                                     = 2
@@ -23,10 +19,10 @@ single_handed                            = 0
 default_to_ruck                          = false
 sprint_allowed                           = true
 
-inv_grid_width     = 5
-inv_grid_height    = 2
-inv_grid_x         = 20
-inv_grid_y         = 24
+inv_grid_height                          = 2
+inv_grid_width                           = 5
+inv_grid_x                               = 20
+inv_grid_y                               = 26
 inv_name                                 = st_wpn_vintorez
 inv_name_short                           = st_wpn_vintorez
 description                              = st_wpn_vintorez_descr
@@ -41,8 +37,8 @@ hud                                      = wpn_vintorez_hud
 visual                                   = dynamics\weapons\wpn_vintorez\wpn_vintorez.ogf
 position                                 = -0.026, -0.097, 0
 orientation                              = 0, 0, 0
-fire_point								 = 0.0,-0.01,0.532
-fire_point2                              = 0.0,-0.01,0.532
+fire_point                               = 0, 0.137, 0.649
+fire_point2                              = 0, 0.097, 0.722
 strap_bone0                              = bip01_spine2
 strap_bone1                              = bip01_spine1
 strap_position                           = -0.26, -0.11, 0.25
@@ -171,25 +167,22 @@ kill_msg_height                          = 25
 
 
 [wpn_vintorez_hud]:hud_base
-item_visual                              = dynamics\weapons\wpn_vintorez\wpn_vintorez_hud.ogf
-hud_fov_factor = 1.25
+item_visual                              = anomaly_weapons\wpn_vintorez\wpn_vintorez_hud.ogf
 attach_place_idx                         = 0
 zoom_hide_crosshair                      = true   
 
 item_position                            = 0, 0, 0
 item_orientation                         = 0, 0, 0
 
-hands_position				= 0.0,-0.0225,-0.07
-hands_orientation			= 0.0,0.0,0.0
+hands_position                           = -0.052, -0.14, 0.15
+hands_position_16x9                      = -0.052, -0.14, 0.15
+hands_orientation                        = 2, 2, 0
+hands_orientation_16x9                   = 2, 2, 0
 
-hands_position_16x9			= 0.0,-0.0225,-0.07
-hands_orientation_16x9			= 0.0,0.0,0.0
-
-aim_hud_offset_pos = 0.000600,0.0185000,-0.02
-aim_hud_offset_rot = -0.00350000,0.000000,0.0
-
-aim_hud_offset_pos_16x9 = -0.000100,0.018500,-0.020000
-aim_hud_offset_rot_16x9 = -0.003500,0.000000,0.000000
+aim_hud_offset_pos                       = -0.10365, 0.06853, -0.285
+aim_hud_offset_pos_16x9                  = -0.10365, 0.06853, -0.285
+aim_hud_offset_rot                       = 0.0304, 0.0341, -0.00865
+aim_hud_offset_rot_16x9                  = 0.0304, 0.0341, -0.00865
 
 gl_hud_offset_pos                        = 0, 0, 0
 gl_hud_offset_rot                        = 0, 0, 0
@@ -197,40 +190,18 @@ gl_hud_offset_rot                        = 0, 0, 0
 lean_hud_offset_pos                      = 0, 0, 0
 lean_hud_offset_rot                      = 0, 0, 0
 
-anm_hide                                 = vss_hide
-anm_idle                                 = vss_idle
-anm_idle_aim                             = vss_aim, idle_aim
-anm_idle_moving                          = vss_walk
-anm_idle_moving_crouch                   = vss_walk_slow_down
-anm_idle_sprint                          = vss_sprint
-anm_reload                               = vss_reload
-anm_reload_empty                         = vss_reload_full
-anm_shots                                = vss_shoot
-anm_shots_aim                            = vss_aim_shoot
-anm_show                                 = vss_draw
-
-;Transition/Intermediate Animations
-
-        anm_walk2sprint             = vss_sprint_start
-        anm_walk2sprint_empty       = vss_sprint_start, vss_idle
-        
-        anm_sprint2walk             = vss_sprint_end
-        anm_sprint2walk_empty       = vss_sprint_end, vss_idle
-	
-         
-		;Transition Definitions
-
-        ts_pattern_walk2sprint      = .+, anm_idle_sprint, anm_walk2sprint, 0.5
-        ts_pattern_sprint2walk      = anm_idle_sprint, ^anm_idle.*, anm_sprint2walk, 1
-        ts_strict_sprint2walk_move  = anm_walk2sprint, anm_idle_moving, anm_sprint2walk
-
-		;--- Aim Motions ---
-
-        anm_idle_aim_start          = vss_aim_start
-        anm_idle_aim_start_empty    = vss_aim_start,idle_aim
- 
-        anm_idle_aim_end            = vss_aim_end
-        anm_idle_aim_end_empty      = vss_aim_end,vss_idle
+anm_hide                                 = vintorez_holster
+anm_idle                                 = vintorez_idle
+anm_idle_aim                             = vintorez_idle_aim
+anm_idle_aim_moving                      = vintorez_idle_moving, idle, 0.75
+anm_idle_aim_moving_crouch               = vintorez_idle_crouch
+anm_idle_moving                          = vintorez_idle_moving
+anm_idle_moving_crouch                   = vintorez_idle_crouch
+anm_idle_sprint                          = lancew_sr3m_sprint
+anm_reload                               = vintorez_reload, reload
+anm_reload_empty                         = vintorez_reload_empty, reload_empty
+anm_shots                                = vintorez_shoot, shoot
+anm_show                                 = vintorez_draw
 
 shell_bone                               = gilza
 shell_dir                                = 0, 1, 0

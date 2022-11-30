@@ -145,11 +145,11 @@
         attach_place_idx            = 0
         zoom_hide_crosshair         = true
         
-        item_position               = 0.0,0.0,0.005
-        item_orientation            = 0.0,0.0,0.0
+        item_position               = 0, 0, 0
+        item_orientation            = 180, 0, 0
         
-        hands_position              = 0.0,-0.13,0.18
-        hands_position_16x9         = 0.0,-0.13,0.16
+        hands_position              = 0, -0.155, 0.2
+        hands_position_16x9         = 0, -0.155, 0.2
         hands_orientation           = 0, 0, 0
         hands_orientation_16x9      = 0, 0, 0
         
@@ -164,14 +164,13 @@
         lean_hud_offset_pos         = 0, 0, 0
         lean_hud_offset_rot         = 0, 0, 0
         
-		anm_bore			        = binocular_hide
-        anm_hide                    = binocular_hide
-        anm_idle                    = binocular_idle
-        anm_idle_aim                = binocular_aim
-        anm_idle_moving             = binocular_walk
-        anm_idle_moving_crouch      = binocular_slow_super
-        anm_idle_sprint             = binocular_sprint
-        anm_show                    = binocular_draw
+        anm_hide                    = binoculars_holster
+        anm_idle                    = binoculars_idle
+        anm_idle_aim                = binoculars_idle_aim
+        anm_idle_moving             = binoculars_idle_moving
+        anm_idle_moving_crouch      = binoculars_idle_moving, idle, 0.75
+        anm_idle_sprint             = binoculars_idle_sprint
+        anm_show                    = binoculars_draw
  
 		freelook_z_offset_mul		= 0.75
  
