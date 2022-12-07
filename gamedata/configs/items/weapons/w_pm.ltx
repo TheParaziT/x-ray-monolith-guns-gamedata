@@ -12,7 +12,6 @@
         animation_slot              = 1
         default_to_ruck             = false
         sprint_allowed              = true
-        ef_weapon_type              = 5
         hand_dependence             = 1
         single_handed               = 1
         kind                        = w_pistol
@@ -24,7 +23,7 @@
 
         discharge_on_misfire        = false
         has_empty_misfire           = false
-                
+           
 ;--- Position and Orientation of Weapon ---
 
         position                    = -0.021, -0.085, 0.0
@@ -170,7 +169,8 @@
         zoom_cam_dispersion         = 1.5
         
 ;----------- Parameters for AI ---------------------------
-        
+       
+        ef_weapon_type              = 5 
         cam_relax_speed_ai          = 360
         holder_fov_modifier         = 1.0
         holder_range_modifier       = 1.0
@@ -180,10 +180,15 @@
 ;----------- Weapon HUD parameters ---------------------------
 
 [wpn_pm_hud]:hud_base
-        item_visual                 = anomaly_weapons\wpn_pm\wpn_pm_hud.ogf
+
+        item_visual                 = dynamics\weapons\wpn_pm\wpn_pm_hud.ogf
         attach_place_idx            = 0
         zoom_hide_crosshair         = true
         
+	script_binding                           = bind_weapon.bind
+	def_hide_bones                           = flash,light,laser,line,spusk,firemode,sight
+	def_show_bones                           = wpn_silencer
+
 ;--- Parameters of the weapon position ---
         
         item_position               = 0.0,0.0,0.0
@@ -202,11 +207,6 @@
         aim_hud_offset_pos_16x9     = 0.0,0.0,0.0
         aim_hud_offset_rot          = 0.0,0.0,0.0
         aim_hud_offset_rot_16x9     = 0.0,0.0,0.0
-
-;--- Parameters of HUD weapon position for underbarrel grenade launcher ---
-
-        gl_hud_offset_pos           = 0, 0, 0
-        gl_hud_offset_rot           = 0, 0, 0
 
 ;--- Parameters of HUD arms position for the mode when the weapon is lowered ---
 

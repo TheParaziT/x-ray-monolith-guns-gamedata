@@ -302,51 +302,69 @@ snd_shoot				                                          = wpn_spas12_snd_shoot
 snd_empty				                                          = weapons\spas12\spas12_empty
 snd_reload				                                          = weapons\spas12\spas12_insertshell
 snd_bore				                                          = $no_sound
-snd_open_weapon				                                      = $no_sound
+snd_open_weapon				                                      = $no_soundwpn_toz194_sounds
 snd_add_cartridge			                                      = weapons\spas12\spas12_insertshell
 snd_close_weapon			                                      = weapons\spas12\spas12_pump
 
 ;--------------------------------------Winchester1300
 [wpn_winchester1300_snd_shoot]
-snd_1_layer                                        			      = weapons\mossberg\mossberg_shoot
-snd_2_layer                                        			      = weapons\mossberg\pump
-snd_3_layer                                        			      = weapons\_distance_shooting_mid\saiga_distant
-snd_4_layer                                        			      = weapons\_distance_shooting_far\saiga_distant
+snd_1_layer                                                       = weapons\winchester1300\winchester1300_shoot
+snd_2_layer                                                       = weapons\winchester1300\winchester1300_pump
+snd_3_layer                                                       = weapons\_distance_shooting_mid\saiga_distant
+snd_4_layer                                                       = weapons\_distance_shooting_far\saiga_distant
 
 [wpn_winchester1300_snd_shoot_duplet]
-snd_1_layer                                        			      = weapons\mossberg\mossberg_shoot
-snd_2_layer                                        			      = weapons\mossberg\pump
-snd_3_layer                                        			      = weapons\_distance_shooting_mid\saiga_distant
-snd_4_layer                                        			      = weapons\_distance_shooting_far\saiga_distant
+snd_1_layer                                                       = weapons\winchester1300\winchester1300_shoot
+snd_2_layer                                                       = weapons\winchester1300\winchester1300_pump
+snd_3_layer                                                       = weapons\_distance_shooting_mid\saiga_distant
+snd_4_layer                                                       = weapons\_distance_shooting_far\saiga_distant
 
 [wpn_winchester1300_sounds]:base_sounds
-snd_draw					                                      = weapons\w1300\w1300_draw
-snd_holster				                                          = weapons\shotgun_holster
-snd_shoot				                                          = wpn_winchester1300_snd_shoot
-snd_empty				                                          = weapons\w1300\w1300_empty
-snd_reload				                                          = weapons\toz34_reload
-snd_shoot_duplet				                                  = wpn_winchester1300_snd_shoot_duplet
-snd_open_weapon				                                      = $no_sound	
-snd_add_cartridge				                                  = weapons\w1300\w1300_load		
-snd_close_weapon				                                  = weapons\w1300\w1300_close	
+snd_draw					                                    = weapons\winchester1300\winchester1300_draw
+snd_holster				                                          = weapons\winchester1300\winchester1300_hide
+snd_shoot				                                          = weapons\winchester1300\winchester1300_shoot, weapons\winchester1300\winchester1300_pump
+snd_empty				                                          = weapons\glock17\glock17_dry
+snd_reload				                                          = weapons\winchester1300\winchester1300_reload_start
+snd_shoot_duplet				                                  	= weapons\winchester1300\winchester1300_shoot
+snd_open_weapon				                                    = weapons\winchester1300\winchester1300_reload_start
+snd_add_cartridge				                                  	= weapons\winchester1300\winchester1300_reload_ammo	
+snd_close_weapon				                                  	= weapons\winchester1300\winchester1300_reload_end
+;--------------------------------------Saiga
 
+[wpn_saiga_snd_shoot]
+snd_1_layer				                                          = weapons\saiga12\saiga12_shoot
+snd_1_layer1				                                      = weapons\saiga12\saiga12_shoot
+snd_2_layer                                                       = weapons\_distance_shooting_mid\saiga_distant
+snd_3_layer                                                       = weapons\_distance_shooting_far\saiga_distant
+
+[wpn_saiga_sounds]:wpn_ak_sounds
+snd_draw				                                          = weapons\p90\p90_draw
+snd_holster				                                          = weapons\p90\p90_hide
+snd_shoot				                                          = weapons\saiga12\saiga12_shoot, -1.1
+snd_empty				                                          = weapons\glock17\glock17_dry
+snd_reload              										  = weapons\aks74u\aks74u_reload
+snd_reload_empty                                                  = weapons\aks74u\aks74u_reload_full
+snd_shoot_duplet				                                  = weapons\saiga12\saiga12_shoot
+snd_open_weapon			                                          = $no_sound	
+snd_add_cartridge				                                  = $no_sound	
+snd_close_weapon				                                  = $no_sound
 ;--------------------------------------Toz194
 [wpn_toz194_snd_shoot]
-snd_1_layer                                                       = weapons\toz194\toz194_shoot
-snd_2_layer                                                       = weapons\toz194\pump
+snd_1_layer                                                       = weapons\winchester1300\winchester1300_shoot
+snd_2_layer                                                       = weapons\winchester1300\winchester1300_pump
 snd_3_layer                                                       = weapons\_distance_shooting_mid\saiga_distant
 snd_4_layer                                                       = weapons\_distance_shooting_far\saiga_distant
 
 [wpn_toz194_sounds]:base_sounds
-snd_draw				                                          = weapons\toz34\toz34_draw
-snd_holster				                                          = weapons\shotgun_holster
-snd_shoot				                                          = wpn_toz194_snd_shoot
-snd_empty				                                          = weapons\mossberg\mossberg_empty
-snd_reload				                                          = weapons\toz194\toz194_shell
-snd_bore					                                      = $no_sound
-snd_open_weapon			                                          = $no_sound
-snd_add_cartridge				                                  = weapons\toz194\toz194_shell
-snd_close_weapon				                                  = weapons\toz194\toz194_pump
+snd_draw					                                    = weapons\winchester1300\winchester1300_draw
+snd_holster				                                          = weapons\winchester1300\winchester1300_hide
+snd_shoot				                                          = weapons\winchester1300\winchester1300_shoot
+snd_empty				                                          = weapons\glock17\glock17_dry
+snd_reload				                                          = weapons\winchester1300\winchester1300_reload_start
+snd_shoot_duplet				                                  	= weapons\winchester1300\winchester1300_shoot, -1.1
+snd_open_weapon				                                    = weapons\winchester1300\winchester1300_reload_start
+snd_add_cartridge				                                  	= weapons\winchester1300\winchester1300_reload_ammo	
+snd_close_weapon				                                  	= weapons\winchester1300\winchester1300_reload_end
 
 ;--------------------------------------Toz34(Vertikalka)
 [wpn_toz34_snd_shoot]
@@ -416,9 +434,10 @@ snd_3_layer                                                       = weapons\_dis
 
 [wpn_ak74_sounds]:wpn_ak_sounds
 snd_draw				                                          = weapons\ak74\ak74_draw
-snd_holster				                                          = weapons\ak74\ak74_holster
-snd_shoot				                                          = wpn_ak74_snd_shoot
-snd_reload				                                          = weapons\ak74\ak74_reload
+snd_holster														  = weapons\p90\p90_hide
+snd_shoot														  = weapons\ak74\ak74_shoot, -0.9
+snd_reload              										  = weapons\ak74\ak74_reload
+snd_reload_empty              									  = weapons\ak74\ak74_reload_full
 snd_reload_w_gl					                                  = weapons\ak74\ak74_reload_w_gl
 snd_reload_grenade			                                      = weapons\ak74\ak74_grenload,	1.0, 0.8	
 snd_switch				                                          = weapons\ak74\ak74_switch

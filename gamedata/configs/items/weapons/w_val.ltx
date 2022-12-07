@@ -160,22 +160,24 @@ kill_msg_height                          = 21
 
 
 [wpn_val_hud]:hud_base
-item_visual                              = anomaly_weapons\wpn_val\wpn_val_hud.ogf
+item_visual                              = dynamics\weapons\wpn_val\wpn_val_hud.ogf
 attach_place_idx                         = 0
 zoom_hide_crosshair                      = true   
 
 item_position                            = 0.0, 0.0, 0.0
 item_orientation                         = 0.0, 0.0, 0.0
 
-hands_position                           = -0.005,-0.025, 0.0
-hands_position_16x9                      = -0.005,-0.025, 0.0
-hands_orientation                        = 0.0,0.0,-4.0
-hands_orientation_16x9                   = 0.0,0.0,-4.0
+hands_position				= 0.0,-0.0225,-0.07
+hands_orientation			= 0.0,0.0,0.0
 
-aim_hud_offset_pos                       = 0.0, 0.0, 0.0
-aim_hud_offset_pos_16x9                  = 0.0, 0.0, 0.0
-aim_hud_offset_rot                       = 0.0, 0.0, 0.0
-aim_hud_offset_rot_16x9                  = 0.0, 0.0, 0.0
+hands_position_16x9			= 0.0,-0.0225,-0.07
+hands_orientation_16x9			= 0.0,0.0,0.0
+
+aim_hud_offset_pos = 0.000100,0.017800,-0.020000
+aim_hud_offset_rot = -0.003500,0.000000,0.000000
+
+aim_hud_offset_pos_16x9 = 0.000000,0.018500,-0.020000
+aim_hud_offset_rot_16x9 = -0.003500,0.000000,0.000000
 
 gl_hud_offset_pos                        = 0, 0, 0
 gl_hud_offset_pos_16x9                   = 0, 0, 0
@@ -186,15 +188,39 @@ lean_hud_offset_pos                      = 0, 0, 0
 lean_hud_offset_rot                      = 0, 0, 0
 
 anm_hide                                 = val_hide
-anm_idle                                 = vss_idle, idle
-anm_idle_aim                             = vss_idle, idle
-anm_idle_moving                          = val_walk
-anm_idle_moving_crouch                   = val_walk
-anm_idle_sprint                          = val_sprint
-anm_reload                               = action, idle
-anm_reload_empty                         = action, idle
-anm_shots                                = val_shoot, idle
+anm_idle                                 = vss_idle
+anm_idle_aim                             = vss_aim, idle_aim
+anm_idle_moving                          = vss_walk
+anm_idle_moving_crouch                   = vss_walk_slow_down
+anm_idle_sprint                          = vss_sprint
+anm_reload                               = vss_reload
+anm_reload_empty                         = vss_reload_full
+anm_shots                                = vss_shoot
+anm_shots_aim                            = vss_aim_shoot
 anm_show                                 = val_draw
+
+;Transition/Intermediate Animations
+
+        anm_walk2sprint             = vss_sprint_start
+        anm_walk2sprint_empty       = vss_sprint_start, vss_idle
+        
+        anm_sprint2walk             = vss_sprint_end
+        anm_sprint2walk_empty       = vss_sprint_end, vss_idle
+	
+         
+		;Transition Definitions
+
+        ts_pattern_walk2sprint      = .+, anm_idle_sprint, anm_walk2sprint, 0.5
+        ts_pattern_sprint2walk      = anm_idle_sprint, ^anm_idle.*, anm_sprint2walk, 1
+        ts_strict_sprint2walk_move  = anm_walk2sprint, anm_idle_moving, anm_sprint2walk
+
+		;--- Aim Motions ---
+
+        anm_idle_aim_start          = val_aim_start
+        anm_idle_aim_start_empty    = val_aim_start,idle_aim
+ 
+        anm_idle_aim_end            = val_aim_end
+        anm_idle_aim_end_empty      = val_aim_end,vss_idle
 
 shell_bone                               = bolt
 shell_dir                                = 0.0, 0.0, 0.0

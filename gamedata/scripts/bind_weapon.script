@@ -103,6 +103,7 @@ function weapon_binder:update(dt)
 	--bone - имя кости, с которой что-то будем делать
 	--status - видимости кости
 	for bone,status in pairs(self.bone_params) do
+		w:set_bone_visible(bone,status,false,true)
 		w:set_bone_visible(bone,status,false,false)
 	end
 end

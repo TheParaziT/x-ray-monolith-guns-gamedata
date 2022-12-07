@@ -19,10 +19,10 @@ single_handed                            = 0
 default_to_ruck                          = false
 sprint_allowed                           = true
 
-inv_grid_height                          = 2
-inv_grid_width                           = 5
-inv_grid_x                               = 20
-inv_grid_y                               = 0
+inv_grid_width     						= 5
+inv_grid_height							= 2
+inv_grid_x         						= 25
+inv_grid_y         						= 6
 inv_name                                 = st_wpn_ak74
 inv_name_short                           = st_wpn_ak74
 description                              = st_wpn_ak74_descr
@@ -34,7 +34,7 @@ repair_type                              = rifle_5
 weapon_class                             = assault_rifle
 
 hud                                      = wpn_ak74_hud
-visual                                   = dynamics\weapons\wpn_ak74\wpn_ak74.ogf
+visual                  		     = dynamics\weapons\wpn_ak74\wpn_ak74.ogf
 position                                 = -0.026, -0.175, 0.0
 orientation                              = 0, 0, 0
 fire_point                               = 0, 0.218, 0.656
@@ -165,63 +165,107 @@ kill_msg_height                          = 28
 
 
 [wpn_ak74_hud]:hud_base
+
+script_binding                           = bind_weapon.bind
+def_hide_bones                           = mag30,foregrip,tilnik,mag45,mag45_black,mag60,mag75,handler,handler2,handler3,knife,laser
+def_show_bones                           = wpn_scope,wpn_silencer,wpn_launcher,wpn_body
+
 item_visual                              = anomaly_weapons\wpn_ak74\wpn_ak74_hud.ogf
 attach_place_idx                         = 0
 zoom_hide_crosshair                      = true
 
-item_position                            = -0.003, 0.011, 0.008
-item_orientation                         = -0.56, 0.7, 0
+item_position                            = 0, 0, 0
+item_orientation                         = 0, 0, 0
 
-hands_position                           = 0.0195, -0.00672, 0.15
-hands_position_16x9                      = 0.0195, -0.00672, 0.15
-hands_orientation                        = 2, 1.3198, -0.3
-hands_orientation_16x9                   = 2, 1.3198, -0.3
+hands_position				= 0.02,-0.02,0.005
+hands_orientation			= 0.0,0.0,0.0
 
-aim_hud_offset_pos                       = -0.07269, 0.04719, -0.19
-aim_hud_offset_pos_16x9                  = -0.07269, 0.04719, -0.19
-aim_hud_offset_rot                       = 0.03115, 0.02484, -0.0047
-aim_hud_offset_rot_16x9                  = 0.03115, 0.02484, -0.0047
+hands_position_16x9			= 0.02,-0.02,0.005
+hands_orientation_16x9			= 0.0,0.0,0.0
 
-gl_hud_offset_pos                        = -0.0415, 0.01, -0.15
-gl_hud_offset_pos_16x9                   = -0.0415, 0.01, -0.15
-gl_hud_offset_rot                        = -0.07, 0.023, 0
-gl_hud_offset_rot_16x9                   = -0.07, 0.023, 0
+item_position				= 0.0,0.0,0.0
+item_orientation			= 0.0,0.0,0.0
+
+aim_hud_offset_pos         = 0.00030,0.025000,0.000
+aim_hud_offset_rot         = 0.000000,0.000000,0.0000
+
+aim_hud_offset_pos_16x9    = 0.00030,0.025000,0.000
+aim_hud_offset_rot_16x9    = 0.000000,0.000000,0.0000
+
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
 
 lean_hud_offset_pos                      = 0, 0, 0
 lean_hud_offset_rot                      = 0, 0, 0
 
-anm_hide                                 = ak_74_holster
-anm_hide_g                               = ak_74_holster_w_gl, ak_74_holster_grenade
-anm_hide_w_gl                            = ak_74_holster_w_gl
-anm_idle                                 = ak_74_idle
-anm_idle_aim                             = ak_74_idle_aim
-anm_idle_aim_moving                      = ak_74_idle_move, idle, 0.75
-anm_idle_aim_moving_crouch               = ak_74_idle_move, idle, 0.7
-anm_idle_g                               = ak_74_idle_w_gl, ak_74_idle_grenade
-anm_idle_g_aim                           = ak_74_idle_aim_w_gl, ak_74_idle_grenade
-anm_idle_moving                          = ak_74_idle_move
-anm_idle_moving_crouch_g_aim             = ak_74_idle_move_w_gl, ak_74_idle_grenade, 0.7
-anm_idle_moving_crouch_w_gl_aim          = ak_74_idle_move_w_gl, idle, 0.7
-anm_idle_moving_g                        = ak_74_idle_move_w_gl, ak_74_idle_grenade
-anm_idle_moving_g_aim                    = ak_74_idle_move_w_gl, ak_74_idle_grenade, 0.75
-anm_idle_moving_w_gl                     = ak_74_idle_move_w_gl
-anm_idle_moving_w_gl_aim                 = ak_74_idle_move_w_gl, idle, 0.75
-anm_idle_sprint                          = ak_74_idle_sprint
-anm_idle_sprint_g                        = ak_74_idle_sprint_w_gl, ak_74_idle_grenade
-anm_idle_sprint_w_gl                     = ak_74_idle_sprint_w_gl
-anm_idle_w_gl                            = ak_74_idle_w_gl
-anm_idle_w_gl_aim                        = ak_74_idle_aim_w_gl
-anm_reload                               = ak_74_reload1
-anm_reload_g                             = ak_74_reload_grenade_l
-anm_reload_w_gl                          = ak_74_reload_w_gl
-anm_shots                                = ak_74_shoot
-anm_shots_g                              = ak_74_shoot_grenade
-anm_shots_w_gl                           = ak_74_shoot_w_gl
-anm_show                                 = ak_74_draw
-anm_show_g                               = ak_74_draw_w_gl, ak_74_draw_grenade
-anm_show_w_gl                            = ak_74_draw_w_gl
-anm_switch                               = ak_74_grenade_off
-anm_switch_g                             = ak_74_grenade_on
+anm_hide                                 = ak74_hide
+anm_hide_g                               = ak74_hide_gl_on, idle_gl_on
+anm_hide_w_gl                            = ak74_hide_gl_off, idle_gl_off
+anm_idle                                 = ak74_idle
+anm_idle_aim                             = ak74_aim
+anm_idle_aim_moving                      = ak74_aim_walk, ak74_aim, 0.75
+anm_idle_aim_moving_crouch               = ak74_aim_walk, ak74_aim, 0.7
+anm_idle_g                            	 = ak74_idle_gl_on, idle_gl_on
+anm_idle_g_aim                           = ak74_aim_start_gl_on, idle_gl_on
+anm_idle_moving                          = ak74_walk, idle_auto
+anm_idle_moving_crouch_g_aim             = ak74_idle_gl_off, ak74_idle_gl_off, 0.7
+anm_idle_moving_crouch_w_gl_aim          = ak74_idle_gl_off, ak74_idle_gl_off, 0.7
+anm_idle_moving_g                        = ak74_idle_gl_off, ak74_idle_gl_off
+anm_idle_moving_g_aim                    = ak74_idle_gl_off, ak74_idle_gl_on, 0.75
+anm_idle_moving_w_gl                     = ak74_idle_gl_off, ak74_idle_gl_off
+anm_idle_moving_w_gl_aim                 = ak74_idle_gl_off, ak74_idle_gl_off, 0.75
+anm_idle_sprint                          = ak74_sprint
+anm_idle_sprint_g                        = ak74_sprint_gl_off, idle_gl_on
+anm_idle_sprint_w_gl                     = ak74_sprint, idle_gl_off
+anm_idle_w_gl                            = ak74_idle_gl_off, idle_gl_off
+anm_idle_w_gl_aim                        = ak74_idle_gl_off, idle_gl_off
+anm_reload                               = ak74_reload
+anm_reload_empty                     	 = ak74_reload_full
+anm_reload_g                             = ak74_gl_reload
+anm_reload_w_gl                          = ak74_reload_gl_off
+anm_shots                                = ak74_shoot
+anm_shots_g                              = ak74_gl_shoot
+anm_shots_w_gl                           = ak74_shoot_gl_off
+anm_shots_aim               			 = ak74_aim_shoot
+anm_shots_aim_l             			 = ak74_aim_shoot_scope
+anm_show                                 = ak74_draw
+anm_show_g                               = ak74_draw_gl_on, idle_gl_on
+anm_show_w_gl                            = ak74_draw_gl_off, idle_gl_off
+anm_switch                               = ak74_gl_deactivate
+anm_switch_g                             = ak74_gl_activate
+
+
+;Transition/Intermediate Animations
+
+        anm_walk2sprint             = ak74_sprint_start
+        anm_walk2sprint_empty       = ak74_sprint_start, ak74_walk
+        
+        anm_sprint2walk             = ak74_sprint_end
+        anm_sprint2walk_empty       = ak74_sprint_end, ak74_walk
+	
+         
+;Transition Definitions
+
+        ts_pattern_walk2sprint      = .+, anm_idle_sprint, anm_walk2sprint, 0.5
+        ts_pattern_sprint2walk      = anm_idle_sprint, ^anm_idle.*, anm_sprint2walk, 1
+        ts_strict_sprint2walk_move  = anm_walk2sprint, anm_idle_moving, anm_sprint2walk
+
+;--- Aim Motions ---
+        
+        anm_idle_aim_moving         = ak74_aim_start
+        anm_idle_aim_moving_empty   = ak74_aim_start, ak74_aim_walk
+        
+        anm_idle_aim_moving_crouch  = ak74_idle
+        anm_idle_aim_moving_crouch_empty = ak74_idle
+
+        anm_idle_aim_start          = ak74_aim_start
+        anm_idle_aim_start_empty    = ak74_aim_start,ak74_aim_walk
+ 
+        anm_idle_aim_end            = ak74_aim_end
+        anm_idle_aim_end_empty      = ak74_aim_end,ak74_idle
 
 shell_bone                               = wpn_body
 shell_dir                                = 0, 1, 0
@@ -234,72 +278,4 @@ fire_point2                              = 0.078965, -0.211564, 0.553397
 
 freelook_z_offset_mul					 = 0.2
 
-;------------------------------------------------------------------------------------------------
-[wpn_ak74_1p29]:wpn_ak74
-1icon_layer                              = 1p29
-1icon_layer_x                            = 53
-1icon_layer_y                            = 1
 
-inv_weight                               = 4.1
-
-hud                                      = wpn_ak74_1p29_hud
-visual                                   = dynamics\weapons\wpn_ak74\wpn_ak74_1p29.ogf
-
-scope_status                             = 1
-scope_dynamic_zoom                       = off
-scope_texture                            = wpn_crosshair_1p29
-scope_zoom_factor                        = 15
-
-
-[wpn_ak74_1p29_hud]:wpn_ak74_hud
-item_visual                              = anomaly_weapons\wpn_ak74\wpn_ak74_1p29_hud.ogf
-
-aim_hud_offset_pos                       = -0.0717, 0.0172, -0.25
-aim_hud_offset_pos_16x9                  = -0.0717, 0.0172, -0.25
-aim_hud_offset_rot                       = 0.0195, 0.026, -0.0035
-aim_hud_offset_rot_16x9                  = 0.0195, 0.026, -0.0035
-
-;------------------------------------------------------------------------------------------------
-[wpn_ak74_kobra]:wpn_ak74
-1icon_layer                              = kobra
-1icon_layer_x                            = 65
-1icon_layer_y                            = 3
-
-inv_weight                               = 3.7
-
-hud                                      = wpn_ak74_kobra_hud
-visual                                   = dynamics\weapons\wpn_ak74\wpn_ak74_kobra.ogf
-
-
-[wpn_ak74_kobra_hud]:wpn_ak74_1p29_hud
-item_visual                              = anomaly_weapons\wpn_ak74\wpn_ak74_kobra_hud.ogf
-
-aim_hud_offset_pos                       = -0.0714,0.0168,-0.2
-aim_hud_offset_pos_16x9                  = -0.0714,0.0168,-0.2
-aim_hud_offset_rot                       = 0.0195, 0.026, -0.0035
-aim_hud_offset_rot_16x9                  = 0.0195, 0.026, -0.0035
-
-;------------------------------------------------------------------------------------------------
-[wpn_ak74_ps01]:wpn_ak74
-1icon_layer                              = ps01
-1icon_layer_x                            = 27
-1icon_layer_y                            = 2
-
-inv_weight                               = 3.93
-
-hud                                      = wpn_ak74_pso1_hud
-
-scope_status                             = 1
-scope_dynamic_zoom                       = off
-scope_texture                            = wpn_crosshair_pso1
-scope_zoom_factor                        = 15
-
-
-[wpn_ak74_pso1_hud]:wpn_ak74_kobra_hud
-item_visual                              = anomaly_weapons\wpn_ak74\wpn_ak74_hud.ogf
-
-hands_position                           = 0.0195, -0.00672, 0.18
-hands_position_16x9                      = 0.0195, -0.00672, 0.18
-
-aim_hud_offset_pos                       = -0.0717, 0.0372, -0.2
-aim_hud_offset_pos_16x9                  = -0.0717, 0.0372, -0.2
