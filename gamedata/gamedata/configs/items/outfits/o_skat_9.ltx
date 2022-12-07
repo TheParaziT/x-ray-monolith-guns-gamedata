@@ -1,0 +1,123 @@
+;--------------------------------------------------------------------------
+[military_outfit]:outfit_base
+		$spawn                        = "outfit\military_outfit"
+		class                         = EQU_STLK
+		ef_equipment_type             = 4
+		visual                        = dynamics\outfit\military_outfit
+		actor_visual                  = actors\stalker_soldier\stalker_soldier_4.ogf
+		npc_visual                    = actors\stalker_soldier\stalker_soldier_4.ogf
+		player_hud_section            = actor_hud_military_skat9
+		character_portrait            = ui_inGame2_Soldier_4
+		full_icon_name                = npc_icon_military_outfit
+		full_scale_icon               = 10, 6
+        
+		inv_name                      = military_outfit_name
+		inv_name_short                = military_outfit_name
+		description                   = military_outfit_description
+		inv_grid_x                    = 102
+		inv_grid_y                    = 0
+		upgr_icon_x                   = 643
+		upgr_icon_y                   = 348
+		upgr_icon_width               = 288
+		upgr_icon_height              = 155
+		upgrades                      = up_gr_firstab_skat_1, up_gr_seconab_skat_1, up_gr_thirdab_skat_1, up_gr_fourtab_skat_1
+		installed_upgrades            =
+		upgrade_scheme                = up_scheme_skat_1
+        
+		community                     = army
+		kind                          = o_heavy
+		cost                          = 70700
+		inv_weight                    = 18
+		additional_inventory_weight   = 15
+		additional_inventory_weight2  = 15
+		artefact_count                = 0
+		immunities_sect               = sect_military_outfit_immunities
+		repair_type                   = outfit_heavy
+		;repair_part_bonus             = 0.27
+		hit_fraction_actor            = 0.25
+		bones_koeff_protection        = actor_armor_skat
+		control_inertion_factor       = 1.54
+		power_loss                    = 0.05
+        
+		burn_protection               = 0.4
+		shock_protection              = 1.5
+		radiation_protection          = 0.006
+		chemical_burn_protection      = 0.07
+		telepatic_protection          = 0
+		strike_protection             = 0.55
+		explosion_protection          = 0.70
+		wound_protection              = 0.43
+		fire_wound_protection         = 0.38
+
+[sect_military_outfit_immunities]
+		burn_immunity                 = 0.025
+		chemical_burn_immunity        = 0.03
+		explosion_immunity            = 0.08
+		fire_wound_immunity           = 0.016
+		radiation_immunity            = 0.0
+		shock_immunity                = 0.021
+		strike_immunity               = 0
+		telepatic_immunity            = 0.0
+		wound_immunity                = 0.012
+ 
+;--------------------------------------------------------------------------
+[dolg_heavy_outfit]:outfit_base
+		$spawn                        = "outfit\dolg_heavy_outfit"
+		class                         = EQU_STLK
+		ef_equipment_type             = 4
+		visual                        = dynamics\outfit\dolg_heavy_outfit
+		actor_visual                  = actors\stalker_dolg\stalker_dolg_3.ogf
+		npc_visual                    = actors\stalker_dolg\stalker_dolg_3.ogf
+		player_hud_section            = actor_hud_duty_psz9d
+		character_portrait            = ui_inGame2_Dolg_3
+		full_icon_name                = npc_icon_dolg_heavy_outfit
+		full_scale_icon               = 8, 6
+        
+		inv_name                      = dolg_heavy_outfit_name
+		inv_name_short                = dolg_heavy_outfit_name
+		description                   = dolg_heavy_outfit_description
+		inv_grid_x                    = 102
+		inv_grid_y                    = 18
+		upgr_icon_x                   = 0
+		upgr_icon_y                   = 0
+		upgr_icon_width               = 301
+		upgr_icon_height              = 155
+		upgrades                      = up_gr_firstab_skat_1, up_gr_seconab_skat_1, up_gr_thirdab_skat_1, up_gr_fourtab_skat_1
+		installed_upgrades            =
+		upgrade_scheme                = up_scheme_skat_1
+        
+		community                     = dolg
+		kind                          = o_heavy
+		cost                          = 79960
+		inv_weight                    = 20
+		additional_inventory_weight   = 16
+		additional_inventory_weight2  = 16
+		artefact_count                = 0
+		immunities_sect               = sect_dolg_heavy_outfit_immunities
+		repair_type                   = outfit_heavy
+		;repair_part_bonus             = 0.29
+		hit_fraction_actor            = 0.22
+		bones_koeff_protection        = actor_armor_psz
+		control_inertion_factor       = 1.61
+		power_loss                    = 0.05
+        
+		burn_protection               = 0.5
+		shock_protection              = 1.1
+		radiation_protection          = 0.007
+		chemical_burn_protection      = 0.07
+		telepatic_protection          = 0
+		strike_protection             = 0.65
+		explosion_protection          = 0.70
+		wound_protection              = 0.46
+		fire_wound_protection         = 0.44
+
+[sect_dolg_heavy_outfit_immunities]
+		burn_immunity                 = 0.025
+		chemical_burn_immunity        = 0.035
+		explosion_immunity            = 0.08
+		fire_wound_immunity           = 0.017
+		radiation_immunity            = 0.0
+		shock_immunity                = 0.021
+		strike_immunity               = 0
+		telepatic_immunity            = 0.0
+		wound_immunity                = 0.015

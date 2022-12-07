@@ -1,0 +1,304 @@
+;------------------------------------------------------------------------------------------------
+[wpn_pm]:identity_immunities,weapon_probability,default_weapon_params,wpn_pm_sounds
+
+        GroupControlSection         = spawn_group
+        $npc                        = on
+        $prefetch                   = 8
+        $spawn                      = "weapons\pm"
+        scheduled                   = off
+        cform                       = skeleton
+        class                       = WP_PM
+
+        animation_slot              = 1
+        default_to_ruck             = false
+        sprint_allowed              = true
+        hand_dependence             = 1
+        single_handed               = 1
+        kind                        = w_pistol
+        
+        cost                        = 4890
+        
+        hud                         = wpn_pm_hud
+        visual                      = dynamics\weapons\wpn_pm\wpn_pm.ogf
+
+        discharge_on_misfire        = false
+        has_empty_misfire           = false
+           
+;--- Position and Orientation of Weapon ---
+
+        position                    = -0.021, -0.085, 0.0
+        orientation                 = 0, 0, 0
+        fire_point                  = 0.0, 0.133, 0.161
+
+;--- Weapon parameters in inventory ---
+        
+        inv_grid_height             = 1
+        inv_grid_width              = 2
+        inv_grid_x                  = 61
+        inv_grid_y                  = 80
+        inv_name                    = st_wpn_pm
+        inv_name_short              = st_wpn_pm
+        description                 = st_wpn_pm_descr
+        inv_weight                  = 0.73
+        slot                        = 1
+        
+;--- Particle parameters from the shot ---
+
+        flame_particles             = weapons\generic_weapon03
+        smoke_particles             = weapons\generic_shoot_00
+        light_color                 = 0.6, 0.5, 0.3
+        light_range                 = 3.0
+        light_time                  = 0.2
+        light_var_color             = 0.05
+        light_var_range             = 0.5
+
+;--- Parameters of the upgrades/repairs ---
+
+        upgrades                    = up_gr_firstab_pm, up_gr_seconab_pm, up_gr_thirdab_pm, up_gr_fourtab_pm, up_gr_fifthab_pm, up_gr_fifthcd_pm
+        installed_upgrades          =
+        upgrade_scheme              = upgrade_scheme_pm
+        repair_type                 = pistol
+
+;Icons of the upgrades
+
+        upgr_icon_x                 = 1300
+        upgr_icon_y                 = 0
+        upgr_icon_width             = 150
+        upgr_icon_height            = 100
+
+;----------- Parameters of the weapon itself ---------------------------
+
+        fire_modes                  = 1
+        ph_mass                     = 1
+        weapon_lower_speed          = 0.2
+        
+;--- Shot parameters ---      
+        
+        hit_impulse                 = 20
+        hit_power                   = 0.45, 0.45, 0.45, 0.45
+        hit_type                    = fire_wound
+        fire_distance               = 300
+        bullet_speed                = 290
+        rpm                         = 315
+        rpm_empty_click             = 120
+
+        fire_dispersion_base        = 0.62
+        PDM_disp_accel_factor       = 1.055
+        PDM_disp_base               = 0.6
+        PDM_disp_crouch             = 1.0
+        PDM_disp_crouch_no_acc      = 1.0
+        PDM_disp_vel_factor         = 1.05
+        
+        hit_probability_gd_novice   = 1.00
+        hit_probability_gd_stalker  = 1.00
+        hit_probability_gd_veteran  = 1.00
+        hit_probability_gd_master   = 1.00
+
+;--- Ammo parameters ---
+        
+        ammo_class                  = ammo_9x18_fmj, ammo_9x18_fmj_bad, ammo_9x18_fmj_verybad, ammo_9x18_pmm, ammo_9x18_pmm_bad, ammo_9x18_pmm_verybad, ammo_9x18_ap, ammo_9x18_ap_bad, ammo_9x18_ap_verybad
+        ammo_elapsed                = 8
+        ammo_mag_size               = 8
+
+;--- Particle shell parameters ---
+
+        shell_point		 			= 0.0, 0.133, 0.047
+        shell_dir		 			= 0.0, 0.0, 0.4
+        shell_particles	 			= weapons\9x18
+
+;--- Scope parameters ---
+
+        scope_status                = 0
+        scope_zoom_factor           = 0
+       
+;--- Parameters of the silencer ---
+
+        silencer_name               = wpn_sil_9mm
+        silencer_status             = 0
+        silencer_x                  = 39
+        silencer_y                  = -16
+        silencer_light_color        = 0.6, 0.5, 0.3
+        silencer_light_range        = 0.01
+        silencer_light_time         = 0.2
+        silencer_light_var_color    = 0.05
+        silencer_light_var_range    = 0.5
+        silencer_smoke_particles    = weapons\generic_shoot_00
+        
+;--- Parameters of the underbarrel grenade launcher ---
+
+        grenade_launcher_status     = 0
+        
+;--- Aiming parameters ---
+        
+        use_aim_bullet              = false
+        time_to_aim                 = 0.0 ;  1.0
+        zoom_dof                    = -1000, 1.0, 1000
+        zoom_enabled                = true
+        zoom_rotate_time            = 0.25
+        reload_dof                  = 0.0, 0.5, 5, 1.7
+        control_inertion_factor     = 1.0f
+        crosshair_inertion          = 2.3
+
+;--- Misfire parameters ---
+
+        misfire_probability         = 0.005
+        misfire_start_condition     = 0.7 ;  0.81
+        misfire_start_prob          = 0.007
+        misfire_end_condition       = 0.1
+        misfire_end_prob            = 0.11
+        
+;--- Wear parameters ---
+
+        condition_queue_shot_dec    = 0.0016
+        condition_shot_dec          = 0.0016
+        fire_dispersion_condition_factor = 0.001  
+        
+;--- Сamera parameters ---
+        
+        cam_return                  = 0
+        cam_relax_speed             = 8
+        cam_dispersion              = 2.0
+        cam_dispersion_frac         = 1.1
+        cam_dispersion_inc          = 0.0
+        cam_max_angle               = 50.0
+        cam_max_angle_horz          = 50.0
+        cam_step_angle_horz         = 0.52
+        
+;Parameters of the camera when aiming
+
+        zoom_cam_dispersion         = 1.5
+        
+;----------- Parameters for AI ---------------------------
+       
+        ef_weapon_type              = 5 
+        cam_relax_speed_ai          = 360
+        holder_fov_modifier         = 1.0
+        holder_range_modifier       = 1.0
+        min_radius                  = 0
+        max_radius                  = 500
+
+;----------- Weapon HUD parameters ---------------------------
+
+[wpn_pm_hud]:hud_base
+
+        item_visual                 = dynamics\weapons\wpn_pm\wpn_pm_hud.ogf
+        attach_place_idx            = 0
+        zoom_hide_crosshair         = true
+        
+	script_binding                           = bind_weapon.bind
+	def_hide_bones                           = flash,light,laser,line,spusk,firemode,sight
+	def_show_bones                           = wpn_silencer
+
+;--- Parameters of the weapon position ---
+        
+        item_position               = 0.0,0.0,0.0
+        item_orientation            = 0.0,0.0,0.0
+        
+;--- Hand parameters ---
+
+        hands_position              = -0.015,-0.12,-0.04
+        hands_position_16x9         = -0.015,-0.12,-0.04
+        hands_orientation           = 0.0,0.0,-4.0
+        hands_orientation_16x9      = 0.0,0.0,-4.0
+        
+;--- Parameters of the weapon HUD position when aiming --- 
+        
+        aim_hud_offset_pos          = 0.0,0.0,0.0
+        aim_hud_offset_pos_16x9     = 0.0,0.0,0.0
+        aim_hud_offset_rot          = 0.0,0.0,0.0
+        aim_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+;--- Parameters of HUD arms position for the mode when the weapon is lowered ---
+
+        lowered_hud_offset_pos			= 0,0.1,0
+        lowered_hud_offset_rot			= 0.3,-0.1,0.1
+        
+        lowered_hud_offset_pos_16x9		= 0,0.1,0
+        lowered_hud_offset_rot_16x9		= 0.3,-0.1,0.1
+        
+;--- Parameters of HUD arms position for the mode when the actor lean ---      
+        
+        lean_hud_offset_pos         = 0, 0, 0
+        lean_hud_offset_rot         = 0, 0, 0
+
+;----------- HUD animations parameters ---------------------------
+
+;--- Idle ---
+
+        anm_idle                    = pm_idle
+        anm_idle_empty              = pm_idle, idle_empty
+        
+        anm_idle_aim                = pm_aim
+        anm_idle_aim_empty          = pm_aim, idle_empty
+        
+;--- Motions ---
+        
+        anm_show                    = pm_draw
+        anm_show_empty              = pm_draw, idle_empty
+
+        anm_idle_moving             = pm_walk
+        anm_idle_moving_empty       = pm_walk, idle_empty
+        
+        anm_idle_sprint             = pm_sprint
+        anm_idle_sprint_empty       = pm_sprint, idle_empty
+
+        anm_idle_moving_crouch      = pm_slow_down
+        anm_idle_moving_crouch_empty = pm_slow_down, idle_empty
+    		
+        anm_hide                    = pm_hide
+        anm_hide_empty              = pm_hide, idle_empty
+
+        anm_bore                      = pm_bore
+        anm_bore_empty                = pm_bore, pm_bore_empty
+
+;Transition/Intermediate Animations
+
+        anm_walk2sprint             = pm_sprint_start
+        anm_walk2sprint_empty       = pm_sprint_start, idle_empty
+        
+        anm_sprint2walk             = pm_sprint_end
+        anm_sprint2walk_empty       = pm_sprint_end, idle_empty
+         
+;Transition Definitions
+
+        ts_pattern_walk2sprint      = .+, anm_idle_sprint, anm_walk2sprint, 1
+        ts_pattern_sprint2walk      = anm_idle_sprint, ^anm_idle.*, anm_sprint2walk, 1
+        ts_strict_sprint2walk_move  = anm_walk2sprint, anm_idle_moving, anm_sprint2walk
+
+;--- Aim Motions ---
+        
+        anm_idle_aim_moving         = pm_slow_aim
+        anm_idle_aim_moving_empty   = pm_slow_aim, idle_empty
+        
+        anm_idle_aim_moving_crouch  = pm_slow_down
+        anm_idle_aim_moving_crouch_empty = pm_slow_down, idle_empty
+
+        anm_idle_aim_start          = pm_aim_start
+        anm_idle_aim_start_empty    = pm_aim_start, idle_empty
+ 
+        anm_idle_aim_end            = pm_aim_end
+        anm_idle_aim_end_empty      = pm_aim_end, idle_empty
+
+;--- Weapon animations ---
+
+        anm_reload                  = pm_reload
+        anm_reload_empty            = pm_reload_full
+        
+        anm_reload_misfire          = pm_revival, pm_revival
+        anm_reload_misfire_empty    = pm_revival_last
+      
+        anm_shots                   = pm_shoot  
+        anm_shot_l                  = pm_shoot_empty
+
+        anm_shots_aim               = pm_aim_shoot
+        anm_shots_aim_l             = pm_aim_shoot_empty
+
+;----------- Parameters of the shells sprite for HUD ---------------------------
+
+        shell_bone                  = wpn_body
+        shell_point                 = 0.0,-9.0,0.0
+
+;----------- Particle sprite parameters for HUD ---------------------------    
+        
+        fire_bone                   = wpn_body
+        fire_point                  = -0.010,0.11,0.37
