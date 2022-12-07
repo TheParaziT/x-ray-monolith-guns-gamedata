@@ -1,0 +1,59 @@
+;--------------------------------------------------------------------------
+[trenchcoat_outfit]:outfit_base
+		$spawn                        = "outfit\trenchcoat_outfit"
+		class                         = EQU_STLK
+		ef_equipment_type             = 3
+		visual                        = dynamics\outfit\novice_outfit
+		actor_visual                  = actors\stalker_bandit\stalker_bandit_3_mask.ogf
+		npc_visual                    = actors\stalker_bandit\stalker_bandit_3_mask.ogf
+		player_hud_section            = actor_hud_bandit_trench
+		character_portrait            = ui_inGame2_bandit_3_mask
+		full_icon_name                = npc_icon_novice_outfit
+		full_scale_icon               = 0, 11
+        
+		inv_name                      = trenchcoat_outfit_name
+		inv_name_short                = trenchcoat_outfit_name
+		description                   = trenchcoat_outfit_description
+		inv_grid_x                    = 84
+		inv_grid_y                    = 0
+		upgr_icon_x                   = 636
+		upgr_icon_y                   = 0
+		upgr_icon_width               = 302
+		upgr_icon_height              = 168
+		upgrades                      = up_gr_firstab_novice_1, up_gr_seconab_novice_1, up_gr_thirdab_novice_1
+		installed_upgrades            =
+		upgrade_scheme                = up_scheme_novice_1
+		kind                          = o_light
+		cost                          = 23320
+		inv_weight                    = 5.22
+		additional_inventory_weight   = 5
+		additional_inventory_weight2  = 5
+		artefact_count                = 0
+		immunities_sect               = sect_coat_outfit_immunities
+		repair_type                   = outfit_novice
+		;repair_part_bonus             = 0.15
+		hit_fraction_actor            = 0.85
+		bones_koeff_protection        = actor_armor_trench
+		control_inertion_factor       = 1.19
+		power_loss                    = 0.05
+        
+		burn_protection               = 0.14
+		shock_protection              = 0.51
+		radiation_protection          = 0.0022
+		chemical_burn_protection      = 0.04
+		telepatic_protection          = 0.034
+		strike_protection             = 0.004
+		explosion_protection          = 0.2
+		wound_protection              = 0.2
+		fire_wound_protection         = 0.2
+
+[sect_coat_outfit_immunities]
+		burn_immunity                 = 0.15
+		chemical_burn_immunity        = 0.025
+		explosion_immunity            = 0.25
+		fire_wound_immunity           = 0.1
+		radiation_immunity            = 0.0
+		shock_immunity                = 0.015
+		strike_immunity               = 0
+		telepatic_immunity            = 0.0
+		wound_immunity                = 0.058

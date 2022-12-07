@@ -1,0 +1,114 @@
+;--------------------------------------------------------------------------
+
+[scientific_outfit]:outfit_base,outfit_restrictions_1
+		$spawn                        = "outfit\scientific_outfit"
+		class                         = EQU_STLK
+		ef_equipment_type             = 2
+		visual                        = dynamics\outfit\scientific_outfit
+		actor_visual                  = actors\stalker_neutral\stalker_neutral_nauchniy.ogf
+		npc_visual                    = actors\stalker_neutral\stalker_neutral_nauchniy.ogf
+		player_hud_section            = actor_hud_loner_seva
+		character_portrait            = ui_inGame2_neutral_nauchniy
+		full_icon_name                = npc_icon_scientific_outfit
+		full_scale_icon               = 12, 11
+        
+		inv_name                      = scientific_outfit_name
+		inv_name_short                = scientific_outfit_name
+		description                   = scientific_outfit_description
+		inv_grid_x                    = 108
+		inv_grid_y                    = 0
+		upgr_icon_x                   = 3130
+		upgr_icon_y                   = 192
+		upgr_icon_width               = 298
+		upgr_icon_height              = 166
+		upgrades                      = up_gr_firstab_seva_1, up_gr_seconab_seva_1, up_gr_thirdab_seva_1, up_gr_fourtab_seva_1
+		installed_upgrades            =
+		upgrade_scheme                = up_scheme_seva_1
+        
+		community                     = stalker
+		kind                          = o_sci
+		cost                          = 75400
+		inv_weight                    = 13.4
+		additional_inventory_weight   = 18
+		additional_inventory_weight2  = 18
+		artefact_count                = 2
+		immunities_sect               = sect_scientific_outfit_immunities
+		repair_type                   = outfit_medium
+		;repair_part_bonus             = 0.35
+		hit_fraction_actor            = 0.45
+		bones_koeff_protection        = actor_armor_seva
+		control_inertion_factor       = 1.42
+		power_loss                    = 0.1
+        
+		burn_protection               = 0.14
+		shock_protection              = 1.7
+		radiation_protection          = 0.032
+		chemical_burn_protection      = 0.11
+		telepatic_protection          = 0.12
+		strike_protection             = 0.2
+		explosion_protection          = 0.32
+		wound_protection              = 0.36
+		fire_wound_protection         = 0.28
+
+[sect_scientific_outfit_immunities]
+		burn_immunity                 = 0.03
+		chemical_burn_immunity        = 0.007
+		explosion_immunity            = 0.1
+		fire_wound_immunity           = 0.024
+		radiation_immunity            = 0.0
+		shock_immunity                = 0.004
+		strike_immunity               = 0
+		telepatic_immunity            = 0.0
+		wound_immunity                = 0.024
+ 
+
+;--------------------------------------------------------------------------
+[dolg_scientific_outfit]:outfit_base,outfit_restrictions_1
+		$spawn                        = "outfit\dolg_scientific_outfit"
+		class                         = EQU_STLK
+		ef_equipment_type             = 2
+		visual                        = dynamics\outfit\dolg_scientific_outfit
+		actor_visual                  = actors\stalker_dolg\stalker_dolg_1.ogf
+		npc_visual                    = actors\stalker_dolg\stalker_dolg_1.ogf
+		player_hud_section            = actor_hud_loner_seva
+		character_portrait            = ui_inGame2_Dolg_1
+		full_icon_name                = npc_icon_scientific_outfit
+		full_scale_icon               = 12, 11
+        
+		inv_name                      = dolg_scientific_outfit_name
+		inv_name_short                = dolg_scientific_outfit_name
+		description                   = dolg_scientific_outfit_description
+		inv_grid_x                    = 108
+		inv_grid_y                    = 6
+		upgr_icon_x                   = 1888
+		upgr_icon_y                   = 191
+		upgr_icon_width               = 297
+		upgr_icon_height              = 173
+		upgrades                      = up_gr_firstab_seva_1, up_gr_seconab_seva_1, up_gr_thirdab_seva_1, up_gr_fourtab_seva_1
+		installed_upgrades            =
+		upgrade_scheme                = up_scheme_seva_1
+        
+		community                     = dolg
+		kind                          = o_sci
+		cost                          = 79400
+		inv_weight                    = 14
+		additional_inventory_weight   = 20
+		additional_inventory_weight2  = 20
+		artefact_count                = 1
+		immunities_sect               = sect_scientific_outfit_immunities
+		repair_type                   = outfit_medium
+		;repair_part_bonus             = 0.32
+		hit_fraction_actor            = 0.45
+		bones_koeff_protection        = actor_armor_seva
+		control_inertion_factor       = 1.42
+		power_loss                    = 0.1
+        
+		burn_protection               = 0.14
+		shock_protection              = 1.8
+		radiation_protection          = 0.032
+		chemical_burn_protection      = 0.1
+		telepatic_protection          = 0.105
+		strike_protection             = 0.3
+		explosion_protection          = 0.32
+		wound_protection              = 0.36
+		fire_wound_protection         = 0.28
