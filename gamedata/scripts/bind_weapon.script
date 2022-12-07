@@ -1,0 +1,108 @@
+--Биндер оружия, сокрытие/появление костей у оружия
+--Автор кода: liner (https://ap-pro.ru/profile/643-liner/)
+--Сделано для Original Weapon Restoration Mod
+
+--Сам биндер: ничего НЕ ТРОГАТЬ!
+function bind(obj)
+	obj:bind_object(weapon_binder(obj))
+end
+
+--Крашить игру при малейших оплошностях (строгий контроль)? (рекомендуется ставить true)
+local STRONG = true
+
+--В зависимости от уровня контроля крашнуть игру или вывести в лог инфу об ошибках в биндере
+local out
+if STRONG then
+	--краш игры
+	out = function (s,...)
+		abort("! "..s,...)
+	end
+else --простой вывод в лог
+	out = function (s,...)
+		printf("~ "..s,...)
+	end
+end
+
+class "weapon_binder" (object_binder)
+
+function weapon_binder:__init(obj) super(obj)
+end
+
+function weapon_binder:bone_check(bone)
+	local obj = self.object
+	--Если вдруг нету кости в модели оружия, которая указана в конфиге
+	if obj:get_bone_id(bone) == 65535 then
+		--сообщаем об этом
+		out("Weapon binder [initiator: %s]: bone [%s] doesn't exist in visual [%s]",obj:name(),bone,obj:get_visual_name())
+	end
+end
+
+--Распарсить строку в таблицу костей
+function weapon_binder:insert_bones(str, status, verify)
+	local list = str_explode(str,",") --парсим через запятые
+	for q,v in pairs(list) do
+		self:bone_check(v)
+		--Если вдруг мы случайно в конфиге опечатались, создали дубликат кости в одной из строчек
+		if self.bone_params[v] ~= nil and verify then
+			--сообщаем об этом
+			out("Weapon binder [initiator: %s]: duplicate bone [%s] found in invisible/show params",self.object:name(),v)
+		end
+		--Косточка будет видна/не видна
+		self.bone_params[v] = status
+	end
+end
+
+--Собрать все данные о настройках костей
+function weapon_binder:init_bone_settings()
+	local sec = self.object:section()
+	local s = ini_sys:r_string_ex(sec, "def_hide_bones")
+	if s then
+		self:insert_bones(s, false, true)
+	end
+	s = ini_sys:r_string_ex(sec, "def_show_bones")
+	if s then
+		self:insert_bones(s, true, true)
+	end
+end
+
+function weapon_binder:net_spawn(se_obj)
+	if not(object_binder.net_spawn(self,se_obj)) then
+        return false
+    end
+	self.bone_params = {}
+	self:init_bone_settings() --Задаём настройки
+	return true
+end
+
+--Апдейт
+local tg = 0 --общий таймер для всех оружий
+function weapon_binder:update(dt)
+	object_binder.update(self,dt)
+	if device():time_global() < tg then
+		--Апдейт должен быть один раз в 500 милисекунд!
+		return
+	end
+	tg = device():time_global() + 500
+	local w = self.object
+	--Перебираем установленные апгрейды и читаем их свойства
+	w:iterate_installed_upgrades(function(sec)
+		sec = ini_sys:r_string(sec,"section")
+		--Читаем кости, которые надо прятать
+		local s = ini_sys:r_string_ex(sec, "hide_bones")
+		if s then
+			--и заносим в таблицу
+			self:insert_bones(s, false)
+		end
+		--Читаем кости, которые надо показывать
+		s = ini_sys:r_string_ex(sec, "show_bones")
+		if s then
+			--и заносим в таблицу
+			self:insert_bones(s, true)
+		end
+	end)
+	--bone - имя кости, с которой что-то будем делать
+	--status - видимости кости
+	for bone,status in pairs(self.bone_params) do
+		w:set_bone_visible(bone,status,false,false)
+	end
+end
