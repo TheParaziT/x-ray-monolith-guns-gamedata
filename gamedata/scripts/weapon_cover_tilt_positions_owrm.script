@@ -1,0 +1,34 @@
+-- Extension script for weapon_cover_tilt_positions.script file
+-- Open weapon_cover_tilt_positions.script file for instructions
+
+if weapon_cover_tilt_positions then
+
+	if not weapon_cover_tilt_positions.weapon_offsets then
+		weapon_cover_tilt_positions.weapon_offsets = {}
+	end
+	
+	local o = weapon_cover_tilt_positions.weapon_offsets
+    
+--- Pistols
+	
+	o["wpn_pm"] = {
+		y = 0,
+	}
+	
+--- PP
+
+	o["wpn_mp5"] = {
+		y = 0.1,
+	}
+	
+--- Snipers
+
+	o["wpn_svd"] = {
+		y = -0.1,
+	}
+	
+	o["wpn_svu"] = {
+		y = -0.1,
+	}
+	
+end

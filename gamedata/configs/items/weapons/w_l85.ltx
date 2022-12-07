@@ -74,7 +74,7 @@ ammo_mag_size                            = 30
 startup_ammo                             = 90
 
 scope_status                             = 0
-scope_zoom_factor                        = 15
+scope_zoom_factor                        = 0
 
 silencer_name                            = wpn_sil_nato
 silencer_status                          = 0
@@ -168,42 +168,47 @@ zoom_hide_crosshair                      = true
 item_position                            = 0, 0, 0
 item_orientation                         = 0, 0, 0
 
-hands_position                           = -0.062, -0.2, 0.2655
-hands_position_16x9                      = -0.062, -0.2, 0.2655
-hands_orientation                        = 1.5,3,-0.85
-hands_orientation_16x9                   = 1.5,3,-0.85
+hands_position                           = 0.0,-0.013,-0.05
+hands_position_16x9                      = 0.0,-0.013,-0.05
+hands_orientation                        = 0.0,0.0,-4.0
+hands_orientation_16x9                   = 0.0,0.0,-4.0
 
-aim_hud_offset_pos                       = -0.09614,0.0724,-0.35
-aim_hud_offset_pos_16x9                  = -0.09614,0.0724,-0.35
-aim_hud_offset_rot                       = 0.047, 0.0265, -0.0145
-aim_hud_offset_rot_16x9                  = 0.047, 0.0265, -0.0145
+aim_hud_offset_pos                       = -0.113, 0.02, 0.0
+aim_hud_offset_pos_16x9                  = -0.113, 0.02, 0.0
+aim_hud_offset_rot                       = 0.0, 0.0, -0.06
+aim_hud_offset_rot_16x9                  = 0.0, 0.0, -0.06
 
 gl_hud_offset_pos                        = 0, 0, 0
 gl_hud_offset_pos_16x9                   = 0, 0, 0
 gl_hud_offset_rot                        = 0, 0, 0
 gl_hud_offset_rot_16x9                   = 0, 0, 0
 
-lean_hud_offset_pos                      = 0, 0, 0
-lean_hud_offset_rot                      = 0, 0, 0
+lowered_hud_offset_pos					 = 0.02, 0.06, 0.0
+lowered_hud_offset_pos_16x9				 = 0.02, 0.06, 0.0
+lowered_hud_offset_rot					 = 0.25, -0.5, 0.1
+lowered_hud_offset_rot_16x9				 = 0.25, -0.5, 0.1
 
-anm_hide                                 = l85_holster
+anm_hide                                 = l85_hide
 anm_idle                                 = l85_idle
-anm_idle_aim                             = l85_idle_aim
+anm_idle_aim                             = l85_aim
+anm_idle_ain_shots                       = l85_aim_shoot, l85_aim_shoot
 anm_idle_aim_moving                      = l85_idle_moving, idle, 0.75
 anm_idle_aim_moving_crouch               = l85_idle_crouch
-anm_idle_moving                          = l85_idle_moving
-anm_idle_moving_crouch                   = l85_idle_crouch
-anm_idle_sprint                          = l85_idle_sprint
-anm_reload                               = l85_reload, reload
-anm_reload_empty                         = l85_reload_empty, reload_empty
-anm_shots                                = l85_shoot, shoot
+anm_idle_moving                          = l85_walk
+anm_idle_moving_crouch                   = l85_walk_slow_down
+anm_idle_sprint                          = l85_sprint
+anm_reload                               = l85_reload, l85_reload
+anm_reload_empty                         = l85_reload_empty, l85_reload_empty
+anm_reload_misfire                       = l85_revival_scope, l85_revival
+anm_switch_mode                          = l85_firemode_1_to_a
+anm_shots                                = l85_shoot, l85_shoot
 anm_show                                 = l85_draw
 
-shell_bone                               = gilza
-shell_dir                                = 0, 1, 0
-shell_point                              = 0, 0, 0
+shell_bone                               = bolt
+shell_dir                                = 0.0,0.0,0.0
+shell_point                              = 0.0,-9.0,0.0
 
-fire_bone                                = muzzle
+fire_bone                                = wpn_body
 fire_bone2                               = wpn_body
-fire_point                               = 0, 0, 0
-fire_point2                              = 0, 0, 0
+fire_point                               = 0,0.003,0.711
+fire_point2                              = 0.0,-0.075,0.697

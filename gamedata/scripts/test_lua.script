@@ -1,0 +1,9 @@
+function bone_visible()
+	local weapon = db.actor:item_in_slot()
+	--local removable_bones = 
+	
+	--if weapon
+	
+	set_bone_visible (spusk, 0)
+	
+end

@@ -110,7 +110,7 @@
         zoom_enabled                = true
         zoom_rotate_time            = 0.25
         reload_dof                  = 0.0, 0.5, 5, 2
-control_inertion_factor = 1.0f
+        control_inertion_factor = 1.0f
         crosshair_inertion          = 6.8
         fire_dispersion_base        = 0.265
         fire_dispersion_condition_factor = 0.001
@@ -171,139 +171,69 @@ control_inertion_factor = 1.0f
         item_position               = 0, 0, 0
         item_orientation            = 0, 0, 0
         
-        hands_position              = -0.13, -0.175, 0.085
-        hands_position_16x9         = -0.13, -0.175, 0.085
-        hands_orientation           = 2, 2, 0
-        hands_orientation_16x9      = 2, 2, 0
+        hands_position                           = 0.02,-0.03,-0.03
+        hands_position_16x9                      = 0.02,-0.03,-0.03
+        hands_orientation                        = 0.0,0.0,-4.0
+        hands_orientation_16x9                   = 0.0,0.0,-4.0
         
-        aim_hud_offset_pos          = -0.0932, 0.0786, -0.25
-        aim_hud_offset_pos_16x9     = -0.0932, 0.0786, -0.25
-        aim_hud_offset_rot          = 0.0375, 0.03455, 0
-        aim_hud_offset_rot_16x9     = 0.0375, 0.03455, 0
+        aim_hud_offset_pos                       = -0.111, 0.062, 0.0
+        aim_hud_offset_pos_16x9                  = -0.111, 0.062, 0.0
+        aim_hud_offset_rot                       = 0.0, 0.0, -0.06
+        aim_hud_offset_rot_16x9                  = 0.0, 0.0, -0.06
         
-        gl_hud_offset_pos           = -0.054, 0.025, -0.25
-        gl_hud_offset_pos_16x9      = -0.054, 0.025, -0.25
-        gl_hud_offset_rot           = -0.076, 0.03275, 0
-        gl_hud_offset_rot_16x9      = -0.076, 0.03275, 0
+        gl_hud_offset_pos                        = -0.054, 0.025, -0.25
+        gl_hud_offset_pos_16x9                   = -0.054, 0.025, -0.25
+        gl_hud_offset_rot                        = -0.076, 0.03275, 0
+        gl_hud_offset_rot_16x9                   = -0.076, 0.03275, 0
         
-        lean_hud_offset_pos         = 0, 0, 0
-        lean_hud_offset_rot         = 0, 0, 0
+        lowered_hud_offset_pos					 = 0.02, 0.06, 0.0
+        lowered_hud_offset_pos_16x9				 = 0.02, 0.06, 0.0
+        lowered_hud_offset_rot					 = 0.25, -0.5, 0.1
+        lowered_hud_offset_rot_16x9				 = 0.25, -0.5, 0.1
         
-        anm_hide                    = abakan_holster
-        anm_hide_g                  = abakan_holster_w_gl
-        anm_hide_w_gl               = abakan_holster_w_gl
-        anm_idle                    = abakan_idle
-        anm_idle_aim                = abakan_idle_aim
+        anm_hide                                 = ak74_hide
+        anm_hide_g                               = an94_hide_gl_on, idle_gl_on
+        anm_hide_w_gl                            = an94_hide_gl_off
+        anm_idle                                 = ak74_idle
+        anm_idle_aim                             = ak74_idle
         anm_idle_aim_moving         = abakan_idle_moving, idle, 0.75
         anm_idle_aim_moving_crouch  = abakan_idle_crouch
-        anm_idle_g                  = abakan_idle_w_gl
-        anm_idle_g_aim              = abakan_idle_aim_w_gl
-        anm_idle_moving             = abakan_idle_moving
-        anm_idle_moving_crouch      = abakan_idle_crouch
-        anm_idle_moving_crouch_g    = abakan_idle_crouch_w_gl
+        anm_idle_g                  = an94_idle_gl_on, idle_gl_on
+        anm_idle_g_aim              = an94_aim_gl_on, idle_gl_on
+        anm_idle_moving             = ak74_walk
+        anm_idle_moving_crouch      = ak74_walk_slow_down
+        anm_idle_moving_crouch_g    = an94_walk_slow_down_gl_on, idle_gl_on
         anm_idle_moving_crouch_g_aim = abakan_idle_moving_w_gl, idle, 0.7
-        anm_idle_moving_crouch_w_gl = abakan_idle_crouch_w_gl
+        anm_idle_moving_crouch_w_gl = an94_walk_slow_down_gl_off
         anm_idle_moving_crouch_w_gl_aim = abakan_idle_moving_w_gl, idle, 0.7
-        anm_idle_moving_g           = abakan_idle_moving_w_gl
+        anm_idle_moving_g           = an94_walk_gl_on, idle_gl_on
         anm_idle_moving_g_aim       = abakan_idle_moving_w_gl, idle, 0.75
-        anm_idle_moving_w_gl        = abakan_idle_moving_w_gl
+        anm_idle_moving_w_gl        = an94_walk_gl_off
         anm_idle_moving_w_gl_aim    = abakan_idle_moving_w_gl, idle, 0.75
-        anm_idle_sprint             = abakan_idle_sprint
-        anm_idle_sprint_g           = abakan_idle_sprint_w_gl
-        anm_idle_sprint_w_gl        = abakan_idle_sprint_w_gl
-        anm_idle_w_gl               = abakan_idle_w_gl
+        anm_idle_sprint             = ak74_sprint
+        anm_idle_sprint_g           = an94_sprint_start_gl_on, idle_gl_on
+        anm_idle_sprint_w_gl        = an94_sprint_start_gl_off
+        anm_idle_w_gl               = an94_aim_end_gl_off, an94_aim_end
         anm_idle_w_gl_aim           = abakan_idle_aim_w_gl
-        anm_reload                  = abakan_reload
-        anm_reload_empty            = abakan_reload_empty
-        anm_reload_empty_w_gl       = abakan_reload_empty_w_gl
-        anm_reload_g                = abakan_reload_grenade
-        anm_reload_w_gl             = abakan_reload_w_gl
-        anm_shots                   = abakan_shoot
-        anm_shots_g                 = abakan_shoot_grenade
-        anm_shots_w_gl              = abakan_shoot_w_gl
-        anm_show                    = abakan_draw
-        anm_show_g                  = abakan_draw_w_gl
-        anm_show_w_gl               = abakan_draw_w_gl
+        anm_reload                  = an94_reload, an94_reload
+        anm_reload_empty            = an94_reload_empty, an94_reload_empty
+        anm_reload_empty_w_gl       = an94_reload_empty_gl_off, an94_reload_empty
+        anm_reload_g                = an94_gl_reload, an94_gl_reload
+        anm_reload_w_gl             = an94_reload_gl_off, an94_reload
+		anm_reload_misfire          = an94_revival, an94_revival
+		anm_switch_mode             = an94_firemode
+        anm_shots                   = an94_shoot
+        anm_shots_g                 = an94_gl_shoot
+        anm_shots_w_gl              = an94_shoot_gl_off
+        anm_show                    = ak74_draw
+        anm_show_g                  = an94_draw_gl_on, idle_gl_on
+        anm_show_w_gl               = an94_draw_gl_off
         
-        shell_bone                  = gilza
-        shell_dir                   = 0, 1, 0
-        shell_point                 = 0, 0, 0
+        shell_bone                  = bolt
+        shell_dir                   = 0.0,0.0,0.0
+        shell_point                 = 0.0,-9.0,0.0
         
-        fire_bone                   = muzzle
-        fire_bone2                  = muzzle_gl
-        fire_point                  = 0, 0, 0
-        fire_point2                 = 0, 0, 0
- 
-;------------------------------------------------------------------------------------------------
-[wpn_abakan_1p29]:wpn_abakan
-        1icon_layer                 = 1p29
-        1icon_layer_x               = 57
-        1icon_layer_y               = 0
-        
-        inv_weight                  = 4.65
-        
-        hud                         = wpn_abakan_1p29_hud
-        visual                      = dynamics\weapons\wpn_abakan\wpn_abakan_1p29.ogf
-        
-        scope_status                = 1
-        scope_dynamic_zoom          = off
-        scope_texture               = wpn_crosshair_1p29
-        scope_zoom_factor           = 15
-        
-        zoom_rotate_time            = 0.25
-		use_alt_aim_hud				= true
- 
-
-[wpn_abakan_1p29_hud]:wpn_abakan_hud
-        item_visual                 = anomaly_weapons\wpn_abakan\wpn_abakan_1p29_hud.ogf
-        
-        aim_hud_offset_pos          = -0.08535, 0.0342, -0.3
-        aim_hud_offset_pos_16x9     = -0.08535, 0.0342, -0.3
-        aim_hud_offset_rot          = 0.019, 0.0342, 0.005
-        aim_hud_offset_rot_16x9     = 0.019, 0.0342, 0.005
-		aim_hud_offset_alt_pos		= -0.09295, 0.074, -0.250
-		aim_hud_offset_alt_pos_16x9 = -0.09295, 0.074, -0.250
-		aim_hud_offset_alt_rot		= 0.03255, 0.03455, 0
-		aim_hud_offset_alt_rot_16x9 = 0.03255, 0.03455, 0
- 
-;------------------------------------------------------------------------------------------------
-[wpn_abakan_kobra]:wpn_abakan
-        1icon_layer                 = kobra
-        1icon_layer_x               = 68
-        1icon_layer_y               = 4
-        
-        inv_weight                  = 4.25
-        
-        hud                         = wpn_abakan_kobra_hud
-        visual                      = dynamics\weapons\wpn_abakan\wpn_abakan_kobra.ogf
- 
-
-[wpn_abakan_kobra_hud]:wpn_abakan_1p29_hud
-        item_visual                 = anomaly_weapons\wpn_abakan\wpn_abakan_kobra_hud.ogf
-        
-        aim_hud_offset_pos          = -0.085300, 0.034310, -0.3
-        aim_hud_offset_pos_16x9     = -0.085300, 0.034310, -0.3
-        aim_hud_offset_rot          = 0.019000, 0.034200, 0.005000
-        aim_hud_offset_rot_16x9     = 0.019000, 0.034200, 0.005000
- 
-;------------------------------------------------------------------------------------------------
-[wpn_abakan_ps01]:wpn_abakan
-        1icon_layer                 = ps01
-        1icon_layer_x               = 40
-        1icon_layer_y               = 3
-        
-        inv_weight                  = 4.43
-        
-        hud                         = wpn_abakan_pso1_hud
-        
-        scope_status                = 1
-        scope_dynamic_zoom          = off
-        scope_texture               = wpn_crosshair_pso1
-        scope_zoom_factor           = 15
-        
-        zoom_rotate_time            = 0.25
- 
-
-[wpn_abakan_pso1_hud]:wpn_abakan_hud
-        aim_hud_offset_pos          = -0.0795, 0.057, -0.25
-        aim_hud_offset_pos_16x9     = -0.0795, 0.057, -0.25
+        fire_bone                   = wpn_body
+        fire_bone2                  = wpn_body
+        fire_point                  = 0.0,0.0,0.569
+        fire_point2                 = 0.0,-0.104,0.361  
