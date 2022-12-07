@@ -1,0 +1,123 @@
+;--------------------------------------------------------------------------
+[svoboda_light_outfit]:outfit_base
+		$spawn                        = "outfit\svoboda_light_outfit"
+		class                         = EQU_STLK
+		ef_equipment_type             = 3
+		visual                        = dynamics\outfit\svoboda_light_outfit
+		actor_visual                  = actors\stalker_freedom\stalker_freedom_1.ogf
+		npc_visual                    = actors\stalker_freedom\stalker_freedom_1.ogf
+		player_hud_section            = actor_hud_freedom_wind
+		character_portrait            = ui_inGame2_Freedom_1
+		full_icon_name                = npc_icon_svoboda_light_outfit
+		full_scale_icon               = 10, 11
+        
+		inv_name                      = svoboda_light_outfit_name
+		inv_name_short                = svoboda_light_outfit_name
+		description                   = svoboda_light_outfit_description
+		inv_grid_x                    = 90
+		inv_grid_y                    = 0
+		upgr_icon_x                   = 0
+		upgr_icon_y                   = 451
+		upgr_icon_width               = 310
+		upgr_icon_height              = 128
+		upgrades                	  = up_gr_firstab_sts_2, up_gr_seconab_sts_2, up_gr_thirdab_sts_2
+		installed_upgrades            =
+		upgrade_scheme                = up_scheme_sts_1
+        
+		community                     = freedom
+		kind                          = o_medium
+		cost                          = 44700
+		inv_weight                    = 10
+		additional_inventory_weight   = 10
+		additional_inventory_weight2  = 10
+		artefact_count                = 1
+		immunities_sect               = sect_svoboda_light_outfit_immunities
+		repair_type                   = outfit_medium
+		;repair_part_bonus             = 0.18
+		hit_fraction_actor            = 0.55
+		bones_koeff_protection        = actor_armor_freedom_wind
+		control_inertion_factor       = 1.18
+		power_loss                    = 0.05
+        
+		burn_protection               = 0.09
+		shock_protection              = 0.2
+		radiation_protection          = 0.0055
+		chemical_burn_protection      = 0.12
+		telepatic_protection          = 0
+		strike_protection             = 0.2
+		explosion_protection          = 0.21
+		wound_protection              = 0.32
+		fire_wound_protection         = 0.25
+
+[sect_svoboda_light_outfit_immunities]
+		burn_immunity                 = 0.1
+		chemical_burn_immunity        = 0.045
+		explosion_immunity            = 0.1
+		fire_wound_immunity           = 0.03
+		radiation_immunity            = 0.0
+		shock_immunity                = 0.027
+		strike_immunity               = 0
+		telepatic_immunity            = 0.0
+		wound_immunity                = 0.033
+		
+;--------------------------------------------------------------------------
+[monolith_outfit]:outfit_base
+		$spawn                        = "outfit\monolith_stalker_outfit"
+		class                         = EQU_STLK
+		ef_equipment_type             = 3
+		visual                        = dynamics\outfit\monolith_outfit
+		actor_visual                  = actors\stalker_monolith\stalker_monolith_2.ogf
+		npc_visual                    = actors\stalker_monolith\stalker_monolith_2.ogf
+		player_hud_section            = actor_hud_monolith_suit
+		character_portrait            = ui_inGame2_monolit_2
+		full_icon_name                = npc_icon_stalker_outfit
+		full_scale_icon               = 14, 11
+        
+		inv_name                      = monolith_outfit_name
+		inv_name_short                = monolith_outfit_name
+		description                   = monolith_outfit_description
+		inv_grid_x                    = 90
+		inv_grid_y                    = 3
+		upgr_icon_x                   = 3438
+		upgr_icon_y                   = 608
+		upgr_icon_width               = 308
+		upgr_icon_height              = 136
+		upgrades                	  = up_gr_firstab_sts_1, up_gr_seconab_sts_1, up_gr_thirdab_sts_1
+		installed_upgrades            =
+		upgrade_scheme                = up_scheme_sts_1
+        
+		community                     = monolith
+		kind                          = o_medium
+		cost                          = 45120
+		inv_weight                    = 8.2
+		additional_inventory_weight   = 10
+		additional_inventory_weight2  = 10
+		artefact_count                = 2
+		immunities_sect               = sect_monolith_outfit_immunities
+		repair_type                   = outfit_medium
+		;repair_part_bonus             = 0.24
+		hit_fraction_actor            = 0.55
+		bones_koeff_protection        = actor_armor_suit
+		control_inertion_factor       = 1.23
+		power_loss                    = 0.05
+        
+		burn_protection               = 0.04
+		shock_protection              = 0.17
+		radiation_protection          = 0.011
+		chemical_burn_protection      = 0.04
+		telepatic_protection          = 0
+		strike_protection             = 0.1
+		explosion_protection          = 0.19
+		wound_protection              = 0.19
+		fire_wound_protection         = 0.19
+
+[sect_monolith_outfit_immunities]
+		burn_immunity                 = 0.1
+		chemical_burn_immunity        = 0.045
+		explosion_immunity            = 0.1
+		fire_wound_immunity           = 0.03
+		radiation_immunity            = 0.0
+		shock_immunity                = 0.027
+		strike_immunity               = 0
+		telepatic_immunity            = 0.0
+		wound_immunity                = 0.033
