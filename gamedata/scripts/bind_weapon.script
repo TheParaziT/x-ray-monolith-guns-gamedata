@@ -1,10 +1,54 @@
---Биндер оружия, сокрытие/появление костей у оружия
+--Биндер оружия, сокрытие/появление костей у оружия, поддержка специальных анимаций из Gunslinger
 --Автор кода: liner (https://ap-pro.ru/profile/643-liner/)
 --Сделано для Original Weapon Restoration Mod
 
---Сам биндер: ничего НЕ ТРОГАТЬ!
+--TODO:
+--[[
+1. ЛЦУ, фонарик, тактический нож
+2. Апгрейды
+3. Синхроназация звука с анимациями из ганса
+4. Быстрый удар ножом
+]]
+
+--БАГИ:
+--[[
+1. Если выбросить оружие на землю, то оно будет покоцано.
+]]
+
+--ВСЕ возможные состояния оружие (скопированные enum из ДВИЖКА)
+--[[
+	eIdle = 0,							[0]
+	eShowing, 							[1]
+	eHiding, 							[2]
+	eHidden, 							[3]
+	eBore,								[4]
+	eLastBaseState = eBore,				[4]
+	eFire = eLastBaseState + 1,			[5]
+	eFire2,								[6]
+	eReload,							[7]
+	eMisfire,							[8]
+	eSwitch,							[9]
+	eSwitchMode,						[10]
+	eAimStart,							[11]
+	eAimEnd								[12]
+]]
+
+--тестовая функция
+--run_string _G.set_misfire()
+local function state_set(s)
+	local a = db.actor:active_item()
+	if a and IsWeapon(a) then
+		a:set_state(s)
+	end
+end
+
+_G.set_misfire = function()
+	state_set(8)
+end
+
+--Тут мы биндим оружие
 function bind(obj)
-	obj:bind_object(weapon_binder(obj))
+	obj:bind_object(wpn_binder(obj))
 end
 
 --Крашить игру при малейших оплошностях (строгий контроль)? (рекомендуется ставить true)
@@ -23,12 +67,12 @@ else --простой вывод в лог
 	end
 end
 
-class "weapon_binder" (object_binder)
+class "wpn_binder" (object_binder)
 
-function weapon_binder:__init(obj) super(obj)
+function wpn_binder:__init(obj) super(obj)
 end
 
-function weapon_binder:bone_check(bone)
+function wpn_binder:bone_check(bone)
 	local obj = self.object
 	--Если вдруг нету кости в модели оружия, которая указана в конфиге
 	if obj:get_bone_id(bone) == 65535 then
@@ -38,7 +82,7 @@ function weapon_binder:bone_check(bone)
 end
 
 --Распарсить строку в таблицу костей
-function weapon_binder:insert_bones(str, status, verify)
+function wpn_binder:insert_bones(str, status, verify)
 	local list = str_explode(str,",") --парсим через запятые
 	for q,v in pairs(list) do
 		self:bone_check(v)
@@ -53,7 +97,7 @@ function weapon_binder:insert_bones(str, status, verify)
 end
 
 --Собрать все данные о настройках костей
-function weapon_binder:init_bone_settings()
+function wpn_binder:init_bone_settings()
 	local sec = self.object:section()
 	local s = ini_sys:r_string_ex(sec, "def_hide_bones")
 	if s then
@@ -65,7 +109,7 @@ function weapon_binder:init_bone_settings()
 	end
 end
 
-function weapon_binder:net_spawn(se_obj)
+function wpn_binder:net_spawn(se_obj)
 	if not(object_binder.net_spawn(self,se_obj)) then
         return false
     end
@@ -76,14 +120,15 @@ end
 
 --Апдейт
 local tg = 0 --общий таймер для всех оружий
-function weapon_binder:update(dt)
+function wpn_binder:update(dt)
 	object_binder.update(self,dt)
+	local w = self.object
+	w:play_cycle("idle")
 	if device():time_global() < tg then
 		--Апдейт должен быть один раз в 500 милисекунд!
 		return
 	end
 	tg = device():time_global() + 500
-	local w = self.object
 	--Перебираем установленные апгрейды и читаем их свойства
 	w:iterate_installed_upgrades(function(sec)
 		sec = ini_sys:r_string(sec,"section")
@@ -103,7 +148,212 @@ function weapon_binder:update(dt)
 	--bone - имя кости, с которой что-то будем делать
 	--status - видимости кости
 	for bone,status in pairs(self.bone_params) do
-		w:set_bone_visible(bone,status,false,true)
 		w:set_bone_visible(bone,status,false,false)
+		w:set_bone_visible(bone,status,false,true)
 	end
 end
+
+--Существует ли заданная анимация в секции предмета?
+local function anim_ex(s,anm)
+	local hud = ini_sys:r_string(s,"hud")
+	return (ini_sys:r_string_ex(hud,anm) or nil) ~= nil
+end
+
+--Привести анимацию к базовому виду, без всяких префиксов
+local function degrade(anm)
+	printf("Anim degrade start! [%s]",anm)
+	anm = anm:gsub("_empty","")
+	anm = anm:gsub("_w_gl","")
+	anm = anm:gsub("_g","")
+	anm = anm:gsub("_aim","")
+	anm = anm:gsub("shots","shoot")
+	return anm
+end
+
+--Соединить префикс с анимацией и проверить, существует ли такая анимация
+local function concat(anm,prefix,s)
+	local new = anm..prefix
+	if anim_ex(s,new) then
+		return new
+	end
+	printf("New anim [%s] doesn't ex! old [%s]",new,anm)
+	return anm
+end
+
+local LAST_FM = "1"
+local SPRINT_STARTED = false
+
+function wpn_binder:animation_play(t)
+	local it = self.object
+	local w = it:cast_Weapon()
+	if not w then
+		return
+	end
+	local anm = t.anm_name
+	local name = degrade(anm)
+	local s = it:section()
+	if w:IsZoomed() then
+		name = concat(name,w:IsScopeAttached() and "_aim_scope" or "_aim",s)
+		local st = level.actor_moving_state()
+		if not name:find("shoo") and (IsMoveState('mcAccel',st) or IsMoveState('mcFwd',st) or IsMoveState('mcLStrafe',st) or IsMoveState('mcRStrafe',st) or IsMoveState('mcBack',st) or IsMoveState('mcAnyMove',st)) then
+			name = name.."_moving"
+		end
+		if IsMoveState('mcAccel',st) then
+			name = concat(name,"_slow",s)
+		end
+		if IsMoveState('mcFwd',st) then
+			name = concat(name,"_forward",s)
+		elseif IsMoveState('mcBack',st) then
+			name = concat(name,"_back",s)
+		end
+		if IsMoveState('mcLStrafe',st) then
+			name = concat(name,"_left",s)
+		elseif IsMoveState('mcRStrafe',st) then
+			name = concat(name,"_right",s)
+		end
+	end
+	if anm:find("sprint") then
+		if SPRINT_STARTED then
+			name = "anm_idle_sprint"
+		else
+			name = "anm_idle_sprint_start"
+		end
+		SPRINT_STARTED = true
+	else
+		if SPRINT_STARTED then
+			name = "anm_idle_sprint_end"
+		end
+		SPRINT_STARTED = false
+		if anm:find("switch_mod") then
+			name = string.format("anm_changefiremode_from_%s_to_",LAST_FM)
+			local Fm = w:GetFireMode()
+			if Fm == -1 then
+				name = name.."a"
+			else
+				name = name..Fm
+			end
+		end
+	end
+	printf("Sprint started [%s]",SPRINT_STARTED and "true" or "false")
+	if w:IsMisfire() then
+		name = concat(name,"_jammed",s)
+	else
+		local ea = w:GetAmmoElapsed()
+		if ea == 0 then
+			name = concat(name,"_empty",s)
+		elseif ea == 1 and anm:find("shoo") then
+			name = concat(name,"_last",s)
+		end
+	end
+	if w:IsSilencerAttached() then
+		name = concat(name,"_sil",s)
+	end
+	if w:IsGrenadeLauncherAttached() then
+		name = concat(name,it:weapon_in_grenade_mode() and "_g" or "_w_gl",s)
+	end
+	printf("Motion name [%s], old [%s]",name,anm)
+	if anim_ex(s,name) then
+		t.anm_name = name
+	else
+		printf("Anm for new doesn't exist!")
+	end
+end
+
+--Проиграть звук соответствующий анимации
+function wpn_binder:snd_play(anm)
+
+end
+
+--Проверить, является ли оружие оружием из Ганса?
+local function GetGWR(o)
+	if not o then
+		o = db.actor:active_item()
+	end
+	if not o then return nil end
+	local b = o:binded_object()
+	if b and ini_sys:r_string_ex(o:section(),"script_binding","") == "bind_weapon.bind" then
+		return b
+	end
+	return nil
+end
+
+--Каллбэк на проигрыш анимации
+--t - таблица с настройками анимации
+--it - предмет, который играет анимацию
+local function anim_play(t, it)
+	--Проверяем, забиндено ли оружие
+	local b = GetGWR(it)
+	if b then
+		b:animation_play(t)
+	end
+end
+
+--[[
+local function before_key_press(q,bind,dis)
+	--Если полностью отключено управление
+	if dis then
+		return
+	end
+	if bind == key_bindings.kWPN_FIREMODE_PREV or bind == key_bindings.kWPN_FIREMODE_NEXT then
+		local a = db.actor:active_item()
+		if not a then
+			return
+		end
+		--Проверяем, забиндено ли оружие
+		local b = GetGWR(a)
+		if b then
+			local w = a:cast_Weapon()
+			if w then
+				local mode = w:GetFireMode()
+				if mode == -1 then
+					LAST_FM = "a"
+				else
+					LAST_FM = tostring(mode)
+				end
+				printf("Before key press: fire mode [%s]",LAST_FM)
+			end
+		end
+	end
+end
+]]
+
+local tg = 0
+local function upd()
+	if device():time_global() < tg then
+		return
+	end
+	local a = db.actor:active_item()
+	if not a then
+		return
+	end
+	tg = device():time_global() + 100
+	--Проверяем, забиндено ли оружие
+	local b = GetGWR(a)
+	if b then
+		local w = a:cast_Weapon()
+		if w then
+			local mode = w:GetFireMode()
+			if mode == -1 then
+				LAST_FM = "a"
+			else
+				LAST_FM = tostring(mode)
+			end
+			printf("Before key press: fire mode [%s]",LAST_FM)
+		end
+	end
+end
+
+function on_game_start()
+	--Проверка на версию аномали 1.5.2
+	if GAME_VERSION ~= "1.5.2" then
+		abort("Invalid Anomaly version [%s]! Must be 1.5.2",GAME_VERSION)
+		return
+	end
+	RegisterScriptCallback("actor_on_hud_animation_play",anim_play)
+	RegisterScriptCallback("actor_on_update",upd)
+end
+
+
+--------------------------------------------------------------------------------------------------------------------
+---------------------------			GUNSLINGER WORLD WEAPON BINDER				------------------------------------
+--------------------------------------------------------------------------------------------------------------------
