@@ -1,0 +1,726 @@
+[wpn_ak74u_hud]:default_hud
+zoom_hide_crosshair        = true
+attach_place_idx           = 0
+item_visual                = dynamics\weapons\wpn_ak74u\wpn_ak74u_hud.ogf
+
+zoom_dof_near = 0.25
+zoom_dof_focus = 0.5
+
+inertion_pitch_offset_r = -0.008
+inertion_pitch_offset_n = -0.006
+inertion_pitch_offset_d = -0.001
+inertion_origin_offset = 0.06
+
+inertion_aim_origin_offset = 0.015
+inertion_aim_speed = 10
+
+hud_fov_factor = 1.25
+
+hands_position				= 0.02,-0.02,0.01
+hands_orientation			= 0.0,0.0,0.0
+
+hands_position_16x9			= 0.02,-0.02,0.01
+hands_orientation_16x9			= 0.0,0.0,0.0
+
+item_position				= 0.0,0.0,0.0
+item_orientation			= 0.0,0.0,0.0
+
+aim_hud_offset_pos = 0.0009500,0.02100,0.0
+aim_hud_offset_rot = 0.000000,0.000000,0.0
+
+aim_hud_offset_pos_16x9 = 0.0009500,0.02100,0.0
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.0
+
+gl_hud_offset_pos               = 0,0,0;-0.053000,-0.059000,0.000000
+gl_hud_offset_rot               = 0,0,0;-0.145000,0.000000,0.000000
+
+gl_hud_offset_pos_16x9            = 0,0,0;-0.130000,0.003500,0.000500
+gl_hud_offset_rot_16x9            = 0,0,0;0.052500,0.045000,-0.010000
+
+lean_hud_offset_pos        = 0,0,0
+lean_hud_offset_rot        = 0,0,0
+
+
+shell_point			= 0.0,-9.0,0.0
+shell_dir                       = 0.0,0.0,0.0
+shell_bone			= bolt
+
+fire_point			= 0.0,0.007,0.572
+fire_bone                       = wpn_body
+fire_point2                     = 0.0,0.007,0.765
+fire_bone2                      = wpn_body
+
+
+mask_firemode_1 = 
+mask_firemode_a = _auto
+
+
+disable_bore = true                                            ;отключение анимации скуки
+
+mix_shoot_after_idle = true                                    ;микс первого выстрела с анимациями idle
+mix_shoot_after_shoot_in_queue = true                          ;микс между серией выстрелов
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+prohibit_suicide = false		;включаем суицид
+suicide_by_animation=true		;кроме смещения будет играться анимация
+custom_suicide_shot = true		; показываем, что необходима особая анимация самоубийственного выстрела
+
+anm_suicide			= aks74u_suicide
+lock_time_anm_suicide 		= 7.37
+anm_stop_suicide 		= aks74u_suicide_end
+lock_time_anm_stop_suicide 	= 1.37
+suicide_delay = 0.25 ;0.5
+
+anm_shoot_suicide                = aks74u_suicide_shoot
+anm_shoot_suicide_sil            = aks74u_suicide_shoot
+anm_shoot_last_suicide           = aks74u_suicide_shoot
+anm_shoot_last_suicide_sil       = aks74u_suicide_shoot
+
+hud_move_suicide_offset_pos = 0, 0, 0
+hud_move_suicide_offset_rot = 0,0,0
+
+hud_move_suicide_offset_pos_16x9 = 0, 0, 0
+hud_move_suicide_offset_rot_16x9 = 0,0,0
+
+;АВТО-РЕЖИМ
+
+anm_suicide_auto			= aks74u_suicide, idle_auto
+lock_time_anm_suicide_auto 		= 7.37
+anm_stop_suicide_auto 		        = aks74u_suicide_end, idle_auto
+lock_time_anm_stop_suicide_auto 	= 1.37
+
+anm_shoot_auto_suicide                = aks74u_suicide_shoot
+anm_shoot_auto_suicide_sil            = aks74u_suicide_shoot
+anm_shoot_auto_last_suicide           = aks74u_suicide_shoot
+anm_shoot_auto_last_suicide_sil       = aks74u_suicide_shoot
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;Доставание///////////////////////////////////////////////////
+anm_show                   = aks74u_draw
+anm_show_empty             = aks74u_draw
+anm_show_jammed            = aks74u_draw, idle_jammed
+
+;Убирание/////////////////////////////////////////////////////
+anm_hide                   = aks74u_hide
+anm_hide_empty             = aks74u_hide
+anm_hide_jammed            = aks74u_hide, idle_jammed
+
+;Бездействие//////////////////////////////////////////////////
+anm_idle                            = aks74u_idle
+anm_idle_empty                      = aks74u_idle
+anm_idle_jammed                     = aks74u_idle, idle_jammed
+anm_idle_slow                       = aks74u_idle
+anm_idle_crouch                     = aks74u_idle
+anm_idle_crouch_slow                = aks74u_idle
+anm_idle_slow_empty                 = aks74u_idle
+anm_idle_crouch_empty               = aks74u_idle
+anm_idle_crouch_slow_empty          = aks74u_idle
+anm_idle_slow_jammed                = aks74u_idle, idle_jammed
+anm_idle_crouch_jammed              = aks74u_idle, idle_jammed
+anm_idle_crouch_slow_jammed         = aks74u_idle, idle_jammed
+
+
+;Бездействие в прицеливании///////////////////////////////////
+autoshoot_anm_idle_aim_start = true         ;команда заставляет произвести выстрел с задержкой на lock_time, если кнопка выстрела будет нажата раньше заданного времени в lock_time
+lock_time_anm_idle_aim_start = 0.2          ;команда блокирует все действия (кроме выбрасывания оружия) во время отыгрывания обозначенной анимации до окончания заданного времени
+autoshoot_anm_idle_aim_start_empty = true
+lock_time_anm_idle_aim_start_empty = 0.2
+autoshoot_anm_idle_aim_start_jammed = true
+lock_time_anm_idle_aim_start_jammed = 0.2
+
+anm_idle_aim_start             = aks74u_aim_start
+anm_idle_aim_start_empty       = aks74u_aim_start
+anm_idle_aim_start_jammed      = aks74u_aim_start
+
+anm_idle_aim                   = aks74u_aim, idle_aim
+anm_idle_aim_empty             = aks74u_aim, idle_aim
+anm_idle_aim_jammed            = aks74u_aim, idle_aim
+anm_idle_aim_scope             = aks74u_aim, idle_aim
+anm_idle_aim_scope_empty       = aks74u_aim, idle_aim
+anm_idle_aim_scope_jammed      = aks74u_aim, idle_aim
+
+
+autoshoot_anm_idle_aim_end = true
+lock_time_anm_idle_aim_end = 0.25
+autoshoot_anm_idle_aim_end_empty = true
+lock_time_anm_idle_aim_end_empty = 0.25
+autoshoot_anm_idle_aim_end_jammed = true
+lock_time_anm_idle_aim_end_jammed = 0.25
+
+anm_idle_aim_end               = aks74u_aim_end
+anm_idle_aim_end_empty         = aks74u_aim_end
+anm_idle_aim_end_jammed        = aks74u_aim_end
+
+
+;enable_directions_anm_idle = true
+enable_directions_anm_idle_aim = true
+
+;Ходьба ВПЕРЕД//////////////////////////////////////////////////////////////////////////
+anm_idle_moving 					= aks74u_walk
+anm_idle_moving_jammed 					= aks74u_walk, idle_jammed
+anm_idle_moving_empty					= aks74u_walk
+
+;Ходьба медленная (SHIFT) ВПЕРЕД//////////////////////////////////////////////////////////////////////////
+anm_idle_moving_slow 					= aks74u_walk_slow
+anm_idle_moving_slow_jammed 				= aks74u_walk_slow, idle_jammed
+anm_idle_moving_slow_empty				= aks74u_walk_slow
+
+;Ходьба в полуприсяди (CTRL) ВПЕРЕД//////////////////////////////////////////////////////////////////////////
+anm_idle_moving_crouch 					        = aks74u_walk_slow_down
+anm_idle_moving_crouch_jammed 					= aks74u_walk_slow_down, idle_jammed
+anm_idle_moving_crouch_empty					= aks74u_walk_slow_down
+
+;Ходьба в присяде (CTRL+SHIFT) ВПЕРЕД/////////////////////////////////////////////////////////////////////////
+anm_idle_moving_crouch_slow 					= aks74u_walk_slow_super
+anm_idle_moving_crouch_slow_jammed 				= aks74u_walk_slow_super, idle_jammed
+anm_idle_moving_crouch_slow_empty				= aks74u_walk_slow_super
+
+;ходьба в прицеливании ВПЕРЕД//////////////////////////////////////////////////////////////////
+anm_idle_aim_moving_forward                   = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_forward_empty             = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_forward_jammed            = aks74u_aim_walk, idle_aim
+
+;ходьба в прицеливании НАЗАД//////////////////////////////////////////////////////////////////
+anm_idle_aim_moving_back                   = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_back_empty             = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_back_jammed            = aks74u_aim_walk, idle_aim
+
+
+;ходьба в прицеливании ВЛЕВО//////////////////////////////////////////////////////////////////
+anm_idle_aim_moving_left                   = aks74u_aim_walk_left, idle_aim  
+anm_idle_aim_moving_left_empty             = aks74u_aim_walk_left, idle_aim
+anm_idle_aim_moving_left_jammed            = aks74u_aim_walk_left, idle_aim
+
+
+;ходьба в прицеливании ВПРАВО//////////////////////////////////////////////////////////////////
+anm_idle_aim_moving_right                   = aks74u_aim_walk_right, idle_aim
+anm_idle_aim_moving_right_empty             = aks74u_aim_walk_right, idle_aim
+anm_idle_aim_moving_right_jammed            = aks74u_aim_walk_right, idle_aim
+ 
+
+;ходьба в прицеливании ВПЕРЕД+ВЛЕВО////////////////////////////////////////////////////////////
+anm_idle_aim_moving_forward_left                   = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_forward_left_empty             = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_forward_left_jammed            = aks74u_aim_walk, idle_aim
+
+
+;ходьба в прицеливании ВПЕРЕД+ВПРАВО///////////////////////////////////////////////////////////
+anm_idle_aim_moving_forward_right                   = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_forward_right_empty             = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_forward_right_jammed            = aks74u_aim_walk, idle_aim
+
+
+;ходьба в прицеливании НАЗАД+ВЛЕВО/////////////////////////////////////////////////////////////
+anm_idle_aim_moving_back_left                   = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_back_left_empty             = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_back_left_jammed            = aks74u_aim_walk, idle_aim
+
+
+;ходьба в прицеливании НАЗАД+ВПРАВО////////////////////////////////////////////////////////////
+anm_idle_aim_moving_back_right                   = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_back_right_empty             = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_back_right_jammed            = aks74u_aim_walk, idle_aim
+
+;ходьба в прицеливании при надетом прицеле////////////////////////////////////////////////////
+anm_idle_aim_scope_moving	              = aks74u_aim_walk_scope, idle_aim
+anm_idle_aim_scope_moving_empty		      = aks74u_aim_walk_scope, idle_aim
+anm_idle_aim_scope_moving_jammed	      = aks74u_aim_walk_scope, idle_aim
+
+
+;Бег//////////////////////////////////////////////////////////////////
+lock_time_anm_idle_sprint_start = 0.15
+lock_time_anm_idle_sprint_start_empty = 0.15
+lock_time_anm_idle_sprint_start_jammed = 0.15
+anm_idle_sprint_start             = aks74u_sprint_start
+anm_idle_sprint_start_empty       = aks74u_sprint_start
+anm_idle_sprint_start_jammed      = aks74u_sprint_start, idle_jammed
+
+
+anm_idle_sprint                   = aks74u_sprint
+anm_idle_sprint_empty             = aks74u_sprint
+anm_idle_sprint_jammed            = aks74u_sprint, idle_jammed
+
+
+lock_time_anm_idle_sprint_end        = 0.35
+lock_time_anm_idle_sprint_end_empty  = 0.35
+lock_time_anm_idle_sprint_end_jammed = 0.35
+anm_idle_sprint_end             = aks74u_sprint_end
+anm_idle_sprint_end_empty       = aks74u_sprint_end
+anm_idle_sprint_end_jammed      = aks74u_sprint_end, idle_jammed
+
+
+;Скука////////////////////////////////////////////////////////////////////
+anm_bore                   = aks74u_draw
+anm_bore_empty             = aks74u_draw
+anm_bore_jammed            = aks74u_draw, idle_jammed
+
+
+;Выстрелы обычными патронами/////////////////////////////////////////////////////////////////////
+anm_shoot                = aks74u_shoot
+anm_shoot_sil            = aks74u_shoot
+anm_shoot_jammed	 = aks74u_shoot, idle_jammed
+anm_shoot_jammed_sil	 = aks74u_shoot, idle_jammed
+anm_shoot_last           = aks74u_shoot
+anm_shoot_last_sil       = aks74u_shoot
+anm_shoot_aim            = aks74u_aim_shoot
+anm_shoot_aim_sil        = aks74u_aim_shoot
+anm_shoot_aim_jammed	 = aks74u_aim_shoot, idle_aim
+anm_shoot_aim_jammed_sil = aks74u_aim_shoot, idle_aim
+anm_shoot_aim_last       = aks74u_aim_shoot
+anm_shoot_aim_last_sil   = aks74u_aim_shoot
+anm_shoot_aim_scope            = aks74u_aim_shoot_scope, aks74u_aim_shoot
+anm_shoot_aim_scope_sil        = aks74u_aim_shoot_scope, aks74u_aim_shoot
+anm_shoot_aim_scope_last       = aks74u_aim_shoot_scope, aks74u_aim_shoot
+anm_shoot_aim_scope_last_sil   = aks74u_aim_shoot_scope, aks74u_aim_shoot
+anm_shoot_aim_scope_jammed     = aks74u_aim_shoot_scope, idle_aim
+anm_shoot_aim_scope_jammed_sil = aks74u_aim_shoot_scope, idle_aim
+
+;Осечка//////////////////////////////////////////////////
+lock_time_anm_fakeshoot_empty = 0.20
+anm_fakeshoot_empty      = aks74u_dry_empty
+lock_time_anm_fakeshoot_aim_empty = 0.20
+anm_fakeshoot_aim_empty      = aks74u_aim_dry, idle_aim
+lock_time_anm_fakeshoot_jammed = 0.90
+anm_fakeshoot_jammed     = aks74u_dry, idle_jammed
+lock_time_anm_fakeshoot_aim_jammed = 0.20
+anm_fakeshoot_aim_jammed     = aks74u_aim_dry, idle_aim
+
+;Перезарядка/////////////////////////////////////////////////////////////////////
+anm_reload                           = aks74u_reload
+anm_reload_empty                     = aks74u_reload_full
+anm_reload_jammed                    = aks74u_revival
+anm_reload_jammed_last               = aks74u_revival
+anm_reload_ammochange                = aks74u_reload
+anm_reload_empty_ammochange          = aks74u_reload_full
+
+
+;Смена режима огня//////////////////////////////////////////////////////////////////////////
+use_firemode_change_anim = true
+
+;1-a
+lock_time_anm_changefiremode_from_1_to_a = 1.17
+anm_changefiremode_from_1_to_a			     = aks74u_firemode_1_to_a
+lock_time_anm_changefiremode_from_1_to_a_jammed = 1.17
+anm_changefiremode_from_1_to_a_jammed		     = aks74u_firemode_1_to_a, aks74u_firemode_1_to_a_jammed
+lock_time_anm_changefiremode_from_1_to_a_empty = 1.17
+anm_changefiremode_from_1_to_a_empty		     = aks74u_firemode_1_to_a
+
+
+;a-1
+lock_time_anm_changefiremode_from_a_to_1 = 1.17
+anm_changefiremode_from_a_to_1			     = aks74u_firemode_a_to_1
+lock_time_anm_changefiremode_from_a_to_1_jammed = 1.17
+anm_changefiremode_from_a_to_1_jammed		     = aks74u_firemode_a_to_1, aks74u_firemode_a_to_1_jammed
+lock_time_anm_changefiremode_from_a_to_1_empty = 1.17
+anm_changefiremode_from_a_to_1_empty		     = aks74u_firemode_a_to_1
+
+
+
+
+;Разрядка//////////////////////////////////////////////////////////////////////////
+use_unloadmag_anim = true
+lock_time_anm_unload_mag = 0.8
+anm_unload_mag                               = aks74u_draw
+lock_time_anm_unload_mag_jammed = 0.8
+anm_unload_mag_jammed                        = aks74u_draw  
+lock_time_anm_unload_mag_empty = 0.8
+anm_unload_mag_empty                         = aks74u_draw
+
+;Включение ЛЦУ//////////////////////////////////////////////////////////////////////////
+anm_laser_on = aks74u_lam
+lock_time_start_anm_laser_on = 0.45
+lock_time_end_anm_laser_on = 0.65
+
+anm_laser_on_empty = aks74u_lam
+lock_time_start_anm_laser_on_empty = 0.45
+lock_time_end_anm_laser_on_empty = 0.65
+
+anm_laser_on_jammed = aks74u_lam, idle_jammed
+lock_time_start_anm_laser_on_jammed = 0.45
+lock_time_end_anm_laser_on_jammed = 0.65
+
+
+;Выключение ЛЦУ//////////////////////////////////////////////////////////////////////////
+anm_laser_off = aks74u_lam
+lock_time_start_anm_laser_off = 0.45
+lock_time_end_anm_laser_off = 0.65
+
+anm_laser_off_empty = aks74u_lam
+lock_time_start_anm_laser_off_empty = 0.45
+lock_time_end_anm_laser_off_empty = 0.65
+
+anm_laser_off_jammed = aks74u_lam, idle_jammed
+lock_time_start_anm_laser_off_jammed = 0.45
+lock_time_end_anm_laser_off_jammed = 0.65
+
+;Включение фонаря//////////////////////////////////////////////////////////////////////////
+anm_torch_on = aks74u_lam
+lock_time_start_anm_torch_on = 0.45
+lock_time_end_anm_torch_on = 0.65
+
+anm_torch_on_empty = aks74u_lam
+lock_time_start_anm_torch_on_empty = 0.45
+lock_time_end_anm_torch_on_empty = 0.65
+
+anm_torch_on_jammed = aks74u_lam, idle_jammed
+lock_time_start_anm_torch_on_jammed = 0.45
+lock_time_end_anm_torch_on_jammed = 0.65
+
+
+;Выключение фонаря//////////////////////////////////////////////////////////////////////////
+anm_torch_off = aks74u_lam
+lock_time_start_anm_torch_off = 0.45
+lock_time_end_anm_torch_off = 0.65
+
+anm_torch_off_empty = aks74u_lam
+lock_time_start_anm_torch_off_empty = 0.45
+lock_time_end_anm_torch_off_empty = 0.65
+
+anm_torch_off_jammed = aks74u_lam, idle_jammed
+lock_time_start_anm_torch_off_jammed = 0.45
+lock_time_end_anm_torch_off_jammed = 0.65
+
+
+;включение налобника//////////////////////////////////////////////////////////////////////////
+anm_headlamp_on = aks74u_headflash
+lock_time_start_anm_headlamp_on = 0.58
+lock_time_end_anm_headlamp_on = 0.5
+
+anm_headlamp_on_empty = aks74u_headflash
+lock_time_start_anm_headlamp_on_empty = 0.58
+lock_time_end_anm_headlamp_on_empty = 0.5
+
+anm_headlamp_on_jammed = aks74u_headflash, idle_jammed
+lock_time_start_anm_headlamp_on_jammed = 0.58
+lock_time_end_anm_headlamp_on_jammed = 0.5
+
+;выключение налобника//////////////////////////////////////////////////////////////////////////
+anm_headlamp_off = aks74u_headflash
+lock_time_start_anm_headlamp_off = 0.58
+lock_time_end_anm_headlamp_off = 0.5
+
+anm_headlamp_off_empty = aks74u_headflash
+lock_time_start_anm_headlamp_off_empty = 0.58
+lock_time_end_anm_headlamp_off_empty = 0.5
+
+anm_headlamp_off_jammed = aks74u_headflash, idle_jammed
+lock_time_start_anm_headlamp_off_jammed = 0.58
+lock_time_end_anm_headlamp_off_jammed = 0.5
+
+
+;включение пнв//////////////////////////////////////////////////////////////////////////
+anm_nv_on = aks74u_headflash
+anm_nv_on_empty = aks74u_headflash
+anm_nv_on_jammed = aks74u_headflash, idle_jammed
+
+
+;выключение пнв//////////////////////////////////////////////////////////////////////////
+anm_nv_off = aks74u_headflash
+anm_nv_off_empty = aks74u_headflash
+anm_nv_off_jammed = aks74u_headflash, idle_jammed
+
+
+
+
+;//////////////////////////////////////////////////////////////////////////СЕТ АНИМАЦИЙ АВТОМАТИЧЕСКОГО РЕЖИМА//////////////////////////////////////////////////////////////////////////
+
+;Доставание///////////////////////////////////////////////////
+anm_show_auto                   = aks74u_draw, idle_auto
+anm_show_auto_empty             = aks74u_draw, idle_auto
+anm_show_auto_jammed            = aks74u_draw, idle_jammed_auto
+
+;Убирание/////////////////////////////////////////////////////
+anm_hide_auto                   = aks74u_hide, idle_auto
+anm_hide_auto_empty             = aks74u_hide, idle_auto
+anm_hide_auto_jammed            = aks74u_hide, idle_jammed_auto
+
+;Бездействие//////////////////////////////////////////////////
+anm_idle_auto                            = aks74u_idle, idle_auto
+anm_idle_auto_empty                      = aks74u_idle, idle_auto
+anm_idle_auto_jammed                     = aks74u_idle, idle_jammed_auto
+anm_idle_slow_auto                       = aks74u_idle, idle_auto
+anm_idle_crouch_auto                     = aks74u_idle, idle_auto
+anm_idle_crouch_slow_auto                = aks74u_idle, idle_auto
+anm_idle_slow_auto_empty                 = aks74u_idle, idle_auto
+anm_idle_crouch_auto_empty               = aks74u_idle, idle_auto
+anm_idle_crouch_slow_auto_empty          = aks74u_idle, idle_auto
+anm_idle_slow_auto_jammed                = aks74u_idle, idle_jammed_auto
+anm_idle_crouch_auto_jammed              = aks74u_idle, idle_jammed_auto
+anm_idle_crouch_slow_auto_jammed         = aks74u_idle, idle_jammed_auto
+
+
+;Бездействие в прицеливании///////////////////////////////////
+autoshoot_anm_idle_aim_start_auto = true         ;команда заставляет произвести выстрел с задержкой на lock_time, если кнопка выстрела будет нажата раньше заданного времени в lock_time
+lock_time_anm_idle_aim_start_auto = 0.2          ;команда блокирует все действия (кроме выбрасывания оружия) во время отыгрывания обозначенной анимации до окончания заданного времени
+autoshoot_anm_idle_aim_start_auto_empty = true
+lock_time_anm_idle_aim_start_auto_empty = 0.2
+autoshoot_anm_idle_aim_start_auto_jammed = true
+lock_time_anm_idle_aim_start_auto_jammed = 0.2
+
+anm_idle_aim_start_auto             = aks74u_aim_start, aks74u_aim_start_auto
+anm_idle_aim_start_auto_empty       = aks74u_aim_start, aks74u_aim_start_auto
+anm_idle_aim_start_auto_jammed      = aks74u_aim_start, aks74u_aim_start_auto
+
+anm_idle_aim_auto                   = aks74u_aim, idle_aim_auto
+anm_idle_aim_auto_empty             = aks74u_aim, idle_aim_auto
+anm_idle_aim_auto_jammed            = aks74u_aim, idle_aim_auto
+anm_idle_aim_scope_auto             = aks74u_aim, idle_aim_auto
+anm_idle_aim_scope_auto_empty       = aks74u_aim, idle_aim_auto
+anm_idle_aim_scope_auto_jammed      = aks74u_aim, idle_aim_auto
+
+
+
+autoshoot_anm_idle_aim_end_auto = true
+lock_time_anm_idle_aim_end_auto = 0.25
+autoshoot_anm_idle_aim_end_auto_empty = true
+lock_time_anm_idle_aim_end_auto_empty = 0.25
+autoshoot_anm_idle_aim_end_auto_jammed = true
+lock_time_anm_idle_aim_end_auto_jammed = 0.25
+
+anm_idle_aim_end_auto               = aks74u_aim_end, aks74u_aim_end_auto
+anm_idle_aim_end_auto_empty         = aks74u_aim_end, aks74u_aim_end_auto
+anm_idle_aim_end_auto_jammed        = aks74u_aim_end, aks74u_aim_end_auto
+
+
+;Ходьба ВПЕРЕД//////////////////////////////////////////////////////////////////////////
+anm_idle_moving_auto 					= aks74u_walk, idle_auto
+anm_idle_moving_auto_jammed 			        = aks74u_walk, idle_jammed_auto
+anm_idle_moving_auto_empty				= aks74u_walk, idle_auto
+
+;Ходьба медленная (SHIFT) ВПЕРЕД//////////////////////////////////////////////////////////////////////////
+anm_idle_moving_slow_auto 				= aks74u_walk_slow, idle_auto
+anm_idle_moving_slow_auto_jammed 			= aks74u_walk_slow, idle_jammed_auto
+anm_idle_moving_slow_auto_empty				= aks74u_walk_slow, idle_auto
+
+;Ходьба в полуприсяди (CTRL) ВПЕРЕД//////////////////////////////////////////////////////////////////////////
+anm_idle_moving_crouch_auto 					= aks74u_walk_slow_down, idle_auto
+anm_idle_moving_crouch_auto_jammed 				= aks74u_walk_slow_down, idle_jammed_auto
+anm_idle_moving_crouch_auto_empty				= aks74u_walk_slow_down, idle_auto
+
+;Ходьба в присяде (CTRL+SHIFT) ВПЕРЕД/////////////////////////////////////////////////////////////////////////
+anm_idle_moving_crouch_slow_auto 				= aks74u_walk_slow_super, idle_auto
+anm_idle_moving_crouch_slow_auto_jammed 			= aks74u_walk_slow_super, idle_jammed_auto
+anm_idle_moving_crouch_slow_auto_empty				= aks74u_walk_slow_super, idle_auto
+
+
+;ходьба в прицеливании ВПЕРЕД//////////////////////////////////////////////////////////////////
+anm_idle_aim_moving_forward_auto                   = aks74u_aim_walk, idle_aim_auto
+anm_idle_aim_moving_forward_auto_empty             = aks74u_aim_walk, idle_aim_auto
+anm_idle_aim_moving_forward_auto_jammed            = aks74u_aim_walk, idle_aim_auto
+
+;ходьба в прицеливании НАЗАД//////////////////////////////////////////////////////////////////
+anm_idle_aim_moving_back_auto                   = aks74u_aim_walk, idle_aim_auto
+anm_idle_aim_moving_back_auto_empty             = aks74u_aim_walk, idle_aim_auto
+anm_idle_aim_moving_back_auto_jammed            = aks74u_aim_walk, idle_aim_auto
+
+
+;ходьба в прицеливании ВЛЕВО//////////////////////////////////////////////////////////////////
+anm_idle_aim_moving_left_auto                   = aks74u_aim_walk_left, idle_aim_auto
+anm_idle_aim_moving_left_auto_empty             = aks74u_aim_walk_left, idle_aim_auto
+anm_idle_aim_moving_left_auto_jammed            = aks74u_aim_walk_left, idle_aim_auto
+
+
+;ходьба в прицеливании ВПРАВО//////////////////////////////////////////////////////////////////
+anm_idle_aim_moving_right_auto                   = aks74u_aim_walk_right, idle_aim_auto
+anm_idle_aim_moving_right_auto_empty             = aks74u_aim_walk_right, idle_aim_auto
+anm_idle_aim_moving_right_auto_jammed            = aks74u_aim_walk_right, idle_aim_auto
+ 
+
+;ходьба в прицеливании ВПЕРЕД+ВЛЕВО////////////////////////////////////////////////////////////
+anm_idle_aim_moving_forward_left_auto                   = aks74u_aim_walk, idle_aim_auto
+anm_idle_aim_moving_forward_left_auto_empty             = aks74u_aim_walk, idle_aim_auto
+anm_idle_aim_moving_forward_left_auto_jammed            = aks74u_aim_walk, idle_aim_auto
+
+
+;ходьба в прицеливании ВПЕРЕД+ВПРАВО///////////////////////////////////////////////////////////
+anm_idle_aim_moving_forward_right_auto                   = aks74u_aim_walk, idle_aim_auto
+anm_idle_aim_moving_forward_right_auto_empty             = aks74u_aim_walk, idle_aim_auto
+anm_idle_aim_moving_forward_right_auto_jammed            = aks74u_aim_walk, idle_aim_auto
+
+
+;ходьба в прицеливании НАЗАД+ВЛЕВО/////////////////////////////////////////////////////////////
+anm_idle_aim_moving_back_left_auto                   = aks74u_aim_walk, idle_aim_auto
+anm_idle_aim_moving_back_left_auto_empty             = aks74u_aim_walk, idle_aim_auto
+anm_idle_aim_moving_back_left_auto_jammed            = aks74u_aim_walk, idle_aim_auto
+
+
+;ходьба в прицеливании НАЗАД+ВПРАВО////////////////////////////////////////////////////////////
+anm_idle_aim_moving_back_right_auto                   = aks74u_aim_walk, idle_aim_auto
+anm_idle_aim_moving_back_right_auto_empty             = aks74u_aim_walk, idle_aim_auto
+anm_idle_aim_moving_back_right_auto_jammed            = aks74u_aim_walk, idle_aim_auto
+
+;ходьба в прицеливании при надетом прицеле////////////////////////////////////////////////////
+anm_idle_aim_scope_moving_auto	                      = aks74u_aim_walk_scope, idle_aim_auto
+anm_idle_aim_scope_moving_auto_empty		      = aks74u_aim_walk_scope, idle_aim_auto
+anm_idle_aim_scope_moving_auto_jammed	              = aks74u_aim_walk_scope, idle_aim_auto
+
+;Бег//////////////////////////////////////////////////////////////////
+lock_time_anm_idle_sprint_start_auto = 0.15
+lock_time_anm_idle_sprint_start_auto_empty = 0.15
+lock_time_anm_idle_sprint_start_auto_jammed = 0.15
+anm_idle_sprint_start_auto             = aks74u_sprint_start, idle_auto
+anm_idle_sprint_start_auto_empty       = aks74u_sprint_start, idle_auto
+anm_idle_sprint_start_auto_jammed      = aks74u_sprint_start, idle_jammed_auto
+
+
+anm_idle_sprint_auto                   = aks74u_sprint, idle_auto
+anm_idle_sprint_auto_empty             = aks74u_sprint, idle_auto
+anm_idle_sprint_auto_jammed            = aks74u_sprint, idle_jammed_auto
+
+
+lock_time_anm_idle_sprint_end_auto        = 0.35
+lock_time_anm_idle_sprint_end_auto_empty  = 0.35
+lock_time_anm_idle_sprint_end_auto_jammed = 0.35
+anm_idle_sprint_end_auto             = aks74u_sprint_end, idle_auto
+anm_idle_sprint_end_auto_empty       = aks74u_sprint_end, idle_auto
+anm_idle_sprint_end_auto_jammed      = aks74u_sprint_end, idle_jammed_auto
+
+
+
+;Скука////////////////////////////////////////////////////////////////////
+anm_bore_auto                   = aks74u_draw, idle_auto
+anm_bore_auto_empty             = aks74u_draw, idle_auto
+anm_bore_auto_jammed            = aks74u_draw, idle_jammed_auto
+
+
+;Выстрелы обычными патронами/////////////////////////////////////////////////////////////////////
+anm_shoot_auto                = aks74u_shoot_auto
+anm_shoot_auto_sil            = aks74u_shoot_auto
+anm_shoot_auto_jammed	      = aks74u_shoot_auto, idle_jammed_auto
+anm_shoot_auto_jammed_sil     = aks74u_shoot_auto, idle_jammed_auto
+anm_shoot_auto_last           = aks74u_shoot_auto
+anm_shoot_auto_last_sil       = aks74u_shoot_auto
+anm_shoot_aim_auto            = aks74u_aim_shoot_auto
+anm_shoot_aim_auto_sil        = aks74u_aim_shoot_auto
+anm_shoot_aim_auto_jammed     = aks74u_aim_shoot, idle_aim_auto
+anm_shoot_aim_auto_jammed_sil = aks74u_aim_shoot, idle_aim_auto
+anm_shoot_aim_auto_last       = aks74u_aim_shoot_auto
+anm_shoot_aim_auto_last_sil   = aks74u_aim_shoot_auto
+anm_shoot_aim_scope_auto            = aks74u_aim_shoot_scope, aks74u_aim_shoot_auto
+anm_shoot_aim_scope_auto_sil        = aks74u_aim_shoot_scope, aks74u_aim_shoot_auto
+anm_shoot_aim_scope_auto_last       = aks74u_aim_shoot_scope, aks74u_aim_shoot_auto
+anm_shoot_aim_scope_auto_last_sil   = aks74u_aim_shoot_scope, aks74u_aim_shoot_auto
+anm_shoot_aim_scope_auto_jammed     = aks74u_aim_shoot_scope, idle_aim_auto
+anm_shoot_aim_scope_auto_jammed_sil = aks74u_aim_shoot_scope, idle_aim_auto
+
+
+;Осечка//////////////////////////////////////////////////
+lock_time_anm_fakeshoot_auto_empty = 0.20
+anm_fakeshoot_auto_empty      = aks74u_dry_empty, idle_auto
+lock_time_anm_fakeshoot_aim_auto_empty = 0.20
+anm_fakeshoot_aim_auto_empty      = aks74u_aim_dry, idle_aim_auto
+lock_time_anm_fakeshoot_auto_jammed = 0.90
+anm_fakeshoot_auto_jammed     = aks74u_dry, idle_jammed_auto
+lock_time_anm_fakeshoot_aim_auto_jammed = 0.20
+anm_fakeshoot_aim_auto_jammed     = aks74u_aim_dry, idle_aim_auto
+
+;Перезарядка/////////////////////////////////////////////////////////////////////
+anm_reload_auto                           = aks74u_reload, aks74u_reload_auto
+anm_reload_auto_empty                     = aks74u_reload_full, aks74u_reload_full_auto
+anm_reload_auto_jammed                    = aks74u_revival, aks74u_revival_auto
+anm_reload_auto_jammed_last               = aks74u_revival, aks74u_revival_auto
+anm_reload_auto_ammochange                = aks74u_reload, aks74u_reload_auto
+anm_reload_auto_empty_ammochange          = aks74u_reload_full, aks74u_reload_full_auto
+
+;Разрядка//////////////////////////////////////////////////////////////////////////
+lock_time_anm_unload_mag_auto = 0.8
+anm_unload_mag_auto                               = aks74u_draw, idle_auto
+lock_time_anm_unload_mag_auto_jammed = 0.8
+anm_unload_mag_auto_jammed                        = aks74u_draw, idle_auto 
+lock_time_anm_unload_mag_auto_empty = 0.8
+anm_unload_mag_auto_empty                         = aks74u_draw, idle_auto
+
+
+;Включение ЛЦУ//////////////////////////////////////////////////////////////////////////
+anm_laser_on_auto = aks74u_lam, idle_auto
+lock_time_start_anm_laser_on_auto = 0.45
+lock_time_end_anm_laser_on_auto = 0.65
+
+anm_laser_on_auto_empty = aks74u_lam, idle_auto
+lock_time_start_anm_laser_on_auto_empty = 0.45
+lock_time_end_anm_laser_on_auto_empty = 0.65
+
+anm_laser_on_auto_jammed = aks74u_lam, idle_jammed_auto
+lock_time_start_anm_laser_on_auto_jammed = 0.45
+lock_time_end_anm_laser_on_auto_jammed = 0.65
+
+
+;Выключение ЛЦУ//////////////////////////////////////////////////////////////////////////
+anm_laser_off_auto = aks74u_lam, idle_auto
+lock_time_start_anm_laser_off_auto = 0.45
+lock_time_end_anm_laser_off_auto = 0.65
+
+anm_laser_off_auto_empty = aks74u_lam, idle_auto
+lock_time_start_anm_laser_off_auto_empty = 0.45
+lock_time_end_anm_laser_off_auto_empty = 0.65
+
+anm_laser_off_auto_jammed = aks74u_lam, idle_jammed_auto
+lock_time_start_anm_laser_off_auto_jammed = 0.45
+lock_time_end_anm_laser_off_auto_jammed = 0.65
+
+
+;Включение фонаря//////////////////////////////////////////////////////////////////////////
+anm_torch_on_auto = aks74u_lam, idle_auto
+lock_time_start_anm_torch_on_auto = 0.45
+lock_time_end_anm_torch_on_auto = 0.65
+
+anm_torch_on_auto_empty = aks74u_lam, idle_auto
+lock_time_start_anm_torch_on_auto_empty = 0.45
+lock_time_end_anm_torch_on_auto_empty = 0.65
+
+anm_torch_on_auto_jammed = aks74u_lam, idle_jammed_auto
+lock_time_start_anm_torch_on_auto_jammed = 0.45
+lock_time_end_anm_torch_on_auto_jammed = 0.65
+
+
+;Выключение фонаря//////////////////////////////////////////////////////////////////////////
+anm_torch_off_auto = aks74u_lam, idle_auto
+lock_time_start_anm_torch_off_auto = 0.45
+lock_time_end_anm_torch_off_auto = 0.65
+
+anm_torch_off_auto_empty = aks74u_lam, idle_auto
+lock_time_start_anm_torch_off_auto_empty = 0.45
+lock_time_end_anm_torch_off_auto_empty = 0.65
+
+anm_torch_off_auto_jammed = aks74u_lam, idle_jammed_auto
+lock_time_start_anm_torch_off_auto_jammed = 0.45
+lock_time_end_anm_torch_off_auto_jammed = 0.65
+
+
+;включение налобника//////////////////////////////////////////////////////////////////////////
+anm_headlamp_on_auto = aks74u_headflash, idle_auto
+lock_time_start_anm_headlamp_on_auto = 0.58
+lock_time_end_anm_headlamp_on_auto = 0.5
+
+anm_headlamp_on_auto_empty = aks74u_headflash, idle_auto
+lock_time_start_anm_headlamp_on_auto_empty = 0.58
+lock_time_end_anm_headlamp_on_auto_empty = 0.5
+
+anm_headlamp_on_auto_jammed = aks74u_headflash, idle_jammed_auto
+lock_time_start_anm_headlamp_on_auto_jammed = 0.58
+lock_time_end_anm_headlamp_on_auto_jammed = 0.5
+
+;выключение налобника//////////////////////////////////////////////////////////////////////////
+anm_headlamp_off_auto = aks74u_headflash, idle_auto
+lock_time_start_anm_headlamp_off_auto = 0.58
+lock_time_end_anm_headlamp_off_auto = 0.5
+
+anm_headlamp_off_auto_empty = aks74u_headflash, idle_auto
+lock_time_start_anm_headlamp_off_auto_empty = 0.58
+lock_time_end_anm_headlamp_off_auto_empty = 0.5
+
+anm_headlamp_off_auto_jammed = aks74u_headflash, idle_jammed_auto
+lock_time_start_anm_headlamp_off_auto_jammed = 0.58
+lock_time_end_anm_headlamp_off_auto_jammed = 0.5
+
+
+;включение пнв//////////////////////////////////////////////////////////////////////////
+anm_nv_on_auto = aks74u_headflash, idle_auto
+anm_nv_on_auto_empty = aks74u_headflash, idle_auto
+anm_nv_on_auto_jammed = aks74u_headflash, idle_jammed_auto
+
+;выключение пнв//////////////////////////////////////////////////////////////////////////
+anm_nv_off_auto = aks74u_headflash, idle_auto
+anm_nv_off_auto_empty = aks74u_headflash, idle_auto
+anm_nv_off_auto_jammed = aks74u_headflash, idle_jammed_auto

@@ -1,0 +1,364 @@
+[wpn_abakan]:identity_immunities,weapon_probability,default_weapon_params
+GroupControlSection     = spawn_group
+$spawn               = "weapons\abakan"   ; name and section in level editor
+$npc              = on
+$prefetch               = 8
+scheduled               = off                                ; option for ALife Simulator
+cform                   = skeleton
+class                = WP_AK74         ; class of the weapon that corresponding to CPP class
+description          = gunsl_wpn_an94_descr
+
+ef_main_weapon_type     = 2
+ef_weapon_type          = 7
+
+default_to_ruck         = false
+sprint_allowed          = true
+
+kind                    = w_rifle
+
+script_binding = bind_weapon.bind
+def_show_bones = mag30, handler
+def_hide_bones = mag45, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, sight, sight_back, foregrip_rail, knife, tilnik
+
+repair_group = an94
+
+;-------------------------------------------------------------------------------
+cost				= 6000            ; the price of the item
+weapon_class        = assault_rifle      ; the type of the box that will be used in buy-menu in multiplayer mode
+inv_weight           = 4.078
+
+upgrades = 
+installed_upgrades = 
+upgrade_scheme = 
+
+;-˜˜˜---------------------------------------------------------------------------
+hit_power            = 1.1, 1.1, 1.1, 1.1
+hit_impulse          = 100    ; size of physic impulse by bullet
+hit_type             = fire_wound            ; [] type of the wound
+fire_distance           = 200 ;1000                  ; maximum fire distance that bullet can fly
+bullet_speed            = 600                ; starting bullet speed
+rpm                     = 600    ; max round per minute
+rpm_empty_click         = 200
+
+use_aim_bullet          = false                ;˜˜˜˜˜˜˜˜˜˜˜˜˜˜ ˜˜ ˜˜˜˜˜˜ ˜˜˜˜˜˜ ˜˜˜˜
+time_to_aim             = 0
+
+
+base_dispersioned_bullets_count	= 2           	;˜˜˜˜˜˜˜˜˜˜ ˜˜˜˜, ˜˜˜˜˜˜˜˜˜˜˜˜ ˜ ˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜˜˜ ˜˜˜ ˜˜˜˜˜˜
+base_dispersioned_bullets_speed	= 550           ;˜˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜ ˜˜˜˜, ˜˜˜˜˜˜˜˜˜˜˜˜ ˜ ˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜˜˜ ˜˜˜ ˜˜˜˜˜˜
+base_dispersioned_bullets_time_delta = 0.035    ; 1 / RPM
+
+hud                     = wpn_abakan_hud
+
+misfire_probability        = 0.005 ;˜˜˜˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜ ˜˜˜ ˜˜˜˜˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜  !!!old - now not working
+;˜˜˜˜˜˜˜˜˜˜˜˜, ˜˜˜ ˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜˜˜ ˜˜˜˜ ˜˜˜˜˜˜
+misfire_start_condition		= 0.6
+;˜˜˜˜˜˜˜˜˜˜˜ ˜˜˜ ˜˜˜˜˜˜˜ ˜˜˜˜ ˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜˜˜˜
+misfire_end_condition		= 0.1
+;˜˜˜˜ ˜˜˜˜˜˜ ˜˜˜ ˜˜˜˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜ ˜˜˜ misfireStartCondition
+misfire_start_prob	     	= 0.0037
+;˜˜˜˜ ˜˜˜˜˜˜ ˜˜˜ ˜˜˜˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜ ˜˜˜ misfireEndCondition
+misfire_end_prob	     	= 0.05
+;˜˜˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜˜˜˜ ˜˜˜ ˜˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜
+condition_shot_dec      	= 0.0012
+;˜˜˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜˜˜˜ ˜˜˜ ˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜
+condition_queue_shot_dec	= 0.0013
+
+ammo_in_chamber = true
+
+ammo_elapsed        = 31           ; obsolete
+ammo_mag_size        = 31           ; clip (magazine) size
+
+fire_modes           = 1, 2, -1
+ammo_class           = ammo_5.45x39_fmj, ammo_5.45x39_ap  ; name of the ltx-section of used ammo
+grenade_class        = ammo_vog-25, ammo_vog-25p         ; name of the ltx-section of used grenades
+
+launch_speed         = 0
+hand_dependence      = 1
+single_handed        = 0
+
+;---DOF-------------------------------------------------------------------------
+zoom_dof             = 0.5, 1.0, 150
+reload_dof           = 0.0, 0.5, 5, 2
+
+;-˜˜˜˜˜˜˜˜˜--------------------------------------------------------------------------
+
+;˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜˜
+fire_dispersion_base    = 0.19 ;0.17        ;˜˜˜˜ (˜ ˜˜˜˜˜˜˜˜) ˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜ (˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜ ˜ ˜˜˜˜˜˜)
+control_inertion_factor = 1.2f
+crosshair_inertion		= 6.85
+
+;˜˜˜˜˜˜
+cam_return				 = 0
+cam_relax_speed          = 10     ;˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜ ˜ ˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜˜
+cam_relax_speed_ai       = 360
+cam_dispersion           = 0.6     ;˜˜˜˜˜˜˜˜˜˜ ˜˜˜˜ (˜ ˜˜˜˜˜˜˜˜) ˜ ˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜˜
+cam_dispersion_inc       = 0.35      ;˜˜˜˜˜˜˜˜˜e cam_dispersion ˜ ˜˜˜˜v˜ ˜v˜˜˜˜˜˜˜
+cam_dispersion_frac      = 1.0    ;˜˜˜˜˜ ˜˜˜˜˜ ˜˜˜v˜˜˜˜˜˜ ˜˜ cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
+cam_max_angle            = 50.0       ;˜˜˜˜˜˜˜˜˜˜v˜ ˜˜˜˜ ˜˜˜˜˜˜
+cam_max_angle_horz       = 50.0      ;(degree) maximum shot horizontal degree
+cam_step_angle_horz      = 0.5    ;(degree) size of step camera moved in horizontal position while shooting
+
+PDM_disp_base 				= 0.95
+PDM_disp_vel_factor 		= 1.7
+PDM_disp_accel_factor 		= 1.7
+PDM_disp_crouch	 			= 0.95
+PDM_disp_crouch_no_acc 		= 0.95
+
+
+zoom_cam_relax_speed         = 10	    ; scope & ironsight
+zoom_cam_relax_speed_ai      = 360
+zoom_cam_dispersion          = 0.4
+zoom_cam_dispersion_inc      = 0.2
+zoom_cam_dispersion_frac     = 1.0
+zoom_cam_max_angle           = 50.0
+zoom_cam_max_angle_horz      = 50.0
+zoom_cam_step_angle_horz     = 0.5
+
+fire_dispersion_condition_factor = 9        ;˜˜˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜˜ ˜ ˜˜˜˜˜˜˜˜˜ ˜˜˜ ˜˜˜˜˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜
+
+;-------------------------------------------------------------------------------
+holder_range_modifier   = 1.0              ; ˜˜ ˜˜˜˜˜˜˜ ˜˜˜ ˜˜˜˜˜˜˜˜˜˜˜˜˜ eye_range
+holder_fov_modifier     = 1.0              ; ˜˜ ˜˜˜˜˜˜˜ ˜˜˜ ˜˜˜˜˜˜˜˜˜˜˜˜˜ eye_fov
+
+min_radius           = 5           ; [] for AI
+max_radius           = 100          ; [] for AI
+
+hit_probability_gd_novice  = 0.80
+hit_probability_gd_stalker = 0.80
+hit_probability_gd_veteran = 0.80
+hit_probability_gd_master  = 0.80
+
+;-------------------------------------------------------------------------------
+slot                 = 2                ; // secondary
+animation_slot       = 2                ; type of the animation that will be used
+inv_name             = gunsl_wpn_an94               ; name in inventory
+inv_name_short       = gunsl_wpn_an94
+
+icons_texture        = ui\ui_icon_equipment_guns
+inv_grid_width       = 5    ; position and size of the icon that will be used to display weapon in the inventory menu
+inv_grid_height      = 2    ; all icons are on the texture ui_icon_equipment.dds,
+inv_grid_x           = 6  ; position and size are in terms of 64x64 squares
+inv_grid_y           = 2
+
+upgr_icon_x			= 591
+upgr_icon_y			= 746
+upgr_icon_width		= 295
+upgr_icon_height   	= 86
+
+kill_msg_x        = 119
+kill_msg_y        = 199
+kill_msg_width    = 93
+kill_msg_height   = 32
+
+;-------------------------------------------------------------------------------
+
+position                = -0.026, -0.178, 0.0
+orientation             = 0, 0, 0
+
+
+fire_point				= -0.0,0.228,0.713
+fire_point2             = -0.0,0,153.608
+
+flame_particles         = weapons\generic_weapon05
+smoke_particles         = weapons\generic_shoot_00
+grenade_flame_particles = weapons\generic_weapon01
+
+shell_point             = 0.120000,0.000000,0.070000
+shell_dir               = 0.0, 0.0, 0.4
+shell_particles         = weapons\generic_shells_r
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+;˜˜˜ ˜˜˜˜˜˜
+strap_position          = -0.26,-0.11,0.25                                ; position (offset) and orientation of the weapon when it is strapped
+strap_orientation       = -15,-9,110                                        ; (3rd person view in degrees)
+strap_bone0             = bip01_spine2
+strap_bone1             = bip01_spine1
+
+startup_ammo            = 90
+visual                  = dynamics\weapons\wpn_abakan\wpn_abakan.ogf
+
+light_disabled                                = false
+light_color             = 0.6,0.5,0.3
+light_range             = 5
+light_var_color         = 0.05
+light_var_range         = 0.5
+light_time              = 0.2
+
+ph_mass                 = 4
+
+;addons
+scope_status               = 2                  ; 0 - no addon
+silencer_status            = 0                   ; 1 - permanent
+grenade_launcher_status    = 2                   ; 2 - attachable
+
+scopes_sect		= scope_pka_an94, scope_nvas_an94, scope_cobra_an94, scope_pso1m2x1_an94, scope_kashtan_an94, scope_pso1_an94, scope_nvsn_an94
+
+zoom_enabled            = true                                                ; (on,off)zoom mode (right mouse button)
+zoom_rotate_time        = 0.25
+scope_zoom_factor       = 0                                                ; fov for zoom mode
+ironsight_zoom_factor   = 0
+
+silencer_name              = wpn_addon_silencer          ; section name for the attachable silencer
+silencer_x                 = 198                         ; offset in inventory icon
+silencer_y                 = 10
+grenade_launcher_name      = wpn_addon_grenade_launcher  ; section name for the attachable grenade launcher
+grenade_launcher_x         = 119                         ; offset in inventory icon
+grenade_launcher_y         = 27
+
+;˜˜˜˜˜
+snd_draw		= weapons\ak74\ak74_draw
+snd_holster		= weapons\p90\p90_hide
+snd_shoot		= weapons\l85\l85_shoot, -1.1
+snd_empty		= weapons\glock17\glock17_dry
+snd_reload              = weapons\ak74\ak74_reload
+snd_reload_empty        = weapons\ak74\ak74_reload_full
+snd_changecartridgetype = weapons\ak74\ak74_reload
+snd_shoot_grenade       = weapons\ak74\ak74_gl_shoot
+snd_load_grenade        = weapons\ak74\ak74_gl_reload
+snd_change_grenade      = weapons\ak74\ak74_gl_grenadechange
+snd_switch              = $silent
+snd_close		= $silent
+snd_reload_jammed       = weapons\ak74\ak74_revival
+snd_reload_jammed_last  = weapons\ak74\ak74_revival
+snd_jammed_click        = weapons\glock17\glock17_dry
+snd_unload_mag          = $silent
+snd_jam                 = $silent
+snd_breechblock         = $silent
+snd_fakeshoot_first	= weapons\glock17\glock17_shoot_s
+snd_changefiremode	= weapons\vss\vss_firemode
+;snd_changefiremode_empty
+;snd_changefiremode_jammed
+snd_aim_start           = weapons\vss\vss_aim_start
+snd_aim_end             = weapons\vss\vss_aim_end
+snd_sprint_start        = weapons\detector_prepare
+snd_sprint_end          = weapons\pistol_sprint_end
+snd_suicide	        = weapons\suicide_start
+snd_stop_suicide	= weapons\suicide_end
+snd_laser_on	        = weapons\vss\vss_firemode
+snd_laser_off	        = weapons\vss\vss_firemode
+snd_torch_on	        = weapons\vss\vss_firemode
+snd_torch_off	        = weapons\vss\vss_firemode
+snd_headlamp_on         = weapons\headflash_on
+snd_headlamp_off        = weapons\headflash_off
+snd_nv_on               = weapons\nv_act
+snd_nv_off              = weapons\nv_deact
+snd_kick		= weapons\ak74\ak74_bayonet
+
+snd_scope_brightness_plus = weapons\nv_intensity
+snd_scope_brightness_minus = weapons\nv_intensity
+
+;silencer_flame_particles  = weapons\generic_weapon01
+silencer_smoke_particles   = weapons\generic_shoot_00
+
+snd_silncer_shot        = weapons\w_ak74_shot1, -1.1
+
+silencer_light_color    = 0.6,0.5,0.3
+silencer_light_range    = 0.01
+silencer_light_var_color= 0.05
+silencer_light_var_range= 0.01
+silencer_light_time     = 0.01
+
+
+
+use_world_anims=true
+
+wanm_idle        = idle
+wanm_idle_2      = idle_two
+wanm_idle_a      = idle_auto
+wanm_idle_w_gl   = idle
+wanm_idle_2_w_gl = idle_two
+wanm_idle_a_w_gl = idle_auto
+wanm_idle_g      = idle_gl_on
+wanm_idle_2_g    = idle_gl_on_two
+wanm_idle_a_g    = idle_gl_on_auto
+
+wanm_idle_empty        = idle
+wanm_idle_empty_2      = idle_two
+wanm_idle_empty_a      = idle_auto
+wanm_idle_empty_w_gl   = idle
+wanm_idle_empty_2_w_gl = idle_two
+wanm_idle_empty_a_w_gl = idle_auto
+wanm_idle_empty_g      = idle_gl_on
+wanm_idle_empty_2_g    = idle_gl_on_two
+wanm_idle_empty_a_g    = idle_gl_on_auto
+
+wanm_idle_jammed        = idle_jammed
+wanm_idle_jammed_2      = idle_jammed_two
+wanm_idle_jammed_a      = idle_jammed_auto
+wanm_idle_jammed_w_gl   = idle_jammed 
+wanm_idle_jammed_2_w_gl = idle_jammed_two
+wanm_idle_jammed_a_w_gl = idle_jammed_auto
+wanm_idle_jammed_g      = idle_gl_on_jammed
+wanm_idle_jammed_2_g    = idle_gl_on_jammed_two
+wanm_idle_jammed_a_g    = idle_gl_on_jammed_auto
+
+wanm_shoot        = shoot
+wanm_shoot_2      = shoot_two
+wanm_shoot_a      = shoot_auto
+wanm_shoot_w_gl   = shoot
+wanm_shoot_2_w_gl = shoot_two
+wanm_shoot_a_w_gl = shoot_auto
+wanm_shoot_g      = idle_gl_on
+wanm_shoot_2_g    = idle_gl_on_two
+wanm_shoot_a_g    = idle_gl_on_auto
+
+wanm_shoot_jammed        = idle_jammed
+wanm_shoot_jammed_2      = idle_jammed_two
+wanm_shoot_jammed_a      = idle_jammed_auto
+wanm_shoot_jammed_w_gl   = idle_jammed
+wanm_shoot_jammed_2_w_gl = idle_jammed_two
+wanm_shoot_jammed_a_w_gl = idle_jammed_auto
+wanm_shoot_jammed_g      = idle_gl_on_jammed
+wanm_shoot_jammed_2_g    = idle_gl_on_jammed_two
+wanm_shoot_jammed_a_g    = idle_gl_on_jammed_auto
+
+wanm_shoot_last        = shoot
+wanm_shoot_last_2      = shoot_two
+wanm_shoot_last_a      = shoot_auto
+wanm_shoot_last_w_gl   = shoot
+wanm_shoot_last_2_w_gl = shoot_two
+wanm_shoot_last_a_w_gl = shoot_auto
+wanm_shoot_last_g      = idle_gl_on
+wanm_shoot_last_2_g    = idle_gl_on_two
+wanm_shoot_last_a_g    = idle_gl_on_auto
+
+wanm_shoot_last_jammed        = idle_jammed
+wanm_shoot_last_jammed_2      = idle_jammed_two
+wanm_shoot_last_jammed_a      = idle_jammed_auto
+wanm_shoot_last_jammed_w_gl   = idle_jammed
+wanm_shoot_last_jammed_2_w_gl = idle_jammed_two
+wanm_shoot_last_jammed_a_w_gl = idle_jammed_auto
+wanm_shoot_last_jammed_g      = idle_gl_on_jammed
+wanm_shoot_last_jammed_2_g    = idle_gl_on_jammed_two
+wanm_shoot_last_jammed_a_g    = idle_gl_on_jammed_auto
+
+wanm_reload        = idle
+wanm_reload_2      = idle_two
+wanm_reload_a      = idle_auto
+wanm_reload_w_gl   = idle
+wanm_reload_2_w_gl = idle_two
+wanm_reload_a_w_gl = idle_auto
+wanm_reload_g      = idle_gl_on
+wanm_reload_2_g    = idle_gl_on_two
+wanm_reload_a_g    = idle_gl_on_auto
+
+wanm_reload_empty        = idle
+wanm_reload_empty_2      = idle_two
+wanm_reload_empty_a      = idle_auto
+wanm_reload_empty_w_gl   = idle
+wanm_reload_empty_2_w_gl = idle_two
+wanm_reload_empty_a_w_gl = idle_auto
+wanm_reload_empty_g      = idle_gl_on
+wanm_reload_empty_2_g    = idle_gl_on_two
+wanm_reload_empty_a_g    = idle_gl_on_auto
+
+wanm_reload_jammed        = idle
+wanm_reload_jammed_2      = idle_two
+wanm_reload_jammed_a      = idle_auto
+wanm_reload_jammed_w_gl   = idle
+wanm_reload_jammed_2_w_gl = idle_two
+wanm_reload_jammed_a_w_gl = idle_auto
+wanm_reload_jammed_g      = idle_gl_on_jammed
+wanm_reload_jammed_2_g    = idle_gl_on_jammed_two
+wanm_reload_jammed_a_g    = idle_gl_on_jammed_auto

@@ -1,0 +1,334 @@
+[wpn_l85]:identity_immunities,weapon_probability,default_weapon_params
+GroupControlSection     = spawn_group
+$spawn               	= "weapons\l85"      ; option for Level Editor
+$npc                    = on                                ; option for Level Editor
+$prefetch               = 8
+scheduled               = off                                ; option for ALife Simulator
+cform                   = skeleton
+class                   = WP_AK74
+description          	= gunsl_wpn_l85_descr
+ef_main_weapon_type     = 2
+ef_weapon_type          = 7
+default_to_ruck         = false
+sprint_allowed       	= true
+restricted_gl_and_sil   = true
+
+kind                    = w_rifle
+
+script_binding = bind_weapon.bind
+def_show_bones = sight_handle, sight_iron2, mag30, handguard, handler
+def_hide_bones = scope1, scope2, scope3, scope4, scope5, rail, handguard_rail, mag45, mag60, tac_handler, flash, light, rope, sight, sight_top, bayonet
+
+def_hide_bones_override_when_gl_attached = handguard, handguard_rail, tac_handler
+
+repair_group = l85
+
+;-------------------------------------------------------------------------------
+cost                    = 5000
+weapon_class            = assault_rifle        ; Type of the weapon
+inv_weight           	= 3.82
+
+upgrades = 
+installed_upgrades = 
+upgrade_scheme = 
+
+;--TTX--------------------------------------------------------------------------
+hit_power               = 0.9, 0.9, 0.9, 0.9
+hit_impulse             = 100
+hit_type				= fire_wound
+rpm                     = 650
+fire_distance           = 200
+bullet_speed            = 500        ;��������� �������� ����
+rpm                     = 610
+rpm_empty_click         = 200
+
+use_aim_bullet          = false                ;�������������� �� ������ ������ ����
+time_to_aim             = 3.0
+
+hud                     = wpn_l85_hud
+
+misfire_probability        = 0.005 ;����������� ������ ��� ������������ ������  !!!old - now not working
+;������������, ��� ������� ���������� ���� ������
+misfire_start_condition		= 0.85
+;����������� ��� ������� ���� ������ ���������� �����������
+misfire_end_condition		= 0.25
+;���� ������ ��� ����������� ������ ��� misfireStartCondition
+misfire_start_prob	     	= 0.004
+;���� ������ ��� ����������� ������ ��� misfireEndCondition
+misfire_end_prob	     	= 0.08
+;���������� ����������� ��� ��������� ��������
+condition_shot_dec      	= 0.0005
+;���������� ����������� ��� �������� ��������
+condition_queue_shot_dec	= 0.0008
+
+ammo_in_chamber = true
+
+ammo_elapsed            = 31
+ammo_mag_size           = 31
+
+ammo_class              = ammo_5.56x45_ss190, ammo_5.56x45_ap
+grenade_class           = ammo_m209, ammo_m397a1
+fire_modes              = 1, -1
+launch_speed            = 0
+hand_dependence         = 1
+single_handed           = 0
+
+;--���������----------------------------------------------------------------------------
+;������� ���������
+fire_dispersion_base    = 0.21    ;���� (� ��������) ������� ��������� ������ (������ �������� � ������)
+control_inertion_factor = 1.4f
+crosshair_inertion		= 6.20
+
+;������
+cam_return				= 0
+cam_relax_speed         = 5      ;�������� �������� � �������� ���������
+cam_relax_speed_ai      = 360
+cam_dispersion          = 0.75      ;���������� ���� (� ��������) � ������ ���������
+cam_dispersion_inc      = 0.4    ;���������e cam_dispersion � ������ ���������
+cam_dispersion_frac     = 1.0    ;����� ����� ���������� �� cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
+cam_max_angle           = 50.0         ;������������ ���� ������
+cam_max_angle_horz      = 50.0      ;(degree) maximum shot horizontal degree
+cam_step_angle_horz     = 2.0    ;(degree) size of step camera moved in horizontal position while shooting
+
+PDM_disp_base 				= 1.2
+PDM_disp_vel_factor 		= 2.0
+PDM_disp_accel_factor 		= 2.0
+PDM_disp_crouch	 			= 1.0
+PDM_disp_crouch_no_acc 		= 1.0
+
+zoom_cam_relax_speed         = 5     ; scope & ironsight
+zoom_cam_relax_speed_ai      = 360
+zoom_cam_dispersion          = 0.4
+zoom_cam_dispersion_inc      = 0.3
+zoom_cam_dispersion_frac     = 0.8
+zoom_cam_max_angle           = 50.0
+zoom_cam_max_angle_horz      = 50.0
+zoom_cam_step_angle_horz     = 1.8
+
+fire_dispersion_condition_factor = 11        ;���������� ��������� � ��������� ��� ������������ ������
+
+;---DOF-------------------------------------------------------------------------
+zoom_dof						= 0.5, 1.0, 180
+reload_dof					= 0.0, 0.5, 5, 2
+
+;-------------------------------------------------------------------------------
+holder_range_modifier   = 1.85             ; �� ������� ��� ������������� eye_range
+holder_fov_modifier     = 1.0              ; �� ������� ��� ������������� eye_fov
+
+hit_probability_gd_novice  = 0.80
+hit_probability_gd_stalker = 0.80
+hit_probability_gd_veteran = 0.80
+hit_probability_gd_master  = 0.80
+
+min_radius              = 5
+max_radius              = 100
+
+;-------------------------------------------------------------------------------
+slot                    = 2                ; // secondary
+animation_slot          = 2                ; type of the animation that will be used
+
+inv_name          = gunsl_wpn_l85
+inv_name_short    = gunsl_wpn_l85
+
+icons_texture           = ui\ui_icon_equipment_guns
+inv_grid_width          = 5
+inv_grid_height         = 2
+inv_grid_x           	= 0
+inv_grid_y           	= 12
+
+upgr_icon_x			= 302
+upgr_icon_y			= 515
+upgr_icon_width		= 295
+upgr_icon_height   	= 110
+
+kill_msg_x           	= 84
+kill_msg_y           	= 28
+kill_msg_width       	= 73
+kill_msg_height         = 30
+
+;-------------------------------------------------------------------------------
+position                = -0.026, -0.135, 0.0
+orientation             = 0, 0, 0
+
+fire_point              = 0.0,0.186,0.435
+fire_point2             = 0.0, 0.106, 0.468
+
+flame_particles         = weapons\generic_weapon05
+smoke_particles         = weapons\generic_shoot_00
+grenade_flame_particles = weapons\generic_weapon01
+
+shell_point             = -0.020000,0.167000,0.082000
+shell_dir               = 0.0, 0.0, 0.4
+shell_particles         = weapons\generic_shells_r       ; name of the particles for shells
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+;��� ������
+strap_position         	= -0.15,-0.36,0.25			; position (offset) and orientation of the weapon when it is strapped
+strap_orientation      	= -10,-5,10					; (3rd person view in degrees)
+strap_bone0             = bip01_spine2
+strap_bone1             = bip01_spine1
+
+startup_ammo            = 90
+visual                  = dynamics\weapons\wpn_l85\wpn_l85.ogf
+
+light_disabled				= false
+light_color             = 0.6,0.5,0.3
+light_range             = 5
+light_var_color         = 0.05
+light_var_range         = 0.5
+light_time              = 0.2
+
+ph_mass                 = 5
+;cost                   = 2100
+
+;addons
+scope_status            = 2
+silencer_status         = 2
+grenade_launcher_status = 2
+
+zoom_enabled            = true                                                ; (on,off)zoom mode (right mouse button)
+zoom_rotate_time	= 0.25
+scope_zoom_factor       = 0                                                ; fov for zoom mode
+ironsight_zoom_factor   = 0
+
+scopes_sect		= scope_eotech_l85a2, scope_aimpoint_l85a2, scope_susat_l85a2, scope_elcan_l85a2, scope_pn23_l85a2
+
+scope_name 		= wpn_addon_scope_susat
+scope_x 		= 60
+scope_y 		= -2
+silencer_name  	        = wpn_silencer_m4_2000
+silencer_x 		= 193
+silencer_y 		= 12
+grenade_launcher_name 	= wpn_addon_grenade_launcher_l123a2
+grenade_launcher_x      = 110
+grenade_launcher_y      = 11
+
+;�����
+snd_draw		= weapons\ak74\ak74_draw
+snd_holster		= weapons\p90\p90_hide
+snd_shoot		= weapons\l85\l85_shoot, -1.1
+snd_empty		= weapons\glock17\glock17_dry
+snd_reload              = weapons\l85\l85_reload
+snd_reload_empty        = weapons\l85\l85_reload_empty
+snd_changecartridgetype = weapons\l85\l85_reload
+snd_shoot_grenade       = weapons\l85\l85_gl_shoot
+snd_load_grenade        = weapons\l85\l85_gl_reload
+snd_change_grenade      = weapons\l85\l85_gl_changegrenade
+snd_switch              = $silent
+snd_close		= $silent
+snd_reload_jammed       = weapons\l85\l85_revival
+snd_reload_jammed_last  = weapons\l85\l85_revival
+snd_jammed_click        = weapons\glock17\glock17_dry
+snd_unload_mag          = $silent
+snd_jam                 = $silent
+snd_breechblock         = $silent
+snd_fakeshoot_first	= weapons\glock17\glock17_shoot_s
+snd_changefiremode	= weapons\l85\l85_firemode
+;snd_changefiremode_empty
+;snd_changefiremode_jammed
+snd_aim_start           = weapons\vss\vss_aim_start
+snd_aim_end             = weapons\vss\vss_aim_end
+snd_sprint_start        = weapons\detector_prepare
+snd_sprint_end          = weapons\pistol_sprint_end
+snd_suicide	        = weapons\suicide_start
+snd_stop_suicide	= weapons\suicide_end
+snd_laser_on	        = weapons\l85\l85_lam
+snd_laser_off	        = weapons\l85\l85_lam
+snd_torch_on	        = weapons\l85\l85_lam
+snd_torch_off	        = weapons\l85\l85_lam
+snd_headlamp_on         = weapons\headflash_on
+snd_headlamp_off        = weapons\headflash_off
+snd_nv_on               = weapons\nv_act
+snd_nv_off              = weapons\nv_deact
+snd_kick		= weapons\ak74\ak74_bayonet
+
+snd_scope_brightness_plus = weapons\nv_intensity
+snd_scope_brightness_minus = weapons\nv_intensity
+snd_scope_zoom_plus = weapons\nv_intensity
+snd_scope_zoom_minus = weapons\nv_intensity
+
+;��������� ��� ���������
+;silencer_flame_particles  = weapons\generic_weapon01
+silencer_smoke_particles   = weapons\generic_shoot_00
+
+snd_silncer_shot        = weapons\l85\l85_shoot_silencer, 0.9
+
+silencer_light_color    = 0.6,0.5,0.3
+silencer_light_range    = 0.01
+silencer_light_var_color= 0.05
+silencer_light_var_range= 0.01
+silencer_light_time     = 0.01
+
+
+
+use_world_anims=true
+
+wanm_idle        = idle
+wanm_idle_a      = idle_auto
+wanm_idle_w_gl   = idle_gloff
+wanm_idle_a_w_gl = idle_gloff_auto
+wanm_idle_g      = idle_glon
+wanm_idle_a_g    = idle_glon_auto
+
+wanm_idle_empty        = idle
+wanm_idle_empty_a      = idle_auto
+wanm_idle_empty_w_gl   = idle_gloff
+wanm_idle_empty_a_w_gl = idle_gloff_auto
+wanm_idle_empty_g      = idle_glon
+wanm_idle_empty_a_g    = idle_glon_auto
+
+wanm_idle_jammed        = idle_jammed
+wanm_idle_jammed_a      = idle_auto_jammed
+wanm_idle_jammed_w_gl   = idle_gloff_jammed 
+wanm_idle_jammed_a_w_gl = idle_gloff_auto_jammed
+wanm_idle_jammed_g      = idle_glon_jammed
+wanm_idle_jammed_a_g    = idle_glon_auto_jammed
+
+wanm_shoot        = shoot
+wanm_shoot_a      = shoot_auto
+wanm_shoot_w_gl   = shoot_gloff
+wanm_shoot_a_w_gl = shoot_gloff_auto
+wanm_shoot_g      = idle_glon
+wanm_shoot_a_g    = idle_glon_auto
+
+wanm_shoot_jammed        = idle_jammed
+wanm_shoot_jammed_a      = idle_auto_jammed
+wanm_shoot_jammed_w_gl   = idle_gloff_jammed
+wanm_shoot_jammed_a_w_gl = idle_gloff_auto_jammed
+wanm_shoot_jammed_g      = idle_glon_jammed
+wanm_shoot_jammed_a_g    = idle_glon_auto_jammed
+
+wanm_shoot_last        = shoot
+wanm_shoot_last_a      = shoot_auto
+wanm_shoot_last_w_gl   = shoot_gloff
+wanm_shoot_last_a_w_gl = shoot_gloff_auto
+wanm_shoot_last_g      = idle_glon
+wanm_shoot_last_a_g    = idle_glon_auto
+
+wanm_shoot_last_jammed        = idle_jammed
+wanm_shoot_last_jammed_a      = idle_auto_jammed
+wanm_shoot_last_jammed_w_gl   = idle_gloff_jammed
+wanm_shoot_last_jammed_a_w_gl = idle_gloff_auto_jammed
+wanm_shoot_last_jammed_g      = idle_glon_jammed
+wanm_shoot_last_jammed_a_g    = idle_glon_auto_jammed
+
+wanm_reload        = idle
+wanm_reload_a      = idle_auto
+wanm_reload_w_gl   = idle_gloff
+wanm_reload_a_w_gl = idle_gloff_auto
+wanm_reload_g      = idle_glon
+wanm_reload_a_g    = idle_glon_auto
+
+wanm_reload_empty        = idle
+wanm_reload_empty_a      = idle_auto
+wanm_reload_empty_w_gl   = idle_gloff
+wanm_reload_empty_a_w_gl = idle_gloff_auto
+wanm_reload_empty_g      = idle_glon
+wanm_reload_empty_a_g    = idle_glon_auto
+
+wanm_reload_jammed        = idle
+wanm_reload_jammed_a      = idle_auto
+wanm_reload_jammed_w_gl   = idle_gloff
+wanm_reload_jammed_a_w_gl = idle_gloff_auto
+wanm_reload_jammed_g      = idle_glon_jammed
+wanm_reload_jammed_a_g    = idle_glon_auto_jammed

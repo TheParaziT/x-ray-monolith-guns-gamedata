@@ -1,0 +1,308 @@
+[wpn_sig550]:identity_immunities,weapon_probability,default_weapon_params
+GroupControlSection     = spawn_group
+$spawn						= "weapons\sig550"                ; option for Level Editor
+$npc                    = on                                ; option for Level Editor
+$prefetch               = 8
+scheduled               = off                                ; option for ALife Simulator
+cform                   = skeleton
+class                   = WP_AK74
+description             = gunsl_wpn_sig550_descr
+
+ef_main_weapon_type     = 2
+ef_weapon_type          = 6
+
+default_to_ruck         = false
+sprint_allowed       	= true
+
+kind                    = w_rifle
+
+script_binding = bind_weapon.bind
+def_hide_bones = scope1, scope2, scope3, scope4, scope5, scope6, light, foregrip_handler, ironsight_rail, flash, laser, ironsight_sight, foregrip_sight, bayonet, foregrip_handler
+def_show_bones = ironsight
+
+def_hide_bones_override_when_gl_attached = foregrip_handler
+
+repair_group = sg550
+
+;-------------------------------------------------------------------------------
+cost                    = 8000
+weapon_class            = assault_rifle        ; Type of the weapon
+inv_weight              = 4.1
+
+upgrades = 
+installed_upgrades = 
+upgrade_scheme = 
+
+; ��������� ��� ����������������� ������ �� ������ ������ ���� � ���������� ������ ���������
+banned_upgrades = 
+
+;-------TTX-----------------------------------------------------------------------
+hit_power				= 1.0, 1.0, 1.0, 1.0
+hit_impulse				= 100
+hit_type				= fire_wound
+fire_distance           = 200
+bullet_speed            = 550         ;��������� �������� ����
+rpm                     = 590
+rpm_empty_click         = 200
+
+use_aim_bullet          = false                ;�������������� �� ������ ������ ����
+time_to_aim             = 3.0
+
+hud                     = wpn_sig550_hud
+
+misfire_probability        = 0.005 ;����������� ������ ��� ������������ ������  !!!old - now not working
+;������������, ��� ������� ���������� ���� ������
+misfire_start_condition		= 0.6
+;����������� ��� ������� ���� ������ ���������� �����������
+misfire_end_condition		= 0.1
+;���� ������ ��� ����������� ������ ��� misfireStartCondition
+misfire_start_prob	     	= 0.003
+;���� ������ ��� ����������� ������ ��� misfireEndCondition
+misfire_end_prob	     	= 0.045
+;���������� ����������� ��� ��������� ��������
+condition_shot_dec      	= 0.0005
+;���������� ����������� ��� �������� ��������
+condition_queue_shot_dec	= 0.0006
+
+ammo_in_chamber = true
+
+ammo_elapsed            = 31
+ammo_mag_size           = 31
+
+ammo_class              = ammo_5.56x45_ss190, ammo_5.56x45_ap
+grenade_class           = ammo_m209, ammo_m397a1
+fire_modes              = 1, 3, -1
+launch_speed            = 0
+hand_dependence         = 1
+single_handed           = 0
+
+;-���������-----------------------------------------------------------------------------
+;������� ���������
+fire_dispersion_base    = 0.18        ;���� (� ��������) ������� ��������� ������ (������ �������� � ������)
+control_inertion_factor = 1.4f
+crosshair_inertion		= 7.25
+
+;������
+cam_return				= 0
+cam_relax_speed         = 5		; �������� �������� � �������� ���������
+cam_relax_speed_ai      = 360	; �������� �������� � �������� ��������� ��� AI
+cam_dispersion          = 0.55       ; ���������� ���� (� ��������) ��� ������ ��������
+cam_dispersion_inc      = 0.3       ; ���������e cam_dispersion � ������ ���������
+cam_dispersion_frac     = 1.0       ; frac * angle + rand(-1,1)*(1-frac) * angle
+cam_max_angle           = 50.0       ; ������������ ���� ������
+cam_max_angle_horz      = 50.0       ; (degree) maximum shot horizontal degree
+cam_step_angle_horz     = 1.5       ; (degree) size of step camera moved in horizontal position while shooting
+
+PDM_disp_base 				= 1.1
+PDM_disp_vel_factor 		= 2.0
+PDM_disp_accel_factor 		= 2.0
+PDM_disp_crouch	 			= 1.0
+PDM_disp_crouch_no_acc 		= 1.0
+
+zoom_cam_relax_speed         = 5     ; scope & ironsight
+zoom_cam_relax_speed_ai      = 360
+zoom_cam_dispersion          = 0.35
+zoom_cam_dispersion_inc      = 0.2
+zoom_cam_dispersion_frac     = 0.8
+zoom_cam_max_angle           = 50.0
+zoom_cam_max_angle_horz      = 50.0
+zoom_cam_step_angle_horz     = 1.3
+
+fire_dispersion_condition_factor = 7        ;���������� ��������� � ��������� ��� ������������ ������
+;---DOF-------------------------------------------------------------------------
+zoom_dof				= 0.5, 1.0, 180
+reload_dof				= 0.0, 0.5, 5, 2
+
+;-------------------------------------------------------------------------------
+holder_range_modifier   = 1.0                       ; �� ������� ��� ������������� eye_range
+holder_fov_modifier     = 1.0              ; �� ������� ��� ������������� eye_fov
+
+min_radius              = 5
+max_radius              = 100
+
+hit_probability_gd_novice  = 0.80
+hit_probability_gd_stalker = 0.80
+hit_probability_gd_veteran = 0.80
+hit_probability_gd_master  = 0.80
+;------------------------------------------------------------------------------
+slot                    = 2                ; // secondary
+animation_slot          = 2                ; type of the animation that will be used
+
+inv_name                = gunsl_wpn_sig550
+inv_name_short          = gunsl_wpn_sig550
+
+icons_texture           = ui\ui_icon_equipment_guns
+inv_grid_width          = 5
+inv_grid_height         = 2
+inv_grid_x              = 5
+inv_grid_y              = 7
+
+upgr_icon_x			= 594
+upgr_icon_y			= 473
+upgr_icon_width		= 297
+upgr_icon_height   	= 92
+
+kill_msg_x              = 80
+kill_msg_y              = 59
+kill_msg_width          = 87
+kill_msg_height         = 24
+
+;-------------------------------------------------------------------------------
+;---normal                  = 0, 1, 0
+;---direction               = 0, 0, 1
+
+position                = -0.026, -0.097, 0.0
+orientation             = 0, 0, 0
+
+fire_point              = 0.000000,0.137000,0.649000
+fire_point2             = 0.0, 0.097, 0.722
+
+flame_particles         = weapons\generic_weapon05
+smoke_particles         = weapons\generic_shoot_00
+grenade_flame_particles = weapons\generic_weapon01
+
+shell_point             = -0.020000,0.167000,0.082000
+shell_dir               = 0.0, 0.0, 0.4
+shell_particles         = weapons\generic_shells_r
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+;��� ������
+strap_position          = -0.26,-0.11,0.25                        	; position (offset) and orientation of the weapon when it is strapped
+strap_orientation       = -15,-9,110                                	; (3rd person view in degrees)
+strap_bone0             = bip01_spine2
+strap_bone1             = bip01_spine1
+
+startup_ammo            = 90
+visual                  = dynamics\weapons\wpn_sig550\wpn_sig550.ogf
+
+light_disabled		= false
+light_color             = 0.6,0.5,0.3
+light_range             = 5
+light_var_color         = 0.05
+light_var_range         = 0.5
+light_time              = 0.2
+
+ph_mass                 = 4
+
+;addons
+scope_status            = 2 ;0
+silencer_status         = 2 ;0
+grenade_launcher_status = 0
+
+zoom_enabled            = true                                                ; (on,off)zoom mode (right mouse button)
+zoom_rotate_time	= 0.25
+scope_zoom_factor	        = 0
+ironsight_zoom_factor = 0
+
+silencer_name           = wpn_silencer_m4_2000
+silencer_x              = 196
+silencer_y              = 20
+grenade_launcher_name   = wpn_addon_grenade_launcher_m203
+grenade_launcher_x      = 117
+grenade_launcher_y      = 33
+scopes_sect	        = scope_aimpoint_sig550, scope_eotech_sig550, scope_elcan_sig550, scope_pn23_sig550
+
+;�����
+snd_draw		= weapons\sig550\sig550_draw
+snd_holster		= weapons\p90\p90_hide
+snd_shoot		= weapons\sig550\sig550_shoot, -1.1
+snd_empty		= weapons\glock17\glock17_dry
+snd_reload              = weapons\sig550\sig550_reload
+snd_reload_empty        = weapons\sig550\sig550_reload_empty
+snd_changecartridgetype = weapons\sig550\sig550_reload
+snd_shoot_grenade       = weapons\m203\m203_shoot
+snd_load_grenade        = weapons\m203\m203_reload
+snd_change_grenade      = weapons\m203\m203_changegrenade
+snd_switch              = $silent
+snd_close		= $silent
+snd_reload_jammed       = weapons\sig550\sig550_revival
+snd_reload_jammed_last  = weapons\sig550\sig550_revival_last
+snd_jammed_click        = weapons\glock17\glock17_dry
+snd_unload_mag          = $silent
+snd_jam                 = $silent
+snd_breechblock         = $silent
+snd_fakeshoot_first	= weapons\glock17\glock17_shoot_s
+snd_changefiremode	= weapons\l85\l85_firemode
+;snd_changefiremode_empty
+;snd_changefiremode_jammed
+snd_aim_start           = weapons\vss\vss_aim_start
+snd_aim_end             = weapons\vss\vss_aim_end
+snd_sprint_start        = weapons\detector_prepare
+snd_sprint_end          = weapons\pistol_sprint_end
+snd_suicide	        = weapons\suicide_start
+snd_stop_suicide	= weapons\suicide_end
+snd_laser_on	        = weapons\l85\l85_lam
+snd_laser_off	        = weapons\l85\l85_lam
+snd_torch_on	        = weapons\l85\l85_lam
+snd_torch_off	        = weapons\l85\l85_lam
+snd_headlamp_on         = weapons\headflash_on
+snd_headlamp_off        = weapons\headflash_off
+snd_nv_on               = weapons\nv_act
+snd_nv_off              = weapons\nv_deact
+snd_kick		= weapons\ak74\ak74_bayonet
+
+snd_scope_brightness_plus = weapons\nv_intensity
+snd_scope_brightness_minus = weapons\nv_intensity
+snd_scope_zoom_plus = weapons\nv_intensity
+snd_scope_zoom_minus = weapons\nv_intensity
+
+;��������� ��� ���������
+silencer_hit_power      = 0.9, 0.9, 0.9, 0.9
+silencer_hit_impulse    = 100
+silencer_fire_distance  = 200
+silencer_bullet_speed   = 500
+
+;silencer_flame_particles  = weapons\generic_weapon01
+silencer_smoke_particles   = weapons\generic_shoot_00
+
+snd_silncer_shot        = weapons\sig550\sig550_shoot_silencer, 0.9
+
+silencer_light_color    = 0.6,0.5,0.3
+silencer_light_range    = 0.01
+silencer_light_var_color= 0.05
+silencer_light_var_range= 0.01
+silencer_light_time     = 0.01
+
+
+use_world_anims = true
+
+wanm_idle        = idle
+wanm_idle_w_gl   = idle
+wanm_idle_g      = idle_gl_on
+
+wanm_idle_empty        = idle
+wanm_idle_empty_w_gl   = idle_empty
+wanm_idle_empty_g      = idle_gl_on_empty
+
+wanm_idle_jammed        = idle_jammed
+wanm_idle_jammed_w_gl   = idle_jammed 
+wanm_idle_jammed_g      = idle_gl_on_jammed
+
+wanm_shoot        = shoot
+wanm_shoot_w_gl   = shoot
+wanm_shoot_g      = idle_gl_on
+
+wanm_shoot_jammed        = idle_jammed
+wanm_shoot_jammed_w_gl   = idle_jammed
+wanm_shoot_jammed_g      = idle_gl_on_jammed
+
+wanm_shoot_last        = shoot
+wanm_shoot_last_w_gl   = shoot
+wanm_shoot_last_g      = idle_gl_on
+
+wanm_shoot_last_jammed        = idle_jammed
+wanm_shoot_last_jammed_w_gl   = idle_jammed
+wanm_shoot_last_jammed_g      = idle_gl_on_jammed
+
+wanm_reload        = idle
+wanm_reload_w_gl   = idle
+wanm_reload_g      = idle_gl_on
+
+wanm_reload_empty        = idle
+wanm_reload_empty_w_gl   = idle
+wanm_reload_empty_g      = idle_gl_on
+
+wanm_reload_jammed        = idle
+wanm_reload_jammed_w_gl   = idle
+wanm_reload_jammed_g      = idle_gl_on_jammed
+

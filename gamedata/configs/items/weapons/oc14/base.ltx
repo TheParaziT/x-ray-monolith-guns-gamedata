@@ -1,0 +1,340 @@
+[wpn_groza]:identity_immunities,weapon_probability,default_weapon_params
+GroupControlSection     = spawn_group
+$spawn					= "weapons\groza"                ; option for Level Editor
+$npc                    = on                                ; option for Level Editor
+$prefetch               = 8
+scheduled               = off                                ; option for ALife Simulator
+cform                   = skeleton
+class                   = WP_AK74
+description             = gunsl_wpn_groza_descr
+
+ef_main_weapon_type     = 2
+ef_weapon_type          = 6
+
+default_to_ruck         = false
+sprint_allowed       	= true
+
+repair_group = oc14
+
+kind                    = w_rifle
+
+script_binding = bind_weapon.bind
+def_hide_bones = scope1, scope2, scope3, scope4, scope5, mag30, mag45, mag45_black, mag60, flash, light, sight, grip, laser, foregrip_rail, launcher_scope_static, shell5x45, bullet5x45, bullet5x45_2, ammo_chamber_5x45
+def_show_bones = planka, dtc, handler, usm, spusk, launcher_scope, mag_20, foregrip, shell, bullet, bullet2, ammo_chamber, wpn_silencer_9x39
+
+def_hide_bones_override_when_gl_attached = usm, spusk, grip, dtc
+no_scope_overriding_hide_bones = launcher_scope_static
+no_scope_overriding_show_bones = launcher_scope
+
+
+banned_upgrades = 
+
+;-------------------------------------------------------------------------------
+cost                    = 10000
+weapon_class            = assault_rifle        ; Type of the weapon
+inv_weight              = 2.7
+
+upgrades = 
+installed_upgrades = 
+upgrade_scheme = 
+
+
+;--TTX----------------------------------------------------------------------------
+hit_power				= 0.95, 0.95, 0.95, 0.95
+hit_impulse				= 100
+hit_type				= fire_wound
+fire_distance           = 100
+bullet_speed            = 300
+rpm                     = 650
+rpm_empty_click         = 200
+
+use_aim_bullet          = false                ;�������������� �� ������ ������ ����
+time_to_aim             = 3.0
+
+ammo_in_chamber = true
+
+hud                     = wpn_groza_hud
+hud_when_silencer_is_attached = true
+hud_silencer = wpn_groza_silencer_hud
+
+misfire_probability        = 0.005 ;����������� ������ ��� ������������ ������  !!!old - now not working
+;������������, ��� ������� ���������� ���� ������
+misfire_start_condition		= 0.7
+;����������� ��� ������� ���� ������ ���������� �����������
+misfire_end_condition		= 0.2
+;���� ������ ��� ����������� ������ ��� misfireStartCondition
+misfire_start_prob	     	= 0.005
+;���� ������ ��� ����������� ������ ��� misfireEndCondition
+misfire_end_prob	     	= 0.044
+;���������� ����������� ��� ��������� ��������
+condition_shot_dec      	= 0.0007
+;���������� ����������� ��� �������� ��������
+condition_queue_shot_dec	= 0.0008
+
+
+ammo_elapsed            = 21
+ammo_mag_size           = 21
+ammo_class              = ammo_9x39_pab9, ammo_9x39_ap
+grenade_class           = ammo_vog-25, ammo_vog-25p
+
+fire_modes              = 1, -1
+grenade_vel 			= 32 ;76
+launch_speed            = 32
+
+hand_dependence         = 1
+single_handed           = 0
+
+;---DOF-------------------------------------------------------------------------
+zoom_dof				= 0.05, 0.1, 180
+reload_dof				= 0.0, 0.5, 5, 2
+
+;-���������-----------------------------------------------------------------------------
+;������� ���������
+fire_dispersion_base    = 0.23        ;���� (� ��������) ������� ��������� ������ (������ �������� � ������)
+control_inertion_factor = 1.2f
+crosshair_inertion		= 6.80
+
+;������
+cam_return              = 0
+cam_relax_speed         = 5        ;�������� �������� � �������� ���������
+cam_relax_speed_ai      = 360     ;�������� �������� � �������� ���������
+cam_dispersion          = 0.4        ;���������� ���� (� ��������) � ������ ���������
+cam_dispersion_inc      = 0.2       ;���������e cam_dispersion � ������ ���������
+cam_dispersion_frac     = 0.7       ;����� ����� ���������� �� cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
+cam_max_angle           = 50.0        ;������������ ���� ������
+cam_max_angle_horz      = 50.0        ;(degree) maximum shot horizontal degree
+cam_step_angle_horz     = 1.35        ;(degree) size of step camera moved in horizontal position while shooting
+
+PDM_disp_base 				= 1.2
+PDM_disp_vel_factor 		= 1.5
+PDM_disp_accel_factor 		= 1.5
+PDM_disp_crouch	 			= 1.0
+PDM_disp_crouch_no_acc 		= 1.0
+
+zoom_cam_relax_speed         = 5	    ; scope & ironsight
+zoom_cam_relax_speed_ai      = 360
+zoom_cam_dispersion          = 0.2
+zoom_cam_dispersion_inc      = 0.15
+zoom_cam_dispersion_frac     = 1.0
+zoom_cam_max_angle           = 50.0
+zoom_cam_max_angle_horz      = 50.0
+zoom_cam_step_angle_horz     = 1.25
+
+fire_dispersion_condition_factor = 11        ;���������� ��������� � ��������� ��� ������������ ������
+
+;-------------------------------------------------------------------------------
+holder_range_modifier   = 1.0                       ; �� ������� ��� ������������� eye_range
+holder_fov_modifier     = 1.0              ; �� ������� ��� ������������� eye_fov
+
+min_radius              = 3
+max_radius              = 100
+
+hit_probability_gd_novice  = 0.80
+hit_probability_gd_stalker = 0.80
+hit_probability_gd_veteran = 0.80
+hit_probability_gd_master  = 0.80
+
+;-------------------------------------------------------------------------------
+slot                    = 2                ; // secondary
+animation_slot          = 8                ; type of the animation that will be used
+
+inv_name                = gunsl_wpn_groza
+inv_name_short          = gunsl_wpn_groza
+
+icons_texture           = ui\ui_icon_equipment_guns
+inv_grid_width          = 4
+inv_grid_height         = 2
+inv_grid_x              = 0
+inv_grid_y              = 14
+
+upgr_icon_x	        = 1
+upgr_icon_y		= 122
+upgr_icon_width		= 231
+upgr_icon_height   	= 124
+
+kill_msg_x              = 67
+kill_msg_y              = 123
+kill_msg_width          = 64
+kill_msg_height         = 30
+
+;-------------------------------------------------------------------------------
+position                = -0.026, -0.144, 0.0
+orientation             = 0, 0, 0
+
+fire_point              = 0.000000,0.194,0.274
+fire_point2             = 0.0, 0.156, 0.285
+
+flame_particles         = weapons\generic_weapon05
+smoke_particles         = weapons\generic_shoot_00
+grenade_flame_particles = weapons\generic_weapon01
+
+shell_point             = 0.0, 0.194, 0.04
+shell_dir               = 0.0, 0.0, 0.4
+shell_particles         = weapons\generic_shells_r
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+;��� ������
+strap_position          = -0.15,-0.38,0.35			; position (offset) and orientation of the weapon when it is strapped
+strap_orientation       = -10,-5,10					; (3rd person view in degrees)
+strap_bone0             = bip01_spine2
+strap_bone1             = bip01_spine1
+
+startup_ammo            = 90
+visual                  = dynamics\weapons\wpn_groza\wpn_groza.ogf
+
+light_disabled				= false
+light_color             = 0.6,0.5,0.3
+light_range             = 5
+light_var_color         = 0.05
+light_var_range         = 0.5
+light_time              = 0.2
+
+ph_mass                 = 5
+;cost                   = 2100
+
+;addons
+scope_status            = 2
+silencer_status         = 2
+grenade_launcher_status = 2
+restricted_gl_and_sil = true
+
+zoom_enabled            = true                                                ; (on,off)zoom mode (right mouse button)
+zoom_rotate_time		= 0.25
+scope_zoom_factor	        = 0
+ironsight_zoom_factor = 0
+
+silencer_name           = wpn_addon_silencer_groza
+silencer_x              = 135
+silencer_y              = 17
+grenade_launcher_name   = wpn_addon_grenade_launcher_groza
+grenade_launcher_x      = 69
+grenade_launcher_y      = 23
+scopes_sect		= scope_po4x34_groza
+
+;�����
+snd_draw		= weapons\ak74\ak74_draw
+snd_holster		= weapons\p90\p90_hide
+snd_shoot		= weapons\groza\groza_shoot, -0.9
+snd_empty		= weapons\glock17\glock17_dry
+snd_reload              = weapons\groza\groza_reload
+snd_reload_empty        = weapons\groza\groza_reload_empty
+snd_changecartridgetype = weapons\groza\groza_reload
+snd_shoot_grenade       = weapons\ak74\ak74_gl_shoot
+snd_load_grenade        = weapons\ak74\ak74_gl_reload
+snd_change_grenade      = weapons\ak74\ak74_gl_grenadechange
+snd_switch              = $silent
+snd_close		= $silent
+snd_reload_jammed       = weapons\groza\groza_revival
+snd_reload_jammed_last  = weapons\groza\groza_revival
+snd_jammed_click        = weapons\glock17\glock17_dry
+snd_unload_mag          = $silent
+snd_jam                 = $silent
+snd_breechblock         = $silent
+snd_fakeshoot_first	= weapons\glock17\glock17_shoot_s
+snd_changefiremode	= $silent
+;snd_changefiremode_empty
+;snd_changefiremode_jammed
+snd_aim_start           = weapons\vss\vss_aim_start
+snd_aim_end             = weapons\vss\vss_aim_end
+snd_sprint_start        = weapons\detector_prepare
+snd_sprint_end          = weapons\pistol_sprint_end
+snd_suicide	        = weapons\suicide_start
+snd_stop_suicide	= weapons\suicide_end
+snd_laser_on	        = weapons\vss\vss_firemode
+snd_laser_off	        = weapons\vss\vss_firemode
+snd_torch_on	        = weapons\vss\vss_firemode
+snd_torch_off	        = weapons\vss\vss_firemode
+snd_headlamp_on         = weapons\headflash_on
+snd_headlamp_off        = weapons\headflash_off
+snd_nv_on               = weapons\nv_act
+snd_nv_off              = weapons\nv_deact
+snd_kick		= weapons\ak74\ak74_bayonet
+
+snd_scope_brightness_plus = weapons\nv_intensity
+snd_scope_brightness_minus = weapons\nv_intensity
+
+;��������� ��� ���������
+snd_silncer_shot        = weapons\groza\groza_shoot_silencer, -1.1
+volume_snd_silncer_shot = 80
+
+;silencer_flame_particles  = weapons\generic_weapon01
+silencer_smoke_particles   = weapons\generic_shoot_00
+
+silencer_light_color    = 0.6,0.5,0.3
+silencer_light_range    = 0.01
+silencer_light_var_color= 0.05
+silencer_light_var_range= 0.01
+silencer_light_time     = 0.01
+
+
+use_world_anims=true
+
+wanm_idle        = idle
+wanm_idle_a      = idle_auto
+wanm_idle_w_gl   = idle
+wanm_idle_a_w_gl = idle_auto
+wanm_idle_g      = glon_idle
+wanm_idle_a_g    = glon_idle_auto
+
+wanm_idle_empty        = idle
+wanm_idle_empty_a      = idle_auto
+wanm_idle_empty_w_gl   = idle
+wanm_idle_empty_a_w_gl = idle_auto
+wanm_idle_empty_g      = glon_idle
+wanm_idle_empty_a_g    = glon_idle_auto
+
+wanm_idle_jammed        = idle_jammed
+wanm_idle_jammed_a      = idle_jammed_auto
+wanm_idle_jammed_w_gl   = idle_jammed 
+wanm_idle_jammed_a_w_gl = idle_jammed_auto
+wanm_idle_jammed_g      = glon_idle_jammed
+wanm_idle_jammed_a_g    = glon_idle_jammed_auto
+
+wanm_shoot        = shoot
+wanm_shoot_a      = shoot_auto
+wanm_shoot_w_gl   = shoot
+wanm_shoot_a_w_gl = shoot_auto
+wanm_shoot_g      = glon_idle
+wanm_shoot_a_g    = glon_idle_auto
+
+wanm_shoot_jammed        = idle_jammed
+wanm_shoot_jammed_a      = idle_jammed_auto
+wanm_shoot_jammed_w_gl   = idle_jammed
+wanm_shoot_jammed_a_w_gl = idle_jammed_auto
+wanm_shoot_jammed_g      = glon_idle_jammed
+wanm_shoot_jammed_a_g    = glon_idle_jammed_auto
+
+wanm_shoot_last        = shoot
+wanm_shoot_last_a      = shoot_auto
+wanm_shoot_last_w_gl   = shoot
+wanm_shoot_last_a_w_gl = shoot_auto
+wanm_shoot_last_g      = glon_idle
+wanm_shoot_last_a_g    = glon_idle_auto
+
+wanm_shoot_last_jammed        = idle_jammed
+wanm_shoot_last_jammed_a      = idle_jammed_auto
+wanm_shoot_last_jammed_w_gl   = idle_jammed
+wanm_shoot_last_jammed_a_w_gl = idle_jammed_auto
+wanm_shoot_last_jammed_g      = glon_idle_jammed
+wanm_shoot_last_jammed_a_g    = glon_idle_jammed_auto
+
+wanm_reload        = idle
+wanm_reload_a      = idle_auto
+wanm_reload_w_gl   = idle
+wanm_reload_a_w_gl = idle_auto
+wanm_reload_g      = glon_idle
+wanm_reload_a_g    = glon_idle_auto
+
+wanm_reload_empty        = idle
+wanm_reload_empty_a      = idle_auto
+wanm_reload_empty_w_gl   = idle
+wanm_reload_empty_a_w_gl = idle_auto
+wanm_reload_empty_g      = glon_idle
+wanm_reload_empty_a_g    = glon_idle_auto
+
+wanm_reload_jammed        = idle
+wanm_reload_jammed_a      = idle_auto
+wanm_reload_jammed_w_gl   = idle
+wanm_reload_jammed_a_w_gl = idle_auto
+wanm_reload_jammed_g      = glon_idle_jammed
+wanm_reload_jammed_a_g    = glon_idle_jammed_auto
