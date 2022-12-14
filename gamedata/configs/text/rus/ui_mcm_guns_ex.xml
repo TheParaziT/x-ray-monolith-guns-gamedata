@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="ui_mcm_menu_gunslinger_extended">
+		<text>Gunslinger Ex.</text>
+	</string>
+	<string id="ui_mcm_gunex_title">
+		<text>Gunslinger Extended</text>
+	</string>
+	<string id="ui_mcm_gunslinger_extended_strong_mode">
+		<text>Крашить игру при багах</text>
+	</string>
+	<string id="ui_mcm_gunslinger_extended_strong_mode_desc">
+		<text>Если опция включена, то при скриптовых ошибках мода игра будет крашиться. Иначе, вся информация об ошибках будет выводиться в консоль.</text>
+	</string>
+	<string id="ui_mcm_gunslinger_extended_knife_kick">
+		<text>Клавиша быстрого удара ножом</text>
+	</string>
+</string_table>

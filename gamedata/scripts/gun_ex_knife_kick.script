@@ -1,0 +1,79 @@
+--Быстрый удар ножом у оружия
+--Автор кода: liner (https://ap-pro.ru/profile/643-liner/)
+--Сделано для Anomaly Gunslinger Extended
+
+local KICK_FINISHED = true
+
+--Нажатие на кнопку
+local function press(key)
+	--Если нажата не клавиша удара
+	if key ~= ui_mcm.get("gunslinger_extended/knife_kick") then
+		return
+	end
+	local w = db.actor:active_item()
+	if not KICK_FINISHED then
+		return
+	end
+	--Если в руках нету прдемета или на оружии нет ножа
+	if not w or not gwr.allow_knife_kick(w) then
+		local k = db.actor:item_in_slot(1)
+		if k then
+			db.actor:activate_slot(1)
+			KICK_FINISHED = false
+			--то убираем всё из рук, достаём нож
+			local last = db.actor:active_slot()
+			gwr.event(173,function()
+				--и бьём
+				k:switch_state(5)
+				level.add_cam_effector("camera_effects\\weapon\\knife_kick_1.anm",32172,false,"")
+				gwr.event(1030,
+					function()
+						--а затем возвращемся к активному слоту до удара ножом
+						db.actor:activate_slot(last)
+						KICK_FINISHED = true
+					end
+				)
+			end)
+		end
+		printf("close 2")
+		return
+	end
+	if IsMelee(w) then
+		w:switch_state(5)
+		return
+	elseif not gwr.get(w) then
+		printf("close 3")
+		return
+	end
+	if not gwr.allow_knife_kick(w) then
+		return
+	end
+	printf("All checks have been passed!")
+	--Если мы прошли через все условия, то начинаем отрабатывать удар
+	--Первым делом играем анимацию
+	gwr.event(w:play_hud_motion("anm_kick",false,0,1.0,0),
+		function()
+			KICK_FINISHED = true
+		end)
+	--Через 170 мс происходит хит объекта, на которого наведена мышь
+	KICK_FINISHED = false
+	gwr.event(170,function()
+		local trg = level.get_target_obj()
+		if trg and w:bone_position("knife"):distance_to(trg:position()) < 1.5 then
+			printf("Hit target object [%s] by knife kick",trg:name())
+			local h=hit()
+			h.type = hit.fire_wound
+			h.power = 0.5
+			h.impulse = 0.2
+			h.direction = w:direction()
+			h.draftsman = db.actor
+			h.weapon_id = w:id()
+			trg:hit(h)
+		end
+		--Реализация воллмарков через ray_pick
+	end)
+end
+
+function on_game_start()
+	RegisterScriptCallback("on_key_press",press)
+end

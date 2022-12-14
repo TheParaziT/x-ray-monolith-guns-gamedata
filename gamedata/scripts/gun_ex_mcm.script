@@ -1,0 +1,12 @@
+--Настройка опций аддона
+--Автор кода: liner (https://ap-pro.ru/profile/643-liner/)
+--Сделано для Anomaly Gunslinger Extended
+
+function on_mcm_load()
+	return {id="gunslinger_extended",sh=true,gr={
+			{id="title",type="slide",link="ui_options_slider_gameplay_diff",text="ui_mcm_gunex_title",size={512,50},spacing=20 },
+			{id="strong_mode",type="check",val=1,def=true},
+			{id = "knife_kick", type = "key_bind", val = 2, def = DIK_keys.DIK_C},
+		}
+	}
+end
