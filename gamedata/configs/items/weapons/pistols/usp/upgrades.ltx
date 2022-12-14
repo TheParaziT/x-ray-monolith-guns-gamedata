@@ -1,0 +1,450 @@
+;------------------------------------------wpn_usp_sights------------------------------------------
+[up_sect_wpn_usp_sights]
+cost = 1000
+crosshair_inertion = -1
+control_inertion_factor = -0.1
+show_bones = sight
+
+[up_wpn_usp_sights]
+scheme_index = 0, 0
+known = 1
+effects = 
+section = up_sect_wpn_usp_sights
+property = prop_lightingsights
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_usp_up_sights_name
+description =gunsl_wpn_usp_up_sights_descr
+icon = ui_gunsl_up_wpn_usp_sights
+;------------------------------------------wpn_usp_anatomic_handle------------------------------------------
+[up_sect_wpn_usp_anatomic_handle]
+cost = 1500
+value = +20
+control_inertion_factor = -0.2
+
+cam_relax_speed         = +1.0
+cam_dispersion          = -0.03
+
+zoom_cam_relax_speed = +2
+zoom_cam_dispersion = -0.05
+zoom_cam_dispersion_inc = -0.03
+
+PDM_disp_base = -0.05
+PDM_disp_vel_factor = -0.1
+
+[up_wpn_usp_anatomic_handle]
+scheme_index = 0, 1
+known = 1
+effects = 
+section = up_sect_wpn_usp_anatomic_handle
+property = prop_inertion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_usp_up_anatomic_handle_name
+description =gunsl_wpn_usp_up_anatomic_handle_descr
+icon = ui_gunsl_up_wpn_usp_anatomic_handle
+;------------------------------------------wpn_usp_ramka------------------------------------------
+[up_sect_wpn_usp_ramka]
+cost = 3000
+value = +15
+condition_shot_dec      	= -0.0005
+
+[up_wpn_usp_ramka]
+scheme_index = 0, 2
+known = 1
+effects = vartree_wpn_usp_laser
+section = up_sect_wpn_usp_ramka
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_usp_up_ramka_name
+description =gunsl_wpn_usp_up_ramka_descr
+icon = ui_gunsl_up_wpn_usp_ramka
+;------------------------------------------wpn_usp_flashlaser------------------------------------------
+[up_sect_wpn_usp_flashlaser]:red_laser, tactical_torch
+cost = 5000
+value = 0
+crosshair_inertion = -0.5
+show_bones = flash, laser
+laserdot_world_attach_offset_x = 0.0
+laserdot_world_attach_offset_y = 0.06
+laserdot_world_attach_offset_z = 0.144
+
+torch_world_attach_offset_x = 0.000
+torch_world_attach_offset_y = 0.082
+torch_world_attach_offset_z = 0.157
+
+torch_omni_world_attach_offset_x = 0.049
+torch_omni_world_attach_offset_y = 0.082
+torch_omni_world_attach_offset_z = 0.157
+
+torch_attach_offset_x = 0.0
+torch_attach_offset_y = 0.0
+torch_attach_offset_z = -0.2
+
+torch_omni_attach_offset_x = 0.0 
+torch_omni_attach_offset_y = 0.0
+torch_omni_attach_offset_z = -0.2
+
+inv_weight = +0.2
+
+[up_wpn_usp_flashlaser]
+scheme_index = 0, 3
+known = 1
+effects = 
+section = up_sect_wpn_usp_flashlaser
+property = prop_laser
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_usp_up_flashlaser_name
+description =gunsl_wpn_usp_up_flashlaser_descr
+icon = ui_gunsl_up_wpn_usp_flashlaser
+;------------------------------------------wpn_usp_light_mag------------------------------------------
+[up_sect_wpn_usp_light_mag]
+cost = 1000
+value = -0.1
+inv_weight = -0.1
+
+[up_wpn_usp_light_mag]
+scheme_index = 0, 4
+known = 1
+effects = 
+section = up_sect_wpn_usp_light_mag
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_usp_up_light_mag_name
+description =gunsl_wpn_usp_up_light_mag_descr
+icon = ui_gunsl_up_wpn_usp_light_mag
+;------------------------------------------wpn_usp_pokritie------------------------------------------
+[up_sect_wpn_usp_pokritie]
+cost = 3000
+value = +10
+condition_shot_dec      	= -0.0002
+misfire_end_prob	     	= -0.01
+misfire_start_condition		= -0.05
+
+[up_wpn_usp_pokritie]
+scheme_index = 0, 5
+known = 1
+effects = vartree_wpn_usp_usm
+section = up_sect_wpn_usp_pokritie
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_usp_up_pokritie_name
+description =gunsl_wpn_usp_up_pokritie_descr
+icon = ui_gunsl_up_wpn_usp_pokritie
+;------------------------------------------wpn_usp_usm_rpm------------------------------------------
+[up_sect_wpn_usp_usm_rpm]
+cost = 4000
+value = +20
+condition_shot_dec  = +0.001
+rpm = +30
+
+[up_wpn_usp_usm_rpm]
+scheme_index = 0, 6
+known = 1
+effects = vartree_wpn_usp_barrel
+section = up_sect_wpn_usp_usm_rpm
+property = prop_rpm
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_usp_up_usm_rpm_name
+description =gunsl_wpn_usp_up_usm_rpm_descr
+icon = ui_gunsl_up_wpn_usp_usm_rpm
+;------------------------------------------wpn_usp_usm_recoil------------------------------------------
+[up_sect_wpn_usp_usm_recoil]
+cost = 4000
+value = -20
+cam_dispersion = -0.2
+cam_dispersion_inc = -0.5
+zoom_cam_dispersion = -0.05
+zoom_cam_dispersion_inc = -0.1
+PDM_disp_base = -0.03
+
+[up_wpn_usp_usm_recoil]
+scheme_index = 0, 7
+known = 1
+effects = vartree_wpn_usp_barrel
+section = up_sect_wpn_usp_usm_recoil
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_usp_up_usm_recoil_name
+description =gunsl_wpn_usp_up_usm_recoil_descr
+icon = ui_gunsl_up_wpn_usp_usm_recoil
+;------------------------------------------wpn_usp_barrel_accuracy------------------------------------------
+[up_sect_wpn_usp_barrel_accuracy]
+cost = 6000
+value = +30
+PDM_disp_base = -0.25
+fire_dispersion_base = -0.04
+
+[up_wpn_usp_barrel_accuracy]
+scheme_index = 0, 8
+known = 1
+effects = 
+section = up_sect_wpn_usp_barrel_accuracy
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_usp_up_barrel_accuracy_name
+description =gunsl_wpn_usp_up_barrel_accuracy_descr
+icon = ui_gunsl_up_wpn_usp_barrel_accuracy
+;------------------------------------------wpn_usp_barrel_bullet_speed------------------------------------------
+[up_sect_wpn_usp_barrel_bullet_speed]
+cost = 6000
+value = +30
+fire_dispersion_base = -0.005
+bullet_speed = +60
+
+[up_wpn_usp_barrel_bullet_speed]
+scheme_index = 0, 9
+known = 1
+effects = 
+section = up_sect_wpn_usp_barrel_bullet_speed
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_usp_up_barrel_bullet_speed_name
+description =gunsl_wpn_usp_up_barrel_bullet_speed_descr
+icon = ui_gunsl_up_wpn_usp_barrel_bullet_speed
+;------------------------------------------wpn_usp_barrel_recoil------------------------------------------
+[up_sect_wpn_usp_barrel_recoil]
+cost = 6000
+value = -30
+cam_dispersion = -0.5
+cam_dispersion = -0.1
+zoom_cam_dispersion = -0.1
+zoom_cam_dispersion_inc = -0.05
+
+[up_wpn_usp_barrel_recoil]
+scheme_index = 0, 10
+known = 1
+effects = 
+section = up_sect_wpn_usp_barrel_recoil
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_usp_up_barrel_recoil_name
+description =gunsl_wpn_usp_up_barrel_recoil_descr
+icon = ui_gunsl_up_wpn_usp_barrel_recoil
+;------------------------------------------wpn_usp_zatvor_ejector------------------------------------------
+[up_sect_wpn_usp_zatvor_ejector]
+cost = 6000
+value = +30
+misfire_start_condition		= -0.1
+misfire_start_prob	     	= -0.002
+misfire_end_prob	     	= -0.02
+condition_shot_dec = -0.001
+
+[up_wpn_usp_zatvor_ejector]
+scheme_index = 0, 11
+known = 1
+effects = 
+section = up_sect_wpn_usp_zatvor_ejector
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_usp_up_zatvor_ejector_name
+description =gunsl_wpn_usp_up_zatvor_ejector_descr
+icon = ui_gunsl_up_wpn_usp_zatvor_ejector
+;------------------------------------------wpn_usp_zatvor_zapiratel------------------------------------------
+[up_sect_wpn_usp_zatvor_zapiratel]
+cost = 6000
+value = +30
+bullet_speed = +55
+fire_distance = +100
+
+[up_wpn_usp_zatvor_zapiratel]
+scheme_index = 0, 12
+known = 1
+effects = 
+section = up_sect_wpn_usp_zatvor_zapiratel
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_usp_up_zatvor_zapiratel_name
+description =gunsl_wpn_usp_up_zatvor_zapiratel_descr
+icon = ui_gunsl_up_wpn_usp_zatvor_zapiratel
+;------------------------------------------wpn_usp_zatvor_rpm------------------------------------------
+[up_sect_wpn_usp_zatvor_rpm]
+cost = 6000
+value = +30
+rpm = +60
+misfire_start_condition = +0.1
+
+[up_wpn_usp_zatvor_rpm]
+scheme_index = 0, 13
+known = 1
+effects = 
+section = up_sect_wpn_usp_zatvor_rpm
+property = prop_rpm
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_usp_up_zatvor_rpm_name
+description =gunsl_wpn_usp_up_zatvor_rpm_descr
+icon = ui_gunsl_up_wpn_usp_zatvor_rpm
+;------------------------------------------wpn_usp_polymer_buffer------------------------------------------
+[up_sect_wpn_usp_polymer_buffer]
+cost = 4000
+value = -15
+cam_dispersion          = -0.3
+zoom_cam_dispersion         = -0.07
+PDM_disp_base  = -0.05
+
+[up_wpn_usp_polymer_buffer]
+scheme_index = 0, 14
+known = 1
+effects = vartree_wpn_usp_zatvor2
+section = up_sect_wpn_usp_polymer_buffer
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_usp_up_polymer_buffer_name
+description =gunsl_wpn_usp_up_polymer_buffer_descr
+icon = ui_gunsl_up_wpn_usp_polymer_buffer
+;------------------------------------------wpn_usp_patronnik------------------------------------------
+[up_sect_wpn_usp_patronnik]
+cost = 4000
+value = +20
+PDM_disp_base = -0.1
+fire_dispersion_base = -0.02
+
+[up_wpn_usp_patronnik]
+scheme_index = 0, 15
+known = 1
+effects = vartree_wpn_usp_zatvor2
+section = up_sect_wpn_usp_patronnik
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_usp_up_patronnik_name
+description =gunsl_wpn_usp_up_patronnik_descr
+icon = ui_gunsl_up_wpn_usp_patronnik
+;------------------------------------------wpn_usp_light_details------------------------------------------
+[up_sect_wpn_usp_light_details]
+cost = 1500
+value = -0.1
+inv_weight = -0.1
+
+[up_wpn_usp_light_details]
+scheme_index = 0, 16
+known = 1
+effects = vartree_wpn_usp_zatvor1
+section = up_sect_wpn_usp_light_details
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_usp_up_light_details_name
+description =gunsl_wpn_usp_up_light_details_descr
+icon = ui_gunsl_up_wpn_usp_light_details
+;------------------------------------------------------------------------------------
+[vartree_wpn_usp_body]
+elements = up_wpn_usp_pokritie
+[vartree_wpn_usp_usm]
+elements = up_wpn_usp_usm_rpm, up_wpn_usp_usm_recoil
+[vartree_wpn_usp_barrel]
+elements = up_wpn_usp_barrel_accuracy, up_wpn_usp_barrel_bullet_speed, up_wpn_usp_barrel_recoil
+[vartree_wpn_usp_zz]
+elements = up_wpn_usp_light_details
+[vartree_wpn_usp_zatvor1]
+elements = up_wpn_usp_polymer_buffer, up_wpn_usp_patronnik
+[vartree_wpn_usp_zatvor2]
+elements = up_wpn_usp_zatvor_ejector, up_wpn_usp_zatvor_zapiratel, up_wpn_usp_zatvor_rpm
+[vartree_wpn_usp_ramka]
+elements = up_wpn_usp_ramka
+[vartree_wpn_usp_laser]
+elements = up_wpn_usp_flashlaser
+[vartree_wpn_usp_sights]
+elements = up_wpn_usp_sights
+[vartree_wpn_usp_mag]
+elements = up_wpn_usp_light_mag
+[vartree_wpn_usp_handle]
+elements = up_wpn_usp_anatomic_handle

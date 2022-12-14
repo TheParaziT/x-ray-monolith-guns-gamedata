@@ -1,0 +1,478 @@
+;------------------------------------------fort17_barrel_sil------------------------------------------
+[up_sect_fort17_barrel_sil]
+cost = 2000
+fire_dispersion_base = -0.03
+PDM_disp_base = -0.1
+inv_weight = +0.01
+
+silencer_status = 2
+silencer_name = wpn_addon_silencer
+silencer_x = 62
+silencer_y = -17
+
+silencer_smoke_particles = weapons\generic_shoot_00
+snd_silncer_shot = weapons\fort12\fort_shoot_s, -1.1
+silencer_light_color = 0.6,0.5,0.3
+silencer_light_range	= 0.01
+silencer_light_var_color = 0.05
+silencer_light_var_range = 0.01
+silencer_light_time = 0.01
+
+hide_bones = barrel
+show_bones = barrel_silencer
+
+[up_fort17_barrel_sil]
+scheme_index = 0, 0
+known = 1
+effects = vartree_fort17_barrel
+section = up_sect_fort17_barrel_sil
+property = prop_silencer
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_fort17_up_barrel_sil_name
+description =gunsl_fort17_up_barrel_sil_descr
+icon = ui_gunsl_up_fort17_barrel_sil
+;------------------------------------------fort17_barrel_speed------------------------------------------
+[up_sect_fort17_barrel_speed]
+cost = 4000
+value = +20
+bullet_speed = +50
+PDM_disp_base = -0.1
+
+[up_fort17_barrel_speed]
+scheme_index = 0, 1
+known = 1
+effects = vartree_fort17_zatvor
+section = up_sect_fort17_barrel_speed
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_fort17_up_barrel_speed_name
+description =gunsl_fort17_up_barrel_speed_descr
+icon = ui_gunsl_up_fort17_barrel_speed
+;------------------------------------------fort17_body------------------------------------------
+[up_sect_fort17_body]
+cost = 5000
+value = +30
+misfire_end_prob = -0.02
+misfire_start_condition = -0.1
+misfire_end_condition = -0.05
+
+
+condition_shot_dec = -0.0012
+condition_queue_shot_dec = -0.0012
+
+[up_fort17_body]
+scheme_index = 0, 2
+known = 1
+effects = 
+section = up_sect_fort17_body
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_fort17_up_body_name
+description =gunsl_fort17_up_body_descr
+icon = ui_gunsl_up_fort17_body
+;------------------------------------------fort17_ejector------------------------------------------
+[up_sect_fort17_ejector]
+cost = 6000
+value = +25
+misfire_start_prob = -0.001
+misfire_end_prob = -0.03
+
+condition_shot_dec = -0.0003
+condition_queue_shot_dec = -0.0003
+
+[up_fort17_ejector]
+scheme_index = 0, 3
+known = 1
+effects = 
+section = up_sect_fort17_ejector
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_fort17_up_ejector_name
+description =gunsl_fort17_up_ejector_descr
+icon = ui_gunsl_up_fort17_ejector
+;------------------------------------------fort17_handle------------------------------------------
+[up_sect_fort17_handle]
+cost = 2000
+value = +20
+control_inertion_factor = -0.1
+
+cam_relax_speed         = +1.0
+cam_dispersion          = -0.03
+
+zoom_cam_relax_speed = +2
+zoom_cam_dispersion = -0.05
+zoom_cam_dispersion_inc = -0.03
+
+PDM_disp_base = -0.1
+PDM_disp_vel_factor = -0.1
+
+[up_fort17_handle]
+scheme_index = 0, 4
+known = 1
+effects = 
+section = up_sect_fort17_handle
+property = prop_inertion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_fort17_up_handle_name
+description =gunsl_fort17_up_handle_descr
+icon = ui_gunsl_up_fort17_handle
+;------------------------------------------fort17_usm_recoil------------------------------------------
+[up_sect_fort17_usm_recoil]
+cost = 4000
+value = -20
+PDM_disp_base = -0.05
+cam_dispersion = -0.18
+cam_dispersion_inc = -0.25
+zoom_cam_dispersion = -0.08
+zoom_cam_dispersion_inc = -0.30
+
+[up_fort17_usm_recoil]
+scheme_index = 0, 5
+known = 1
+effects = vartree_fort17_body
+section = up_sect_fort17_usm_recoil
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_fort17_up_usm_recoil_name
+description =gunsl_fort17_up_usm_recoil_descr
+icon = ui_gunsl_up_fort17_usm_recoil
+;------------------------------------------fort17_plus_mag------------------------------------------
+[up_sect_fort17_plus_mag]
+cost = 1000
+value = +1
+ammo_mag_size = +1
+
+[up_fort17_plus_mag]
+scheme_index = 0, 6
+known = 1
+effects = 
+section = up_sect_fort17_plus_mag
+property = prop_ammo_size
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_fort17_up_plus_mag_name
+description =gunsl_fort17_up_plus_mag_descr
+icon = ui_gunsl_up_fort17_plus_mag
+;------------------------------------------fort17_patronnik_accuracy------------------------------------------
+[up_sect_fort17_patronnik_accuracy]
+cost = 6000
+value = +30
+fire_dispersion_base = -0.08
+PDM_disp_base = -0.5
+PDM_disp_crouch = -0.1
+PDM_disp_crouch_no_acc = -0.1
+
+[up_fort17_patronnik_accuracy]
+scheme_index = 0, 7
+known = 1
+effects = 
+section = up_sect_fort17_patronnik_accuracy
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_fort17_up_patronnik_accuracy_name
+description =gunsl_fort17_up_patronnik_accuracy_descr
+icon = ui_gunsl_up_fort17_patronnik_accuracy
+;------------------------------------------fort17_zatvor_balancer------------------------------------------
+[up_sect_fort17_zatvor_balancer]
+cost = 6000
+value = -30
+PDM_disp_base = -0.15
+cam_dispersion = -0.3
+cam_dispersion_inc = -0.1
+zoom_cam_dispersion = -0.1
+zoom_cam_dispersion_inc = -0.2
+
+[up_fort17_zatvor_balancer]
+scheme_index = 0, 8
+known = 1
+effects = 
+section = up_sect_fort17_zatvor_balancer
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_fort17_up_zatvor_balancer_name
+description =gunsl_fort17_up_zatvor_balancer_descr
+icon = ui_gunsl_up_fort17_zatvor_balancer
+;------------------------------------------fort17_light_details------------------------------------------
+[up_sect_fort17_light_details]
+cost = 1500
+value = -0.1
+inv_weight = -0.1
+
+[up_fort17_light_details]
+scheme_index = 0, 9
+known = 1
+effects = vartree_fort17_usm
+section = up_sect_fort17_light_details
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_fort17_up_light_details_name
+description =gunsl_fort17_up_light_details_descr
+icon = ui_gunsl_up_fort17_light_details
+;------------------------------------------fort17_sights------------------------------------------
+[up_sect_fort17_sights]
+cost = 1000
+crosshair_inertion = -1
+control_inertion_factor = -0.1
+show_bones = sight
+
+[up_fort17_sights]
+scheme_index = 0, 10
+known = 1
+effects = 
+section = up_sect_fort17_sights
+property = prop_lightingsights
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_fort17_up_sights_name
+description =gunsl_fort17_up_sights_descr
+icon = ui_gunsl_up_fort17_sights
+;------------------------------------------fort17_usm_rpm------------------------------------------
+[up_sect_fort17_usm_rpm]
+cost = 4000
+value = +40
+rpm = +120
+condition_shot_dec = +0.0005
+condition_queue_shot_dec = +0.0005
+
+[up_fort17_usm_rpm]
+scheme_index = 0, 11
+known = 1
+effects = vartree_fort17_body
+section = up_sect_fort17_usm_rpm
+property = prop_rpm
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_fort17_up_usm_rpm_name
+description =gunsl_fort17_up_usm_rpm_descr
+icon = ui_gunsl_up_fort17_usm_rpm
+;------------------------------------------fort17_recoil_compensator------------------------------------------
+[up_sect_fort17_recoil_compensator]
+cost = 2000
+value = -10
+cam_dispersion = -0.11
+zoom_cam_dispersion = -0.04
+
+[up_fort17_recoil_compensator]
+scheme_index = 0, 12
+known = 1
+effects = vartree_fort17_usm
+section = up_sect_fort17_recoil_compensator
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_fort17_up_recoil_compensator_name
+description =gunsl_fort17_up_recoil_compensator_descr
+icon = ui_gunsl_up_fort17_recoil_compensator
+;------------------------------------------fort17_barrel_accuracy------------------------------------------
+[up_sect_fort17_barrel_accuracy]
+cost = 4000
+value = +20
+PDM_disp_base = -0.3
+fire_dispersion_base = -0.05
+
+[up_fort17_barrel_accuracy]
+scheme_index = 0, 13
+known = 1
+effects = vartree_fort17_zatvor
+section = up_sect_fort17_barrel_accuracy
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_fort17_up_barrel_accuracy_name
+description =gunsl_fort17_up_barrel_accuracy_descr
+icon = ui_gunsl_up_fort17_barrel_accuracy
+;------------------------------------------fort17_flashlaser------------------------------------------
+[up_sect_fort17_flashlaser]:green_laser, tactical_torch
+cost = 6000
+crosshair_inertion = -0.5
+show_bones = flash, laser
+laserdot_world_attach_offset_x = 0.0
+laserdot_world_attach_offset_y = 0.099
+laserdot_world_attach_offset_z = 0.126
+
+torch_world_attach_offset_x = 0.000
+torch_world_attach_offset_y = 0.073
+torch_world_attach_offset_z = 0.116
+
+torch_omni_world_attach_offset_x = 0.000
+torch_omni_world_attach_offset_y = 0.073
+torch_omni_world_attach_offset_z = 0.116
+
+torch_attach_offset_x = 0.0
+torch_attach_offset_y = 0.0
+torch_attach_offset_z = -0.2
+
+torch_omni_attach_offset_x = 0.0 
+torch_omni_attach_offset_y = 0.0
+torch_omni_attach_offset_z = -0.2
+
+inv_weight = +0.2
+
+[up_fort17_flashlaser]
+scheme_index = 0, 14
+known = 1
+effects = 
+section = up_sect_fort17_flashlaser
+property = prop_laser
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_fort17_up_flashlaser_name
+description =gunsl_fort17_up_flashlaser_descr
+icon = ui_gunsl_up_fort17_flashlaser
+;------------------------------------------fort17_hard_ramka------------------------------------------
+[up_sect_fort17_hard_ramka]
+cost = 2000
+value = +10
+misfire_start_condition = -0.2
+misfire_start_prob = -0.001
+misfire_end_prob = -0.01
+
+condition_shot_dec = -0.0003
+condition_queue_shot_dec = -0.0003
+
+[up_fort17_hard_ramka]
+scheme_index = 0, 15
+known = 1
+effects = vartree_fort17_flashlaser
+section = up_sect_fort17_hard_ramka
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_fort17_up_hard_ramka_name
+description =gunsl_fort17_up_hard_ramka_descr
+icon = ui_gunsl_up_fort17_hard_ramka
+;------------------------------------------fort17_titan_details------------------------------------------
+[up_sect_fort17_titan_details]
+cost = 1500
+value = +10
+condition_shot_dec = -0.0004
+condition_queue_shot_dec = -0.0004
+
+[up_fort17_titan_details]
+scheme_index = 0, 16
+known = 1
+effects = vartree_fort17_usm
+section = up_sect_fort17_titan_details
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_fort17_up_titan_details_name
+description =gunsl_fort17_up_titan_details_descr
+icon = ui_gunsl_up_fort17_titan_details
+;------------------------------------------------------------------------------------
+[vartree_fort17_details]
+elements = up_fort17_titan_details, up_fort17_recoil_compensator, up_fort17_light_details
+[vartree_fort17_barrel]
+elements = up_fort17_barrel_speed, up_fort17_barrel_accuracy
+[vartree_fort17_zatvor]
+elements = up_fort17_ejector, up_fort17_patronnik_accuracy, up_fort17_zatvor_balancer
+[vartree_fort17_usm]
+elements = up_fort17_usm_recoil, up_fort17_usm_rpm
+[vartree_fort17_body]
+elements = up_fort17_body
+[vartree_fort17_sights]
+elements = up_fort17_sights
+[vartree_fort17_handle]
+elements = up_fort17_handle
+[vartree_fort17_mag]
+elements = up_fort17_plus_mag
+[vartree_fort17_silencer]
+elements = up_fort17_barrel_sil
+[vartree_fort17_ramka]
+elements = up_fort17_hard_ramka
+[vartree_fort17_flashlaser]
+elements = up_fort17_flashlaser

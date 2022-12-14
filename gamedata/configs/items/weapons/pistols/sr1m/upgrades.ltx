@@ -1,0 +1,524 @@
+;------------------------------------------sr1m_barrel_sil------------------------------------------
+[up_sect_sr1m_barrel_sil]
+cost = 7000
+silencer_status = 2
+silencer_name  = wpn_silencer_921
+silencer_x = 65
+silencer_y = -18
+
+silencer_smoke_particles = weapons\generic_shoot_00
+snd_silncer_shot = weapons\glock17\glock17_shoot_s, -1.1
+silencer_light_color = 0.6,0.5,0.3
+silencer_light_range	= 0.01
+silencer_light_var_color = 0.05
+silencer_light_var_range = 0.01
+silencer_light_time = 0.01
+
+hide_bones = barrel
+show_bones = barrel_silencer
+
+[up_sr1m_barrel_sil]
+scheme_index = 0, 0
+known = 1
+effects = 
+section = up_sect_sr1m_barrel_sil
+property = prop_silencer
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_barrel_sil_name
+description =gunsl_sr1m_up_barrel_sil_descr
+icon = ui_gunsl_up_sr1m_barrel_sil
+;------------------------------------------sr1m_barrel_speed------------------------------------------
+[up_sect_sr1m_barrel_speed]
+cost = 7000
+value = +30
+bullet_speed = +80
+PDM_disp_base = -0.1
+
+[up_sr1m_barrel_speed]
+scheme_index = 0, 1
+known = 1
+effects = 
+section = up_sect_sr1m_barrel_speed
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_barrel_speed_name
+description =gunsl_sr1m_up_barrel_speed_descr
+icon = ui_gunsl_up_sr1m_barrel_speed
+;------------------------------------------sr1m_barrel_accuracy------------------------------------------
+[up_sect_sr1m_barrel_accuracy]
+cost = 7000
+value = +30
+PDM_disp_base = -0.45
+fire_dispersion_base = -0.045
+PDM_disp_crouch = -0.1
+PDM_disp_crouch_no_acc = -0.1
+
+[up_sr1m_barrel_accuracy]
+scheme_index = 0, 2
+known = 1
+effects = 
+section = up_sect_sr1m_barrel_accuracy
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_barrel_accuracy_name
+description =gunsl_sr1m_up_barrel_accuracy_descr
+icon = ui_gunsl_up_sr1m_barrel_accuracy
+;------------------------------------------sr1m_mag_reliability------------------------------------------
+[up_sect_sr1m_mag_reliability]
+cost = 1000
+value = +10
+misfire_start_prob = -0.01
+misfire_end_prob = -0.03
+
+[up_sr1m_mag_reliability]
+scheme_index = 0, 3
+known = 1
+effects = vartree_sr1m_handle
+section = up_sect_sr1m_mag_reliability
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_mag_reliability_name
+description =gunsl_sr1m_up_mag_reliability_descr
+icon = ui_gunsl_up_sr1m_mag_reliability
+;------------------------------------------sr1m_ejector------------------------------------------
+[up_sect_sr1m_ejector]
+cost = 5000
+value = +20
+misfire_start_prob = -0.01
+misfire_end_prob = -0.02
+
+condition_shot_dec = -0.00055
+condition_queue_shot_dec = -0.00055
+
+[up_sr1m_ejector]
+scheme_index = 0, 4
+known = 1
+effects = vartree_sr1m_barrel
+section = up_sect_sr1m_ejector
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_ejector_name
+description =gunsl_sr1m_up_ejector_descr
+icon = ui_gunsl_up_sr1m_ejector
+;------------------------------------------sr1m_flashlaser------------------------------------------
+[up_sect_sr1m_flashlaser]:red_laser, tactical_torch
+cost = 6000
+crosshair_inertion = -0.5
+show_bones = flash, laser
+laserdot_world_attach_offset_x = 0.008
+laserdot_world_attach_offset_y = 0.107
+laserdot_world_attach_offset_z = 0.147
+
+torch_world_attach_offset_x = -0.002
+torch_world_attach_offset_y = 0.096
+torch_world_attach_offset_z = 0.148
+
+torch_omni_world_attach_offset_x = -0.002
+torch_omni_world_attach_offset_y = 0.096
+torch_omni_world_attach_offset_z = 0.148
+
+torch_attach_offset_x = 0.0
+torch_attach_offset_y = 0.0
+torch_attach_offset_z = -0.2
+
+torch_omni_attach_offset_x = 0.0 
+torch_omni_attach_offset_y = 0.0
+torch_omni_attach_offset_z = -0.2
+
+inv_weight = +0.2
+
+[up_sr1m_flashlaser]
+scheme_index = 0, 5
+known = 1
+effects = 
+section = up_sect_sr1m_flashlaser
+property = prop_laser
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_flashlaser_name
+description =gunsl_sr1m_up_flashlaser_descr
+icon = ui_gunsl_up_sr1m_flashlaser
+;------------------------------------------sr1m_handle_inertion------------------------------------------
+[up_sect_sr1m_handle_inertion]
+cost = 2000
+value = +20
+control_inertion_factor = -0.1
+
+cam_relax_speed         = +1.0
+cam_dispersion          = -0.035
+
+zoom_cam_relax_speed = +2
+zoom_cam_dispersion = -0.05
+zoom_cam_dispersion_inc = -0.03
+
+PDM_disp_base = -0.05
+PDM_disp_vel_factor = -0.2
+PDM_disp_crouch = -0.1
+PDM_disp_crouch_no_acc = -0.1
+
+[up_sr1m_handle_inertion]
+scheme_index = 0, 6
+known = 1
+effects = vartree_sr1m_body
+section = up_sect_sr1m_handle_inertion
+property = prop_inertion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_handle_inertion_name
+description =gunsl_sr1m_up_handle_inertion_descr
+icon = ui_gunsl_up_sr1m_handle_inertion
+;------------------------------------------sr1m_handle_weight------------------------------------------
+[up_sect_sr1m_handle_weight]
+cost = 2000
+value = -0.05
+inv_weight = -0.05
+
+[up_sr1m_handle_weight]
+scheme_index = 0, 7
+known = 1
+effects = vartree_sr1m_body
+section = up_sect_sr1m_handle_weight
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_handle_weight_name
+description =gunsl_sr1m_up_handle_weight_descr
+icon = ui_gunsl_up_sr1m_handle_weight
+;------------------------------------------sr1m_body------------------------------------------
+[up_sect_sr1m_body]
+cost = 4000
+value = +25
+misfire_end_prob = -0.03
+
+condition_shot_dec      	= -0.00095
+condition_queue_shot_dec	= -0.00095
+
+[up_sr1m_body]
+scheme_index = 0, 8
+known = 1
+effects = 
+section = up_sect_sr1m_body
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_body_name
+description =gunsl_sr1m_up_body_descr
+icon = ui_gunsl_up_sr1m_body
+;------------------------------------------sr1m_rail------------------------------------------
+[up_sect_sr1m_rail]
+cost = 2500
+inv_weight = +0.05
+show_bones = picatinia
+cam_dispersion = -0.07
+zoom_cam_dispersion = -0.04
+
+
+[up_sr1m_rail]
+scheme_index = 0, 9
+known = 1
+effects = vartree_sr1m_flashlaser
+section = up_sect_sr1m_rail
+property = prop_rail
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_rail_name
+description =gunsl_sr1m_up_rail_descr
+icon = ui_gunsl_up_sr1m_rail
+;------------------------------------------sr1m_usm_recoil_kurok_myagkii_spusk------------------------------------------
+[up_sect_sr1m_usm_recoil_kurok_myagkii_spusk]
+cost = 3000
+value = -10
+PDM_disp_base = -0.1
+cam_dispersion = -0.12
+cam_dispersion_inc = -0.15
+zoom_cam_dispersion = -0.05
+zoom_cam_dispersion_inc = -0.1
+
+[up_sr1m_usm_recoil_kurok_myagkii_spusk]
+scheme_index = 0, 10
+known = 1
+effects = vartree_sr1m_details
+section = up_sect_sr1m_usm_recoil_kurok_myagkii_spusk
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_usm_recoil_kurok_myagkii_spusk_name
+description =gunsl_sr1m_up_usm_recoil_kurok_myagkii_spusk_descr
+icon = ui_gunsl_up_sr1m_usm_recoil_kurok_myagkii_spusk
+;------------------------------------------sr1m_mag------------------------------------------
+[up_sect_sr1m_mag]
+cost = 3000
+value = -0.07
+inv_weight = -0.07
+
+[up_sr1m_mag]
+scheme_index = 0, 11
+known = 1
+effects = 
+section = up_sect_sr1m_mag
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_mag_name
+description =gunsl_sr1m_up_mag_descr
+icon = ui_gunsl_up_sr1m_mag
+;------------------------------------------sr1m_light_details------------------------------------------
+[up_sect_sr1m_light_details]
+cost = 5000
+value = -0.2
+inv_weight = -0.2
+
+[up_sr1m_light_details]
+scheme_index = 0, 12
+known = 1
+effects = vartree_sr1m_recoil_compensator
+section = up_sect_sr1m_light_details
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_light_details_name
+description =gunsl_sr1m_up_light_details_descr
+icon = ui_gunsl_up_sr1m_light_details
+;------------------------------------------sr1m_patronnik_obturation------------------------------------------
+[up_sect_sr1m_patronnik_obturation]
+cost = 5000
+value = +20
+bullet_speed = +50
+fire_distance = +70
+fire_dispersion_base = -0.02
+
+[up_sr1m_patronnik_obturation]
+scheme_index = 0, 13
+known = 1
+effects = vartree_sr1m_barrel
+section = up_sect_sr1m_patronnik_obturation
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_patronnik_obturation_name
+description =gunsl_sr1m_up_patronnik_obturation_descr
+icon = ui_gunsl_up_sr1m_patronnik_obturation
+;------------------------------------------sr1m_sights------------------------------------------
+[up_sect_sr1m_sights]
+cost = 1500
+crosshair_inertion = -1
+control_inertion_factor = -0.1
+show_bones = sight
+
+[up_sr1m_sights]
+scheme_index = 0, 14
+known = 1
+effects = 
+section = up_sect_sr1m_sights
+property = prop_lightingsights
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_sights_name
+description =gunsl_sr1m_up_sights_descr
+icon = ui_gunsl_up_sr1m_sights
+;------------------------------------------sr1m_usm_rpm------------------------------------------
+[up_sect_sr1m_usm_rpm]
+cost = 3000
+value = +10
+rpm = +50
+condition_shot_dec = +0.0003
+condition_queue_shot_dec = +0.0003
+
+[up_sr1m_usm_rpm]
+scheme_index = 0, 15
+known = 1
+effects = vartree_sr1m_details
+section = up_sect_sr1m_usm_rpm
+property = prop_rpm
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_usm_rpm_name
+description =gunsl_sr1m_up_usm_rpm_descr
+icon = ui_gunsl_up_sr1m_usm_rpm
+;------------------------------------------sr1m_zatvor_balancer------------------------------------------
+[up_sect_sr1m_zatvor_balancer]
+cost = 3000
+value = -10
+cam_dispersion = -0.1
+zoom_cam_dispersion = -0.03
+PDM_disp_base = -0.05
+
+[up_sr1m_zatvor_balancer]
+scheme_index = 0, 16
+known = 1
+effects = vartree_sr1m_patronnik
+section = up_sect_sr1m_zatvor_balancer
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_zatvor_balancer_name
+description =gunsl_sr1m_up_zatvor_balancer_descr
+icon = ui_gunsl_up_sr1m_zatvor_balancer
+;------------------------------------------sr1m_light_ramka------------------------------------------
+[up_sect_sr1m_light_ramka]
+cost = 2000
+value = -0.07
+inv_weight = -0.07
+
+[up_sr1m_light_ramka]
+scheme_index = 0, 17
+known = 1
+effects = vartree_sr1m_flashlaser
+section = up_sect_sr1m_light_ramka
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_light_ramka_name
+description =gunsl_sr1m_up_light_ramka_descr
+icon = ui_gunsl_up_sr1m_light_ramka
+;------------------------------------------sr1m_recoil_compensation_system------------------------------------------
+[up_sect_sr1m_recoil_compensation_system]
+cost = 6000
+value = -30
+PDM_disp_base = -0.2
+cam_dispersion = -0.4
+cam_dispersion_inc = -0.3
+
+zoom_cam_dispersion = -0.12
+zoom_cam_dispersion_inc = -0.2
+
+[up_sr1m_recoil_compensation_system]
+scheme_index = 0, 18
+known = 1
+effects = 
+section = up_sect_sr1m_recoil_compensation_system
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_sr1m_up_recoil_compensation_system_name
+description =gunsl_sr1m_up_recoil_compensation_system_descr
+icon = ui_gunsl_up_sr1m_recoil_compensation_system
+;------------------------------------------------------------------------------------
+[vartree_sr1m_zatvor]
+elements = up_sr1m_zatvor_balancer
+[vartree_sr1m_patronnik]
+elements = up_sr1m_ejector, up_sr1m_patronnik_obturation
+[vartree_sr1m_barrel]
+elements = up_sr1m_barrel_sil, up_sr1m_barrel_speed, up_sr1m_barrel_accuracy
+[vartree_sr1m_mar_reliability]
+elements = up_sr1m_mag_reliability
+[vartree_sr1m_handle]
+elements = up_sr1m_handle_inertion, up_sr1m_handle_weight
+[vartree_sr1m_body]
+elements = up_sr1m_body
+[vartree_sr1m_usm]
+elements = up_sr1m_usm_recoil_kurok_myagkii_spusk, up_sr1m_usm_rpm
+[vartree_sr1m_details]
+elements = up_sr1m_light_details
+[vartree_sr1m_recoil_compensator]
+elements = up_sr1m_recoil_compensation_system
+[vartree_sr1m_ramka]
+elements = up_sr1m_light_ramka
+[vartree_sr1m_rail]
+elements = up_sr1m_rail
+[vartree_sr1m_flashlaser]
+elements = up_sr1m_flashlaser
+[vartree_sr1m_sights]
+elements = up_sr1m_sights
+[vartree_sr1m_mag]
+elements = up_sr1m_mag

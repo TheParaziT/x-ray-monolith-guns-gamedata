@@ -1,0 +1,426 @@
+;------------------------------------------hpsa_barrel_sil------------------------------------------
+[up_sect_hpsa_barrel_sil]
+cost = 5000
+bullet_speed = +10
+
+silencer_status = 2
+silencer_name  = wpn_silencer_919	
+silencer_x = 74
+silencer_y = -18
+
+silencer_smoke_particles = weapons\generic_shoot_00
+snd_silncer_shot = weapons\browning\browning_sil_shoot, -1.1
+silencer_light_color = 0.6,0.5,0.3
+silencer_light_range	= 0.01
+silencer_light_var_color = 0.05
+silencer_light_var_range = 0.01
+silencer_light_time = 0.01
+
+show_bones = barrel_silencer
+
+[up_hpsa_barrel_sil]
+scheme_index = 0, 0
+known = 1
+effects = 
+section = up_sect_hpsa_barrel_sil
+property = prop_silencer
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_hpsa_up_barrel_sil_name
+description =gunsl_hpsa_up_barrel_sil_descr
+icon = ui_gunsl_up_hpsa_barrel_sil
+;------------------------------------------hpsa_barrel_dispersion------------------------------------------
+[up_sect_hpsa_barrel_dispersion]
+cost = 6000
+value = +30
+fire_dispersion_base = -0.08
+PDM_disp_base = -0.2
+
+[up_hpsa_barrel_dispersion]
+scheme_index = 0, 1
+known = 1
+effects = 
+section = up_sect_hpsa_barrel_dispersion
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_hpsa_up_barrel_dispersion_name
+description =gunsl_hpsa_up_barrel_dispersion_descr
+icon = ui_gunsl_up_hpsa_barrel_dispersion
+;------------------------------------------hpsa_barrel_speed------------------------------------------
+[up_sect_hpsa_barrel_speed]
+cost = 6000
+value = +30
+bullet_speed = +60
+PDM_disp_base = -0.2
+
+[up_hpsa_barrel_speed]
+scheme_index = 0, 2
+known = 1
+effects = 
+section = up_sect_hpsa_barrel_speed
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_hpsa_up_barrel_speed_name
+description =gunsl_hpsa_up_barrel_speed_descr
+icon = ui_gunsl_up_hpsa_barrel_speed
+;------------------------------------------hpsa_body------------------------------------------
+[up_sect_hpsa_body]
+cost = 5000
+value = +30
+misfire_end_prob = -0.022
+
+condition_shot_dec      	= -0.00014
+condition_queue_shot_dec	= -0.00014
+
+[up_hpsa_body]
+scheme_index = 0, 3
+known = 1
+effects = 
+section = up_sect_hpsa_body
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_hpsa_up_body_name
+description =gunsl_hpsa_up_body_descr
+icon = ui_gunsl_up_hpsa_body
+;------------------------------------------hpsa_polymer_buffer------------------------------------------
+[up_sect_hpsa_polymer_buffer]
+cost = 1500
+value = -10
+cam_dispersion = -0.1
+cam_dispersion_inc = -0.1
+zoom_cam_dispersion = -0.03
+zoom_cam_dispersion_inc = -0.08
+PDM_disp_base = -0.1
+
+[up_hpsa_polymer_buffer]
+scheme_index = 0, 4
+known = 1
+effects = vartree_hpsa_usm
+section = up_sect_hpsa_polymer_buffer
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_hpsa_up_polymer_buffer_name
+description =gunsl_hpsa_up_polymer_buffer_descr
+icon = ui_gunsl_up_hpsa_polymer_buffer
+;------------------------------------------hpsa_zapiratel------------------------------------------
+[up_sect_hpsa_zapiratel]
+cost = 3000
+value = +20
+bullet_speed = +40
+PDM_disp_base = -0.1
+
+[up_hpsa_zapiratel]
+scheme_index = 0, 5
+known = 1
+effects = vartree_hpsa_barrel
+section = up_sect_hpsa_zapiratel
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_hpsa_up_zapiratel_name
+description =gunsl_hpsa_up_zapiratel_descr
+icon = ui_gunsl_up_hpsa_zapiratel
+;------------------------------------------hpsa_usm_recoil------------------------------------------
+[up_sect_hpsa_usm_recoil]
+cost = 3000
+value = -20
+cam_dispersion = -0.2
+cam_dispersion_inc = -0.2
+zoom_cam_dispersion = -0.06
+zoom_cam_dispersion_inc = -0.2
+PDM_disp_base = -0.12
+
+[up_hpsa_usm_recoil]
+scheme_index = 0, 6
+known = 1
+effects = vartree_hpsa_body
+section = up_sect_hpsa_usm_recoil
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_hpsa_up_usm_recoil_name
+description =gunsl_hpsa_up_usm_recoil_descr
+icon = ui_gunsl_up_hpsa_usm_recoil
+;------------------------------------------hpsa_mag_prujina------------------------------------------
+[up_sect_hpsa_mag_prujina]
+cost = 1000
+value = +1
+ammo_mag_size = +1
+
+[up_hpsa_mag_prujina]
+scheme_index = 0, 7
+known = 1
+effects = 
+section = up_sect_hpsa_mag_prujina
+property = prop_ammo_size
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_hpsa_up_mag_prujina_name
+description =gunsl_hpsa_up_mag_prujina_descr
+icon = ui_gunsl_up_hpsa_mag_prujina
+;------------------------------------------hpsa_patronnik------------------------------------------
+[up_sect_hpsa_patronnik]
+cost = 3000
+value = +20
+fire_dispersion_base = -0.05
+PDM_disp_base = -0.15
+
+[up_hpsa_patronnik]
+scheme_index = 0, 8
+known = 1
+effects = vartree_hpsa_barrel
+section = up_sect_hpsa_patronnik
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_hpsa_up_patronnik_name
+description =gunsl_hpsa_up_patronnik_descr
+icon = ui_gunsl_up_hpsa_patronnik
+;------------------------------------------hpsa_plastic_handle------------------------------------------
+[up_sect_hpsa_plastic_handle]
+cost = 1000
+value = -0.1
+inv_weight = -0.1
+
+cam_relax_speed         = +1.0
+cam_dispersion          = -0.03
+
+[up_hpsa_plastic_handle]
+scheme_index = 0, 9
+known = 1
+effects = 
+section = up_sect_hpsa_plastic_handle
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_hpsa_up_plastic_handle_name
+description =gunsl_hpsa_up_plastic_handle_descr
+icon = ui_gunsl_up_hpsa_plastic_handle
+;------------------------------------------hpsa_shell_ejector------------------------------------------
+[up_sect_hpsa_shell_ejector]
+cost = 1000
+value = +10
+misfire_start_prob = -0.0008
+misfire_end_prob = -0.008
+
+condition_shot_dec      	= -0.0001
+condition_queue_shot_dec	= -0.0001
+
+[up_hpsa_shell_ejector]
+scheme_index = 0, 10
+known = 1
+effects = vartree_hpsa_patronnik
+section = up_sect_hpsa_shell_ejector
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_hpsa_up_shell_ejector_name
+description =gunsl_hpsa_up_shell_ejector_descr
+icon = ui_gunsl_up_hpsa_shell_ejector
+;------------------------------------------hpsa_sights------------------------------------------
+[up_sect_hpsa_sights]
+cost = 1000
+crosshair_inertion = -1
+control_inertion_factor = -0.1
+show_bones = sight
+
+[up_hpsa_sights]
+scheme_index = 0, 11
+known = 1
+effects = 
+section = up_sect_hpsa_sights
+property = prop_lightingsights
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_hpsa_up_sights_name
+description =gunsl_hpsa_up_sights_descr
+icon = ui_gunsl_up_hpsa_sights
+;------------------------------------------hpsa_usm_rpm------------------------------------------
+[up_sect_hpsa_usm_rpm]
+cost = 3000
+value = +20
+condition_shot_dec  = +0.001
+rpm = +60
+
+[up_hpsa_usm_rpm]
+scheme_index = 0, 12
+known = 1
+effects = vartree_hpsa_body
+section = up_sect_hpsa_usm_rpm
+property = prop_rpm
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_hpsa_up_usm_rpm_name
+description =gunsl_hpsa_up_usm_rpm_descr
+icon = ui_gunsl_up_hpsa_usm_rpm
+;------------------------------------------hpsa_light_details------------------------------------------
+[up_sect_hpsa_light_details]
+cost = 1500
+value = -0.2
+inv_weight = -0.2
+
+[up_hpsa_light_details]
+scheme_index = 0, 13
+known = 1
+effects = 
+section = up_sect_hpsa_light_details
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_hpsa_up_light_details_name
+description =gunsl_hpsa_up_light_details_descr
+icon = ui_gunsl_up_hpsa_light_details
+;------------------------------------------hpsa_zatvor_balancer------------------------------------------
+[up_sect_hpsa_zatvor_balancer]
+cost = 2500
+value = -20
+PDM_disp_base = -0.2
+
+cam_dispersion = -0.2
+cam_dispersion_inc = -0.2
+
+zoom_cam_dispersion = -0.06
+zoom_cam_dispersion_inc = -0.15
+
+PDM_disp_crouch_no_acc = -0.1
+
+[up_hpsa_zatvor_balancer]
+scheme_index = 0, 14
+known = 1
+effects = vartree_hpsa_details
+section = up_sect_hpsa_zatvor_balancer
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_hpsa_up_zatvor_balancer_name
+description =gunsl_hpsa_up_zatvor_balancer_descr
+icon = ui_gunsl_up_hpsa_zatvor_balancer
+;------------------------------------------hpsa_titan_details------------------------------------------
+[up_sect_hpsa_titan_details]
+cost = 1500
+value = +20
+misfire_start_condition = -0.1
+misfire_end_condition = -0.01
+misfire_start_prob = -0.002
+misfire_end_prob = -0.02
+condition_shot_dec = -0.001
+condition_queue_shot_dec = -0.001
+
+[up_hpsa_titan_details]
+scheme_index = 0, 15
+known = 1
+effects = 
+section = up_sect_hpsa_titan_details
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_hpsa_up_titan_details_name
+description =gunsl_hpsa_up_titan_details_descr
+icon = ui_gunsl_up_hpsa_titan_details
+;------------------------------------------------------------------------------------
+[vartree_hpsa_ejector]
+elements = up_hpsa_shell_ejector
+[vartree_hpsa_patronnik]
+elements = up_hpsa_zapiratel, up_hpsa_patronnik
+[vartree_hpsa_barrel]
+elements = up_hpsa_barrel_speed, up_hpsa_barrel_sil, up_hpsa_barrel_dispersion
+[vartree_hpsa_buffer]
+elements = up_hpsa_polymer_buffer
+[vartree_hpsa_usm]
+elements = up_hpsa_usm_recoil, up_hpsa_usm_rpm
+[vartree_hpsa_body]
+elements = up_hpsa_body
+[vartree_hpsa_zatvor]
+elements = up_hpsa_zatvor_balancer
+[vartree_hpsa_details]
+elements = up_hpsa_light_details, up_hpsa_titan_details
+[vartree_hpsa_sights]
+elements = up_hpsa_sights
+[vartree_hpsa_mag]
+elements = up_hpsa_mag_prujina
+[vartree_hpsa_handle]
+elements = up_hpsa_plastic_handle

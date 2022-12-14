@@ -1,0 +1,446 @@
+;------------------------------------------wpn_walther_sights------------------------------------------
+[up_sect_wpn_walther_sights]
+cost = 1000
+crosshair_inertion = -1
+control_inertion_factor = -0.1
+show_bones = sight
+
+[up_wpn_walther_sights]
+scheme_index = 0, 0
+known = 1
+effects = 
+section = up_sect_wpn_walther_sights
+property = prop_lightingsights
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_walther_up_sights_name
+description =gunsl_wpn_walther_up_sights_descr
+icon = ui_gunsl_up_wpn_walther_sights
+;------------------------------------------wpn_walther_usilinie_ramki------------------------------------------
+[up_sect_wpn_walther_usilinie_ramki]
+cost = 3000
+value = +10
+condition_shot_dec = -0.0003
+condition_queue_shot_dec = -0.0003
+
+[up_wpn_walther_usilinie_ramki]
+scheme_index = 0, 1
+known = 1
+effects = vartree_wpn_walther_body
+section = up_sect_wpn_walther_usilinie_ramki
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_walther_up_usilinie_ramki_name
+description =gunsl_wpn_walther_up_usilinie_ramki_descr
+icon = ui_gunsl_up_wpn_walther_usilinie_ramki
+;------------------------------------------wpn_walther_flashlaser------------------------------------------
+[up_sect_wpn_walther_flashlaser]:green_laser, tactical_torch
+cost = 6000
+crosshair_inertion = -0.5
+show_bones = flash, laser
+laserdot_world_attach_offset_x = 0.0
+laserdot_world_attach_offset_y = 0.099
+laserdot_world_attach_offset_z = 0.135
+
+torch_world_attach_offset_x = 0.000
+torch_world_attach_offset_y = 0.074
+torch_world_attach_offset_z = 0.129
+
+torch_omni_world_attach_offset_x = 0.000
+torch_omni_world_attach_offset_y = 0.074
+torch_omni_world_attach_offset_z = 0.129
+
+torch_attach_offset_x = 0.0
+torch_attach_offset_y = 0.0
+torch_attach_offset_z = -0.2
+
+torch_omni_attach_offset_x = 0.0 
+torch_omni_attach_offset_y = 0.0
+torch_omni_attach_offset_z = -0.2
+
+inv_weight = +0.2
+
+[up_wpn_walther_flashlaser]
+scheme_index = 0, 2
+known = 1
+effects = 
+section = up_sect_wpn_walther_flashlaser
+property = prop_laser
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_walther_up_flashlaser_name
+description =gunsl_wpn_walther_up_flashlaser_descr
+icon = ui_gunsl_up_wpn_walther_flashlaser
+;------------------------------------------wpn_walther_light_mag------------------------------------------
+[up_sect_wpn_walther_light_mag]
+cost = 1000
+value = -0.1
+inv_weight = -0.1
+
+[up_wpn_walther_light_mag]
+scheme_index = 0, 3
+known = 1
+effects = 
+section = up_sect_wpn_walther_light_mag
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_walther_up_light_mag_name
+description =gunsl_wpn_walther_up_light_mag_descr
+icon = ui_gunsl_up_wpn_walther_light_mag
+;------------------------------------------wpn_walther_shell_ejector------------------------------------------
+[up_sect_wpn_walther_shell_ejector]
+cost = 6000
+value = +20
+misfire_start_prob = -0.001
+misfire_end_prob = -0.02
+
+condition_shot_dec = -0.0003
+condition_queue_shot_dec = -0.0003
+
+[up_wpn_walther_shell_ejector]
+scheme_index = 0, 4
+known = 1
+effects = vartree_wpn_walther_zatvor
+section = up_sect_wpn_walther_shell_ejector
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_walther_up_shell_ejector_name
+description =gunsl_wpn_walther_up_shell_ejector_descr
+icon = ui_gunsl_up_wpn_walther_shell_ejector
+;------------------------------------------wpn_walther_zatvor_zapiratel------------------------------------------
+[up_sect_wpn_walther_zatvor_zapiratel]
+cost = 7000
+value = +30
+bullet_speed = +55
+fire_distance = +100
+
+[up_wpn_walther_zatvor_zapiratel]
+scheme_index = 0, 5
+known = 1
+effects = 
+section = up_sect_wpn_walther_zatvor_zapiratel
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_walther_up_zatvor_zapiratel_name
+description =gunsl_wpn_walther_up_zatvor_zapiratel_descr
+icon = ui_gunsl_up_wpn_walther_zatvor_zapiratel
+;------------------------------------------wpn_walther_zatvor_recoil------------------------------------------
+[up_sect_wpn_walther_zatvor_recoil]
+cost = 7000
+value = -30
+PDM_disp_base = -0.1
+cam_dispersion = -0.20
+cam_dispersion_inc = -0.1
+zoom_cam_dispersion = -0.08
+zoom_cam_dispersion_inc = -0.2
+
+[up_wpn_walther_zatvor_recoil]
+scheme_index = 0, 6
+known = 1
+effects = 
+section = up_sect_wpn_walther_zatvor_recoil
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_walther_up_zatvor_recoil_name
+description =gunsl_wpn_walther_up_zatvor_recoil_descr
+icon = ui_gunsl_up_wpn_walther_zatvor_recoil
+;------------------------------------------wpn_walther_patronnik------------------------------------------
+[up_sect_wpn_walther_patronnik]
+cost = 4000
+value = +15
+PDM_disp_base = -0.1
+fire_dispersion_base = -0.02
+
+[up_wpn_walther_patronnik]
+scheme_index = 0, 7
+known = 1
+effects = vartree_wpn_walther_ejector
+section = up_sect_wpn_walther_patronnik
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_walther_up_patronnik_name
+description =gunsl_wpn_walther_up_patronnik_descr
+icon = ui_gunsl_up_wpn_walther_patronnik
+;------------------------------------------wpn_walther_barrel_sil------------------------------------------
+[up_sect_wpn_walther_barrel_sil]
+cost = 7000
+silencer_status = 2
+silencer_name  = wpn_silencer_919
+silencer_x  = 67
+silencer_y = -19
+silencer_smoke_particles = weapons\generic_shoot_00
+snd_silncer_shot = weapons\p99\p99_sil_shoot, -1.1
+silencer_light_color = 0.6,0.5,0.3
+silencer_light_range	= 0.01
+silencer_light_var_color = 0.05
+silencer_light_var_range = 0.01
+silencer_light_time = 0.01
+
+hide_bones = barrel
+show_bones = barrel_silencer
+
+[up_wpn_walther_barrel_sil]
+scheme_index = 0, 8
+known = 1
+effects = 
+section = up_sect_wpn_walther_barrel_sil
+property = prop_silencer
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_walther_up_barrel_sil_name
+description =gunsl_wpn_walther_up_barrel_sil_descr
+icon = ui_gunsl_up_wpn_walther_barrel_sil
+;------------------------------------------wpn_walther_barrel_bullet_speed------------------------------------------
+[up_sect_wpn_walther_barrel_bullet_speed]
+cost = 7000
+value = +30
+fire_distance = +70
+bullet_speed = +80
+
+[up_wpn_walther_barrel_bullet_speed]
+scheme_index = 0, 9
+known = 1
+effects = 
+section = up_sect_wpn_walther_barrel_bullet_speed
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_walther_up_barrel_bullet_speed_name
+description =gunsl_wpn_walther_up_barrel_bullet_speed_descr
+icon = ui_gunsl_up_wpn_walther_barrel_bullet_speed
+;------------------------------------------wpn_walther_barrel_accuracy------------------------------------------
+[up_sect_wpn_walther_barrel_accuracy]
+cost = 7000
+value = +30
+PDM_disp_base = -0.3
+fire_dispersion_base = -0.05
+
+[up_wpn_walther_barrel_accuracy]
+scheme_index = 0, 10
+known = 1
+effects = 
+section = up_sect_wpn_walther_barrel_accuracy
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_walther_up_barrel_accuracy_name
+description =gunsl_wpn_walther_up_barrel_accuracy_descr
+icon = ui_gunsl_up_wpn_walther_barrel_accuracy
+;------------------------------------------wpn_walther_usm_rpm------------------------------------------
+[up_sect_wpn_walther_usm_rpm]
+cost = 4000
+value = +20
+condition_shot_dec  = +0.003
+rpm = +60
+
+[up_wpn_walther_usm_rpm]
+scheme_index = 0, 11
+known = 1
+effects = vartree_wpn_walther_barrel
+section = up_sect_wpn_walther_usm_rpm
+property = prop_rpm
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_walther_up_usm_rpm_name
+description =gunsl_wpn_walther_up_usm_rpm_descr
+icon = ui_gunsl_up_wpn_walther_usm_rpm
+;------------------------------------------wpn_walther_body------------------------------------------
+[up_sect_wpn_walther_body]
+cost = 4000
+value = +20
+misfire_end_prob = -0.02
+misfire_start_condition = -0.1
+misfire_end_condition = -0.05
+
+
+condition_shot_dec = -0.0005
+condition_queue_shot_dec = -0.0005
+
+[up_wpn_walther_body]
+scheme_index = 0, 12
+known = 1
+effects = vartree_wpn_walther_laser
+section = up_sect_wpn_walther_body
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_walther_up_body_name
+description =gunsl_wpn_walther_up_body_descr
+icon = ui_gunsl_up_wpn_walther_body
+;------------------------------------------wpn_walther_usm_recoil------------------------------------------
+[up_sect_wpn_walther_usm_recoil]
+cost = 4000
+value = -20
+PDM_disp_base = -0.05
+cam_dispersion = -0.15
+cam_dispersion_inc = -0.25
+zoom_cam_dispersion = -0.06
+zoom_cam_dispersion_inc = -0.30
+
+[up_wpn_walther_usm_recoil]
+scheme_index = 0, 13
+known = 1
+effects = vartree_wpn_walther_barrel
+section = up_sect_wpn_walther_usm_recoil
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_walther_up_usm_recoil_name
+description =gunsl_wpn_walther_up_usm_recoil_descr
+icon = ui_gunsl_up_wpn_walther_usm_recoil
+;------------------------------------------wpn_walther_handle------------------------------------------
+[up_sect_wpn_walther_handle]
+cost = 1500
+value = +20
+control_inertion_factor = -0.2
+
+cam_relax_speed         = +1.0
+cam_dispersion          = -0.03
+
+zoom_cam_relax_speed = +2
+zoom_cam_dispersion = -0.05
+zoom_cam_dispersion_inc = -0.03
+
+PDM_disp_base = -0.1
+PDM_disp_vel_factor = -0.1
+
+[up_wpn_walther_handle]
+scheme_index = 0, 14
+known = 1
+effects = 
+section = up_sect_wpn_walther_handle
+property = prop_inertion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_walther_up_handle_name
+description =gunsl_wpn_walther_up_handle_descr
+icon = ui_gunsl_up_wpn_walther_handle
+;------------------------------------------wpn_walther_titan_details------------------------------------------
+[up_sect_wpn_walther_titan_details]
+cost = 2000
+value = +10
+condition_shot_dec = 0.0003
+condition_queue_shot_dec = -0.0003
+
+[up_wpn_walther_titan_details]
+scheme_index = 0, 15
+known = 1
+effects = vartree_wpn_walther_usm
+section = up_sect_wpn_walther_titan_details
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_walther_up_titan_details_name
+description =gunsl_wpn_walther_up_titan_details_descr
+icon = ui_gunsl_up_wpn_walther_titan_details
+;------------------------------------------------------------------------------------
+[vartree_wpn_walther_titan]
+elements = up_wpn_walther_titan_details
+[vartree_wpn_walther_usm]
+elements = up_wpn_walther_usm_rpm, up_wpn_walther_usm_recoil
+[vartree_wpn_walther_barrel]
+elements = up_wpn_walther_barrel_sil, up_wpn_walther_barrel_bullet_speed, up_wpn_walther_barrel_accuracy
+[vartree_wpn_walther_patronnik]
+elements = up_wpn_walther_patronnik
+[vartree_wpn_walther_ejector]
+elements = up_wpn_walther_shell_ejector
+[vartree_wpn_walther_zatvor]
+elements = up_wpn_walther_zatvor_zapiratel, up_wpn_walther_zatvor_recoil
+[vartree_wpn_walther_ramka]
+elements = up_wpn_walther_usilinie_ramki
+[vartree_wpn_walther_body]
+elements = up_wpn_walther_body
+[vartree_wpn_walther_laser]
+elements = up_wpn_walther_flashlaser
+[vartree_wpn_walther_sights]
+elements = up_wpn_walther_sights
+[vartree_wpn_walther_mag]
+elements = up_wpn_walther_light_mag
+[vartree_wpn_walther_handle]
+elements = up_wpn_walther_handle

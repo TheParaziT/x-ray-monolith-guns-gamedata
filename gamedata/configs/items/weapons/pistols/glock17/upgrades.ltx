@@ -1,0 +1,419 @@
+;-----------------------------------------------------------------------------Надежность-------------------------------
+[up_sect_reliability_glock17]
+cost		      		= 1000
+value					= +20
+
+fire_dispersion_condition_factor = -2.0
+
+misfire_start_condition		= -0.07
+misfire_start_prob       = -0.0015
+misfire_end_prob	     	= -0.02
+condition_shot_dec = -0.0002
+
+[up_reliability_glock17]
+scheme_index            = 0, 0
+known                   = 1
+effects                 = vartree_barrel_glock17
+section                 = up_sect_reliability_glock17
+property                = prop_reliability
+
+precondition_functor    = inventory_upgrades.precondition_functor_a
+precondition_parameter  = a & b
+
+effect_functor          = inventory_upgrades.effect_functor_a
+effect_parameter        = on_weapon_upgrade_something_here
+
+; ui
+prereq_functor          = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params           = 
+name                    = gunsl_glock17_up_reliability_name
+description             = gunsl_glock17_up_reliability_descr
+icon                    = ui_gunsl_up_glock17_reliability
+
+
+;-----------------------------------------------------------------------------Магазин на 19 патронов-------------------------------
+[up_sect_mag19_glock17]
+cost		      		= 500
+value					= +2
+ammo_mag_size		 	= +2
+inv_weight              = +0.02
+crosshair_inertion = -0.01
+
+show_bones = bone, bone2
+hide_bones = mag, mag2 
+
+
+[up_mag19_glock17]
+scheme_index            = 0, 1
+known                   = 1
+effects                 = vartree_mag33_glock17
+section                 = up_sect_mag19_glock17
+property                = prop_ammo_size 
+
+precondition_functor    = inventory_upgrades.precondition_functor_a
+precondition_parameter  = a & b
+
+effect_functor          = inventory_upgrades.effect_functor_a
+effect_parameter        = on_weapon_upgrade_something_here
+
+; ui
+prereq_functor          = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params           = 
+name                    = gunsl_glock17_up_mag19_name
+description             = gunsl_glock17_up_mag19_descr
+icon                    = ui_gunsl_up_glock17_mag19
+
+;-----------------------------------------------------------------------------Магазин на 33 патрона-------------------------------
+[up_sect_mag33_glock17]
+cost		      		= 2000
+value					= +14
+ammo_mag_size		 	= +14
+inv_weight              = +0.15
+crosshair_inertion = -0.2
+
+show_bones = mag2
+hide_bones = mag, bone, bone2
+hide_bones_override = bone, bone2	;для сокрытия костей, отвечающих за предыдущие апы ветки
+hud = wpn_glock18_hud
+
+
+[up_mag33_glock17]
+scheme_index            = 1, 2
+known                   = 1
+effects                 = 
+section                 = up_sect_mag33_glock17
+property                = prop_ammo_size 
+
+precondition_functor    = inventory_upgrades.precondition_functor_a
+precondition_parameter  = a & b
+
+effect_functor          = inventory_upgrades.effect_functor_a
+effect_parameter        = on_weapon_upgrade_something_here
+
+; ui
+prereq_functor          = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params           = 
+name                    = gunsl_glock17_up_mag33_name
+description             = gunsl_glock17_up_mag33_descr
+icon                    = ui_gunsl_up_glock17_mag33
+
+
+;-----------------------------------------------------------------------------Тритиевый целик------------------------------------
+[up_sect_sights_glock17]
+cost		      		= 500
+show_bones = sight
+crosshair_inertion = -0.2
+
+[up_sights_glock17]
+scheme_index            = 0, 2
+known                   = 1
+effects                 =
+section                 = up_sect_sights_glock17
+property                = prop_lightingsights
+
+precondition_functor    = inventory_upgrades.precondition_functor_a
+precondition_parameter  = a & b
+
+effect_functor          = inventory_upgrades.effect_functor_a
+effect_parameter        = on_weapon_upgrade_something_here
+
+prereq_functor          = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params           =
+name                    = gunsl_glock17_up_sights_name
+description             = gunsl_glock17_up_sights_descr
+icon                    = ui_gunsl_up_glock17_sights
+
+
+;-----------------------------------------------------------------------------ЛЦУ------------------------------------
+[up_sect_laser_glock17]:red_laser
+cost		      		= 3000
+crosshair_inertion = -0.2
+show_bones = flash, laser
+laserdot_world_attach_offset_x = 0.0
+laserdot_world_attach_offset_y = 0.1
+laserdot_world_attach_offset_z = 0.05
+
+[up_laser_glock17]
+scheme_index            = 2, 3
+known                   = 1
+effects                 =
+section                 = up_sect_laser_glock17
+property                = prop_laser
+
+precondition_functor    = inventory_upgrades.precondition_functor_a
+precondition_parameter  = a & b
+
+effect_functor          = inventory_upgrades.effect_functor_a
+effect_parameter        = on_weapon_upgrade_something_here
+
+prereq_functor          = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params           = 
+
+
+name                    = gunsl_glock17_up_laser_name
+description             = gunsl_glock17_up_laser_descr
+icon                    = ui_gunsl_up_glock17_laser
+
+;-----------------------------------------------------------------------------Фонарь------------------------------------
+[up_sect_torch_glock17]:tactical_torch
+cost		      		= 3000
+show_bones = flash, laser
+
+[up_torch_glock17]
+scheme_index            = 1, 3
+known                   = 1
+effects                 = 
+section                 = up_sect_torch_glock17
+property                = prop_torch
+
+precondition_functor    = inventory_upgrades.precondition_functor_a
+precondition_parameter  = a & b
+
+effect_functor          = inventory_upgrades.effect_functor_a
+effect_parameter        = on_weapon_upgrade_something_here
+
+prereq_functor          = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params           = 
+
+
+name                    = gunsl_glock17_up_torch_name
+description             = gunsl_glock17_up_torch_descr
+icon                    = ui_gunsl_up_glock17_torch
+
+;-----------------------------------------------------------------------------Ствол под глушитель--------------------------------
+
+[up_sect_barrel_sil_glock17]
+cost		      		= 2500
+value					= 0
+silencer_status        			 = 2
+silencer_status        			 = 2
+silencer_name  				= wpn_silencer_919		; section name for the attachable silencer
+silencer_x 						= 65						; offset in inventory icon
+silencer_y 						= -16
+fire_dispersion_base	= -0.01
+inv_weight              = +0.02
+snd_silncer_shot		= weapons\glock17\glock17_shoot_s, -1.1
+
+show_bones = barrel_silencer
+hide_bones = barrel, barrel_compensator
+
+[up_barrel_sil_glock17]
+scheme_index            = 1, 0
+known                   = 1
+effects                 = vartree_usm_glock17
+section                 = up_sect_barrel_sil_glock17
+property                = prop_silencer
+
+
+precondition_functor    = inventory_upgrades.precondition_functor_a
+precondition_parameter  = a & b
+
+effect_functor          = inventory_upgrades.effect_functor_a
+effect_parameter        = something_here
+
+; ui
+prereq_functor          = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params           =
+
+
+name                    = gunsl_glock17_up_barrel_sil_name
+description             = gunsl_glock17_up_barrel_sil_descr
+icon                    = ui_gunsl_up_glock17_sil_barrel
+
+;-----------------------------------------------------------------------------Ствол-компенсатор---------------------------------
+[up_sect_barrel_kompensator_glock17]
+cost		      		= 3500
+value					= -20
+cam_dispersion          = -0.08 
+cam_dispersion_inc		= -0.35		
+cam_step_angle_horz		= -0.3
+bullet_speed		 	= 20
+fire_dispersion_base	= -0.03
+inv_weight              = +0.05
+crosshair_inertion = -0.3
+
+
+zoom_cam_dispersion          = -0.05 
+zoom_cam_dispersion_inc		= -0.05		
+zoom_cam_step_angle_horz		= -0.6
+PDM_disp_base = -0.1
+
+show_bones = barrel_compensator
+hide_bones = barrel, barrel_silencer
+
+[up_barrel_kompensator_glock17]
+scheme_index            = 1, 1
+known                   = 1
+effects                 = vartree_usm_glock17
+section                 = up_sect_barrel_kompensator_glock17
+property                = prop_recoil
+
+precondition_functor    = inventory_upgrades.precondition_functor_a
+precondition_parameter  = a & b
+
+effect_functor          = inventory_upgrades.effect_functor_a
+effect_parameter        = something_here
+
+; ui
+prereq_functor          = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params           =
+name                    = gunsl_glock17_up_barrel_kompensator_name
+description             = gunsl_glock17_up_barrel_kompensator_descr
+icon                    = ui_gunsl_up_glock17_compensator_barrel
+
+
+;-----------------------------------------------------------------------------УСМ-точность---------------------------------------
+[up_sect_usm_accuracy_glock17]
+cost		      		= 5000
+value					= +30
+
+bullet_speed		 	= 80
+fire_dispersion_base	= -0.05
+inv_weight              = -0.08
+cam_dispersion          = -0.3
+cam_dispersion_inc		= -0.2
+crosshair_inertion = -0.6
+
+zoom_cam_dispersion          = -0.10 
+zoom_cam_dispersion_inc		= -0.15	
+zoom_cam_step_angle_horz		= -0.3
+
+zoom_cam_dispersion_frac = +0.4
+cam_dispersion_frac = +0.1
+PDM_disp_base = -0.2
+
+
+[up_usm_accuracy_glock17]
+scheme_index            = 2, 0
+known                   = 1
+effects                 = 
+section                 = up_sect_usm_accuracy_glock17
+property                = prop_bullet_speed
+
+precondition_functor    = inventory_upgrades.precondition_functor_a
+precondition_parameter  = a & b
+
+effect_functor          = inventory_upgrades.effect_functor_a
+effect_parameter        = something_here
+
+prereq_functor          = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params           =
+name                    = gunsl_glock17_up_usm_accuracy_name
+description             = gunsl_glock17_up_usm_accuracy_descr
+icon                    = ui_gunsl_up_glock17_usm_accuracy
+
+;-----------------------------------------------------------------------------УСМ-автомат----------------------------------------
+[up_sect_usm_fullautofire_glock17]
+cost		      		= 4000
+;value					= +15
+value					= 1
+fire_dispersion_base	= +0.05
+fire_modes              = 1, -1
+cam_dispersion          = +0.2 
+cam_dispersion_inc		= +0.2		
+cam_step_angle_horz		= +3.5
+
+zoom_cam_dispersion          = +0.1 
+zoom_cam_dispersion_inc		= +0.2	
+zoom_cam_step_angle_horz		= +2.1
+rpm                     	= 900
+PDM_disp_base = 0.8
+
+
+show_bones = bolt_auto
+hide_bones = bolt
+
+[up_usm_fullautofire_glock17]
+scheme_index            = 2, 1
+known                   = 1
+effects                 = 
+section                 = up_sect_usm_fullautofire_glock17
+property                = prop_autofire
+
+precondition_functor    = inventory_upgrades.precondition_functor_a
+precondition_parameter  = a & b
+
+effect_functor          = inventory_upgrades.effect_functor_a
+effect_parameter        = on_weapon_upgrade_something_here
+
+prereq_functor          = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params           = 
+name                    = gunsl_glock17_up_usm_fullauto_name
+description             = gunsl_glock17_up_usm_fullauto_descr
+icon                    = ui_gunsl_up_glock17_usm_auto
+
+;-----------------------------------------------------------------------------УСМ-отсечка по 3----------------------------------------
+[up_sect_usm_x3fire_glock17]
+cost		      		= 4000
+value					= 1
+fire_dispersion_base	= +0.02
+fire_modes              = 1, 3
+
+cam_dispersion          = +0.1 
+cam_dispersion_inc		= +0.1		
+cam_step_angle_horz		= +1.3
+PDM_disp_base = 0.5
+
+zoom_cam_dispersion          = +0.05 
+zoom_cam_dispersion_inc		= +0.05	
+zoom_cam_step_angle_horz		= +1
+rpm                     	= 1000
+
+
+show_bones = bolt_auto
+hide_bones = bolt
+
+
+[up_usm_x3fire_glock17]
+scheme_index            = 2, 2
+known                   = 1
+effects                 = 
+section                 = up_sect_usm_x3fire_glock17
+property                = prop_3xfire
+
+precondition_functor    = inventory_upgrades.precondition_functor_a
+precondition_parameter  = a & b
+
+effect_functor          = inventory_upgrades.effect_functor_a
+effect_parameter        = on_weapon_upgrade_something_here
+
+prereq_functor          = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params           = 
+name                    = gunsl_glock17_up_usm_3x_name
+description             = gunsl_glock17_up_usm_3x_descr
+icon                    = ui_gunsl_up_glock17_usm_3x
+;--------------------------------------------------------------------------------------------------------------------------------
+[vartree_laser_glock17]
+elements                = up_laser_glock17
+
+[vartree_torch_glock17]
+elements                = up_torch_glock17
+
+[vartree_mag19_glock17]
+elements                = up_mag19_glock17
+
+[vartree_mag33_glock17]
+elements                = up_mag33_glock17
+
+[vartree_sights_glock17]
+elements                = up_sights_glock17
+
+[vartree_reliability_glock17]
+elements                = up_reliability_glock17
+
+[vartree_barrel_glock17]
+elements                = up_barrel_sil_glock17, up_barrel_kompensator_glock17
+
+[vartree_usm_glock17]
+elements                = up_usm_fullautofire_glock17, up_usm_x3fire_glock17, up_usm_accuracy_glock17

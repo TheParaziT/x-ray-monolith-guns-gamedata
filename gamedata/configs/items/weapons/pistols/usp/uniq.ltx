@@ -1,0 +1,47 @@
+[wpn_usp_nimble]:wpn_usp
+$spawn                  	= "weapons\usp_nimble"		; option for Level Editor
+description          	= gunsl_wpn_usp_match_descr
+cost					= 3600         ; the price of the item
+inv_weight				= 1.080
+
+upgrades = vartree_wpn_usp_nimble_body, vartree_wpn_usp_nimble_zz, vartree_wpn_usp_nimble_ramka, vartree_wpn_usp_nimble_sights, vartree_wpn_usp_nimble_mag, vartree_wpn_usp_nimble_handle
+installed_upgrades = 
+upgrade_scheme = upgrade_scheme_wpn_usp_nimble
+
+hud                     	= wpn_usp_nimble_hud
+condition_shot_dec      	= 0.0022
+condition_queue_shot_dec	= 0.0022
+
+fire_dispersion_base	= 0.17 ;0.15 			;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+crosshair_inertion   	= 2.40
+
+cam_relax_speed         = 8				;скорость возврата в исходное положение
+cam_relax_speed_ai      = 360
+cam_dispersion          = 1.4			;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 1.4			;увеличениe cam_dispersion с каждым выстрелом
+cam_dispersion_frac		= 1.0			;ствол будет подыматься на cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
+cam_max_angle			= 5.0			;максимальный угол отдачи
+cam_max_angle_horz		= 5.0			;(degree) maximum shot horizontal degree
+cam_step_angle_horz		= 0.5			;(degree) size of step camera moved in horizontal position while shooting
+zoom_cam_dispersion         = 0.4
+zoom_cam_dispersion_inc     = 0.4
+
+
+fire_dispersion_condition_factor = 7        ;увеличение дисперсии в процентах при максимальном износе
+inv_name          = gunsl_wpn_usp_match               ; name in inventory
+inv_name_short    = gunsl_wpn_usp_match
+
+inv_grid_x				= 18
+inv_grid_y				= 24
+
+upgr_icon_x			= 1272
+upgr_icon_y			= 270
+upgr_icon_width		= 202
+upgr_icon_height   	= 110
+
+fire_point              = 0.0, 0.133, 0.211
+
+visual                  = dynamics\weapons\wpn_usp45\wpn_usp_match.ogf
+silencer_status         = 0                   ; 1 - permanent
+snd_shoot			= weapons\usp\usp_match_shoot, -1.1
+snd_reload_empty                = weapons\usp\usp_reload_full

@@ -1,0 +1,12 @@
+[glock17_trash]
+visual                        = dynamics\devices\dev_drink_stalker\dev_drink_stalker_old.ogf
+throw_dir = right
+throw_impulse_z = 90
+GroupControlSection = spawn_group
+$spawn        = "physics\object"
+$prefetch       = 8
+class       = O_PHYS_S
+script_binding      = gwr_eatable.init_trash
+remove_time     = 90; after this time  unbreaked removable bone will be removed
+startup_animation =
+fixed_bones =

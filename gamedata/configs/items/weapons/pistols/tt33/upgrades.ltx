@@ -1,0 +1,340 @@
+;------------------------------------------tt33_barrel_accuracy------------------------------------------
+[up_sect_tt33_barrel_accuracy]
+cost = 3000
+value = +20
+PDM_disp_base = -0.3
+fire_dispersion_base = -0.06
+
+[up_tt33_barrel_accuracy]
+scheme_index = 0, 0
+known = 1
+effects = vartree_tt33_body
+section = up_sect_tt33_barrel_accuracy
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_tt33_up_barrel_accuracy_name
+description =gunsl_tt33_up_barrel_accuracy_descr
+icon = ui_gunsl_up_tt33_barrel_accuracy
+;------------------------------------------tt33_barrel_speed------------------------------------------
+[up_sect_tt33_barrel_speed]
+cost = 3000
+value = +20
+bullet_speed = +40
+hit_power = 1.04
+
+[up_tt33_barrel_speed]
+scheme_index = 0, 1
+known = 1
+effects = vartree_tt33_body
+section = up_sect_tt33_barrel_speed
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_tt33_up_barrel_speed_name
+description =gunsl_tt33_up_barrel_speed_descr
+icon = ui_gunsl_up_tt33_barrel_speed
+;------------------------------------------tt33_sights------------------------------------------
+[up_sect_tt33_sights]
+cost = 1000
+crosshair_inertion = -1
+control_inertion_factor = -0.1
+show_bones = sight
+
+[up_tt33_sights]
+scheme_index = 0, 2
+known = 1
+effects = 
+section = up_sect_tt33_sights
+property = prop_lightingsights
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_tt33_up_sights_name
+description =gunsl_tt33_up_sights_descr
+icon = ui_gunsl_up_tt33_sights
+;------------------------------------------tt33_body_reliability------------------------------------------
+[up_sect_tt33_body_reliability]
+cost = 2000
+value = +30
+condition_shot_dec = -0.0011
+condition_queue_shot_dec = -0.0011
+misfire_end_prob = -0.01
+
+[up_tt33_body_reliability]
+scheme_index = 0, 3
+known = 1
+effects = 
+section = up_sect_tt33_body_reliability
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_tt33_up_body_reliability_name
+description =gunsl_tt33_up_body_reliability_descr
+icon = ui_gunsl_up_tt33_body_reliability
+;------------------------------------------tt33_podacha------------------------------------------
+[up_sect_tt33_podacha]
+cost = 1000
+value = +10
+misfire_start_condition = -0.05
+misfire_start_prob = -0.001
+misfire_end_prob = -0.01
+
+[up_tt33_podacha]
+scheme_index = 0, 4
+known = 1
+effects = vartree_tt33_usm
+section = up_sect_tt33_podacha
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_tt33_up_podacha_name
+description =gunsl_tt33_up_podacha_descr
+icon = ui_gunsl_up_tt33_podacha
+;------------------------------------------tt33_ejector------------------------------------------
+[up_sect_tt33_ejector]
+cost = 4000
+value = +25
+misfire_start_prob = -0.001
+misfire_end_prob = -0.025
+
+condition_shot_dec = -0.0005
+condition_queue_shot_dec = -0.0005
+
+[up_tt33_ejector]
+scheme_index = 0, 5
+known = 1
+effects = 
+section = up_sect_tt33_ejector
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_tt33_up_ejector_name
+description =gunsl_tt33_up_ejector_descr
+icon = ui_gunsl_up_tt33_ejector
+;------------------------------------------tt33_plastic_handle------------------------------------------
+[up_sect_tt33_plastic_handle]
+cost = 1000
+value = +10
+inv_weight = -0.05
+
+cam_relax_speed         = +1.0
+cam_dispersion          = -0.04
+cam_dispersion_inc = -0.2
+
+zoom_cam_relax_speed = +2
+zoom_cam_dispersion = -0.01
+zoom_cam_dispersion_inc = -0.1
+
+[up_tt33_plastic_handle]
+scheme_index = 0, 6
+known = 1
+effects = 
+section = up_sect_tt33_plastic_handle
+property = prop_inertion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_tt33_up_plastic_handle_name
+description =gunsl_tt33_up_plastic_handle_descr
+icon = ui_gunsl_up_tt33_plastic_handle
+;------------------------------------------tt33_kurok------------------------------------------
+[up_sect_tt33_kurok]
+cost = 2000
+value = -20
+PDM_disp_base = -0.05
+cam_dispersion = -0.4
+cam_dispersion_inc = -0.5
+zoom_cam_dispersion = -0.1
+zoom_cam_dispersion_inc = -0.2
+
+[up_tt33_kurok]
+scheme_index = 0, 7
+known = 1
+effects = vartree_tt33_zatvor
+section = up_sect_tt33_kurok
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_tt33_up_kurok_name
+description =gunsl_tt33_up_kurok_descr
+icon = ui_gunsl_up_tt33_kurok
+;------------------------------------------tt33_usm_rpm------------------------------------------
+[up_sect_tt33_usm_rpm]
+cost = 2000
+value = +20
+rpm = 30
+cam_dispersion = -0.05
+zoom_cam_dispersion = -0.02
+
+condition_shot_dec = +0.0004
+condition_queue_shot_dec = +0.0004
+
+[up_tt33_usm_rpm]
+scheme_index = 0, 8
+known = 1
+effects = vartree_tt33_zatvor
+section = up_sect_tt33_usm_rpm
+property = prop_rpm
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_tt33_up_usm_rpm_name
+description =gunsl_tt33_up_usm_rpm_descr
+icon = ui_gunsl_up_tt33_usm_rpm
+;------------------------------------------tt33_light_mag------------------------------------------
+[up_sect_tt33_light_mag]
+cost = 1000
+value = -0.1
+inv_weight = -0.1
+
+[up_tt33_light_mag]
+scheme_index = 0, 9
+known = 1
+effects = 
+section = up_sect_tt33_light_mag
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_tt33_up_light_mag_name
+description =gunsl_tt33_up_light_mag_descr
+icon = ui_gunsl_up_tt33_light_mag
+;------------------------------------------tt33_patronnik------------------------------------------
+[up_sect_tt33_patronnik]
+cost = 4000
+value = +30
+fire_dispersion_base = -0.07
+PDM_disp_base = -0.4
+PDM_disp_crouch = -0.1
+PDM_disp_crouch_no_acc = -0.1
+
+[up_tt33_patronnik]
+scheme_index = 0, 10
+known = 1
+effects = 
+section = up_sect_tt33_patronnik
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_tt33_up_patronnik_name
+description =gunsl_tt33_up_patronnik_descr
+icon = ui_gunsl_up_tt33_patronnik
+;------------------------------------------tt33_zatvor------------------------------------------
+[up_sect_tt33_zatvor]
+cost = 4000
+value = -30
+cam_dispersion = -0.6
+cam_dispersion_inc = -0.6
+zoom_cam_dispersion = -0.15
+zoom_cam_dispersion_inc = -0.23
+PDM_disp_base = -0.2
+
+[up_tt33_zatvor]
+scheme_index = 0, 11
+known = 1
+effects = 
+section = up_sect_tt33_zatvor
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_tt33_up_zatvor_name
+description =gunsl_tt33_up_zatvor_descr
+icon = ui_gunsl_up_tt33_zatvor
+;------------------------------------------tt33_light_details------------------------------------------
+[up_sect_tt33_light_details]
+cost = 2000
+value = -0.15
+inv_weight = -0.15
+
+[up_tt33_light_details]
+scheme_index = 0, 12
+known = 1
+effects = vartree_tt33_barrel
+section = up_sect_tt33_light_details
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_tt33_up_light_details_name
+description =gunsl_tt33_up_light_details_descr
+icon = ui_gunsl_up_tt33_light_details
+;------------------------------------------------------------------------------------
+[vartree_tt33_podacha]
+elements = up_tt33_podacha
+[vartree_tt33_usm]
+elements = up_tt33_kurok, up_tt33_usm_rpm
+[vartree_tt33_zatvor]
+elements = up_tt33_ejector, up_tt33_patronnik, up_tt33_zatvor
+[vartree_tt33_light_details]
+elements = up_tt33_light_details
+[vartree_tt33_barrel]
+elements = up_tt33_barrel_accuracy, up_tt33_barrel_speed
+[vartree_tt33_body]
+elements = up_tt33_body_reliability
+[vartree_tt33_sights]
+elements = up_tt33_sights
+[vartree_tt33_mag]
+elements = up_tt33_light_mag
+[vartree_tt33_handle]
+elements = up_tt33_plastic_handle

@@ -1,0 +1,35 @@
+[wpn_sig220_nimble]:wpn_sig220
+$spawn               = "weapons\wpn_sig220_nimble"   ; name and section in level editor
+description					= gunsl_wpn_sig220_nimble_descr
+cost					= 3400         ; the price of the item
+
+def_hide_bones = sight, barrel_silencer, mag, flash, laser
+def_show_bones = barrel
+
+hud                     	= wpn_sig220_nimble_hud
+condition_shot_dec      	= 0.0017
+condition_queue_shot_dec	= 0.0017
+
+upgrades = vartree_sig220r_body, vartree_sig220r_ramka, vartree_sig220r_shell_ejector, vartree_sig220r_sights, vartree_sig220r_laser, vartree_sig220r_handle
+installed_upgrades = 
+upgrade_scheme = upgrade_scheme_sig220r
+
+inv_name                = gunsl_wpn_sig220_nimble
+inv_name_short          = gunsl_wpn_sig220_nimble
+
+inv_grid_width			= 2
+inv_grid_height			= 1
+inv_grid_x			= 16
+inv_grid_y			= 28
+
+upgr_icon_x			= 1598
+upgr_icon_y			= 534
+upgr_icon_width		        = 170
+upgr_icon_height   	        = 139
+
+ammo_elapsed		 	= 11
+ammo_mag_size		 	= 11 
+
+visual = dynamics\weapons\wpn_sig220\wpn_sig220r.ogf
+
+

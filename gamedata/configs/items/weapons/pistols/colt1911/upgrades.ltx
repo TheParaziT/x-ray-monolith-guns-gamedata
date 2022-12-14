@@ -1,0 +1,481 @@
+;------------------------------------------colt1911_patronnik_accuracy------------------------------------------
+[up_sect_colt1911_patronnik_accuracy]
+cost = 2500
+value = +10
+PDM_disp_base = -0.07
+fire_dispersion_base = -0.03
+
+[up_colt1911_patronnik_accuracy]
+scheme_index = 0, 0
+known = 1
+effects = vartree_colt1911_barrel
+section = up_sect_colt1911_patronnik_accuracy
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_colt1911_up_patronnik_accuracy_name
+description =gunsl_colt1911_up_patronnik_accuracy_descr
+icon = ui_gunsl_up_colt1911_patronnik_accuracy
+;------------------------------------------colt1911_barrel_sil------------------------------------------
+[up_sect_colt1911_barrel_sil]
+cost = 5000
+silencer_status = 2
+silencer_name  = wpn_colt_p220_silencer
+silencer_x  = 69
+silencer_y = -15
+silencer_smoke_particles = weapons\generic_shoot_00
+snd_silncer_shot = weapons\m1911\colt1911_shoot_s, -1.1
+silencer_light_color = 0.6,0.5,0.3
+silencer_light_range	= 0.01
+silencer_light_var_color = 0.05
+silencer_light_var_range = 0.01
+silencer_light_time = 0.01
+
+bullet_speed = +20
+
+hide_bones = barrel
+show_bones = barrel_silencer
+
+[up_colt1911_barrel_sil]
+scheme_index = 0, 1
+known = 1
+effects = vartree_colt1911_systems
+section = up_sect_colt1911_barrel_sil
+property = prop_silencer
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_colt1911_up_barrel_sil_name
+description =gunsl_colt1911_up_barrel_sil_descr
+icon = ui_gunsl_up_colt1911_barrel_sil
+;------------------------------------------colt1911_shell_ejector------------------------------------------
+[up_sect_colt1911_shell_ejector]
+cost = 2500
+value = +10
+misfire_start_prob = -0.001
+misfire_end_prob = -0.01
+
+condition_shot_dec = -0.0002
+condition_queue_shot_dec = -0.0002
+
+[up_colt1911_shell_ejector]
+scheme_index = 0, 2
+known = 1
+effects = vartree_colt1911_barrel
+section = up_sect_colt1911_shell_ejector
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_colt1911_up_shell_ejector_name
+description =gunsl_colt1911_up_shell_ejector_descr
+icon = ui_gunsl_up_colt1911_shell_ejector
+;------------------------------------------colt1911_titan_details------------------------------------------
+[up_sect_colt1911_titan_details]
+cost = 2000
+value = +15
+misfire_start_condition = -0.06
+misfire_end_prob = -0.002
+condition_shot_dec = 0.0005
+condition_queue_shot_dec = -0.0005
+
+[up_colt1911_titan_details]
+scheme_index = 0, 3
+known = 1
+effects = vartree_colt1911_usm
+section = up_sect_colt1911_titan_details
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_colt1911_up_titan_details_name
+description =gunsl_colt1911_up_titan_details_descr
+icon = ui_gunsl_up_colt1911_titan_details
+;------------------------------------------colt1911_light_details------------------------------------------
+[up_sect_colt1911_light_details]
+cost = 2000
+value = -0.2
+inv_weight = -0.2
+
+[up_colt1911_light_details]
+scheme_index = 0, 4
+known = 1
+effects = vartree_colt1911_usm
+section = up_sect_colt1911_light_details
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_colt1911_up_light_details_name
+description =gunsl_colt1911_up_light_details_descr
+icon = ui_gunsl_up_colt1911_light_details
+;------------------------------------------colt1911_usm_accuracy------------------------------------------
+[up_sect_colt1911_usm_accuracy]
+cost = 4000
+value = +20
+fire_dispersion_base = -0.06
+PDM_disp_base = -0.1
+bullet_speed = +20
+
+[up_colt1911_usm_accuracy]
+scheme_index = 0, 5
+known = 1
+effects = vartree_colt1911_systems
+section = up_sect_colt1911_usm_accuracy
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_colt1911_up_usm_accuracy_name
+description =gunsl_colt1911_up_usm_accuracy_descr
+icon = ui_gunsl_up_colt1911_usm_accuracy
+;------------------------------------------colt1911_light_mag_handle------------------------------------------
+[up_sect_colt1911_light_mag_handle]
+cost = 1500
+value = -0.1
+inv_weight = -0.1
+
+[up_colt1911_light_mag_handle]
+scheme_index = 0, 6
+known = 1
+effects = vartree_colt1911_zatvor
+section = up_sect_colt1911_light_mag_handle
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_colt1911_up_light_mag_handle_name
+description =gunsl_colt1911_up_light_mag_handle_descr
+icon = ui_gunsl_up_colt1911_light_mag_handle
+;------------------------------------------colt1911_big_mag------------------------------------------
+[up_sect_colt1911_big_mag]
+cost = 1500
+value = +1
+ammo_mag_size = +1
+
+[up_colt1911_big_mag]
+scheme_index = 0, 7
+known = 1
+effects = vartree_colt1911_zatvor
+section = up_sect_colt1911_big_mag
+property = prop_ammo_size
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_colt1911_up_big_mag_name
+description =gunsl_colt1911_up_big_mag_descr
+icon = ui_gunsl_up_colt1911_big_mag
+;------------------------------------------colt1911_zatvor_reliability------------------------------------------
+[up_sect_colt1911_zatvor_reliability]
+cost = 3000
+value = +25
+misfire_start_prob = -0.002
+misfire_end_prob = -0.025
+
+misfire_start_condition = -0.1
+
+condition_shot_dec = -0.0007
+condition_queue_shot_dec = -0.0007
+
+[up_colt1911_zatvor_reliability]
+scheme_index = 0, 8
+known = 1
+effects = vartree_colt1911_systems
+section = up_sect_colt1911_zatvor_reliability
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_colt1911_up_zatvor_reliability_name
+description =gunsl_colt1911_up_zatvor_reliability_descr
+icon = ui_gunsl_up_colt1911_zatvor_reliability
+;------------------------------------------colt1911_zatvor_rpm------------------------------------------
+[up_sect_colt1911_zatvor_rpm]
+cost = 3000
+value = +20
+condition_shot_dec  = +0.003
+rpm = +40
+
+[up_colt1911_zatvor_rpm]
+scheme_index = 0, 9
+known = 1
+effects = vartree_colt1911_systems
+section = up_sect_colt1911_zatvor_rpm
+property = prop_rpm
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_colt1911_up_zatvor_rpm_name
+description =gunsl_colt1911_up_zatvor_rpm_descr
+icon = ui_gunsl_up_colt1911_zatvor_rpm
+;------------------------------------------colt1911_recoil_compensation_system------------------------------------------
+[up_sect_colt1911_recoil_compensation_system]
+cost = 6000
+value = -30
+cam_dispersion = -0.4
+cam_dispersion_inc = -0.4
+
+zoom_cam_dispersion = -0.15
+zoom_cam_dispersion_inc = -0.25
+
+PDM_disp_base = -0.45
+PDM_disp_crouch = -0.1
+PDM_disp_crouch_no_acc = -0.1
+PDM_disp_vel_factor = -0.1
+
+[up_colt1911_recoil_compensation_system]
+scheme_index = 0, 10
+known = 1
+effects = 
+section = up_sect_colt1911_recoil_compensation_system
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_colt1911_up_recoil_compensation_system_name
+description =gunsl_colt1911_up_recoil_compensation_system_descr
+icon = ui_gunsl_up_colt1911_recoil_compensation_system
+;------------------------------------------colt1911_usm_rpm------------------------------------------
+[up_sect_colt1911_usm_rpm]
+cost = 4000
+value = +20
+condition_shot_dec  = +0.003
+rpm = +40
+
+[up_colt1911_usm_rpm]
+scheme_index = 0, 11
+known = 1
+effects = vartree_colt1911_systems
+section = up_sect_colt1911_usm_rpm
+property = prop_rpm
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_colt1911_up_usm_rpm_name
+description =gunsl_colt1911_up_usm_rpm_descr
+icon = ui_gunsl_up_colt1911_usm_rpm
+;------------------------------------------colt1911_usm_recoil------------------------------------------
+[up_sect_colt1911_usm_recoil]
+cost = 4000
+value = -20
+PDM_disp_base = -0.27
+
+cam_dispersion = -0.24
+cam_dispersion_inc = -0.24
+
+zoom_cam_dispersion = -0.1
+zoom_cam_dispersion_inc = -0.15
+
+PDM_disp_crouch_no_acc = -0.1
+
+[up_colt1911_usm_recoil]
+scheme_index = 0, 12
+known = 1
+effects = vartree_colt1911_systems
+section = up_sect_colt1911_usm_recoil
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_colt1911_up_usm_recoil_name
+description =gunsl_colt1911_up_usm_recoil_descr
+icon = ui_gunsl_up_colt1911_usm_recoil
+;------------------------------------------colt1911_barrel_speed------------------------------------------
+[up_sect_colt1911_barrel_speed]
+cost = 5000
+value = +20
+bullet_speed = +60
+fire_distance = +70
+
+[up_colt1911_barrel_speed]
+scheme_index = 0, 13
+known = 1
+effects = vartree_colt1911_systems
+section = up_sect_colt1911_barrel_speed
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_colt1911_up_barrel_speed_name
+description =gunsl_colt1911_up_barrel_speed_descr
+icon = ui_gunsl_up_colt1911_barrel_speed
+;------------------------------------------colt1911_barrel_accuracy------------------------------------------
+[up_sect_colt1911_barrel_accuracy]
+cost = 5000
+value = +20
+PDM_disp_base = -0.27
+fire_dispersion_base = -0.06
+
+[up_colt1911_barrel_accuracy]
+scheme_index = 0, 14
+known = 1
+effects = vartree_colt1911_systems
+section = up_sect_colt1911_barrel_accuracy
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_colt1911_up_barrel_accuracy_name
+description =gunsl_colt1911_up_barrel_accuracy_descr
+icon = ui_gunsl_up_colt1911_barrel_accuracy
+;------------------------------------------colt1911_bullet_hit_power------------------------------------------
+[up_sect_colt1911_bullet_hit_power]
+cost = 6000
+value = +30
+hit_power = 1.4
+bullet_speed = +60
+rpm = +20
+
+condition_shot_dec = +0.0001
+condition_queue_shot_dec = +0.0001
+
+PDM_disp_base = +0.1
+fire_dispersion_base = +0.03
+
+[up_colt1911_bullet_hit_power]
+scheme_index = 0, 15
+known = 1
+effects = 
+section = up_sect_colt1911_bullet_hit_power
+property = prop_destruction
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_colt1911_up_bullet_hit_power_name
+description =gunsl_colt1911_up_bullet_hit_power_descr
+icon = ui_gunsl_up_colt1911_bullet_hit_power
+;------------------------------------------colt1911_zatvor_recoil------------------------------------------
+[up_sect_colt1911_zatvor_recoil]
+cost = 3000
+value = -20
+PDM_disp_base = -0.3
+
+cam_dispersion = -0.24
+cam_dispersion_inc = -0.24
+
+zoom_cam_dispersion = -0.1
+zoom_cam_dispersion_inc = -0.15
+
+PDM_disp_crouch_no_acc = -0.1
+
+[up_colt1911_zatvor_recoil]
+scheme_index = 0, 16
+known = 1
+effects = vartree_colt1911_systems
+section = up_sect_colt1911_zatvor_recoil
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_colt1911_up_zatvor_recoil_name
+description =gunsl_colt1911_up_zatvor_recoil_descr
+icon = ui_gunsl_up_colt1911_zatvor_recoil
+;------------------------------------------colt1911_sights------------------------------------------
+[up_sect_colt1911_sights]
+cost = 1000
+crosshair_inertion = -1
+control_inertion_factor = -0.1
+show_bones = sight
+
+[up_colt1911_sights]
+scheme_index = 0, 17
+known = 1
+effects = 
+section = up_sect_colt1911_sights
+property = prop_lightingsights
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_colt1911_up_sights_name
+description =gunsl_colt1911_up_sights_descr
+icon = ui_gunsl_up_colt1911_sights
+;------------------------------------------------------------------------------------
+[vartree_colt1911_patronnik]
+elements = up_colt1911_patronnik_accuracy, up_colt1911_shell_ejector
+[vartree_colt1911_barrel]
+elements = up_colt1911_barrel_sil, up_colt1911_barrel_speed, up_colt1911_barrel_accuracy
+[vartree_colt1911_details]
+elements = up_colt1911_titan_details, up_colt1911_light_details
+[vartree_colt1911_usm]
+elements = up_colt1911_usm_accuracy, up_colt1911_usm_rpm, up_colt1911_usm_recoil
+[vartree_colt1911_mag]
+elements = up_colt1911_light_mag_handle, up_colt1911_big_mag
+[vartree_colt1911_zatvor]
+elements = up_colt1911_zatvor_reliability, up_colt1911_zatvor_rpm, up_colt1911_zatvor_recoil
+[vartree_colt1911_systems]
+elements = up_colt1911_recoil_compensation_system, up_colt1911_bullet_hit_power
+[vartree_colt1911_sights]
+elements = up_colt1911_sights

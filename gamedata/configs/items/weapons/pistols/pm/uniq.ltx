@@ -1,0 +1,77 @@
+[wpn_pm_actor]:wpn_pm
+
+upgrades = vartree_wpn_pmm_barrel, vartree_wpn_pmm_mag, vartree_wpn_pmm_sights
+installed_upgrades = 
+upgrade_scheme = upgrade_scheme_wpn_pmm
+
+$spawn                  	= "weapons\pm_actor"		; option for Level Editor
+description			= gunsl_wpn_pmm_descr
+cost				= 600
+inv_weight			= 0.76
+hud                     	= wpn_pmm_hud
+
+hit_power           		= 0.95, 0.95, 0.95, 0.95
+
+ammo_elapsed		 	= 13
+ammo_mag_size		 	= 13
+inv_name			= gunsl_wpn_pmm
+inv_name_short		= gunsl_wpn_pmm
+inv_grid_y			= 26
+
+upgr_icon_x			= 982
+upgr_icon_y			= 400
+upgr_icon_width		= 150
+upgr_icon_height   	= 118
+
+silencer_x 						= 64						
+
+visual                  	= dynamics\weapons\wpn_pm\wpn_pmm.ogf
+
+
+;базовая дисперсия
+fire_dispersion_base	= 0.22 ;0.19 			;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+control_inertion_factor = 1.0
+crosshair_inertion		= 3
+
+;отдача
+cam_return				= 0
+cam_relax_speed         = 8				;скорость возврата в исходное положение
+cam_relax_speed_ai      = 360
+cam_dispersion          = 0.65				;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 0.75				;увеличениe cam_dispersion с каждым выстрелом
+cam_dispersion_frac		= 1.0				;ствол будет подыматься на cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
+cam_max_angle			= 35.0			;максимальный угол отдачи
+cam_max_angle_horz		= 5.0				;(degree) maximum shot horizontal degree
+cam_step_angle_horz		= 1.0				;(degree) size of step camera moved in horizontal posi
+detector_disp_factor            = 3                     ;во сколько раз увеличится дисперсия оружия при активном детекторе в другой руке.
+
+PDM_disp_base 				= 1.3
+PDM_disp_vel_factor 		= 1.1
+PDM_disp_accel_factor 		= 1.3
+PDM_disp_crouch	 			= 0.85
+PDM_disp_crouch_no_acc 		= 0.9
+
+zoom_cam_relax_speed        = 10    ; scope & ironsight
+zoom_cam_relax_speed_ai     = 120.75
+zoom_cam_dispersion         = 0.26
+zoom_cam_dispersion_inc     = 0.7
+zoom_cam_dispersion_frac    = 0.7
+zoom_cam_max_angle          = 25.0
+zoom_cam_max_angle_horz     = 10.0
+zoom_cam_step_angle_horz    = 1.5
+
+misfire_probability        = 0.005 ;вероятность осечки при максимальном износе  !!!old - now not working
+;изношенность, при которой появляется шанс осечки
+misfire_start_condition		= 0.7
+;изношеность при которой шанс осечки становится константным
+misfire_end_condition		= 0.2
+;шанс осечки при изношености больше чем misfireStartCondition
+misfire_start_prob	     	= 0.01
+;шанс осечки при изношености больше чем misfireEndCondition
+misfire_end_prob	     	= 0.055
+;увеличение изношености при одиночном выстреле
+condition_shot_dec      	= 0.0025
+;увеличение изношености при выстреле очередью
+condition_queue_shot_dec	= 0.003
+
+bullet_speed		 	= 160

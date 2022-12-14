@@ -1,0 +1,368 @@
+;------------------------------------------gsh18_barrel_speed------------------------------------------
+[up_sect_gsh18_barrel_speed]
+cost = 7000
+value = +30
+bullet_speed = +100
+PDM_disp_base = -0.2
+
+[up_gsh18_barrel_speed]
+scheme_index = 0, 0
+known = 1
+effects = 
+section = up_sect_gsh18_barrel_speed
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_gsh18_up_barrel_speed_name
+description =gunsl_gsh18_up_barrel_speed_descr
+icon = ui_gunsl_up_gsh18_barrel_speed
+;------------------------------------------gsh18_barrel_recoil------------------------------------------
+[up_sect_gsh18_barrel_recoil]
+cost = 6000
+value = -30
+cam_dispersion = -0.31
+cam_dispersion_inc = -0.26
+zoom_cam_dispersion = -0.16
+zoom_cam_dispersion_inc = -0.2
+
+PDM_disp_base = -0.15
+
+[up_gsh18_barrel_recoil]
+scheme_index = 0, 1
+known = 1
+effects = 
+section = up_sect_gsh18_barrel_recoil
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_gsh18_up_barrel_recoil_name
+description =gunsl_gsh18_up_barrel_recoil_descr
+icon = ui_gunsl_up_gsh18_barrel_recoil
+;------------------------------------------gsh18_barrel_accuracy------------------------------------------
+[up_sect_gsh18_barrel_accuracy]
+cost = 6000
+value = +30
+fire_dispersion_base = -0.09
+PDM_disp_base = -0.2
+
+[up_gsh18_barrel_accuracy]
+scheme_index = 0, 2
+known = 1
+effects = 
+section = up_sect_gsh18_barrel_accuracy
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_gsh18_up_barrel_accuracy_name
+description =gunsl_gsh18_up_barrel_accuracy_descr
+icon = ui_gunsl_up_gsh18_barrel_accuracy
+;------------------------------------------gsh18_body_reliability------------------------------------------
+[up_sect_gsh18_body_reliability]
+cost = 2000
+value = +10
+misfire_end_prob = -0.007
+
+condition_shot_dec      	= -0.00017
+condition_queue_shot_dec	= -0.00017
+
+[up_gsh18_body_reliability]
+scheme_index = 0, 3
+known = 1
+effects = vartree_gsh18_ramka
+section = up_sect_gsh18_body_reliability
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_gsh18_up_body_reliability_name
+description =gunsl_gsh18_up_body_reliability_descr
+icon = ui_gunsl_up_gsh18_body_reliability
+;------------------------------------------gsh18_usm_recoil------------------------------------------
+[up_sect_gsh18_usm_recoil]
+cost = 6000
+value = -30
+cam_dispersion = -0.32
+cam_dispersion_inc = -0.24
+zoom_cam_dispersion = -0.15
+zoom_cam_dispersion_inc = -0.2
+PDM_disp_base = -0.1
+
+[up_gsh18_usm_recoil]
+scheme_index = 0, 4
+known = 1
+effects = 
+section = up_sect_gsh18_usm_recoil
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_gsh18_up_usm_recoil_name
+description =gunsl_gsh18_up_usm_recoil_descr
+icon = ui_gunsl_up_gsh18_usm_recoil
+;------------------------------------------gsh18_handle------------------------------------------
+[up_sect_gsh18_handle]
+cost = 1500
+value = +20
+control_inertion_factor = -0.1
+
+cam_relax_speed         = +1.0
+cam_dispersion          = -0.03
+
+zoom_cam_relax_speed = +2
+zoom_cam_dispersion = -0.05
+zoom_cam_dispersion_inc = -0.03
+
+PDM_disp_base = -0.2
+PDM_disp_vel_factor = -0.1
+
+[up_gsh18_handle]
+scheme_index = 0, 5
+known = 1
+effects = 
+section = up_sect_gsh18_handle
+property = prop_inertion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_gsh18_up_handle_name
+description =gunsl_gsh18_up_handle_descr
+icon = ui_gunsl_up_gsh18_handle
+;------------------------------------------gsh18_patronnik_obturation------------------------------------------
+[up_sect_gsh18_patronnik_obturation]
+cost = 5000
+value = +20
+bullet_speed = +80
+PDM_disp_base = -0.1
+
+[up_gsh18_patronnik_obturation]
+scheme_index = 0, 6
+known = 1
+effects = vartree_gsh18_barrel
+section = up_sect_gsh18_patronnik_obturation
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_gsh18_up_patronnik_obturation_name
+description =gunsl_gsh18_up_patronnik_obturation_descr
+icon = ui_gunsl_up_gsh18_patronnik_obturation
+;------------------------------------------gsh18_patronnik_dispersion------------------------------------------
+[up_sect_gsh18_patronnik_dispersion]
+cost = 5000
+value = +20
+fire_dispersion_base = -0.06
+PDM_disp_base = -0.15
+
+[up_gsh18_patronnik_dispersion]
+scheme_index = 0, 7
+known = 1
+effects = vartree_gsh18_barrel
+section = up_sect_gsh18_patronnik_dispersion
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_gsh18_up_patronnik_dispersion_name
+description =gunsl_gsh18_up_patronnik_dispersion_descr
+icon = ui_gunsl_up_gsh18_patronnik_dispersion
+;------------------------------------------gsh18_ramka------------------------------------------
+[up_sect_gsh18_ramka]
+cost = 4000
+value = +20
+misfire_start_condition = -0.1
+misfire_end_prob = -0.01
+
+condition_shot_dec      	= -0.0004
+condition_queue_shot_dec	= -0.0004
+
+[up_gsh18_ramka]
+scheme_index = 0, 8
+known = 1
+effects = vartree_gsh18_usm
+section = up_sect_gsh18_ramka
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_gsh18_up_ramka_name
+description =gunsl_gsh18_up_ramka_descr
+icon = ui_gunsl_up_gsh18_ramka
+;------------------------------------------gsh18_shell_ejector------------------------------------------
+[up_sect_gsh18_shell_ejector]
+cost = 2000
+value = +10
+misfire_start_prob = -0.0015
+misfire_end_prob = -0.01
+
+condition_shot_dec      	= -0.0001
+condition_queue_shot_dec	= -0.0001
+
+[up_gsh18_shell_ejector]
+scheme_index = 0, 9
+known = 1
+effects = vartree_gsh18_patronnik
+section = up_sect_gsh18_shell_ejector
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_gsh18_up_shell_ejector_name
+description =gunsl_gsh18_up_shell_ejector_descr
+icon = ui_gunsl_up_gsh18_shell_ejector
+;------------------------------------------gsh18_sights------------------------------------------
+[up_sect_gsh18_sights]
+cost = 1500
+crosshair_inertion = -1
+control_inertion_factor = -0.1
+show_bones = sight
+
+[up_gsh18_sights]
+scheme_index = 0, 10
+known = 1
+effects = 
+section = up_sect_gsh18_sights
+property = prop_lightingsights
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_gsh18_up_sights_name
+description =gunsl_gsh18_up_sights_descr
+icon = ui_gunsl_up_gsh18_sights
+;------------------------------------------gsh18_usm_rpm------------------------------------------
+[up_sect_gsh18_usm_rpm]
+cost = 5000
+value = +25
+condition_shot_dec  = +0.001
+rpm = +70
+
+[up_gsh18_usm_rpm]
+scheme_index = 0, 11
+known = 1
+effects = 
+section = up_sect_gsh18_usm_rpm
+property = prop_rpm
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_gsh18_up_usm_rpm_name
+description =gunsl_gsh18_up_usm_rpm_descr
+icon = ui_gunsl_up_gsh18_usm_rpm
+;------------------------------------------gsh18_polymer_buffer------------------------------------------
+[up_sect_gsh18_polymer_buffer]
+cost = 4000
+value = -20
+cam_dispersion = -0.2
+cam_dispersion_inc = -0.15
+zoom_cam_dispersion = -0.09
+zoom_cam_dispersion_inc = -0.1
+PDM_disp_base = -0.05
+
+[up_gsh18_polymer_buffer]
+scheme_index = 0, 12
+known = 1
+effects = vartree_gsh18_usm
+section = up_sect_gsh18_polymer_buffer
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_gsh18_up_polymer_buffer_name
+description =gunsl_gsh18_up_polymer_buffer_descr
+icon = ui_gunsl_up_gsh18_polymer_buffer
+;------------------------------------------gsh18_usm_reliability------------------------------------------
+[up_sect_gsh18_usm_reliability]
+cost = 6000
+value = +30
+misfire_start_condition = -0.15
+misfire_end_prob = -0.02
+condition_shot_dec = -0.0006
+condition_queue_shot_dec = -0.0006
+
+[up_gsh18_usm_reliability]
+scheme_index = 0, 13
+known = 1
+effects = 
+section = up_sect_gsh18_usm_reliability
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_gsh18_up_usm_reliability_name
+description =gunsl_gsh18_up_usm_reliability_descr
+icon = ui_gunsl_up_gsh18_usm_reliability
+;------------------------------------------------------------------------------------
+[vartree_gsh18_ejector]
+elements = up_gsh18_shell_ejector
+[vartree_gsh18_patronnik]
+elements = up_gsh18_patronnik_obturation, up_gsh18_patronnik_dispersion
+[vartree_gsh18_barrel]
+elements = up_gsh18_barrel_speed, up_gsh18_barrel_recoil, up_gsh18_barrel_accuracy
+[vartree_gsh18_body]
+elements = up_gsh18_body_reliability
+[vartree_gsh18_ramka]
+elements = up_gsh18_polymer_buffer, up_gsh18_ramka
+[vartree_gsh18_usm]
+elements = up_gsh18_usm_rpm, up_gsh18_usm_recoil, up_gsh18_usm_reliability
+[vartree_gsh18_sights]
+elements = up_gsh18_sights
+[vartree_gsh18_handle]
+elements = up_gsh18_handle
