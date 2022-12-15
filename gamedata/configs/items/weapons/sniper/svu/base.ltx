@@ -1,0 +1,266 @@
+[wpn_svu]:identity_immunities,weapon_probability,default_weapon_params
+GroupControlSection		= spawn_group
+$spawn                  = "weapons\svu"      ; option for Level Editor
+$npc			 		= on				; option for Level Editor
+$prefetch 		 		= 8
+scheduled               = off              	; option for ALife Simulator
+cform                   = skeleton
+class                   = WP_VAL
+description             = gunsl_wpn_svu_descr
+ef_main_weapon_type		= 3
+ef_weapon_type			= 11
+
+default_to_ruck         = false
+sprint_allowed          = true
+kind                        = w_sniper
+sprint_allowed          = true
+
+script_binding  = bind_weapon.bind
+def_hide_bones = ironsight_off, scope1, scope2, scope3, scope4, scope5, mag20, handler2, sight_on, sight_off, sheka, firemode, scope6, scope7
+def_show_bones = ironsight_on, handler, mag10
+
+no_scope_overriding_hide_bones = sight_off
+
+repair_group = svu
+is_burer_see_sniper_weapon = true
+
+;-------------------------------------------------------------------------------
+cost                    = 17000
+weapon_class			= sniper_rifle
+inv_weight              = 4.4
+
+upgrades = 
+installed_upgrades = 
+upgrade_scheme = 
+
+;----TTX------------------------------------------------------------------------
+hit_power               = 1.09, 1.09, 1.09, 1.09
+hit_impulse             = 125
+hit_type 				= fire_wound
+fire_distance           = 200
+bullet_speed		 	= 750 ;800	;��������� �������� ����
+rpm                     = 140
+rpm_empty_click         = 200
+
+use_aim_bullet				= false		;�������������� �� ������ ������ ����
+time_to_aim					= 1.0
+
+ammo_in_chamber = true
+
+hud                     = wpn_svu_hud
+
+misfire_probability        = 0.005 ;����������� ������ ��� ������������ ������  !!!old - now not working
+;������������, ��� ������� ���������� ���� ������
+misfire_start_condition		= 0.7
+;����������� ��� ������� ���� ������ ���������� �����������
+misfire_end_condition		= 0.3
+;���� ������ ��� ����������� ������ ��� misfireStartCondition
+misfire_start_prob	     	= 0.0065
+;���� ������ ��� ����������� ������ ��� misfireEndCondition
+misfire_end_prob	     	= 0.09
+;���������� ����������� ��� ��������� ��������
+condition_shot_dec      	= 0.0083
+;���������� ����������� ��� �������� ��������
+condition_queue_shot_dec	= 0.0093
+
+ammo_elapsed			= 11
+ammo_mag_size			= 11
+fire_modes		  		= 1;, -1
+ammo_class				= ammo_7.62x54_7h1
+grenade_class           = ammo_m209
+launch_speed            = 0
+hand_dependence         = 1
+single_handed           = 0
+
+;---���������-------------------------------------------------------------------------
+;������� ���������
+fire_dispersion_base    = 0.11   ;���� (� ��������) ������� ��������� ������ (������ �������� � ������)
+control_inertion_factor = 1.7
+crosshair_inertion		= 6.15
+
+;������
+cam_return		= 1
+cam_relax_speed         = 12.0  ;�������� �������� � �������� ���������
+cam_relax_speed_ai      = 360	;�������� �������� � �������� ���������
+cam_dispersion          = 5.0 ;���������� ���� (� ��������) � ������ ���������
+cam_dispersion_inc		= 2.5	;���������e cam_dispersion � ������ ���������
+cam_dispersion_frac		= 0.99	;����� ����� ���������� �� cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
+cam_max_angle           = 90.0   ;������������ ���� ������
+cam_max_angle_horz		= 3.0	;(degree) maximum shot horizontal degree
+cam_step_angle_horz     = 2.5 ;(degree) size of step camera moved in horizontal position while shooting
+
+
+PDM_disp_base 			= 1.5
+PDM_disp_vel_factor 	= 6.0
+PDM_disp_accel_factor 	= 8.0
+PDM_disp_crouch	 		= 0.9
+PDM_disp_crouch_no_acc 	= 0.8
+
+zoom_cam_relax_speed        = 9.0    ; scope & ironsight
+zoom_cam_relax_speed_ai     = 120.75
+zoom_cam_dispersion         = 2.25
+zoom_cam_dispersion_inc     = 1.5
+zoom_cam_dispersion_frac    = 0.99
+zoom_cam_max_angle          = 70
+zoom_cam_max_angle_horz     = 15.0
+zoom_cam_step_angle_horz    = 0.5
+
+fire_dispersion_condition_factor = 25	;���������� ��������� � ��������� ��� ������������ ������
+
+;---DOF-------------------------------------------------------------------------
+;zoom_dof				= 0.5, 1.0, 350
+reload_dof				= 0.0, 0.5, 5, 2
+
+;-------------------------------------------------------------------------------
+holder_range_modifier	= 2.15               ; �� ������� ��� ������������� eye_range
+holder_fov_modifier		= 1.0             ; �� ������� ��� ������������� eye_fov
+
+min_radius              = 10
+max_radius              = 50
+
+hit_probability_gd_novice	= 1
+hit_probability_gd_stalker	= 1
+hit_probability_gd_veteran	= 1
+hit_probability_gd_master	= 1
+
+;-------------------------------------------------------------------------------
+slot                    = 2                ; // secondary
+animation_slot          = 2                ; type of the animation that will be used
+
+inv_name                = gunsl_wpn_svu
+inv_name_short          = gunsl_wpn_svu
+icons_texture        = ui\ui_icon_equipment_guns
+inv_grid_width          = 5
+inv_grid_height			= 2
+inv_grid_x				= 0
+inv_grid_y              = 2
+
+upgr_icon_x			= 594
+upgr_icon_y			= 388
+upgr_icon_width		= 291
+upgr_icon_height   	= 85
+
+kill_msg_x				= 0
+kill_msg_y              = 59
+kill_msg_width          = 80
+kill_msg_height         = 26
+
+;-------------------------------------------------------------------------------
+position                = -0.026, -0.084, 0.0
+orientation             = 0, 0, 0
+
+fire_point              = 0.0, 0.128, 0.522
+fire_point2             = 0.0, 0.128, 0.522
+
+;flame_particles        = amik\weapons\smoke_particles\silencer_smoke_particles_01
+smoke_particles		= weapons\generic_shoot_00
+grenade_flame_particles = weapons\generic_weapon01
+
+shell_point             = 0.0, 0.128, 0.0
+shell_dir		= 0.0, 0.0, 0.4
+shell_particles	        = weapons\generic_shells_r
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+;��� ������
+strap_position          = -0.26,-0.11,0.25         ; position (offset) and orientation of the weapon when it is strapped
+strap_orientation       = -15,-9,110            ; (3rd person view in degrees)
+strap_bone0					= bip01_spine2
+strap_bone1					= bip01_spine1
+
+startup_ammo            = 10
+visual                  = dynamics\weapons\wpn_svu\wpn_svu.ogf
+
+light_disabled          = true
+light_color		 		= 0.6,0.5,0.3
+light_range		 		= 4.0
+light_var_color		 	= 0.05
+light_var_range		 	= 0.5
+light_time 		 		= 0.2
+
+ph_mass			 		= 3
+
+;addons
+scope_status            = 2
+silencer_status		= 0
+grenade_launcher_status	= 0
+
+zoom_enabled			= true
+zoom_rotate_time		= 0.35
+scope_zoom_factor       = 0     ;���-1 4X
+
+scopes_sect = scope_pso1_svu, scope_nvsn_svu, scope_cobra_svu, scope_pka_svu, scope_kashtan_svu, scope_pso1m2_svu, scope_nvas_svu
+
+
+scope_texture			= 
+scope_name 				= wpn_addon_scope
+scope_x 				= 60
+scope_y 				= -2
+
+grenade_launcher_name   = wpn_addon_grenade_launcher_m203
+grenade_launcher_x      = 109
+grenade_launcher_y      = 30
+
+;�����
+snd_draw		= weapons\svu\svu_draw
+snd_holster		= weapons\vss\vss_hide
+snd_shoot		= weapons\svu\svu_shoot, -1.1
+snd_empty		= weapons\glock17\glock17_dry
+snd_reload              = weapons\svu\svu_reload
+snd_reload_empty        = weapons\svu\svu_reload_empty
+snd_changecartridgetype = weapons\svu\svu_reload
+snd_shoot_grenade       = weapons\gen_grenshoot
+snd_reload_grenade      = weapons\gen_grenload, 1.0, 0.8
+snd_switch              = weapons\groza_switch, 1.0, 0.5
+snd_close		= $silent
+snd_reload_jammed       = weapons\svu\svu_revival
+snd_reload_jammed_last  = weapons\svu\svu_revival_last
+snd_jammed_click        = weapons\glock17\glock17_dry
+snd_unload_mag          = $silent
+snd_jam                 = $silent
+snd_breechblock         = $silent
+snd_fakeshoot_first	= weapons\glock17\glock17_shoot_s
+snd_changefiremode	= weapons\vss\vss_firemode
+;snd_changefiremode_empty
+;snd_changefiremode_jammed
+snd_aim_start           = weapons\vss\vss_aim_start
+snd_aim_end             = weapons\vss\vss_aim_end
+snd_sprint_start        = weapons\detector_prepare
+snd_sprint_end          = weapons\pistol_sprint_end
+snd_suicide	        = weapons\suicide_start
+snd_stop_suicide	= weapons\suicide_end
+snd_laser_on	        = weapons\vss\vss_firemode
+snd_laser_off	        = weapons\vss\vss_firemode
+snd_torch_on	        = weapons\vss\vss_firemode
+snd_torch_off	        = weapons\vss\vss_firemode
+snd_headlamp_on         = weapons\headflash_on
+snd_headlamp_off        = weapons\headflash_off
+snd_nv_on               = weapons\nv_act
+snd_nv_off              = weapons\nv_deact
+
+
+snd_scope_brightness_plus = weapons\nv_intensity
+snd_scope_brightness_minus = weapons\nv_intensity
+
+
+use_world_anims=true
+
+wanm_idle = idle
+
+wanm_idle_empty = idle_empty
+
+wanm_idle_jammed = idle_jammed
+
+
+wanm_shoot = shoot
+
+wanm_shoot_jammed = idle_jammed
+
+wanm_shoot_last = shoot_last
+
+wanm_shoot_last_jammed = idle_jammed
+
+wanm_reload = idle
+
+wanm_reload_empty = idle
+
+wanm_reload_jammed = idle

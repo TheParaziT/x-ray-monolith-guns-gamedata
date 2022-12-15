@@ -1,0 +1,43 @@
+[wpn_vintorez_nimble]:wpn_vintorez
+$spawn						= "weapons\unique\vintorez_nimble"                ; option for Level Editor
+inv_name				= gunsl_wpn_vintorez_nimble
+description				= gunsl_wpn_vintorez_nimble_descr
+
+cost                    = 15000
+
+hit_power				= 1.1, 1.1, 1.1, 1.1
+hit_impulse				= 140
+bullet_speed            = 360
+rpm                     = 375
+
+fire_dispersion_base    = 0.12        ;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+control_inertion_factor = 1.2f
+crosshair_inertion		= 6
+
+;отдача
+cam_return				= 1
+cam_relax_speed         = 3.5        ;скорость возврата в исходное положение
+cam_relax_speed_ai      = 360		;скорость возврата в исходное положение
+cam_dispersion          = 0.32        ;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc      = 0.17        ;увеличениe cam_dispersion с каждым выстрелом
+cam_dispersion_frac     = 1.0        ;ствол будет подыматься на cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
+cam_max_angle           = 50.0        ;максимальный угол отдачи
+cam_max_angle_horz      = 50.0        ;(degree) maximum shot horizontal degree
+cam_step_angle_horz     = 0.5        ;(degree) size of step camera moved in horizontal position while shooting
+
+PDM_disp_base           = 0.6
+PDM_disp_vel_factor     = 2.4
+PDM_disp_accel_factor   = 2.4
+PDM_disp_crouch         = 1.0
+PDM_disp_crouch_no_acc  = 1.0
+
+zoom_cam_relax_speed        = 3.5    ; scope & ironsight
+zoom_cam_relax_speed_ai     = 120.75
+zoom_cam_dispersion         = 0.18
+zoom_cam_dispersion_inc     = 0.1
+zoom_cam_dispersion_frac    = 1.0
+zoom_cam_max_angle          = 50.0
+zoom_cam_max_angle_horz     = 50.0
+zoom_cam_step_angle_horz    = 0.25
+
+fire_dispersion_condition_factor = 5        ;увеличение дисперсии в процентах при максимальном износе

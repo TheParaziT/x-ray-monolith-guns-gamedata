@@ -1,0 +1,235 @@
+<w>
+  <wpn_crosshair x="0" y="0" width="1024" height="768">
+    <auto_static x="85" y="0" width="854" height="768" stretch="1">
+      <texture>wpn_crosshair</texture>
+    </auto_static>
+    <auto_static x="0" y="0" width="87" height="768" stretch="1">
+      <texture>wpn_crosshair_add_l</texture>
+    </auto_static>
+    <auto_static x="938" y="0" width="87" height="768" stretch="1">
+      <texture>wpn_crosshair_add_r</texture>
+    </auto_static>
+  </wpn_crosshair>
+
+  <wpn_crosshair_l85 x="0" y="0" width="1024" height="768">
+    <auto_static x="85" y="0" width="854" height="768" stretch="1">
+      <texture>wpn_crosshair_l85</texture>
+    </auto_static>
+    <auto_static x="0" y="0" width="87" height="768" stretch="1">
+      <texture>wpn_crosshair_add_l</texture>
+    </auto_static>
+    <auto_static x="938" y="0" width="87" height="768" stretch="1">
+      <texture>wpn_crosshair_add_r</texture>
+    </auto_static>
+  </wpn_crosshair_l85>
+
+  <wpn_crosshair_g36 x="0" y="0" width="1024" height="768">
+    <auto_static x="85" y="0" width="854" height="768" stretch="1">
+      <texture>wpn_crosshair_g36</texture>
+    </auto_static>
+    <auto_static x="0" y="0" width="87" height="768" stretch="1">
+      <texture>wpn_crosshair_add_l</texture>
+    </auto_static>
+    <auto_static x="938" y="0" width="87" height="768" stretch="1">
+      <texture>wpn_crosshair_add_r</texture>
+    </auto_static>
+  </wpn_crosshair_g36>
+
+  <wpn_crosshair_rpg x="0" y="0" width="1024" height="768">
+    <auto_static x="85" y="0" width="854" height="768" stretch="1">
+      <texture>wpn_crosshair_rpg</texture>
+    </auto_static>
+    <auto_static x="0" y="0" width="87" height="768" stretch="1">
+      <texture>wpn_crosshair_add_l</texture>
+    </auto_static>
+    <auto_static x="938" y="0" width="87" height="768" stretch="1">
+      <texture>wpn_crosshair_add_r</texture>
+    </auto_static>
+  </wpn_crosshair_rpg>
+
+  <wpn_crosshair_bino x="0" y="0" width="1024" height="768">
+    <auto_static x="85" y="0" width="854" height="768" stretch="1">
+      <texture>wpn_crosshair_bino</texture>
+    </auto_static>
+    <auto_static x="0" y="0" width="87" height="768" stretch="1">
+      <texture>wpn_crosshair_add_l</texture>
+    </auto_static>
+    <auto_static x="938" y="0" width="87" height="768" stretch="1">
+      <texture>wpn_crosshair_add_r</texture>
+    </auto_static>
+  </wpn_crosshair_bino>
+
+  <!--GUNSLINGER Mod-->
+  <zero_alpha x="0" y="0" width="1024" height="768">
+    <auto_static x="85" y="0" width="854" height="768" stretch="1">
+      <texture>wpn\zero_alpha</texture>
+    </auto_static>
+  </zero_alpha>
+
+  <crosshair_2d_1pn93x1 x="0" y="0" width="1024" height="768">
+    <auto_static x="224" y="0" width="576" height="768" stretch="1">
+      <texture>crosshair_2d_1pn93x1</texture>
+    </auto_static>
+    <auto_static x="0" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_l</texture>
+    </auto_static>
+    <auto_static x="799" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_r</texture>
+    </auto_static>
+  </crosshair_2d_1pn93x1>
+
+  <crosshair_2d_1pn93x4 x="0" y="0" width="1024" height="768">
+    <auto_static x="224" y="0" width="576" height="768" stretch="1">
+      <texture>crosshair_2d_1pn93x4</texture>
+    </auto_static>
+    <auto_static x="0" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_l</texture>
+    </auto_static>
+    <auto_static x="799" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_r</texture>
+    </auto_static>
+  </crosshair_2d_1pn93x4>
+
+  <crosshair_2d_elcan x="0" y="0" width="1024" height="768">
+    <window_name>switchable_zoom_wnd</window_name>
+    <auto_static x="224" y="0" width="576" height="768" stretch="1">
+      <texture>crosshair_2d_elcan_off</texture>
+    </auto_static>
+    <auto_static x="224" y="0" width="576" height="768" stretch="1">
+      <texture>crosshair_2d_elcan_l1</texture>
+    </auto_static>
+    <auto_static x="224" y="0" width="576" height="768" stretch="1">
+      <texture>crosshair_2d_elcan_l2</texture>
+    </auto_static>
+    <auto_static x="224" y="0" width="576" height="768" stretch="1">
+      <texture>crosshair_2d_elcan_on</texture>
+    </auto_static>
+    <auto_static x="0" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_l</texture>
+    </auto_static>
+    <auto_static x="799" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_r</texture>
+    </auto_static>
+  </crosshair_2d_elcan>
+
+  <crosshair_2d_gauss x="0" y="0" width="1024" height="768">
+    <auto_static x="224" y="0" width="576" height="768" stretch="1">
+      <texture>crosshair_2d_gauss</texture>
+    </auto_static>
+    <auto_static x="0" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_l</texture>
+    </auto_static>
+    <auto_static x="799" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_r</texture>
+    </auto_static>
+  </crosshair_2d_gauss>
+
+  <crosshair_2d_kashtan x="0" y="0" width="1024" height="768">
+    <auto_static x="224" y="0" width="576" height="768" stretch="1">
+      <texture>crosshair_2d_kashtan</texture>
+    </auto_static>
+    <auto_static x="0" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_l</texture>
+    </auto_static>
+    <auto_static x="799" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_r</texture>
+    </auto_static>
+  </crosshair_2d_kashtan>
+
+  <crosshair_2d_pgo7v x="0" y="0" width="1024" height="768">
+    <window_name>switchable_zoom_wnd</window_name>
+    <auto_static x="224" y="0" width="576" height="768" stretch="1">
+      <texture>crosshair_2d_pgo7v_off</texture>
+    </auto_static>
+    <auto_static x="224" y="0" width="576" height="768" stretch="1">
+      <texture>crosshair_2d_pgo7v_on</texture>
+    </auto_static>
+    <auto_static x="0" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_l</texture>
+    </auto_static>
+    <auto_static x="799" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_r</texture>
+    </auto_static>
+  </crosshair_2d_pgo7v>
+
+  <crosshair_2d_pn23 x="0" y="0" width="1024" height="768">
+    <auto_static x="224" y="0" width="576" height="768" stretch="1">
+      <texture>crosshair_2d_pn23</texture>
+    </auto_static>
+    <auto_static x="0" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_l</texture>
+    </auto_static>
+    <auto_static x="799" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_r</texture>
+    </auto_static>
+  </crosshair_2d_pn23>
+
+  <crosshair_2d_pso1as x="0" y="0" width="1024" height="768">
+    <window_name>switchable_zoom_wnd</window_name>
+    <auto_static x="224" y="0" width="576" height="768" stretch="1">
+      <texture>crosshair_2d_pso1as_off</texture>
+    </auto_static>
+    <auto_static x="224" y="0" width="576" height="768" stretch="1">
+      <texture>crosshair_2d_pso1as_on</texture>
+    </auto_static>
+    <auto_static x="0" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_l</texture>
+    </auto_static>
+    <auto_static x="799" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_r</texture>
+    </auto_static>
+  </crosshair_2d_pso1as>
+
+  <crosshair_2d_pso1sn x="0" y="0" width="1024" height="768">
+    <window_name>switchable_zoom_wnd</window_name>
+    <auto_static x="224" y="0" width="576" height="768" stretch="1">
+      <texture>crosshair_2d_pso1sn_off</texture>
+    </auto_static>
+    <auto_static x="224" y="0" width="576" height="768" stretch="1">
+      <texture>crosshair_2d_pso1sn_on</texture>
+    </auto_static>
+    <auto_static x="0" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_l</texture>
+    </auto_static>
+    <auto_static x="799" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_r</texture>
+    </auto_static>
+  </crosshair_2d_pso1sn>
+
+  <crosshair_2d_pu x="0" y="0" width="1024" height="768">
+    <auto_static x="224" y="0" width="576" height="768" stretch="1">
+      <texture>crosshair_2d_pu</texture>
+    </auto_static>
+    <auto_static x="0" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_l</texture>
+    </auto_static>
+    <auto_static x="799" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_r</texture>
+    </auto_static>
+  </crosshair_2d_pu>
+
+  <crosshair_2d_susat x="0" y="0" width="1024" height="768">
+    <auto_static x="224" y="0" width="576" height="768" stretch="1">
+      <texture>crosshair_2d_susat</texture>
+    </auto_static>
+    <auto_static x="0" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_l</texture>
+    </auto_static>
+    <auto_static x="799" y="0" width="225" height="768" stretch="1">
+      <texture>wpn_crosshair_add_r</texture>
+    </auto_static>
+  </crosshair_2d_susat>
+
+  <wpn_crosshair_fn2000 x="0" y="0" width="2048" height="1536">
+    <auto_static x="128" y="0" width="768" height="768" stretch="1">
+      <texture>wpn_crosshair_fn2000</texture>
+    </auto_static>
+		    <auto_static x="0" y="0" width="128" height="768" stretch="1">
+      <texture>wpn_crosshair_add_l</texture>
+    </auto_static>
+    <auto_static x="896" y="0" width="128" height="768" stretch="1">
+      <texture>wpn_crosshair_add_r</texture>
+    </auto_static>
+  </wpn_crosshair_fn2000>
+</w>
+

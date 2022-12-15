@@ -1,0 +1,403 @@
+;------------------------------------------vintorez_rail1------------------------------------------
+[up_sect_vintorez_rail1]
+cost = 1200
+show_bones = rail_lam
+inv_weight              = +0.05
+
+[up_vintorez_rail1]
+scheme_index = 0, 0
+known = 1
+effects = vartree_vintorez_laser, vartree_vintorez_torch
+section = up_sect_vintorez_rail1
+property = prop_rail
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_vintorez_up_rail1_name
+description =gunsl_vintorez_up_rail1_descr
+icon = ui_gunsl_up_vintorez_rail1
+;------------------------------------------vintorez_laser------------------------------------------
+[up_sect_vintorez_laser]:red_laser
+cost = 3500
+show_bones = laser
+inv_weight              = +0.2
+crosshair_inertion = -0.1
+
+laserdot_world_attach_offset_x = -0.042
+laserdot_world_attach_offset_y = 0.127
+laserdot_world_attach_offset_z = 0.460
+
+laserdot_attach_offset_x = -0.2
+laserdot_attach_offset_y = 0.017
+laserdot_attach_offset_z = -0.9
+
+[up_vintorez_laser]
+scheme_index = 0, 1
+known = 1
+effects = 
+section = up_sect_vintorez_laser
+property = prop_laser
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_vintorez_up_laser_name
+description =gunsl_vintorez_up_laser_descr
+icon = ui_gunsl_up_vintorez_laser
+;------------------------------------------vintorez_torch------------------------------------------
+[up_sect_vintorez_torch]:tactical_torch
+cost = 3000
+show_bones = flash
+inv_weight              = +0.3
+
+torch_world_attach_offset_x = 0.000
+torch_world_attach_offset_y = 0.072
+torch_world_attach_offset_z = 0.493
+
+torch_omni_world_attach_offset_x = 0.000
+torch_omni_world_attach_offset_y = 0.072
+torch_omni_world_attach_offset_z = 0.493
+
+torch_attach_offset_x = 0.0
+torch_attach_offset_y = 0.0
+torch_attach_offset_z = -0.3
+
+torch_omni_attach_offset_x = 0.0 
+torch_omni_attach_offset_y = 0.0
+torch_omni_attach_offset_z = -0.35
+torch_omni_range = 0.4
+torch_r2_omni_range = 0.4 
+
+[up_vintorez_torch]
+scheme_index = 0, 2
+known = 1
+effects = 
+section = up_sect_vintorez_torch
+property = prop_torch
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_vintorez_up_torch_name
+description =gunsl_vintorez_up_torch_descr
+icon = ui_gunsl_up_vintorez_torch
+;------------------------------------------vintorez_rail2------------------------------------------
+[up_sect_vintorez_rail2]
+cost = 1200
+show_bones = rail_handler, scope_rakurs
+inv_weight              = +0.05
+scopes_sect = scope_rakurs_vss
+scope_status				= 2
+
+[up_vintorez_rail2]
+scheme_index = 0, 3
+known = 1
+effects = vartree_vintorez_handle
+section = up_sect_vintorez_rail2
+property = prop_scope_attach
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_vintorez_up_rail2_name
+description =gunsl_vintorez_up_rail2_descr
+icon = ui_gunsl_up_vintorez_rail2
+;------------------------------------------vintorez_handle------------------------------------------
+[up_sect_vintorez_handle]
+cost = 2000
+show_bones = tactical_handler
+hud = wpn_vintorez_handler_hud
+inv_weight              = +0.2
+
+control_inertion_factor = -0.3
+crosshair_inertion		= -3.0
+cam_relax_speed         = +1
+cam_dispersion          = -0.05 
+cam_dispersion_inc      = -0.05
+cam_max_angle           = -20.0      
+cam_max_angle_horz      = -20.0
+cam_dispersion_frac =  +0.15
+
+zoom_cam_relax_speed        = +1
+zoom_cam_dispersion         = -0.03
+zoom_cam_dispersion_inc     = -0.02
+zoom_cam_max_angle          = -20
+zoom_cam_max_angle_horz     = -20
+
+PDM_disp_base 				= -0.2
+PDM_disp_vel_factor 		= -0.4
+PDM_disp_accel_factor 		= -0.5
+
+PDM_disp_crouch	 			= -0.3
+PDM_disp_crouch_no_acc 		= -0.4
+
+
+[up_vintorez_handle]
+scheme_index = 0, 4
+known = 1
+effects = 
+section = up_sect_vintorez_handle
+property = prop_tacticalhandle
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_vintorez_up_handle_name
+description =gunsl_vintorez_up_handle_descr
+icon = ui_gunsl_up_vintorez_handle
+;------------------------------------------vintorez_mag20------------------------------------------
+[up_sect_vintorez_mag20]
+cost = 1500
+value = +10
+show_bones = mag20
+hide_bones = mag
+ammo_mag_size		 	= +10
+inv_weight              = +0.15
+control_inertion_factor = +0.1
+
+[up_vintorez_mag20]
+scheme_index = 0, 5
+known = 1
+effects = 
+section = up_sect_vintorez_mag20
+property = prop_ammo_size
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_vintorez_up_mag20_name
+description =gunsl_vintorez_up_mag20_descr
+icon = ui_gunsl_up_vintorez_mag20
+;------------------------------------------vintorez_lightdetails------------------------------------------
+[up_sect_vintorez_lightdetails]
+cost = 2000
+value = -0.7
+inv_weight              = -0.7
+control_inertion_factor = -0.1
+
+[up_vintorez_lightdetails]
+scheme_index = 0, 6
+known = 1
+effects = vartree_vintorez_usm
+section = up_sect_vintorez_lightdetails
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_vintorez_up_lightdetails_name
+description =gunsl_vintorez_up_lightdetails_descr
+icon = ui_gunsl_up_vintorez_lightdetails
+;------------------------------------------vintorez_usm_accuracy------------------------------------------
+[up_sect_vintorez_usm_accuracy]
+cost = 4000
+value = +20
+fire_dispersion_base = -0.03
+PDM_disp_base = -0.1
+bullet_speed = +30
+crosshair_inertion = -1
+cam_dispersion = -0.03
+zoom_cam_dispersion = -0.03
+cam_dispersion_inc      = -0.1
+zoom_cam_dispersion_inc     = -0.03
+
+[up_vintorez_usm_accuracy]
+scheme_index = 0, 7
+known = 1
+effects = vartree_vintorez_barrel
+section = up_sect_vintorez_usm_accuracy
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_vintorez_up_usm_accuracy_name
+description =gunsl_vintorez_up_usm_accuracy_descr
+icon = ui_gunsl_up_vintorez_usm_accuracy
+;------------------------------------------vintorez_usm_rpm------------------------------------------
+[up_sect_vintorez_usm_rpm]
+cost = 3800
+value = +20
+rpm = +100
+condition_queue_shot_dec     = +0.0003
+misfire_start_prob	     	= +0.001
+misfire_end_prob	     	= +0.005
+condition_shot_dec = +0.0002
+
+[up_vintorez_usm_rpm]
+scheme_index = 0, 8
+known = 1
+effects = vartree_vintorez_barrel
+section = up_sect_vintorez_usm_rpm
+property = prop_rpm
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_vintorez_up_usm_rpm_name
+description =gunsl_vintorez_up_usm_rpm_descr
+icon = ui_gunsl_up_vintorez_usm_rpm
+;------------------------------------------vintorez_barrel_accuracy------------------------------------------
+[up_sect_vintorez_barrel_accuracy]
+cost = 5000
+value = +30
+cam_dispersion          = -0.05
+cam_dispersion_inc      = -0.01
+zoom_cam_dispersion = -0.02
+zoom_cam_dispersion_inc     = -0.01
+
+PDM_disp_base = -0.3
+PDM_disp_crouch = -0.1
+PDM_disp_crouch_no_acc = -0.1
+
+fire_dispersion_base = -0.04
+bullet_speed = +40
+
+[up_vintorez_barrel_accuracy]
+scheme_index = 0, 9
+known = 1
+effects = 
+section = up_sect_vintorez_barrel_accuracy
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_vintorez_up_barrel_accuracy_name
+description =gunsl_vintorez_up_barrel_accuracy_descr
+icon = ui_gunsl_up_vintorez_barrel_accuracy
+;------------------------------------------vintorez_recoil------------------------------------------
+[up_sect_vintorez_recoil]
+cost = 1000
+value = -20
+cam_relax_speed         = +1.0
+cam_dispersion          = -0.13
+cam_dispersion_inc      = -0.03
+inv_weight              = +0.1
+
+
+zoom_cam_relax_speed = +2
+zoom_cam_dispersion = -0.07
+zoom_cam_dispersion_inc = -0.02
+zoom_cam_max_angle          = -26
+zoom_cam_max_angle_horz     = -26
+show_bones = sheka
+
+
+
+[up_vintorez_recoil]
+scheme_index = 0, 10
+known = 1
+effects = 
+section = up_sect_vintorez_recoil
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_vintorez_up_recoil_name
+description =gunsl_vintorez_up_recoil_descr
+icon = ui_gunsl_up_vintorez_recoil
+;------------------------------------------vintorez_sights------------------------------------------
+[up_sect_vintorez_sights]
+cost = 500
+crosshair_inertion = -0.3
+control_inertion_factor = -0.1
+show_bones = sight
+
+[up_vintorez_sights]
+scheme_index = 0, 11
+known = 1
+effects = 
+section = up_sect_vintorez_sights
+property = prop_lightingsights
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_vintorez_up_sights_name
+description =gunsl_vintorez_up_sights_descr
+icon = ui_gunsl_up_vintorez_sights
+;------------------------------------------vintorez_barrel------------------------------------------
+[up_sect_vintorez_barrel]
+cost = 5000
+value = +40
+bullet_speed = +170
+fire_dispersion_base = -0.02
+
+[up_vintorez_barrel]
+scheme_index = 0, 12
+known = 1
+effects = 
+section = up_sect_vintorez_barrel
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_vintorez_up_barrel_name
+description =gunsl_vintorez_up_barrel_descr
+icon = ui_gunsl_up_vintorez_barrel
+;------------------------------------------------------------------------------------
+[vartree_vintorez_stock]
+elements = up_vintorez_recoil
+[vartree_vintorez_sights]
+elements = up_vintorez_sights
+[vartree_vintorez_mag]
+elements = up_vintorez_mag20
+[vartree_vintorez_rail1]
+elements = up_vintorez_rail1
+[vartree_vintorez_rail2]
+elements = up_vintorez_rail2
+[vartree_vintorez_handle]
+elements = up_vintorez_handle
+[vartree_vintorez_laser]
+elements = up_vintorez_laser
+[vartree_vintorez_torch]
+elements = up_vintorez_torch
+[vartree_vintorez_weight]
+elements = up_vintorez_lightdetails
+[vartree_vintorez_usm]
+elements = up_vintorez_usm_accuracy, up_vintorez_usm_rpm
+[vartree_vintorez_barrel]
+elements = up_vintorez_barrel_accuracy, up_vintorez_barrel

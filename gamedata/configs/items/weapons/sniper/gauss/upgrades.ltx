@@ -1,0 +1,544 @@
+;------------------------------------------wpn_gauss_computer------------------------------------------
+[up_sect_wpn_gauss_computer]
+cost = 15000
+hide_bones = 
+show_bones = mui_rail, mui_ver1, mui_mode_manual
+inv_weight = 0.5
+fire_modes              = 1, -1
+
+
+[up_wpn_gauss_computer]
+scheme_index = 0, 0
+known = 1
+effects = vartree_wpn_gauss_guard
+section = up_sect_wpn_gauss_computer
+property = prop_computer
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_computer_name
+description =gunsl_wpn_gauss_up_computer_descr
+icon = ui_gunsl_up_wpn_gauss_computer
+;------------------------------------------wpn_gauss_guard------------------------------------------
+[up_sect_wpn_gauss_guard]
+cost = 35000
+hide_bones_override = mui_ver1, mui_mode_manual
+hide_bones = mui_ver3
+show_bones = mui_ver2, mui_mode_autoaim
+autoaim_time = -1
+autoaim_shot_cancellation = true
+autoaim_modes = a
+autoaim_only_alive = true
+autoaim_ignore_dead = false
+
+[up_wpn_gauss_guard]
+scheme_index = 0, 1
+known = 1
+effects = vartree_wpn_gauss_autoshoot
+section = up_sect_wpn_gauss_guard
+property = prop_autoshot
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_guard_name
+description =gunsl_wpn_gauss_up_guard_descr
+icon = ui_gunsl_up_wpn_gauss_guard
+;------------------------------------------wpn_gauss_safari------------------------------------------
+[up_sect_wpn_gauss_safari]
+cost = 50000
+hide_bones_override = mui_ver2, mui_ver1
+show_bones = mui_ver3, mui_upgrade6
+
+autoaim_time = 10
+autoaim_modes = a
+autoaim_only_alive = true
+autoaim_ignore_dead = true
+autoaim_shot_after_key_released = true
+
+fire_dispersion_base = -0.019
+PDM_disp_base = -0.55
+
+[up_wpn_gauss_safari]
+scheme_index = 0, 2
+known = 1
+effects = 
+section = up_sect_wpn_gauss_safari
+property = prop_autoaim
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_safari_name
+description =gunsl_wpn_gauss_up_safari_descr
+icon = ui_gunsl_up_wpn_gauss_safari
+;------------------------------------------wpn_gauss_ideal------------------------------------------
+[up_sect_wpn_gauss_ideal]
+cost = 50000
+hide_bones = mui_ver2, mui_ver1
+show_bones = mui_ver3, mui_upgrade6
+
+autoaim_only_alive = false
+autoaim_ignore_dead = false
+autoaim_shot_cancellation = false
+autoaim_modes = a
+autoaim_time = -1
+
+
+fire_dispersion_base = -0.019
+
+
+[up_wpn_gauss_ideal]
+scheme_index = 0, 3
+known = 1
+effects = 
+section = up_sect_wpn_gauss_ideal
+property = prop_autoaim
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_ideal_name
+description =gunsl_wpn_gauss_up_ideal_descr
+icon = ui_gunsl_up_wpn_gauss_ideal
+;------------------------------------------wpn_gauss_provoda------------------------------------------
+[up_sect_wpn_gauss_provoda]
+cost = 8000
+value = +30
+show_bones = mui_upgrade1
+bullet_speed = 500
+
+[up_wpn_gauss_provoda]
+scheme_index = 0, 4
+known = 1
+effects = vartree_wpn_gauss_katushki
+section = up_sect_wpn_gauss_provoda
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_provoda_name
+description =gunsl_wpn_gauss_up_provoda_descr
+icon = ui_gunsl_up_wpn_gauss_provoda
+;------------------------------------------wpn_gauss_katushki------------------------------------------
+[up_sect_wpn_gauss_katushki]
+cost = 13000
+value = +100
+show_bones = mui_upgrade1
+bullet_speed = +5000
+
+[up_wpn_gauss_katushki]
+scheme_index = 0, 5
+known = 1
+effects = vartree_wpn_gauss_conderi
+section = up_sect_wpn_gauss_katushki
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_katushki_name
+description =gunsl_wpn_gauss_up_katushki_descr
+icon = ui_gunsl_up_wpn_gauss_katushki
+;------------------------------------------wpn_gauss_compensator------------------------------------------
+[up_sect_wpn_gauss_compensator]
+cost = 13000
+value = -50
+show_bones = mui_upgrade5
+cam_dispersion          = -0.4
+zoom_cam_dispersion         = -0.10
+PDM_disp_base = -0.4
+
+[up_wpn_gauss_compensator]
+scheme_index = 0, 6
+known = 1
+effects = vartree_wpn_gauss_conderi
+section = up_sect_wpn_gauss_compensator
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_compensator_name
+description =gunsl_wpn_gauss_up_compensator_descr
+icon = ui_gunsl_up_wpn_gauss_compensator
+;------------------------------------------wpn_gauss_fast_conders------------------------------------------
+[up_sect_wpn_gauss_fast_conders]
+cost = 15000
+value = +30
+show_bones=mui_upgrade2
+recharge_time = -1.0
+hud = wpn_gauss_hud_fastrpm
+
+[up_wpn_gauss_fast_conders]
+scheme_index = 0, 7
+known = 1
+effects = 
+section = up_sect_wpn_gauss_fast_conders
+property = prop_rpm
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_fast_conders_name
+description =gunsl_wpn_gauss_up_fast_conders_descr
+icon = ui_gunsl_up_wpn_gauss_fast_conders
+;------------------------------------------wpn_gauss_ionistori------------------------------------------
+[up_sect_wpn_gauss_ionistori]
+cost = 15000
+value = +50
+show_bones = mui_upgrade3
+recharge_time = -0.3
+bullet_speed = 6500
+condition_shot_dec      	= -0.005
+condition_queue_shot_dec	= -0.005
+misfire_end_prob	     	= -0.3
+ammo_mag_size		= -1
+ammo_mag_size_for_type_0 = 9
+ammo_mag_size_for_type_1 = 5
+
+[up_wpn_gauss_ionistori]
+scheme_index = 0, 8
+known = 1
+effects = 
+section = up_sect_wpn_gauss_ionistori
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_ionistori_name
+description =gunsl_wpn_gauss_up_ionistori_descr
+icon = ui_gunsl_up_wpn_gauss_ionistori
+;------------------------------------------wpn_gauss_lowesr------------------------------------------
+[up_sect_wpn_gauss_lowesr]
+cost = 15000
+value = +1
+show_bones=mui_upgrade8
+ammo_mag_size		= +1
+ammo_mag_size_for_type_0 = 12
+ammo_mag_size_for_type_1 = 7
+condition_shot_dec      	= -0.002
+condition_queue_shot_dec	= -0.002
+PDM_disp_base = -0.1
+
+[up_wpn_gauss_lowesr]
+scheme_index = 0, 9
+known = 1
+effects = 
+section = up_sect_wpn_gauss_lowesr
+property = prop_ammo_size
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_lowesr_name
+description =gunsl_wpn_gauss_up_lowesr_descr
+icon = ui_gunsl_up_wpn_gauss_lowesr
+;------------------------------------------wpn_gauss_zoom------------------------------------------
+[up_sect_wpn_gauss_zoom]
+cost = 7000
+value = 0
+min_lens_factor = 5
+max_lens_factor = 30
+zoom_mouse_sense_koef = 0.13
+lens_factor_levels_count = 5
+lens_speed = +0.3
+
+scope_abberation = +0.006
+
+[up_wpn_gauss_zoom]
+scheme_index = 0, 10
+known = 1
+effects = vartree_wpn_gauss_speedzoom
+section = up_sect_wpn_gauss_zoom
+property = prop_scope
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_zoom_name
+description =gunsl_wpn_gauss_up_zoom_descr
+icon = ui_gunsl_up_wpn_gauss_zoom
+;------------------------------------------wpn_gauss_nv------------------------------------------
+[up_sect_wpn_gauss_nv]
+cost = 20000
+value = 0
+max_night_brightness = 1.5
+min_night_brightness = 0.0
+jitter_brightness = 0.3
+steps_brightness = 7
+scope_nightvision = scope_nightvision_gauss
+
+[up_wpn_gauss_nv]
+scheme_index = 0, 11
+known = 1
+effects = 
+section = up_sect_wpn_gauss_nv
+property = prop_contrast
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_nv_name
+description =gunsl_wpn_gauss_up_nv_descr
+icon = ui_gunsl_up_wpn_gauss_nv
+;------------------------------------------wpn_gauss_kardan_ammo------------------------------------------
+[up_sect_wpn_gauss_kardan_ammo]
+cost = 5000
+show_bones = mui_upgrade8
+ammo_class		= ammo_gauss, ammo_gauss_cardan
+misfire_end_prob = -0.1
+condition_shot_dec      	= -0.001
+PDM_disp_base = -0.1
+
+[up_wpn_gauss_kardan_ammo]
+scheme_index = 0, 12
+known = 1
+effects = 
+section = up_sect_wpn_gauss_kardan_ammo
+property = prop_new_ammo
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_kardan_ammo_name
+description =gunsl_wpn_gauss_up_kardan_ammo_descr
+icon = ui_gunsl_up_wpn_gauss_kardan_ammo
+;------------------------------------------wpn_gauss_priklad_weight------------------------------------------
+[up_sect_wpn_gauss_priklad_weight]
+cost = 10000
+value = -1
+show_bones = mui_upgrade7
+inv_weight = -1
+
+[up_wpn_gauss_priklad_weight]
+scheme_index = 0, 13
+known = 1
+effects = vartree_wpn_gauss_pokritie
+section = up_sect_wpn_gauss_priklad_weight
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_priklad_weight_name
+description =gunsl_wpn_gauss_up_priklad_weight_descr
+icon = ui_gunsl_up_wpn_gauss_priklad_weight
+;------------------------------------------wpn_gauss_priklad_ergonomics------------------------------------------
+[up_sect_wpn_gauss_priklad_ergonomics]
+cost = 10000
+value = -10
+show_bones = mui_upgrade5
+cam_dispersion          = -0.2
+zoom_cam_dispersion         = -0.14
+
+[up_wpn_gauss_priklad_ergonomics]
+scheme_index = 0, 14
+known = 1
+effects = vartree_wpn_gauss_pokritie
+section = up_sect_wpn_gauss_priklad_ergonomics
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_priklad_ergonomics_name
+description =gunsl_wpn_gauss_up_priklad_ergonomics_descr
+icon = ui_gunsl_up_wpn_gauss_priklad_ergonomics
+;------------------------------------------wpn_gauss_tsevie_ergonomics------------------------------------------
+[up_sect_wpn_gauss_tsevie_ergonomics]
+cost = 5000
+value = +20
+show_bones = mui_upgrade4
+crosshair_inertion = -2
+control_inertion_factor	= -0.1
+PDM_disp_base  = -0.2
+cam_dispersion=-0.09
+
+[up_wpn_gauss_tsevie_ergonomics]
+scheme_index = 0, 15
+known = 1
+effects = vartree_wpn_gauss_pokritie
+section = up_sect_wpn_gauss_tsevie_ergonomics
+property = prop_inertion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_tsevie_ergonomics_name
+description =gunsl_wpn_gauss_up_tsevie_ergonomics_descr
+icon = ui_gunsl_up_wpn_gauss_tsevie_ergonomics
+;------------------------------------------wpn_gauss_pokritie------------------------------------------
+[up_sect_wpn_gauss_pokritie]
+cost = 15000
+value = +30
+show_bones = mui_upgrade3
+condition_shot_dec      	= -0.003
+condition_queue_shot_dec	= -0.003
+misfire_end_prob	     	= -0.1
+
+[up_wpn_gauss_pokritie]
+scheme_index = 0, 16
+known = 1
+effects = 
+section = up_sect_wpn_gauss_pokritie
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_pokritie_name
+description =gunsl_wpn_gauss_up_pokritie_descr
+icon = ui_gunsl_up_wpn_gauss_pokritie
+;------------------------------------------wpn_gauss_zoom_speed------------------------------------------
+[up_sect_wpn_gauss_zoom_speed]
+cost = 10000
+lens_speed = +0.9
+scope_abberation = -0.008
+
+[up_wpn_gauss_zoom_speed]
+scheme_index = 0, 17
+known = 1
+effects = vartree_wpn_gauss_nv
+section = up_sect_wpn_gauss_zoom_speed
+property = prop_zoomspeed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_zoom_speed_name
+description =gunsl_wpn_gauss_up_zoom_speed_descr
+icon = ui_gunsl_up_wpn_gauss_zoom_speed
+;------------------------------------------wpn_gauss_magnetic_shield------------------------------------------
+[up_sect_wpn_gauss_magnetic_shield]
+cost = 15000
+show_bones = mui_upgrade3
+condition_shot_dec      	= -0.001
+condition_queue_shot_dec	= -0.001
+misfire_end_prob	     	= -0.02
+
+misfire_after_problems_level = +10
+inv_weight = +0.5
+
+[up_wpn_gauss_magnetic_shield]
+scheme_index = 0, 18
+known = 1
+effects = 
+section = up_sect_wpn_gauss_magnetic_shield
+property = prop_magneticshield
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_magnetic_shield_name
+description =gunsl_wpn_gauss_up_magnetic_shield_descr
+icon = ui_gunsl_up_wpn_gauss_magnetic_shield
+;------------------------------------------wpn_gauss_detector------------------------------------------
+[up_sect_wpn_gauss_detector]
+cost = 20000
+value = 0
+scope_alive_detector = scope_detector
+
+[up_wpn_gauss_detector]
+scheme_index = 0, 19
+known = 1
+effects = 
+section = up_sect_wpn_gauss_detector
+property = prop_autolockscope
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wpn_gauss_up_detector_name
+description =gunsl_wpn_gauss_up_detector_descr
+icon = ui_gunsl_up_wpn_gauss_detector
+;------------------------------------------------------------------------------------
+[vartree_wpn_gauss_comp]
+elements = up_wpn_gauss_computer
+[vartree_wpn_gauss_guard]
+elements = up_wpn_gauss_guard
+[vartree_wpn_gauss_autoshoot]
+elements = up_wpn_gauss_safari, up_wpn_gauss_ideal
+[vartree_wpn_gauss_provod]
+elements = up_wpn_gauss_provoda
+[vartree_wpn_gauss_katushki]
+elements = up_wpn_gauss_katushki, up_wpn_gauss_compensator
+[vartree_wpn_gauss_conderi]
+elements = up_wpn_gauss_fast_conders, up_wpn_gauss_ionistori, up_wpn_gauss_lowesr
+[vartree_wpn_gauss_zoom]
+elements = up_wpn_gauss_zoom
+[vartree_wpn_gauss_nv]
+elements = up_wpn_gauss_nv, up_wpn_gauss_detector
+[vartree_wpn_gauss_magazine]
+elements = up_wpn_gauss_kardan_ammo
+[vartree_wpn_gauss_priklad]
+elements = up_wpn_gauss_priklad_weight, up_wpn_gauss_priklad_ergonomics
+[vartree_wpn_gauss_tsevie]
+elements = up_wpn_gauss_tsevie_ergonomics
+[vartree_wpn_gauss_pokritie]
+elements = up_wpn_gauss_pokritie, up_wpn_gauss_magnetic_shield
+[vartree_wpn_gauss_speedzoom]
+elements = up_wpn_gauss_zoom_speed

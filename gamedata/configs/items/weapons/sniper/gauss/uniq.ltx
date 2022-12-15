@@ -1,0 +1,39 @@
+[pri_a17_gauss_rifle]:wpn_gauss	;Gauss UMIROTVORITEL
+$spawn          = "weapons\uniq\pri_a17_gauss_rifle"
+quest_item 		= true
+story_id = pri_a17_gauss_rifle
+hud 							= wpn_gauss_hud
+inv_name                = gunsl_wpn_umirotvoritel
+description				= gunsl_wpn_umirotvoritel_descr
+
+upgr_icon_x			= 298
+upgr_icon_y			= 939
+upgr_icon_width		= 297
+upgr_icon_height   	= 81
+
+; ttc
+hit_power           		= 1.0, 1.0, 1.0, 1.0
+hit_impulse		 			= 100
+hit_type 					= fire_wound
+
+hit_probability_gd_novice	= 1
+hit_probability_gd_stalker	= 1
+hit_probability_gd_veteran	= 1
+hit_probability_gd_master	= 1
+
+fire_distance           = 2000
+bullet_speed		 	= 100000	;начальная скорость пули
+;rpm                     = 20
+
+ammo_limit				= 10
+ammo_current			= 10
+ammo_elapsed			= 0
+
+ammo_mag_size			= 10
+ammo_class				= ammo_gauss
+
+upgrades =
+installed_upgrades = 
+upgrade_scheme =
+;fire_modes              = 0
+actor_can_shoot = false

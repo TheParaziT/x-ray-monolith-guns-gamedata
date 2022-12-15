@@ -1,0 +1,301 @@
+[wpn_gauss]:identity_immunities,weapon_probability,default_weapon_params
+GroupControlSection		= spawn_group
+discovery_dependency 	=
+$spawn                  = "weapons\gauss"	; option for Level Editor
+$npc			 				= on				; option for Level Editor
+$prefetch 		 			= 8
+scheduled               = off              	; option for ALife Simulator
+cform                   = skeleton
+class                   = WP_VAL
+description				= gunsl_wpn_gauss_descr
+
+ef_main_weapon_type		= 3
+ef_weapon_type			= 11
+
+sprint_allowed          = true
+
+script_binding  = bind_weapon.bind
+default_to_ruck         = false
+sprint_allowed       	= true
+control_inertion_factor = 1.0
+kind                        = w_sniper
+upgrades = 
+installed_upgrades = 
+upgrade_scheme = 
+
+def_hide_bones = mui_rail,mui_ver1,mui_ver2,mui_ver3, mui_upgrade1,mui_upgrade2,mui_upgrade3,mui_upgrade4,mui_upgrade5,mui_upgrade6,mui_upgrade7,mui_upgrade8, mui_mode_autoaim, mui_loading
+
+repair_group = gauss
+is_burer_see_sniper_weapon = true
+
+;-------------------------------------------------------------------------------
+cost				= 25000
+weapon_class			= sniper_rifle
+inv_weight			= 5.5
+
+;---TTX---------------------------------------------------------------------------
+hit_power           	= 1.0, 1.0, 1.0, 1.0
+hit_impulse		= 100
+hit_type 		= fire_wound
+fire_distance           = 1000
+bullet_speed		= 1500	;��������� �������� ����
+rpm                     = 150
+rpm_empty_click         = 150
+
+recharge_time = 3; ��������� ����������� �� ��������� ����� ����� �������� + ��������� �������� + ������������ � ������� ������ ������
+max_queue_size = 1
+
+use_aim_bullet		= false		;�������������� �� ������ ������ ����
+time_to_aim		= 1.0
+
+hud                     = wpn_gauss_hud
+
+ammo_in_chamber         = true
+
+misfire_probability        = 0.005 ;����������� ������ ��� ������������ ������  !!!old - now not working
+;������������, ��� ������� ���������� ���� ������
+misfire_start_condition		= 0.5
+;����������� ��� ������� ���� ������ ���������� �����������
+misfire_end_condition		= 0.1
+;���� ������ ��� ����������� ������ ��� misfireStartCondition
+misfire_start_prob	     	= 0.0005
+;���� ������ ��� ����������� ������ ��� misfireEndCondition
+misfire_end_prob	     	= 0.6
+;���������� ����������� ��� ��������� ��������
+condition_shot_dec      	= 0.01
+;���������� ����������� ��� �������� ��������
+condition_queue_shot_dec	= 0.01
+;��� ����� ������ ������� ������ ���������� ��������
+misfire_after_problems_level = 2
+
+ammo_limit		= 60
+ammo_current		= 10
+ammo_elapsed		= 0
+
+ammo_mag_size		= 11
+ammo_class		= ammo_gauss
+ammo_mag_size_for_type_0 = 11
+ammo_mag_size_for_type_1 = 6
+
+grenade_class           = ammo_m209
+fire_modes              = 1
+launch_speed            = 0
+hand_dependence         = 1
+single_handed           = 0
+
+
+;---DOF-------------------------------------------------------------------------
+;zoom_dof				= 0.5, 1.0, 180
+reload_dof				= 0.0, 0.5, 5, 1.7
+
+;--���������----------------------------------------------------------------------------
+;������� ���������
+fire_dispersion_base	= 0.020 ;0.001 ;���� (� ��������) ������� ��������� ������ (������ �������� � ������)
+control_inertion_factor	= 1.4f
+crosshair_inertion   	= 5
+
+;������
+cam_relax_speed         = 3	;�������� �������� � �������� ���������
+cam_relax_speed_ai      = 360	;�������� �������� � �������� ���������
+cam_dispersion          = 0.7	; 0.01	;���������� ���� (� ��������) � ������ ���������
+cam_dispersion_inc		= 0.01	;���������e cam_dispersion � ������ ���������
+cam_dispersion_frac		= 1.0	;����� ����� ���������� �� cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
+cam_max_angle			= 0.01	;������������ ���� ������
+cam_max_angle_horz		= 0.01	;(degree) maximum shot horizontal degree
+cam_step_angle_horz		= 0.01	;(degree) size of step camera moved in horizontal position while shooting
+
+PDM_disp_base 			= 1.2 ;0.6
+PDM_disp_vel_factor 	= 2.0
+PDM_disp_accel_factor 	= 2.0
+PDM_disp_crouch	 		= 1.0
+PDM_disp_crouch_no_acc 	= 1.0
+
+zoom_cam_relax_speed        = 3   ; scope & ironsight
+zoom_cam_relax_speed_ai     = 360
+zoom_cam_dispersion         = 0.2	;0.01
+zoom_cam_dispersion_inc     = 0.01
+zoom_cam_dispersion_frac    = 1.0
+zoom_cam_max_angle          = 0.01
+zoom_cam_max_angle_horz     = 0.01
+zoom_cam_step_angle_horz    = 0.01
+
+fire_dispersion_condition_factor = 5	;���������� ��������� � ��������� ��� ������������ ������
+;-------------------------------------------------------------------------------
+holder_range_modifier	= 2.85           ; �� ������� ��� ������������� eye_range
+holder_fov_modifier		= 1.0           ; �� ������� ��� ������������� eye_fov
+
+min_radius              = 0
+max_radius              = 50
+
+hit_probability_gd_novice	= 1
+hit_probability_gd_stalker	= 1
+hit_probability_gd_veteran	= 1
+hit_probability_gd_master	= 1
+
+;-------------------------------------------------------------------------------
+slot                    = 2                ; // secondary
+animation_slot          = 2                ; type of the animation that will be used
+
+inv_name				= gunsl_wpn_gauss
+inv_name_short			= gunsl_wpn_gauss
+icons_texture        = ui\ui_icon_equipment_guns
+inv_grid_width			= 5
+inv_grid_height			= 2
+inv_grid_x				= 10
+inv_grid_y				= 6
+
+upgr_icon_x			= 298
+upgr_icon_y			= 939
+upgr_icon_width		= 300
+upgr_icon_height   	= 90
+
+kill_msg_x				= 166
+kill_msg_y				= 59
+kill_msg_width			= 82
+kill_msg_height			= 23
+
+position                = -0.026, -0.070, 0.0
+orientation             = 0, 0, 0
+
+fire_point		= 0.00,0.12,0.69
+fire_point2		= 0.00,0.12,0.69
+
+flame_particles         = weapons\generic_weapon_gauss
+smoke_particles	 	= weapons\generic_weapon07
+grenade_flame_particles = weapons\generic_weapon01
+
+shell_point		= 0.0, 0.129, 0.192
+shell_dir		= 0.0, 0.0, 0.4
+shell_particles	 	= ;weapons\generic_shells_r
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+;��� ������
+strap_position         	= -0.26,-0.11,0.15			; position (offset) and orientation of the weapon when it is strapped
+strap_orientation      	= -15,-9,110				; (3rd person view in degrees)
+strap_bone0					= bip01_spine2
+strap_bone1					= bip01_spine1
+
+startup_ammo            = 10
+visual                  = dynamics\weapons\wpn_gauss\wpn_gauss.ogf
+
+light_disabled				= false
+light_color		 			= 1.3,1.5,2
+light_range		 			= 4.0
+light_var_color		 	= 0.05
+light_var_range		 	= 0.5
+light_time 		 			= 0.5
+
+ph_mass			 			= 3
+
+;addons
+scope_status				= 1
+silencer_status			= 0
+grenade_launcher_status	= 0
+
+grenade_launcher_name   = wpn_addon_grenade_launcher_m203
+grenade_launcher_x      = 109
+grenade_launcher_y      = 30
+
+zoom_enabled				= true
+zoom_rotate_time			= 0.25
+scope_zoom_factor			= 0		;���-1 4X
+need_lens_frame = true
+zoom_hide_ui = true
+
+scope_texture				= crosshair_2d_gauss
+scope_name 					= wpn_addon_scope
+scope_x 						= 60
+scope_y 						= -2
+
+;�����
+snd_draw		= weapons\gauss\gauss_draw
+snd_holster		= weapons\vss\vss_hide
+snd_shoot		= $silent
+snd_empty		= weapons\glock17\glock17_dry
+snd_reload              = weapons\gauss\gauss_reload
+snd_reload_empty        = weapons\gauss\gauss_reload_empty
+snd_changecartridgetype = weapons\gauss\gauss_reload
+snd_shoot_grenade       = weapons\gen_grenshoot
+snd_reload_grenade      = weapons\gen_grenload, 1.0, 0.8
+snd_switch              = weapons\groza_switch, 1.0, 0.5
+snd_close		= $silent
+snd_reload_jammed       = weapons\gauss\gauss_revival
+snd_reload_jammed_last  = weapons\gauss\gauss_revival
+snd_jammed_click        = weapons\glock17\glock17_dry
+snd_unload_mag          = $silent
+snd_jam                 = weapons\gauss\gauss_jam
+snd_breechblock         = $silent
+snd_fakeshoot_first	= weapons\glock17\glock17_shoot_s
+snd_changefiremode	= $silent 
+;snd_changefiremode_empty
+;snd_changefiremode_jammed
+snd_aim_start           = weapons\vss\vss_aim_start
+snd_aim_end             = weapons\vss\vss_aim_end
+snd_sprint_start        = weapons\detector_prepare
+snd_sprint_end          = weapons\pistol_sprint_end
+snd_suicide	        = weapons\suicide_start
+snd_stop_suicide	= weapons\suicide_end
+snd_laser_on	        = weapons\vss\vss_firemode
+snd_laser_off	        = weapons\vss\vss_firemode
+snd_torch_on	        = weapons\vss\vss_firemode
+snd_torch_off	        = weapons\vss\vss_firemode
+snd_headlamp_on         = weapons\headflash_on
+snd_headlamp_off        = weapons\headflash_off
+snd_nv_on               = weapons\nv_act
+snd_nv_off              = weapons\nv_deact
+snd_scope_brightness_plus = weapons\nv_intensity
+snd_scope_brightness_minus = weapons\nv_intensity
+
+snd_scope_zoom_plus = weapons\nv_intensity
+snd_scope_zoom_minus = weapons\nv_intensity
+snd_scope_zoom_gyro = weapons\gauss\gauss_gyro
+disable_aim_start_snd = true;
+disable_aim_end_snd = true;
+disable_sprint_start_snd = true;
+disable_sprint_end_snd = true;
+
+min_lens_factor = 15		//����������� �������� ��������� ������� (��������� ������ ��� �������, ��� ������ �� ���� �����)
+max_lens_factor = 15		//������������ �������� ��������� �������
+lens_factor_levels_count = 1	//����� ��������� �������� �� ������������� ���� �� ������������ � ��������
+zoom_mouse_sense_koef = 0.13
+scope_abberation = 0.006
+lens_speed = 0.0
+lens_gyro_sound_period = 0.38
+max_night_brightness = 0.0 ; ������������ ������� �������
+min_night_brightness = 0.0 ; ����������� ������� �������
+steps_brightness = 0	   ; ����� ������� �������
+jitter_brightness = 0.0    ; ������� ���� � �������
+
+
+use_world_anims=true
+
+wanm_idle = idle
+wanm_idle_a = idle_mui
+
+wanm_idle_empty = idle
+wanm_idle_empty_a = idle_mui
+
+wanm_idle_jammed = idle_jammed
+wanm_idle_jammed_a = idle_mui_jammed
+
+
+wanm_shoot = idle
+wanm_shoot_a = idle_mui
+
+wanm_shoot_jammed = idle_jammed
+wanm_shoot_jammed_a = idle_mui_jammed
+
+wanm_shoot_last = idle
+wanm_shoot_last_a = idle_mui
+
+wanm_shoot_last_jammed = idle_jammed
+wanm_shoot_last_jammed_a = idle_mui_jammed
+
+wanm_reload = idle
+wanm_reload_a = idle_mui
+
+wanm_reload_empty = idle
+wanm_reload_empty_a = idle_mui
+
+wanm_reload_jammed = idle
+wanm_reload_jammed_a = idle_mui
