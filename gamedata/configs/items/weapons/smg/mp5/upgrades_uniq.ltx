@@ -1,0 +1,465 @@
+;------------------------------------------ump45_sights------------------------------------------
+[up_sect_ump45_sights]
+cost = 500
+crosshair_inertion = -1
+control_inertion_factor = -0.05
+show_bones = sight
+
+[up_ump45_sights]
+scheme_index = 0, 0
+known = 1
+effects = 
+section = up_sect_ump45_sights
+property = prop_lightingsights
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_ump45_up_sights_name
+description =gunsl_ump45_up_sights_descr
+icon = ui_gunsl_up_ump45_sights
+;------------------------------------------ump45_sil------------------------------------------
+[up_sect_ump45_sil]
+cost = 1000
+silencer_status = 2
+
+silencer_name           = wpn_colt_p220_silencer
+silencer_x              = 150
+silencer_y              = 16
+
+silencer_smoke_particles = weapons\generic_shoot_00
+snd_silncer_shot = weapons\ump45\ump45_shoot_sil, -1.1
+
+[up_ump45_sil]
+scheme_index = 0, 1
+known = 1
+effects = 
+section = up_sect_ump45_sil
+property = prop_silencer
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_ump45_up_sil_name
+description =gunsl_ump45_up_sil_descr
+icon = ui_gunsl_up_ump45_sil
+;------------------------------------------ump45_rail------------------------------------------
+[up_sect_ump45_rail]
+cost = 1100
+inv_weight = +0.2
+show_bones = rail, scope1, scope2, scope3, scope4
+scope_status = 2
+scopes_sect = scope_eotech_ump, scope_aimpoint_ump, scope_elcan_ump, scope_pn23_ump
+
+[up_ump45_rail]
+scheme_index = 0, 2
+known = 1
+effects = 
+section = up_sect_ump45_rail
+property = prop_scope_attach
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_ump45_up_rail_name
+description =gunsl_ump45_up_rail_descr
+icon = ui_gunsl_up_ump45_rail
+;------------------------------------------ump45_handle------------------------------------------
+[up_sect_ump45_handle]
+cost = 2000
+show_bones = grip_rail
+hide_bones = grip
+inv_weight  = +0.15
+
+control_inertion_factor = -0.15
+crosshair_inertion = -3.0
+cam_relax_speed = +1
+cam_dispersion = -0.12 
+cam_dispersion_inc = -0.07
+cam_max_angle = -15.0      
+cam_max_angle_horz = -15
+
+zoom_cam_relax_speed = +1
+zoom_cam_dispersion = -0.08
+zoom_cam_dispersion_inc = -0.05
+zoom_cam_max_angle = -20
+zoom_cam_max_angle_horz = -20
+
+PDM_disp_base = -0.23
+PDM_disp_vel_factor = -0.3
+PDM_disp_accel_factor = -0.2
+
+PDM_disp_crouch = -0.2
+PDM_disp_crouch_no_acc = -0.4
+
+hud = wpn_ump45_handler_hud
+
+[up_ump45_handle]
+scheme_index = 0, 3
+known = 1
+effects = vartree_ump45_laser, vartree_ump45_flash
+section = up_sect_ump45_handle
+property = prop_tacticalhandle
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_ump45_up_handle_name
+description =gunsl_ump45_up_handle_descr
+icon = ui_gunsl_up_ump45_handle
+;------------------------------------------ump45_laser------------------------------------------
+[up_sect_ump45_laser]:red_laser
+cost = 3500
+crosshair_inertion = -0.3
+show_bones = laser
+inv_weight = +0.3
+laserdot_world_attach_offset_x = 0.0
+laserdot_world_attach_offset_y = 0.1
+laserdot_world_attach_offset_z = 0.05
+
+[up_ump45_laser]
+scheme_index = 0, 4
+known = 1
+effects = 
+section = up_sect_ump45_laser
+property = prop_laser
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_ump45_up_laser_name
+description =gunsl_ump45_up_laser_descr
+icon = ui_gunsl_up_ump45_laser
+;------------------------------------------ump45_torch------------------------------------------
+[up_sect_ump45_torch]:tactical_torch
+cost = 3000
+show_bones = flash
+inv_weight              = +0.3
+
+[up_ump45_torch]
+scheme_index = 0, 5
+known = 1
+effects = 
+section = up_sect_ump45_torch
+property = prop_torch
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_ump45_up_torch_name
+description =gunsl_ump45_up_torch_descr
+icon = ui_gunsl_up_ump45_torch
+;------------------------------------------ump45_stock------------------------------------------
+[up_sect_ump45_stock]
+cost = 1000
+value = -10
+cam_dispersion = -0.012
+zoom_cam_dispersion = -0.01
+cam_dispersion_inc = -0.005
+zoom_cam_dispersion_inc = -0.003
+
+
+[up_ump45_stock]
+scheme_index = 0, 6
+known = 1
+effects = 
+section = up_sect_ump45_stock
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_ump45_up_stock_name
+description =gunsl_ump45_up_stock_descr
+icon = ui_gunsl_up_ump45_stock
+;------------------------------------------ump45_max_fixator------------------------------------------
+[up_sect_ump45_max_fixator]
+cost = 1000
+value = +10
+misfire_start_condition = -0.06
+misfire_start_prob = -0.0004
+misfire_end_prob = -0.007
+
+[up_ump45_max_fixator]
+scheme_index = 0, 7
+known = 1
+effects = vartree_ump45_barrel
+section = up_sect_ump45_max_fixator
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_ump45_up_max_fixator_name
+description =gunsl_ump45_up_max_fixator_descr
+icon = ui_gunsl_up_ump45_max_fixator
+;------------------------------------------ump45_usm_rpm------------------------------------------
+[up_sect_ump45_usm_rpm]
+cost = 2000
+value = +20
+rpm = +100
+condition_queue_shot_dec     = +0.0003
+misfire_start_prob	     	= +0.0005
+misfire_end_prob	     	= +0.005
+
+[up_ump45_usm_rpm]
+scheme_index = 0, 8
+known = 1
+effects = 
+section = up_sect_ump45_usm_rpm
+property = prop_rpm
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_ump45_up_usm_rpm_name
+description =gunsl_ump45_up_usm_rpm_descr
+icon = ui_gunsl_up_ump45_usm_rpm
+;------------------------------------------ump45_usm_accuracy------------------------------------------
+[up_sect_ump45_usm_accuracy]
+cost = 3000
+value = +30
+fire_dispersion_base = -0.05
+bullet_speed = +10
+
+PDM_disp_base = -0.25
+PDM_disp_vel_factor 		= -0.05
+PDM_disp_accel_factor 		= -0.05
+PDM_disp_crouch	 		= -0.05
+PDM_disp_crouch_no_acc 		= -0.05
+
+cam_dispersion = -0.06
+zoom_cam_dispersion = -0.03
+
+cam_dispersion_inc      = -0.05
+zoom_cam_dispersion_inc     = -0.05
+
+[up_ump45_usm_accuracy]
+scheme_index = 0, 9
+known = 1
+effects = 
+section = up_sect_ump45_usm_accuracy
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_ump45_up_usm_accuracy_name
+description =gunsl_ump45_up_usm_accuracy_descr
+icon = ui_gunsl_up_ump45_usm_accuracy
+;------------------------------------------ump45_barrel_speed------------------------------------------
+[up_sect_ump45_barrel_speed]
+cost = 2500
+value = +30
+bullet_speed = +130
+
+[up_ump45_barrel_speed]
+scheme_index = 0, 10
+known = 1
+effects = vartree_ump45_body
+section = up_sect_ump45_barrel_speed
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_ump45_up_barrel_speed_name
+description =gunsl_ump45_up_barrel_speed_descr
+icon = ui_gunsl_up_ump45_barrel_speed
+;------------------------------------------ump45_barrel_compensator------------------------------------------
+[up_sect_ump45_barrel_compensator]
+cost = 2500
+value = -30
+PDM_disp_base = -0.1
+PDM_disp_crouch = -0.01
+PDM_disp_crouch_no_acc = -0.01
+
+cam_dispersion = -0.25
+zoom_cam_dispersion = -0.2
+cam_dispersion_inc = -0.04
+zoom_cam_dispersion_inc = -0.02
+
+[up_ump45_barrel_compensator]
+scheme_index = 0, 11
+known = 1
+effects = vartree_ump45_body
+section = up_sect_ump45_barrel_compensator
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_ump45_up_barrel_compensator_name
+description =gunsl_ump45_up_barrel_compensator_descr
+icon = ui_gunsl_up_ump45_barrel_compensator
+;------------------------------------------ump45_zatvor_balancer------------------------------------------
+[up_sect_ump45_zatvor_balancer]
+cost = 1000
+value = -15
+PDM_disp_base = -0.2
+
+cam_dispersion = -0.18
+zoom_cam_dispersion  = -0.12
+cam_dispersion_inc = -0.05
+zoom_cam_dispersion_inc  = -0.04
+
+[up_ump45_zatvor_balancer]
+scheme_index = 0, 12
+known = 1
+effects = vartree_ump45_extractor
+section = up_sect_ump45_zatvor_balancer
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_ump45_up_zatvor_balancer_name
+description =gunsl_ump45_up_zatvor_balancer_descr
+icon = ui_gunsl_up_ump45_zatvor_balancer
+;------------------------------------------ump45_body_coating------------------------------------------
+[up_sect_ump45_body_coating]
+cost = 4500
+value = +40
+misfire_start_condition = -0.12
+misfire_end_condition = -0.001
+misfire_start_prob = -0.0006
+misfire_end_prob = -0.01
+condition_shot_dec = -0.0006
+condition_queue_shot_dec = -0.0006
+
+[up_ump45_body_coating]
+scheme_index = 0, 13
+known = 1
+effects = 
+section = up_sect_ump45_body_coating
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_ump45_up_body_coating_name
+description =gunsl_ump45_up_body_coating_descr
+icon = ui_gunsl_up_ump45_body_coating
+;------------------------------------------ump45_extractor------------------------------------------
+[up_sect_ump45_extractor]
+cost = 1500
+value = +20
+misfire_start_condition  = -0.03
+misfire_end_condition  = -0.002
+misfire_start_prob = -0.0002
+misfire_end_prob  = -0.004
+condition_shot_dec = -0.0003
+condition_queue_shot_dec= -0.0003
+
+[up_ump45_extractor]
+scheme_index = 0, 14
+known = 1
+effects = vartree_ump45_usm
+section = up_sect_ump45_extractor
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_ump45_up_extractor_name
+description =gunsl_ump45_up_extractor_descr
+icon = ui_gunsl_up_ump45_extractor
+;------------------------------------------ump45_body_weight------------------------------------------
+[up_sect_ump45_body_weight]
+cost = 4500
+value = -0.8
+inv_weight = -0.8
+control_inertion_factor = -0.3
+
+PDM_disp_base = +0.1
+cam_dispersion = +0.04
+zoom_cam_dispersion = +0.03
+
+[up_ump45_body_weight]
+scheme_index = 0, 15
+known = 1
+effects = 
+section = up_sect_ump45_body_weight
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_ump45_up_body_weight_name
+description =gunsl_ump45_up_body_weight_descr
+icon = ui_gunsl_up_ump45_body_weight
+;------------------------------------------------------------------------------------
+[vartree_ump45_mag_fix]
+elements = up_ump45_max_fixator
+[vartree_ump45_barrel]
+elements = up_ump45_barrel_speed, up_ump45_barrel_compensator
+[vartree_ump45_body]
+elements = up_ump45_body_coating, up_ump45_body_weight
+[vartree_ump45_zatvor]
+elements = up_ump45_zatvor_balancer
+[vartree_ump45_extractor]
+elements = up_ump45_extractor
+[vartree_ump45_usm]
+elements = up_ump45_usm_rpm, up_ump45_usm_accuracy
+[vartree_ump45_rail]
+elements = up_ump45_rail
+[vartree_ump45_handle]
+elements = up_ump45_handle
+[vartree_ump45_laser]
+elements = up_ump45_laser
+[vartree_ump45_flash]
+elements = up_ump45_torch
+[vartree_ump45_sights]
+elements = up_ump45_sights
+[vartree_ump45_stock]
+elements = up_ump45_stock
+[vartree_ump45_sil]
+elements = up_ump45_sil

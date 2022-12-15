@@ -1,0 +1,114 @@
+;-----------------------------------------------------------------------------Надежность-------------------------------
+[up_sect_reliability_p90]
+cost		      		= 1000
+value					= +20
+
+fire_dispersion_condition_factor = -2.0
+
+misfire_start_condition		= -0.1
+misfire_start_prob       = -0.0001
+misfire_end_prob	     	= -0.02
+condition_shot_dec = -0.00001
+
+[up_reliability_p90]
+scheme_index            = 0, 0
+known                   = 1
+effects                 = vartree_usm_p90
+section                 = up_sect_reliability_p90
+property                = prop_reliability
+
+precondition_functor    = inventory_upgrades.precondition_functor_a
+precondition_parameter  = a & b
+
+effect_functor          = inventory_upgrades.effect_functor_a
+effect_parameter        = on_weapon_upgrade_something_here
+
+; ui
+prereq_functor          = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params           = 
+name                    = gunsl_p90_up_reliability_name
+description             = gunsl_p90_up_reliability_descr
+icon                    = ui_gunsl_up_p90_reliability
+
+
+
+;-----------------------------------------------------------------------------УСМ-точность---------------------------------------
+[up_sect_usm_p90]
+cost		      		= 5000
+value					= +30
+
+bullet_speed		 	= 100
+fire_dispersion_base	= -0.05
+inv_weight              = -0.1
+cam_dispersion          = -0.3
+cam_dispersion_inc		= -0.05
+crosshair_inertion = -0.6
+
+zoom_cam_dispersion          = -0.10 
+zoom_cam_dispersion_inc		= -0.31	
+zoom_cam_step_angle_horz		= -0.3
+cam_dispersion_frac = +0.11
+zoom_cam_dispersion_frac     = +0.04
+PDM_disp_base = -0.2
+PDM_disp_vel_factor 		= -0.5
+PDM_disp_accel_factor 		= -0.3
+
+[up_usm_p90]
+scheme_index            = 1, 0
+known                   = 1
+effects                 = 
+section                 = up_sect_usm_p90
+property                = prop_dispersion
+
+precondition_functor    = inventory_upgrades.precondition_functor_a
+precondition_parameter  = a & b
+
+effect_functor          = inventory_upgrades.effect_functor_a
+effect_parameter        = something_here
+
+prereq_functor          = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params           =
+name                    = gunsl_p90_up_usm_name
+description             = gunsl_p90_up_usm_descr
+icon                    = ui_gunsl_up_p90_usm
+
+
+;-----------------------------------------------------------------------------Фонарь------------------------------------
+[up_sect_torch_p90]:tactical_torch
+cost		      		= 3000
+show_bones = flash
+inv_weight              = +0.4
+
+[up_torch_p90]
+scheme_index            = 0, 1
+known                   = 1
+effects                 = 
+section                 = up_sect_torch_p90
+property                = prop_torch
+
+precondition_functor    = inventory_upgrades.precondition_functor_a
+precondition_parameter  = a & b
+
+effect_functor          = inventory_upgrades.effect_functor_a
+effect_parameter        = on_weapon_upgrade_something_here
+
+prereq_functor          = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params           = 
+
+
+name                    = gunsl_p90_up_torch_name
+description             = gunsl_p90_up_torch_descr
+icon                    = ui_gunsl_up_p90_torch
+
+;--------------------------------------------------------------------------------------------------------------------
+[vartree_body_p90]
+elements                = up_reliability_p90
+
+[vartree_usm_p90]
+elements                = up_usm_p90
+
+[vartree_torch_p90]
+elements                = up_torch_p90

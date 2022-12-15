@@ -1,0 +1,503 @@
+;------------------------------------------bizon_mag_shnek------------------------------------------
+[up_sect_bizon_mag_shnek]
+cost = 2000
+value = +10
+misfire_start_condition = -0.2
+misfire_end_condition = -0.2
+misfire_end_prob = -0.02
+
+[up_bizon_mag_shnek]
+scheme_index = 0, 0
+known = 1
+effects = vartree_bizon_details
+section = up_sect_bizon_mag_shnek
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_mag_shnek_name
+description =gunsl_bizon_up_mag_shnek_descr
+icon = ui_gunsl_up_bizon_mag_shnek
+;------------------------------------------bizon_mag_lock------------------------------------------
+[up_sect_bizon_mag_lock]
+cost = 1500
+value = +10
+misfire_start_condition = -0.05
+misfire_end_condition = -0.05
+misfire_end_prob = -0.03
+
+condition_shot_dec = -0.0001
+condition_queue_shot_dec = -0.0001
+
+[up_bizon_mag_lock]
+scheme_index = 0, 1
+known = 1
+effects = vartree_bizon_usm
+section = up_sect_bizon_mag_lock
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_mag_lock_name
+description =gunsl_bizon_up_mag_lock_descr
+icon = ui_gunsl_up_bizon_mag_lock
+;------------------------------------------bizon_pokritie_reliability------------------------------------------
+[up_sect_bizon_pokritie_reliability]
+cost = 3500
+value = +20
+misfire_end_prob = -0.02
+
+condition_shot_dec = -0.0002
+condition_queue_shot_dec = -0.0003
+
+[up_bizon_pokritie_reliability]
+scheme_index = 0, 2
+known = 1
+effects = vartree_bizon_zatvor
+section = up_sect_bizon_pokritie_reliability
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_pokritie_reliability_name
+description =gunsl_bizon_up_pokritie_reliability_descr
+icon = ui_gunsl_up_bizon_pokritie_reliability
+;------------------------------------------bizon_rail------------------------------------------
+[up_sect_bizon_rail]
+cost = 1500
+inv_weight        = +0.05
+show_bones = flash_rail, rail
+
+[up_bizon_rail]
+scheme_index = 0, 3
+known = 1
+effects = vartree_bizon_laser, vartree_bizon_flash
+section = up_sect_bizon_rail
+property = prop_rail
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_rail_name
+description =gunsl_bizon_up_rail_descr
+icon = ui_gunsl_up_bizon_rail
+;------------------------------------------bizon_light_tsevie------------------------------------------
+[up_sect_bizon_light_tsevie]
+cost = 1000
+value = -0.3
+inv_weight              = -0.3
+control_inertion_factor = -0.05
+
+[up_bizon_light_tsevie]
+scheme_index = 0, 4
+known = 1
+effects = vartree_bizon_rail
+section = up_sect_bizon_light_tsevie
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_light_tsevie_name
+description =gunsl_bizon_up_light_tsevie_descr
+icon = ui_gunsl_up_bizon_light_tsevie
+;------------------------------------------bizon_laser------------------------------------------
+[up_sect_bizon_laser]:red_laser
+cost = 3500
+show_bones = laser
+laser_ray_bones = line
+inv_weight              = +0.2
+crosshair_inertion = -0.1
+
+laserdot_world_attach_offset_x = -0.035
+laserdot_world_attach_offset_y = 0.267
+laserdot_world_attach_offset_z = 0.365
+
+[up_bizon_laser]
+scheme_index = 0, 5
+known = 1
+effects = 
+section = up_sect_bizon_laser
+property = prop_laser
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_laser_name
+description =gunsl_bizon_up_laser_descr
+icon = ui_gunsl_up_bizon_laser
+;------------------------------------------bizon_flash------------------------------------------
+[up_sect_bizon_flash]:tactical_torch
+cost = 3000
+show_bones = flash
+inv_weight              = +0.3
+
+torch_world_attach_offset_x = 0.047
+torch_world_attach_offset_y = 0.267
+torch_world_attach_offset_z = 0.374
+
+torch_omni_world_attach_offset_x = 0.047
+torch_omni_world_attach_offset_y = 0.267
+torch_omni_world_attach_offset_z = 0.374
+
+[up_bizon_flash]
+scheme_index = 0, 6
+known = 1
+effects = 
+section = up_sect_bizon_flash
+property = prop_torch
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_flash_name
+description =gunsl_bizon_up_flash_descr
+icon = ui_gunsl_up_bizon_flash
+;------------------------------------------bizon_sights------------------------------------------
+[up_sect_bizon_sights]
+cost = 500
+crosshair_inertion = -1
+control_inertion_factor = -0.05
+show_bones = sight
+
+[up_bizon_sights]
+scheme_index = 0, 7
+known = 1
+effects = 
+section = up_sect_bizon_sights
+property = prop_lightingsights
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_sights_name
+description =gunsl_bizon_up_sights_descr
+icon = ui_gunsl_up_bizon_sights
+;------------------------------------------bizon_handle------------------------------------------
+[up_sect_bizon_handle]
+cost = 900
+value = +10
+control_inertion_factor = -0.1
+cam_dispersion = -0.1
+zoom_cam_dispersion_inc = -0.03
+zoom_cam_dispersion = -0.02
+show_bones = handler2
+hide_bones = handler
+inv_weight = -0.05
+PDM_disp_vel_factor = -0.12
+
+[up_bizon_handle]
+scheme_index = 0, 8
+known = 1
+effects = 
+section = up_sect_bizon_handle
+property = prop_inertion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_handle_name
+description =gunsl_bizon_up_handle_descr
+icon = ui_gunsl_up_bizon_handle
+;------------------------------------------bizon_nakladka------------------------------------------
+[up_sect_bizon_nakladka]
+cost = 1000
+value = -25
+PDM_disp_base = -0.1
+cam_dispersion          = -0.15
+cam_dispersion_inc      = -0.05
+inv_weight              = +0.1
+
+
+zoom_cam_dispersion = -0.1
+zoom_cam_dispersion_inc = -0.07
+show_bones = tilnik
+
+[up_bizon_nakladka]
+scheme_index = 0, 9
+known = 1
+effects = 
+section = up_sect_bizon_nakladka
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_nakladka_name
+description =gunsl_bizon_up_nakladka_descr
+icon = ui_gunsl_up_bizon_nakladka
+;------------------------------------------bizon_barrel_bullet_speed------------------------------------------
+[up_sect_bizon_barrel_bullet_speed]
+cost = 5000
+value = +30
+bullet_speed  = +70
+
+[up_bizon_barrel_bullet_speed]
+scheme_index = 0, 10
+known = 1
+effects = 
+section = up_sect_bizon_barrel_bullet_speed
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_barrel_bullet_speed_name
+description =gunsl_bizon_up_barrel_bullet_speed_descr
+icon = ui_gunsl_up_bizon_barrel_bullet_speed
+;------------------------------------------bizon_barrel_dispersion------------------------------------------
+[up_sect_bizon_barrel_dispersion]
+cost = 5000
+value = +30
+PDM_disp_base = -0.2
+fire_dispersion_base = -0.08
+PDM_disp_crouch = -0.1
+PDM_disp_crouch_no_acc = -0.1
+
+[up_bizon_barrel_dispersion]
+scheme_index = 0, 11
+known = 1
+effects = 
+section = up_sect_bizon_barrel_dispersion
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_barrel_dispersion_name
+description =gunsl_bizon_up_barrel_dispersion_descr
+icon = ui_gunsl_up_bizon_barrel_dispersion
+;------------------------------------------bizon_barrel_9x19------------------------------------------
+[up_sect_bizon_barrel_9x19]
+cost = 7500
+value = "9x19"
+ammo_class  = ammo_9x19_fmj, ammo_9x19_pbp
+ammo_mag_size = -11
+hit_power = 0.8
+inv_weight = +0.2
+bullet_speed  = +50
+
+[up_bizon_barrel_9x19]
+scheme_index = 0, 12
+known = 1
+effects = 
+section = up_sect_bizon_barrel_9x19
+property = prop_calibre
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_barrel_9x19_name
+description =gunsl_bizon_up_barrel_9x19_descr
+icon = ui_gunsl_up_bizon_barrel_9x19
+;------------------------------------------bizon_usm_rpm------------------------------------------
+[up_sect_bizon_usm_rpm]
+cost = 3000
+value = +20
+condition_queue_shot_dec = +0.0003
+rpm = +100
+
+[up_bizon_usm_rpm]
+scheme_index = 0, 13
+known = 1
+effects = vartree_bizon_barrel
+section = up_sect_bizon_usm_rpm
+property = prop_rpm
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_usm_rpm_name
+description =gunsl_bizon_up_usm_rpm_descr
+icon = ui_gunsl_up_bizon_usm_rpm
+;------------------------------------------bizon_usm_recoil------------------------------------------
+[up_sect_bizon_usm_recoil]
+cost = 3000
+value = -20
+PDM_disp_base = -0.25
+cam_dispersion = -0.1
+zoom_cam_dispersion = -0.05
+
+[up_bizon_usm_recoil]
+scheme_index = 0, 14
+known = 1
+effects = vartree_bizon_barrel
+section = up_sect_bizon_usm_recoil
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_usm_recoil_name
+description =gunsl_bizon_up_usm_recoil_descr
+icon = ui_gunsl_up_bizon_usm_recoil
+;------------------------------------------bizon_shell_ejector------------------------------------------
+[up_sect_bizon_shell_ejector]
+cost = 4000
+value = +25
+misfire_start_prob = -0.003
+condition_shot_dec = -0.0001
+misfire_end_prob = -0.03
+condition_queue_shot_dec = -0.0002
+
+[up_bizon_shell_ejector]
+scheme_index = 0, 15
+known = 1
+effects = 
+section = up_sect_bizon_shell_ejector
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_shell_ejector_name
+description =gunsl_bizon_up_shell_ejector_descr
+icon = ui_gunsl_up_bizon_shell_ejector
+;------------------------------------------bizon_zatvor_balancer------------------------------------------
+[up_sect_bizon_zatvor_balancer]
+cost = 5000
+value = -25
+PDM_disp_base - 0.1
+cam_dispersion = -0.15
+zoom_cam_dispersion = -0.06
+cam_dispersion_inc = -0.2
+zoom_cam_dispersion_inc = -0.05
+
+[up_bizon_zatvor_balancer]
+scheme_index = 0, 16
+known = 1
+effects = 
+section = up_sect_bizon_zatvor_balancer
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_zatvor_balancer_name
+description =gunsl_bizon_up_zatvor_balancer_descr
+icon = ui_gunsl_up_bizon_zatvor_balancer
+;------------------------------------------bizon_zatvor_prujina------------------------------------------
+[up_sect_bizon_zatvor_prujina]
+cost = 4000
+value = +25
+rpm = +120
+
+[up_bizon_zatvor_prujina]
+scheme_index = 0, 17
+known = 1
+effects = 
+section = up_sect_bizon_zatvor_prujina
+property = prop_rpm
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_zatvor_prujina_name
+description =gunsl_bizon_up_zatvor_prujina_descr
+icon = ui_gunsl_up_bizon_zatvor_prujina
+;------------------------------------------bizon_light_details------------------------------------------
+[up_sect_bizon_light_details]
+cost = 3500
+value = -0.5
+inv_weight = -0.5
+
+[up_bizon_light_details]
+scheme_index = 0, 18
+known = 1
+effects = vartree_bizon_zatvor
+section = up_sect_bizon_light_details
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bizon_up_light_details_name
+description =gunsl_bizon_up_light_details_descr
+icon = ui_gunsl_up_bizon_light_details
+;------------------------------------------------------------------------------------
+[vartree_bizon_mag_lock]
+elements = up_bizon_mag_lock
+[vartree_bizon_usm]
+elements = up_bizon_usm_recoil, up_bizon_usm_rpm
+[vartree_bizon_barrel]
+elements = up_bizon_barrel_bullet_speed, up_bizon_barrel_dispersion, up_bizon_barrel_9x19
+[vartree_bizon_mag_shnek]
+elements = up_bizon_mag_shnek
+[vartree_bizon_details]
+elements = up_bizon_light_details, up_bizon_pokritie_reliability
+[vartree_bizon_zatvor]
+elements = up_bizon_zatvor_balancer, up_bizon_shell_ejector, up_bizon_zatvor_prujina
+[vartree_bizon_tsevie]
+elements = up_bizon_light_tsevie
+[vartree_bizon_rail]
+elements = up_bizon_rail
+[vartree_bizon_laser]
+elements = up_bizon_laser
+[vartree_bizon_flash]
+elements = up_bizon_flash
+[vartree_bizon_sights]
+elements = up_bizon_sights
+[vartree_bizon_stock]
+elements = up_bizon_nakladka
+[vartree_bizon_handle]
+elements = up_bizon_handle

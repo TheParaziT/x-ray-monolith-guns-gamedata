@@ -1,0 +1,300 @@
+[wpn_p90]:identity_immunities,weapon_probability,default_weapon_params, red_laser
+
+GroupControlSection     = spawn_group
+$spawn                  = "weapons\p90"               ; option for Level Editor
+$npc              = on           ; option for Level Editor
+$prefetch               = 8
+scheduled               = off                                ; option for ALife Simulator
+cform                   = skeleton
+class                   = WP_AK74
+description          	= gunsl_wpn_p90_descr
+ef_main_weapon_type     = 2
+ef_weapon_type          = 6
+
+default_to_ruck         = false
+sprint_allowed          = true
+control_inertion_factor = 1.0
+
+kind                    = w_smg
+
+script_binding = bind_weapon.bind
+def_hide_bones = flash
+collimator_sights_bones = sight
+collimator_breaking_params = 0.3, 0.1, 0.1 //���������, ��� ������� �������� ��������, ���������, ��� ������� ��� ������ ����������, ��������� ����������� �������� (�������� - ������� ��, 1)
+collimator_problems_level = 4
+hide_collimator_sights_in_alter_zoom = true
+
+repair_group = p90
+
+;-------------------------------------------------------------------------------
+cost              = 6600            ; the price of the item
+weapon_class      = assault_rifle      ; the type of the box that will be used in buy-menu in multiplayer mode
+inv_weight        = 2.78
+
+upgrades                = 
+installed_upgrades      =
+upgrade_scheme          = 
+
+
+singleshoots_time_delta  = 0.1                                ;���������������� ��� ��������� ���������
+;----TTX--------------------------------------------------------------------------
+hit_power            = 0.8, 0.8, 0.8, 0.8
+hit_impulse          = 100    ; size of physic impulse by bullet
+hit_type             = fire_wound            ; [] type of the wound
+fire_distance           = 200                  ; maximum fire distance that bullet can fly
+bullet_speed            = 270                ; starting bullet speed
+rpm                     = 700
+rpm_empty_click         = 200
+
+use_aim_bullet          = false                ;�������������� �� ������ ������ ����
+time_to_aim             = 3.0
+
+hud                     = wpn_p90_hud
+
+misfire_probability        = 0.005 ;����������� ������ ��� ������������ ������  !!!old - now not working
+;������������, ��� ������� ���������� ���� ������
+misfire_start_condition		= 0.6
+;����������� ��� ������� ���� ������ ���������� �����������
+misfire_end_condition		= 0.1
+;���� ������ ��� ����������� ������ ��� misfireStartCondition
+misfire_start_prob	     	= 0.004
+;���� ������ ��� ����������� ������ ��� misfireEndCondition
+misfire_end_prob	     	= 0.057
+;���������� ����������� ��� ��������� ��������
+condition_shot_dec      	= 0.0012
+;���������� ����������� ��� �������� ��������
+condition_queue_shot_dec	= 0.0014
+
+ammo_in_chamber = true
+
+ammo_elapsed      = 51
+ammo_mag_size     = 51           ; clip (magazine) size
+fire_modes		  = 1, -1
+ammo_class		  = ammo_5.7x28_ss190
+grenade_class     = ammo_vog-25         ; name of the ltx-section of used grenades
+
+launch_speed      = 0
+hand_dependence   = 1
+single_handed     = 0
+
+;---DOF-------------------------------------------------------------------------
+zoom_dof             = 0.5, 1.0, 180
+reload_dof           = 0.0, 0.5, 5, 2
+
+;---���������---------------------------------------------------------------------------
+;������� ���������
+fire_dispersion_base       = 0.23    ;���� (� ��������) ������� ��������� ������ (������ �������� � ������)
+control_inertion_factor    = 1.2f
+crosshair_inertion			= 6.30
+
+;������
+cam_return 				= 0
+cam_relax_speed         = 5    		;�������� �������� � �������� ���������
+cam_relax_speed_ai     	= 120.75
+cam_dispersion          = 0.6 		;���������� ���� (� ��������) � ������ ���������
+cam_dispersion_inc      = 0.15 		;���������e cam_dispersion � ������ ���������
+cam_dispersion_frac     = 0.85 		;����� ����� ���������� �� cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
+cam_max_angle           = 80.0		;������������ ���� ������
+cam_max_angle_horz      = 50.0      ;(degree) maximum shot horizontal degree
+cam_step_angle_horz     = 1.2 		;(degree) size of step camera moved in horizontal position while shooting
+
+PDM_disp_base 				= 1.5
+PDM_disp_vel_factor 		= 1.9
+PDM_disp_accel_factor 		= 1.9
+PDM_disp_crouch	 			= 1.0
+PDM_disp_crouch_no_acc 		= 1.0
+
+zoom_cam_relax_speed         = 5     ; scope & ironsight
+zoom_cam_relax_speed_ai      = 360
+zoom_cam_dispersion          = 0.3
+zoom_cam_dispersion_inc      = 0.15
+zoom_cam_dispersion_frac     = 0.95
+zoom_cam_max_angle           = 50.0
+zoom_cam_max_angle_horz      = 50.0
+zoom_cam_step_angle_horz     = 1.0
+
+fire_dispersion_condition_factor = 11        ;���������� ��������� � ��������� ��� ������������ ������
+
+;-------------------------------------------------------------------------------
+holder_range_modifier   = 1.0                       ; �� ������� ��� ������������� eye_range
+holder_fov_modifier     = 1.0              ; �� ������� ��� ������������� eye_fov
+
+min_radius              = 0
+max_radius              = 50
+
+hit_probability_gd_novice  = 0.80
+hit_probability_gd_stalker = 0.80
+hit_probability_gd_veteran = 0.80
+hit_probability_gd_master  = 0.80
+
+;-------------------------------------------------------------------------------
+slot              = 2                ; // secondary
+animation_slot    = 8                ; type of the animation that will be used
+inv_name          = gunsl_wpn_p90               ; name in inventory
+inv_name_short    = gunsl_wpn_p90
+icons_texture        = ui\ui_icon_equipment_guns
+inv_grid_width    = 4
+inv_grid_height   = 2
+inv_grid_x        = 0
+inv_grid_y        = 27
+
+upgr_icon_x			= 300
+upgr_icon_y			= 129
+upgr_icon_width		= 250
+upgr_icon_height   	= 121
+
+kill_msg_x        = 72
+kill_msg_y        = 82
+kill_msg_width    = 56
+kill_msg_height   = 23
+
+;-------------------------------------------------------------------------------
+position = -0.016000,-0.135000,-0.030000
+orientation             = 0, -10, 0
+
+fire_point              = 0.0, 0.19, 0.237
+fire_point2             = 0.0, 0.19, 0.426
+
+flame_particles         = weapons\generic_weapon05
+smoke_particles         = weapons\generic_shoot_00
+grenade_flame_particles = weapons\generic_weapon01
+
+shell_point             = 0.0, 0.19, 0.426
+shell_dir               = 0.0, 1.0, 0.0
+
+shell_particles	 	= weapons\generic_shells_r
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+;��� ������
+strap_position         	= -0.16,-0.36,0.15			; position (offset) and orientation of the weapon when it is strapped
+strap_orientation      	= -10,-5,10					; (3rd person view in degrees)
+strap_bone0             = bip01_spine2
+strap_bone1             = bip01_spine1
+
+startup_ammo            = 90
+visual                  = dynamics\weapons\wpn_p90\wpn_p90.ogf
+
+light_disabled                                = false
+light_color             = 0.6,0.5,0.3
+light_range             = 5
+light_var_color         = 0.05
+light_var_range         = 0.5
+light_time              = 0.2
+
+ph_mass                 = 3
+
+;addons
+scope_status            = 0                   ; 0 - no addon
+silencer_status         = 2                   ; 1 - permanent
+grenade_launcher_status = 0                   ; 2 - attachable
+
+zoom_enabled            = true                                                ; (on,off)zoom mode (right mouse button)
+zoom_rotate_time        = 0.26
+scope_zoom_factor       = 0                                               ; fov for zoom mode
+alter_scope_zoom_factor = 1.00
+
+scope_name              = wpn_addon_scope       ; section name for the attachable scope
+scope_x              	= 47                 ; offset in inventory icon
+scope_y                 = 0
+silencer_name           = wpn_57x28_silencer    ; section name for the attachable silencer
+silencer_x              = 158                   ; offset in inventory icon
+silencer_y              = 25
+grenade_launcher_name   = wpn_addon_grenade_launcher; section name for the attachable grenade launcher
+grenade_launcher_x      = 126                ; offset in inventory icon
+grenade_launcher_y      = 24
+
+
+;�����
+snd_draw		= weapons\p90\p90_draw
+snd_holster		= weapons\p90\p90_hide
+snd_shoot		= weapons\p90\p90_shoot, -1.1
+snd_empty		= weapons\glock17\glock17_dry
+snd_reload		= weapons\p90\p90_reload
+snd_reload_empty        = weapons\p90\p90_reload_full
+snd_changecartridgetype = weapons\p90\p90_reload
+snd_close		= $silent
+snd_reload_jammed       = weapons\p90\p90_revival
+snd_reload_jammed_last  = weapons\p90\p90_revival
+snd_jammed_click        = weapons\glock17\glock17_dry
+snd_unload_mag          = $silent
+snd_jam                 = $silent
+snd_breechblock         = $silent
+snd_fakeshoot_first	= weapons\glock17\glock17_shoot_s
+snd_changefiremode	= weapons\vss\vss_firemode
+;snd_changefiremode_empty
+;snd_changefiremode_jammed
+snd_aim_start           = weapons\vss\vss_aim_start
+snd_aim_end             = weapons\vss\vss_aim_end
+snd_sprint_start        = weapons\detector_prepare
+snd_sprint_end          = weapons\pistol_sprint_end
+snd_suicide	        = weapons\suicide_start
+snd_stop_suicide	= weapons\suicide_end
+snd_laser_on	= weapons\vss\vss_firemode
+snd_laser_off	= weapons\vss\vss_firemode
+snd_torch_on	        = weapons\vss\vss_firemode
+snd_torch_off	        = weapons\vss\vss_firemode
+snd_headlamp_on         = weapons\headflash_on
+snd_headlamp_off        = weapons\headflash_off
+snd_nv_on               = weapons\nv_act
+snd_nv_off              = weapons\nv_deact
+
+
+;silencer_flame_particles  = weapons\generic_weapon01
+silencer_smoke_particles   = weapons\generic_shoot_00
+
+snd_silncer_shot        = weapons\glock17\glock17_shoot_s, -1.1
+
+silencer_light_color    = 0.6,0.5,0.3
+silencer_light_range    = 0.01
+silencer_light_var_color= 0.05
+silencer_light_var_range= 0.01
+silencer_light_time     = 0.01
+
+
+torch_attach_offset_x = 0.03
+torch_attach_offset_y = 0.05
+torch_attach_offset_z = -0.1
+
+torch_world_attach_offset_x = 0.054
+torch_world_attach_offset_y = 0.269
+torch_world_attach_offset_z = 0.185
+
+torch_omni_attach_offset_x = 0.03 
+torch_omni_attach_offset_y = 0.08
+torch_omni_attach_offset_z = 0.1
+
+torch_omni_world_attach_offset_x = 0.054
+torch_omni_world_attach_offset_y = 0.269
+torch_omni_world_attach_offset_z = 0.185
+
+use_world_anims=true
+
+wanm_idle   = idle
+wanm_idle_a = idle
+
+wanm_idle_empty   = idle
+wanm_idle_empty_a = idle
+
+wanm_idle_jammed   = idle
+wanm_idle_jammed_a = idle
+
+wanm_shoot   = shoot
+wanm_shoot_a = shoot
+
+wanm_shoot_jammed   = idle
+wanm_shoot_jammed_a = idle
+
+wanm_shoot_last   = shoot
+wanm_shoot_last_a = shoot
+
+wanm_shoot_last_jammed   = idle
+wanm_shoot_last_jammed_a = idle
+
+wanm_reload   = idle
+wanm_reload_a = idle
+
+wanm_reload_empty   = idle
+wanm_reload_empty_a = idle
+
+wanm_reload_jammed   = idle
+wanm_reload_jammed_a = idle
