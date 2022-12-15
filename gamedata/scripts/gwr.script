@@ -1,0 +1,83 @@
+--Вспомогательные функции, параметры
+--Автор кода: liner (https://ap-pro.ru/profile/643-liner/)
+--Сделано для Anomaly Gunslinger Extended
+
+--Проверить, является ли оружие оружием из Ганса?
+get = function(o)
+	if not o then
+		o = db.actor:active_item()
+	end
+	if not o then return nil end
+	local b = o:binded_object()
+	if b and ini_sys:r_string_ex(o:section(),"script_binding","") == "bind_weapon.bind" then
+		return b
+	end
+	return nil
+end
+
+--Создать какое-то событие через t милисекунд
+event = function(t,f)
+	local TG = device():time_global()+t
+	level.add_call(
+		function()
+			return TG < device():time_global()
+		end,
+		f
+	)
+end
+
+--Проверка на то, установлен ли заданный апгрейд?
+function upgrade_installed(it,name)
+	local res = false
+	it:iterate_installed_upgrades(
+		function(u)
+			if u == name then
+				res = true
+				return true
+			end
+		end
+	)
+	return res
+end
+
+--Разрешённые состояния оружия для быстрого удара ножом
+local avail_states =
+{
+	[0] = true, --eIdle
+	[4] = true --eBore
+}
+
+--Проверка на то, можно ли сделать удар ножом, который НАЦЕПЛЕН НА ОРУЖИЕ
+--Эта проверка не используется если по алгоритмам будет произведён удар ножом из инвентаря
+function allow_knife_kick(w)
+	if DEV_DEBUG then
+		return true
+	end
+	if not avail_states[w:get_state()] then
+		return false
+	end
+	local allow = false
+	--Если все проверки пройдены то allow будет иметь значение true
+	w:iterate_installed_upgrades(
+		function(u)
+			--Установлен ли апгрейд на нож
+			if u:find("bayonet") then
+				u = ini_sys:r_string(u,"section")
+				local wp = w:cast_Weapon()
+				--Вспомогательные проверки
+				if wp:IsGrenadeLauncherAttached() then
+					if ini_sys:r_bool_ex(u,"disable_kick_anim_when_gl_attached",false) or (ini_sys:r_bool_ex(u,"disable_kick_anim_when_gl_enabled",false) and w:weapon_in_grenade_mode()) then
+						return true
+					end
+				end
+				if ini_sys:r_bool_ex(u,"disable_kick_anim_when_sil_attached",false) and wp:IsSilencerAttached() then
+					return true
+				end
+				--все проверки пройдены
+				allow = true
+				return true
+			end
+		end
+	)
+	return allow
+end
