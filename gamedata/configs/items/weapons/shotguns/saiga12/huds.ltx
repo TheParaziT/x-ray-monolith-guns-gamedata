@@ -1,0 +1,443 @@
+[wpn_saiga12_hud]:default_hud
+zoom_hide_crosshair        = true
+attach_place_idx           = 0
+item_visual                = dynamics\weapons\wpn_saiga12\wpn_saiga12_hud.ogf
+
+zoom_dof_near = 0.25
+zoom_dof_focus = 0.5
+
+hud_fov_factor = 1.25
+
+inertion_pitch_offset_r = -0.008
+inertion_pitch_offset_n = -0.006
+inertion_pitch_offset_d = -0.001
+inertion_origin_offset = 0.06
+
+inertion_aim_origin_offset = 0.015
+inertion_aim_speed = 10
+
+
+hands_position				= 0.02,-0.02,0.02
+hands_orientation			= 0.0,0.0,0.0
+
+hands_position_16x9			= 0.02,-0.02,0.02
+hands_orientation_16x9			= 0.0,0.0,0.0
+
+gl_hud_offset_pos_16x9     = 0,0,0
+gl_hud_offset_rot_16x9     = 0,0,0
+
+item_position				= 0.0,0.0,0.0
+item_orientation			= 0.0,0.0,0.0
+
+aim_hud_offset_pos = -0.001,0.042000,0.0
+aim_hud_offset_rot = -0.0030000,0.000000,0.000000
+
+aim_hud_offset_pos_16x9 = -0.001,0.042000,0.0
+aim_hud_offset_rot_16x9 = -0.0030000,0.000000,0.000000
+
+gl_hud_offset_pos               = 0,0,0;-0.053000,-0.059000,0.000000
+gl_hud_offset_rot               = 0,0,0;-0.145000,0.000000,0.000000
+
+gl_hud_offset_pos_16x9            = 0,0,0;-0.130000,0.003500,0.000500
+gl_hud_offset_rot_16x9            = 0,0,0;0.052500,0.045000,-0.010000
+
+lean_hud_offset_pos        = 0,0,0
+lean_hud_offset_rot        = 0,0,0
+
+
+shell_point			= 0.0,-9.0,0.0
+shell_dir                       = 0.0,0.0,0.0
+shell_bone			= bolt
+
+fire_point			= 0.0,0.005,0.835
+fire_bone                       = wpn_body
+fire_point2                     = 0.0,0.005,1.108
+fire_bone2                      = wpn_body
+
+
+disable_bore = true                                            ;���������� �������� �����
+
+mix_shoot_after_idle = true                                    ;���� ������� �������� � ���������� idle
+mix_shoot_after_shoot_in_queue = false                         ;���� ����� ������ ���������
+
+use_advanced_ammo_bones = true
+ammo_params_toggle_shooting = true			; ��������� ��������� �������� ��� ���������; ��� ���������� �������� false, ��� �������� � ���������� ��������� true
+ammo_params_changing_when_reload_starts = false 	; ����� ��������� ����� ��� �����������: ���� ����� ����� ������ �����, ��������� true, ���� � ��������, ������ �� ��������� - false (������ ��� ��������)
+ammo_params_use_last_cartridge_type = true		; ����� �� �������������� ��� ���������� ������� (true) ��� ���, ������� ������ ��������; ������ true � �� �������
+ammo_params_section_0 = wpn_saiga_ammo_bones_blue
+ammo_params_section_1 = wpn_saiga_ammo_bones_red
+
+minus_ammo_in_usual_reloads = true ; ��� ��� ����������� ��������������� ������� - �� �� ����, ��� � ��������� ��� �� ��������� ������� ������� � ����������, ��� ���� ���������� � �������� �� ���� ������ ������!
+minus_ammo_in_bore = true          ; � ��������� ������, ��� ������� �� �������� ������ �������, � ��� ����� ������������ ������ � �������� ��� �����������, ���� �� ����� ������������� ������� ������ ���� ����
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+prohibit_suicide = false		;�������� ������
+suicide_by_animation=true		;����� �������� ����� �������� ��������
+custom_suicide_shot = true		; ����������, ��� ���������� ������ �������� ����������������� ��������
+
+anm_suicide			= aks74u_suicide
+lock_time_anm_suicide 		= 7.37
+anm_stop_suicide 		= aks74u_suicide_end
+lock_time_anm_stop_suicide 	= 1.37
+suicide_delay = 0.25 ;0.5
+
+anm_shoot_suicide                = aks74u_suicide_shoot
+anm_shoot_suicide_sil            = aks74u_suicide_shoot
+anm_shoot_last_suicide           = aks74u_suicide_shoot
+anm_shoot_last_suicide_sil       = aks74u_suicide_shoot
+
+hud_move_suicide_offset_pos = 0, 0, 0
+hud_move_suicide_offset_rot = 0,0,0
+
+hud_move_suicide_offset_pos_16x9 = 0, 0, 0
+hud_move_suicide_offset_rot_16x9 = 0,0,0
+
+;����-�����
+
+anm_suicide_auto			= aks74u_suicide, idle_auto
+lock_time_anm_suicide_auto 		= 7.37
+anm_stop_suicide_auto 		        = aks74u_suicide_end, idle_auto
+lock_time_anm_stop_suicide_auto 	= 1.37
+
+anm_shoot_auto_suicide                = aks74u_suicide_shoot
+anm_shoot_auto_suicide_sil            = aks74u_suicide_shoot
+anm_shoot_auto_last_suicide           = aks74u_suicide_shoot
+anm_shoot_auto_last_suicide_sil       = aks74u_suicide_shoot
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;����������///////////////////////////////////////////////////
+anm_show                   = aks74u_draw
+anm_show_empty             = aks74u_draw
+anm_show_jammed            = aks74u_draw, idle_jammed
+
+;��������/////////////////////////////////////////////////////
+anm_hide                   = aks74u_hide
+anm_hide_empty             = aks74u_hide
+anm_hide_jammed            = aks74u_hide, idle_jammed
+
+;�����������//////////////////////////////////////////////////
+anm_idle                            = aks74u_idle
+anm_idle_empty                      = aks74u_idle
+anm_idle_jammed                     = aks74u_idle, idle_jammed
+anm_idle_slow                       = aks74u_idle
+anm_idle_crouch                     = aks74u_idle
+anm_idle_crouch_slow                = aks74u_idle
+anm_idle_slow_empty                 = aks74u_idle
+anm_idle_crouch_empty               = aks74u_idle
+anm_idle_crouch_slow_empty          = aks74u_idle
+anm_idle_slow_jammed                = aks74u_idle, idle_jammed
+anm_idle_crouch_jammed              = aks74u_idle, idle_jammed
+anm_idle_crouch_slow_jammed         = aks74u_idle, idle_jammed
+
+
+;����������� � ������������///////////////////////////////////
+autoshoot_anm_idle_aim_start = true         ;������� ���������� ���������� ������� � ��������� �� lock_time, ���� ������ �������� ����� ������ ������ ��������� ������� � lock_time
+lock_time_anm_idle_aim_start = 0.2          ;������� ��������� ��� �������� (����� ������������ ������) �� ����� ����������� ������������ �������� �� ��������� ��������� �������
+autoshoot_anm_idle_aim_start_empty = true
+lock_time_anm_idle_aim_start_empty = 0.2
+autoshoot_anm_idle_aim_start_jammed = true
+lock_time_anm_idle_aim_start_jammed = 0.2
+
+anm_idle_aim_start             = aks74u_aim_start
+anm_idle_aim_start_empty       = aks74u_aim_start
+anm_idle_aim_start_jammed      = aks74u_aim_start, aks74u_aim_start_jammed
+
+anm_idle_aim                   = aks74u_aim, idle_aim
+anm_idle_aim_empty             = aks74u_aim, idle_aim
+anm_idle_aim_jammed            = aks74u_aim, idle_aim_jammed
+anm_idle_aim_scope             = aks74u_aim, idle_aim
+anm_idle_aim_scope_empty       = aks74u_aim, idle_aim
+anm_idle_aim_scope_jammed      = aks74u_aim, idle_aim_jammed
+
+
+autoshoot_anm_idle_aim_end = true
+lock_time_anm_idle_aim_end = 0.25
+autoshoot_anm_idle_aim_end_empty = true
+lock_time_anm_idle_aim_end_empty = 0.25
+autoshoot_anm_idle_aim_end_jammed = true
+lock_time_anm_idle_aim_end_jammed = 0.25
+
+anm_idle_aim_end               = aks74u_aim_end
+anm_idle_aim_end_empty         = aks74u_aim_end
+anm_idle_aim_end_jammed        = aks74u_aim_end, aks74u_aim_end_jammed
+
+
+;enable_directions_anm_idle = true
+enable_directions_anm_idle_aim = true
+
+;������ ������//////////////////////////////////////////////////////////////////////////
+anm_idle_moving 					= aks74u_walk
+anm_idle_moving_jammed 					= aks74u_walk, idle_jammed
+anm_idle_moving_empty					= aks74u_walk
+
+;������ ��������� (SHIFT) ������//////////////////////////////////////////////////////////////////////////
+anm_idle_moving_slow 					= aks74u_walk_slow
+anm_idle_moving_slow_jammed 				= aks74u_walk_slow, idle_jammed
+anm_idle_moving_slow_empty				= aks74u_walk_slow
+
+;������ � ����������� (CTRL) ������//////////////////////////////////////////////////////////////////////////
+anm_idle_moving_crouch 					        = aks74u_walk_slow_down
+anm_idle_moving_crouch_jammed 					= aks74u_walk_slow_down, idle_jammed
+anm_idle_moving_crouch_empty					= aks74u_walk_slow_down
+
+;������ � ������� (CTRL+SHIFT) ������/////////////////////////////////////////////////////////////////////////
+anm_idle_moving_crouch_slow 					= aks74u_walk_slow_super
+anm_idle_moving_crouch_slow_jammed 				= aks74u_walk_slow_super, idle_jammed
+anm_idle_moving_crouch_slow_empty				= aks74u_walk_slow_super
+
+;������ � ������������ ������//////////////////////////////////////////////////////////////////
+anm_idle_aim_moving_forward                   = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_forward_empty             = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_forward_jammed            = aks74u_aim_walk, idle_aim_jammed
+
+;������ � ������������ �����//////////////////////////////////////////////////////////////////
+anm_idle_aim_moving_back                   = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_back_empty             = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_back_jammed            = aks74u_aim_walk, idle_aim_jammed
+
+
+;������ � ������������ �����//////////////////////////////////////////////////////////////////
+anm_idle_aim_moving_left                   = aks74u_aim_walk_left, idle_aim  
+anm_idle_aim_moving_left_empty             = aks74u_aim_walk_left, idle_aim
+anm_idle_aim_moving_left_jammed            = aks74u_aim_walk_left, idle_aim_jammed
+
+
+;������ � ������������ ������//////////////////////////////////////////////////////////////////
+anm_idle_aim_moving_right                   = aks74u_aim_walk_right, idle_aim
+anm_idle_aim_moving_right_empty             = aks74u_aim_walk_right, idle_aim
+anm_idle_aim_moving_right_jammed            = aks74u_aim_walk_right, idle_aim_jammed
+ 
+
+;������ � ������������ ������+�����////////////////////////////////////////////////////////////
+anm_idle_aim_moving_forward_left                   = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_forward_left_empty             = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_forward_left_jammed            = aks74u_aim_walk, idle_aim_jammed
+
+
+;������ � ������������ ������+������///////////////////////////////////////////////////////////
+anm_idle_aim_moving_forward_right                   = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_forward_right_empty             = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_forward_right_jammed            = aks74u_aim_walk, idle_aim_jammed
+
+
+;������ � ������������ �����+�����/////////////////////////////////////////////////////////////
+anm_idle_aim_moving_back_left                   = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_back_left_empty             = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_back_left_jammed            = aks74u_aim_walk, idle_aim_jammed
+
+
+;������ � ������������ �����+������////////////////////////////////////////////////////////////
+anm_idle_aim_moving_back_right                   = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_back_right_empty             = aks74u_aim_walk, idle_aim
+anm_idle_aim_moving_back_right_jammed            = aks74u_aim_walk, idle_aim_jammed
+
+;������ � ������������ ��� ������� �������////////////////////////////////////////////////////
+anm_idle_aim_scope_moving	              = aks74u_aim_walk_scope, idle_aim
+anm_idle_aim_scope_moving_empty		      = aks74u_aim_walk_scope, idle_aim
+anm_idle_aim_scope_moving_jammed	      = aks74u_aim_walk_scope, idle_aim_jammed
+
+
+;���//////////////////////////////////////////////////////////////////
+lock_time_anm_idle_sprint_start = 0.15
+lock_time_anm_idle_sprint_start_empty = 0.15
+lock_time_anm_idle_sprint_start_jammed = 0.15
+anm_idle_sprint_start             = aks74u_sprint_start
+anm_idle_sprint_start_empty       = aks74u_sprint_start
+anm_idle_sprint_start_jammed      = aks74u_sprint_start, idle_jammed
+
+
+anm_idle_sprint                   = aks74u_sprint
+anm_idle_sprint_empty             = aks74u_sprint
+anm_idle_sprint_jammed            = aks74u_sprint, idle_jammed
+
+
+lock_time_anm_idle_sprint_end        = 0.35
+lock_time_anm_idle_sprint_end_empty  = 0.35
+lock_time_anm_idle_sprint_end_jammed = 0.35
+anm_idle_sprint_end             = aks74u_sprint_end
+anm_idle_sprint_end_empty       = aks74u_sprint_end
+anm_idle_sprint_end_jammed      = aks74u_sprint_end, idle_jammed
+
+
+;�����////////////////////////////////////////////////////////////////////
+anm_bore                   = aks74u_draw
+anm_bore_empty             = aks74u_draw
+anm_bore_jammed            = aks74u_draw, idle_jammed
+
+
+;�������� �������� ���������/////////////////////////////////////////////////////////////////////
+anm_shoot                = saiga12_shoot
+anm_shoot_sil            = saiga12_shoot
+anm_shoot_jammed	 = saiga12_shoot, idle_jammed
+anm_shoot_jammed_sil	 = saiga12_shoot, idle_jammed
+anm_shoot_last           = saiga12_shoot
+anm_shoot_last_sil       = saiga12_shoot
+anm_shoot_aim            = saiga12_aim_shoot
+anm_shoot_aim_sil        = saiga12_aim_shoot
+anm_shoot_aim_jammed	 = saiga12_aim_shoot, idle_aim_jammed
+anm_shoot_aim_jammed_sil = saiga12_aim_shoot, idle_aim_jammed
+anm_shoot_aim_last       = saiga12_aim_shoot
+anm_shoot_aim_last_sil   = saiga12_aim_shoot
+anm_shoot_aim_scope            = saiga12_aim_shoot_scope, saiga12_aim_shoot
+anm_shoot_aim_scope_sil        = saiga12_aim_shoot_scope, saiga12_aim_shoot
+anm_shoot_aim_scope_last       = saiga12_aim_shoot_scope, saiga12_aim_shoot
+anm_shoot_aim_scope_last_sil   = saiga12_aim_shoot_scope, saiga12_aim_shoot
+anm_shoot_aim_scope_jammed     = saiga12_aim_shoot_scope, idle_aim_jammed
+anm_shoot_aim_scope_jammed_sil = saiga12_aim_shoot_scope, idle_aim_jammed
+
+;������//////////////////////////////////////////////////
+lock_time_anm_fakeshoot_empty = 0.20
+anm_fakeshoot_empty      = aks74u_dry_empty
+lock_time_anm_fakeshoot_aim_empty = 0.20
+anm_fakeshoot_aim_empty      = aks74u_aim_dry, idle_aim
+lock_time_anm_fakeshoot_jammed = 0.90
+anm_fakeshoot_jammed     = aks74u_dry, idle_jammed
+lock_time_anm_fakeshoot_aim_jammed = 0.20
+anm_fakeshoot_aim_jammed     = aks74u_aim_dry, idle_aim_jammed
+
+;�����������/////////////////////////////////////////////////////////////////////
+anm_reload                           = aks74u_reload
+lock_time_start_anm_reload = 1.2
+lock_time_end_anm_reload = 1.45
+
+anm_reload_empty                     = aks74u_reload_full
+lock_time_start_anm_reload_empty = 1.2
+lock_time_end_anm_reload_empty = 2.45
+
+anm_reload_jammed                    = aks74u_revival
+anm_reload_jammed_last               = aks74u_revival
+
+anm_reload_ammochange                = aks74u_reload
+lock_time_start_anm_reload_ammochange = 1.2
+lock_time_end_anm_reload_ammochange = 1.45
+
+anm_reload_empty_ammochange          = aks74u_reload_full
+lock_time_start_anm_reload_empty_ammochange = 1.2
+lock_time_end_anm_reload_empty_ammochange = 2.45
+
+
+;����� ������ ����//////////////////////////////////////////////////////////////////////////
+use_firemode_change_anim = true
+
+;1-a
+lock_time_anm_changefiremode_from_1_to_a = 1.17
+anm_changefiremode_from_1_to_a			     = aks74u_firemode_1_to_a
+lock_time_anm_changefiremode_from_1_to_a_jammed = 1.17
+anm_changefiremode_from_1_to_a_jammed		     = aks74u_firemode_1_to_a, aks74u_firemode_1_to_a_jammed
+lock_time_anm_changefiremode_from_1_to_a_empty = 1.17
+anm_changefiremode_from_1_to_a_empty		     = aks74u_firemode_1_to_a
+
+
+;a-1
+lock_time_anm_changefiremode_from_a_to_1 = 1.17
+anm_changefiremode_from_a_to_1			     = aks74u_firemode_a_to_1
+lock_time_anm_changefiremode_from_a_to_1_jammed = 1.17
+anm_changefiremode_from_a_to_1_jammed		     = aks74u_firemode_a_to_1, aks74u_firemode_a_to_1_jammed
+lock_time_anm_changefiremode_from_a_to_1_empty = 1.17
+anm_changefiremode_from_a_to_1_empty		     = aks74u_firemode_a_to_1
+
+
+
+
+;��������//////////////////////////////////////////////////////////////////////////
+use_unloadmag_anim = true
+lock_time_anm_unload_mag = 0.8
+anm_unload_mag                               = aks74u_draw
+lock_time_anm_unload_mag_jammed = 0.8
+anm_unload_mag_jammed                        = aks74u_draw  
+lock_time_anm_unload_mag_empty = 0.8
+anm_unload_mag_empty                         = aks74u_draw
+
+;��������� ���//////////////////////////////////////////////////////////////////////////
+anm_laser_on = aks74u_lam
+lock_time_start_anm_laser_on = 0.45
+lock_time_end_anm_laser_on = 0.65
+
+anm_laser_on_empty = aks74u_lam
+lock_time_start_anm_laser_on_empty = 0.45
+lock_time_end_anm_laser_on_empty = 0.65
+
+anm_laser_on_jammed = aks74u_lam, idle_jammed
+lock_time_start_anm_laser_on_jammed = 0.45
+lock_time_end_anm_laser_on_jammed = 0.65
+
+
+;���������� ���//////////////////////////////////////////////////////////////////////////
+anm_laser_off = aks74u_lam
+lock_time_start_anm_laser_off = 0.45
+lock_time_end_anm_laser_off = 0.65
+
+anm_laser_off_empty = aks74u_lam
+lock_time_start_anm_laser_off_empty = 0.45
+lock_time_end_anm_laser_off_empty = 0.65
+
+anm_laser_off_jammed = aks74u_lam, idle_jammed
+lock_time_start_anm_laser_off_jammed = 0.45
+lock_time_end_anm_laser_off_jammed = 0.65
+
+;��������� ������//////////////////////////////////////////////////////////////////////////
+anm_torch_on = aks74u_lam
+lock_time_start_anm_torch_on = 0.45
+lock_time_end_anm_torch_on = 0.65
+
+anm_torch_on_empty = aks74u_lam
+lock_time_start_anm_torch_on_empty = 0.45
+lock_time_end_anm_torch_on_empty = 0.65
+
+anm_torch_on_jammed = aks74u_lam, idle_jammed
+lock_time_start_anm_torch_on_jammed = 0.45
+lock_time_end_anm_torch_on_jammed = 0.65
+
+
+;���������� ������//////////////////////////////////////////////////////////////////////////
+anm_torch_off = aks74u_lam
+lock_time_start_anm_torch_off = 0.45
+lock_time_end_anm_torch_off = 0.65
+
+anm_torch_off_empty = aks74u_lam
+lock_time_start_anm_torch_off_empty = 0.45
+lock_time_end_anm_torch_off_empty = 0.65
+
+anm_torch_off_jammed = aks74u_lam, idle_jammed
+lock_time_start_anm_torch_off_jammed = 0.45
+lock_time_end_anm_torch_off_jammed = 0.65
+
+
+;��������� ���������//////////////////////////////////////////////////////////////////////////
+anm_headlamp_on = aks74u_headflash
+lock_time_start_anm_headlamp_on = 0.58
+lock_time_end_anm_headlamp_on = 0.5
+
+anm_headlamp_on_empty = aks74u_headflash
+lock_time_start_anm_headlamp_on_empty = 0.58
+lock_time_end_anm_headlamp_on_empty = 0.5
+
+anm_headlamp_on_jammed = aks74u_headflash, idle_jammed
+lock_time_start_anm_headlamp_on_jammed = 0.58
+lock_time_end_anm_headlamp_on_jammed = 0.5
+
+;���������� ���������//////////////////////////////////////////////////////////////////////////
+anm_headlamp_off = aks74u_headflash
+lock_time_start_anm_headlamp_off = 0.58
+lock_time_end_anm_headlamp_off = 0.5
+
+anm_headlamp_off_empty = aks74u_headflash
+lock_time_start_anm_headlamp_off_empty = 0.58
+lock_time_end_anm_headlamp_off_empty = 0.5
+
+anm_headlamp_off_jammed = aks74u_headflash, idle_jammed
+lock_time_start_anm_headlamp_off_jammed = 0.58
+lock_time_end_anm_headlamp_off_jammed = 0.5
+
+
+;��������� ���//////////////////////////////////////////////////////////////////////////
+anm_nv_on = aks74u_headflash
+anm_nv_on_empty = aks74u_headflash
+anm_nv_on_jammed = aks74u_headflash, idle_jammed
+
+
+;���������� ���//////////////////////////////////////////////////////////////////////////
+anm_nv_off = aks74u_headflash
+anm_nv_off_empty = aks74u_headflash
+anm_nv_off_jammed = aks74u_headflash, idle_jammed

@@ -1,0 +1,249 @@
+![wpn_wincheaster1300]: identity_immunities,weapon_probability,default_weapon_params
+GroupControlSection			= spawn_group
+$spawn                   	= "weapons\winchester1300"					; option for Level Editor
+$npc			 			= on				; option for Level Editor
+$prefetch 		 			= 8
+scheduled                	= off              ; option for ALife Simulator
+cform                    	= skeleton
+class                    	= WP_ASHTG
+description					= gunsl_wpn_wincheaster1300_descr
+
+ef_main_weapon_type			= 1
+ef_weapon_type				= 9
+
+kind                    = w_shotgun
+
+script_binding = bind_weapon.bind
+repair_group = w1300
+
+def_hide_bones = scope1, scope2, scope3, scope4, barrel_short, flash, laser, bolt_foregrip_rail, handler, stock, sight, sight_short, stock_tactical, magazine, rail
+def_show_bones = barrel, bolt_foregrip, magazine_short, handler
+
+ammo_in_chamber = true
+;----------------------------------------------------------------------------
+cost					 	= 2400
+weapon_class			 	        = shotgun
+inv_weight					= 3.06
+
+upgrades = 
+installed_upgrades = 
+upgrade_scheme = 
+
+banned_upgrades = 
+
+;--TTX----------------------------------------------------------------------------
+hit_power        		= 0.99, 0.99, 0.99, 0.99
+hit_impulse      		= 120
+hit_type 			= fire_wound
+fire_distance            	= 100
+bullet_speed			= 230		;��������� �������� ����
+rpm                      	= 85            ;60 = 1 �������
+rpm_empty_click 	   	= 200
+
+hud                      	= wpn_winchester1300_hud
+
+misfire_probability        = 0.005 ;����������� ������ ��� ������������ ������  !!!old - now not working
+;������������, ��� ������� ���������� ���� ������
+misfire_start_condition		= 0.7
+;����������� ��� ������� ���� ������ ���������� �����������
+misfire_end_condition		= 0.1
+;���� ������ ��� ����������� ������ ��� misfireStartCondition
+misfire_start_prob	     	= 0.002
+;���� ������ ��� ����������� ������ ��� misfireEndCondition
+misfire_end_prob	     	= 0.25
+;���������� ����������� ��� ��������� ��������
+condition_shot_dec      	= 0.0038
+;���������� ����������� ��� �������� ��������
+condition_queue_shot_dec	= 0.0035
+
+tri_state_reload			= on
+
+ammo_elapsed		 		= 5
+ammo_mag_size		 		= 5
+ammo_class		 			= ammo_12x70_buck, ammo_12x76_zhekan
+fire_modes					= 1
+
+;--���������----------------------------------------------------------------------------
+;������� ���������
+fire_dispersion_base		= 0.3  ;���� (� ��������) ������� ��������� ������ (������ �������� � ������)
+control_inertion_factor		= 1.3f
+crosshair_inertion			= 6.85
+
+;������
+cam_return				= 0
+cam_relax_speed         = 10	;�������� �������� � �������� ���������
+cam_relax_speed_ai      = 360
+cam_dispersion          = 5.1	;���������� ���� (� ��������) � ������ ���������
+cam_dispersion_inc		= 2.4	;���������e cam_dispersion � ������ ���������
+cam_dispersion_frac		= 0.7
+cam_max_angle			= 15.0	;������������ ���� ������
+cam_max_angle_horz		= 15.0	;(degree) maximum shot horizontal degree
+cam_step_angle_horz		= 3.0	;(degree) size of step camera moved in horizontal position while shooting
+
+PDM_disp_base 				= 2.8
+PDM_disp_vel_factor 		= 2.0
+PDM_disp_accel_factor 		= 2.0
+PDM_disp_crouch	 				= 1.0
+PDM_disp_crouch_no_acc 			= 1.0
+
+zoom_cam_relax_speed		= 10     ; scope & ironsight
+zoom_cam_relax_speed_ai		= 120.75
+zoom_cam_dispersion			= 3.5
+zoom_cam_dispersion_inc		= 2.9
+zoom_cam_dispersion_frac	= 0.7
+zoom_cam_max_angle			= 15.0
+zoom_cam_max_angle_horz		= 15.0
+zoom_cam_step_angle_horz	= 3.0
+
+fire_dispersion_condition_factor = 2.5	;���������� ��������� � ��������� ��� ������������ ������
+
+;---DOF-------------------------------------------------------------------------
+zoom_dof					= 0.5, 1.0, 180
+;reload_dof           = 0.0, 0.5, 5, 1.7
+;-------------------------------------------------------------------------------
+holder_range_modifier	= 1.0               ; �� ������� ��� ������������� eye_range
+holder_fov_modifier		= 1.0              ; �� ������� ��� ������������� eye_fov
+
+min_radius               	= 0
+max_radius               	= 30
+
+hit_probability_gd_novice	= 0.70
+hit_probability_gd_stalker	= 0.70
+hit_probability_gd_veteran	= 0.70
+hit_probability_gd_master	= 0.70
+
+;-------------------------------------------------------------------------------
+position                 	= -0.024, -0.097, 0.
+orientation              	= 0, -4, 0      ;�������� ��������������� � ��������
+
+shell_point				= 0.0, 0.180, 0.647
+shell_particles         = weapons\generic_shells_shotgun_r
+
+fire_point              = 0.0, 0.158, 0.647
+fire_point2				= 0.0, 0.158, 0.647
+hand_dependence 	 		= 1
+single_handed				= 0
+
+slot 				 		= 2		; // secondary
+animation_slot		 		= 9		; type of the animation that will be used
+
+inv_name					= gunsl_wpn_wincheaster1300
+inv_name_short				= gunsl_wpn_wincheaster1300
+icons_texture               = ui\ui_icon_equipment_guns
+inv_grid_width				= 5
+inv_grid_height				= 2
+inv_grid_x					= 20
+inv_grid_y					= 0
+
+upgr_icon_x			= 988
+upgr_icon_y			= 969
+upgr_icon_width		= 236
+upgr_icon_height   	= 53
+
+kill_msg_x			= 171
+kill_msg_y			= 104
+kill_msg_width		= 75
+kill_msg_height		= 20
+
+flame_particles		   	= weapons\generic_weapon05
+smoke_particles		   	= weapons\generic_shoot_00
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+;��� ������
+strap_position         		= -0.26,-0.10,0.05			; position (offset) and orientation of the weapon when it is strapped
+strap_orientation      		= -15,-9,110				; (3rd person view in degrees)
+strap_bone0					= bip01_spine2
+strap_bone1					= bip01_spine1
+
+startup_ammo             	= 10
+visual                          = dynamics\weapons\wpn_winchester1300\wpn_winchester1300.ogf
+
+light_color		 			= 0.6,0.5,0.3
+light_range		 			= 6.0
+light_var_color		 		= 0.05
+light_var_range		 		= 0.5
+light_time 		 			= 0.2
+
+ph_mass			 			= 3
+
+;addons
+scope_status			= 0
+silencer_status			= 2
+grenade_launcher_status		= 0
+
+
+silencer_name  = wpn_silencer_hexagon12    
+silencer_x = 200
+silencer_y  = 18
+silencer_light_color    = 0.6,0.5,0.3
+silencer_light_range    = 0.01
+silencer_light_var_color= 0.05
+silencer_light_var_range= 0.01
+silencer_light_time     = 0.01
+snd_silncer_shot        = weapons\winchester1300\winchester1300_shoot_silencer, -1.1
+silencer_smoke_particles   = weapons\generic_shoot_00
+
+scopes_sect		= scope_eotech_winchester1300, scope_aimpoint_winchester1300, scope_elcan_winchester1300, scope_pn23_winchester1300
+
+zoom_enabled            = true                                               
+zoom_rotate_time	= 0.25
+scope_zoom_factor	= 0
+ironsight_zoom_factor   = 0
+
+;�����
+snd_draw		    = weapons\winchester1300\winchester1300_draw
+snd_holster		    = weapons\winchester1300\winchester1300_hide
+snd_shoot		    = weapons\winchester1300\winchester1300_shoot, -1.1
+snd_breechblock = weapons\winchester1300\winchester1300_pump
+snd_jam = weapons\winchester1300\winchester1300_pump_jammed
+snd_jammed_click			= weapons\winchester1300\winchester1300_check
+
+snd_empty		    = weapons\glock17\glock17_dry
+snd_reload		    = weapons\winchester1300\winchester1300_reload_start
+snd_reload_jammed       = weapons\winchester1300\winchester1300_revival
+snd_reload_jammed_last  = weapons\winchester1300\winchester1300_revival
+snd_shoot_duplet	    = weapons\winchester1300\winchester1300_shoot, -1.1
+snd_changecartridgetype     = weapons\winchester1300\winchester1300_reload_start
+snd_open_weapon             = weapons\winchester1300\winchester1300_reload_start
+snd_open_weapon_empty       = weapons\winchester1300\winchester1300_reload_empty_start
+snd_add_cartridge	    = weapons\winchester1300\winchester1300_reload_ammo
+snd_add_cartridge_empty     = weapons\winchester1300\winchester1300_reload_ammo
+snd_add_cartridge_preloaded = weapons\winchester1300\winchester1300_reload_empty_second_ammo
+snd_close_weapon            = weapons\winchester1300\winchester1300_reload_end
+snd_close_weapon_empty      = weapons\winchester1300\winchester1300_reload_end
+snd_close_weapon_preloaded  = weapons\winchester1300\winchester1300_reload_end
+snd_aim_start           = weapons\vss\vss_aim_start
+snd_aim_end             = weapons\vss\vss_aim_end
+snd_sprint_start        = weapons\detector_prepare
+snd_sprint_end          = weapons\pistol_sprint_end
+snd_suicide	        = weapons\suicide_start
+snd_stop_suicide	= weapons\suicide_end
+snd_laser_on	        = weapons\vss\vss_firemode
+snd_laser_off	        = weapons\vss\vss_firemode
+snd_torch_on	        = weapons\vss\vss_firemode
+snd_torch_off	        = weapons\vss\vss_firemode
+snd_headlamp_on         = weapons\headflash_on
+snd_headlamp_off        = weapons\headflash_off
+snd_nv_on               = weapons\nv_act
+snd_nv_off              = weapons\nv_deact
+
+snd_scope_brightness_plus = weapons\nv_intensity
+snd_scope_brightness_minus = weapons\nv_intensity
+
+use_world_anims=true
+
+wanm_idle = idle
+wanm_idle_empty = idle
+wanm_idle_jammed = idle_jammed
+
+wanm_shoot = shoot
+wanm_shoot_jammed = idle_jammed
+
+
+wanm_shoot_last = shoot
+wanm_shoot_last_jammed = idle_jammed
+
+
+wanm_reload = idle
+wanm_reload_empty = idle
+wanm_reload_jammed = idle

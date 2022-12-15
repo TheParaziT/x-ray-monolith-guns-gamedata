@@ -1,0 +1,346 @@
+;------------------------------------------bm16_accurate_stock------------------------------------------
+[up_sect_bm16_accurate_stock]
+cost = 700
+value = -10
+inv_weight = +0.2
+cam_dispersion = -1.0
+cam_step_angle_horz = -0.3
+zoom_cam_dispersion = -1.0
+zoom_cam_dispersion_inc = -1
+zoom_cam_step_angle_horz = -0.4
+
+PDM_disp_base 	 = -0.5
+PDM_disp_vel_factor = -0.2
+
+[up_bm16_accurate_stock]
+scheme_index = 0, 0
+known = 1
+effects = vartree_bm16_tsevie
+section = up_sect_bm16_accurate_stock
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bm16_up_accurate_stock_name
+description =gunsl_bm16_up_accurate_stock_descr
+icon = ui_gunsl_up_bm16_accurate_stock
+;------------------------------------------bm16_short_stock------------------------------------------
+[up_sect_bm16_short_stock]
+cost = 500
+inv_weight = -0.5
+cam_dispersion = 4
+cam_step_angle_horz = 3
+zoom_cam_dispersion = 2
+zoom_cam_dispersion_inc = 1
+zoom_cam_step_angle_horz = 4
+show_bones = stock_short
+hide_bones = stock
+actor_camera_speed_factor = 1.1
+PDM_disp_base = 1.2
+inv_grid_y = +2
+
+[up_bm16_short_stock]
+scheme_index = 0, 1
+known = 1
+effects = vartree_bm16_tsevie
+section = up_sect_bm16_short_stock
+property = prop_shortstock
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bm16_up_short_stock_name
+description =gunsl_bm16_up_short_stock_descr
+icon = ui_gunsl_up_bm16_short_stock
+;------------------------------------------bm16_sights------------------------------------------
+[up_sect_bm16_sights]
+cost = 300
+value = 5
+crosshair_inertion = -0.3
+control_inertion_factor = -0.1
+show_bones = sight
+
+[up_bm16_sights]
+scheme_index = 0, 2
+known = 1
+effects = vartree_bm16_dovodka
+section = up_sect_bm16_sights
+property = prop_inertion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bm16_up_sights_name
+description =gunsl_bm16_up_sights_descr
+icon = ui_gunsl_up_bm16_sights
+;------------------------------------------bm16_short_barrel------------------------------------------
+[up_sect_bm16_short_barrel]
+cost = 700
+inv_weight = -0.7
+fire_dispersion_base = +0.175
+control_inertion_factor = -1.1
+crosshair_inertion = -4
+bullet_speed = -100
+fire_distance = -50
+actor_camera_speed_factor = 1.5
+show_bones = barrel_short
+hide_bones = barrel
+flame_particles = weapons\generic_weapon05
+inv_grid_x = +6
+
+[up_bm16_short_barrel]
+scheme_index = 0, 3
+known = 1
+effects = vartree_bm16_dovodka
+section = up_sect_bm16_short_barrel
+property = prop_shortbarrel
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bm16_up_short_barrel_name
+description =gunsl_bm16_up_short_barrel_descr
+icon = ui_gunsl_up_bm16_short_barrel
+;------------------------------------------bm16_calibration------------------------------------------
+[up_sect_bm16_calibration]
+cost = 2500
+value = 20
+fire_dispersion_base = -0.03
+cam_dispersion = -1
+zoom_cam_dispersion = -0.3
+PDM_disp_vel_factor  = -0.1
+PDM_disp_base = -0.2
+
+[up_bm16_calibration]
+scheme_index = 0, 4
+known = 1
+effects = 
+section = up_sect_bm16_calibration
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bm16_up_calibration_name
+description =gunsl_bm16_up_calibration_descr
+icon = ui_gunsl_up_bm16_calibration
+;------------------------------------------bm16_barrel_dovodka------------------------------------------
+[up_sect_bm16_barrel_dovodka]
+cost = 1200
+value = 20
+bullet_speed = 50
+hit_impulse    = +10
+condition_shot_dec = -0.005
+condition_shot_dec = -0.005
+
+[up_bm16_barrel_dovodka]
+scheme_index = 0, 5
+known = 1
+effects = vartree_bm16_barrel_inside
+section = up_sect_bm16_barrel_dovodka
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bm16_up_barrel_dovodka_name
+description =gunsl_bm16_up_barrel_dovodka_descr
+icon = ui_gunsl_up_bm16_barrel_dovodka
+;------------------------------------------bm16_light_tsevie------------------------------------------
+[up_sect_bm16_light_tsevie]
+cost = 1000
+value = -0.3
+inv_weight = -0.3
+control_inertion_factor = -0.5
+crosshair_inertion = -1
+
+[up_bm16_light_tsevie]
+scheme_index = 0, 6
+known = 1
+effects = vartree_bm16_calibration
+section = up_sect_bm16_light_tsevie
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bm16_up_light_tsevie_name
+description =gunsl_bm16_up_light_tsevie_descr
+icon = ui_gunsl_up_bm16_light_tsevie
+;------------------------------------------bm16_sharnir------------------------------------------
+[up_sect_bm16_sharnir]
+cost = 1100
+value = 10
+misfire_start_prob = -0.001
+misfire_end_prob = -0.01
+condition_shot_dec      	= -0.003
+condition_queue_shot_dec	= -0.003
+misfire_start_condition = -0.1
+misfire_end_condition = -0.05
+misfire_start_prob = -0.003
+misfire_end_prob = -0.03
+
+[up_bm16_sharnir]
+scheme_index = 0, 7
+known = 1
+effects = vartree_bm16_korobka
+section = up_sect_bm16_sharnir
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bm16_up_sharnir_name
+description =gunsl_bm16_up_sharnir_descr
+icon = ui_gunsl_up_bm16_sharnir
+;------------------------------------------bm16_kurki------------------------------------------
+[up_sect_bm16_kurki]
+cost = 300
+value = 10
+misfire_start_condition = -0.1
+misfire_end_condition = -0.05
+misfire_start_prob = -0.003
+misfire_end_prob = -0.03
+
+[up_bm16_kurki]
+scheme_index = 0, 8
+known = 1
+effects = vartree_bm16_sharnir
+section = up_sect_bm16_kurki
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bm16_up_kurki_name
+description =gunsl_bm16_up_kurki_descr
+icon = ui_gunsl_up_bm16_kurki
+;------------------------------------------bm16_korobka------------------------------------------
+[up_sect_bm16_korobka]
+cost = 2500
+value = 20
+fire_dispersion_base = -0.01
+cam_dispersion = -0.5
+cam_dispersion_inc = -0.5
+cam_dispersion_frac = -0.2
+zoom_cam_dispersion         = -0.3
+zoom_cam_dispersion_inc     = -0.4
+zoom_cam_dispersion_frac    = -0.1
+PDM_disp_base = -0.3
+
+[up_bm16_korobka]
+scheme_index = 0, 9
+known = 1
+effects = 
+section = up_sect_bm16_korobka
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bm16_up_korobka_name
+description =gunsl_bm16_up_korobka_descr
+icon = ui_gunsl_up_bm16_korobka
+;------------------------------------------bm16_barrel_narezka------------------------------------------
+[up_sect_bm16_barrel_narezka]
+cost = 3000
+value = +30
+bullet_speed = 100
+condition_queue_shot_dec = 0.002
+condition_shot_dec = 0.002
+fire_dispersion_base = -0.06
+ammo_class = ammo_12x76_zhekan
+hit_impulse    = +25
+PDM_disp_base = -0.1
+hit_power       = 1.1, 1.1, 1.1, 1.1
+hud = wpn_bm16_hud_inverted_ammotypes
+
+[up_bm16_barrel_narezka]
+scheme_index = 0, 10
+known = 1
+effects = 
+section = up_sect_bm16_barrel_narezka
+property = prop_dispersion, prop_no_buck
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bm16_up_barrel_narezka_name
+description =gunsl_bm16_up_barrel_narezka_descr
+icon = ui_gunsl_up_bm16_barrel_narezka
+;------------------------------------------bm16_barrel_break_speed------------------------------------------
+[up_sect_bm16_barrel_break_speed]
+cost = 2000
+value = 10
+condition_shot_dec      	= -0.005
+condition_queue_shot_dec	= -0.005
+
+[up_bm16_barrel_break_speed]
+scheme_index = 0, 11
+known = 1
+effects = 
+section = up_sect_bm16_barrel_break_speed
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_bm16_up_barrel_break_speed_name
+description =gunsl_bm16_up_barrel_break_speed_descr
+icon = ui_gunsl_up_bm16_barrel_break_speed
+;------------------------------------------------------------------------------------
+[vartree_bm16_barrel]
+elements = up_bm16_sights, up_bm16_short_barrel
+[vartree_bm16_stock]
+elements = up_bm16_accurate_stock, up_bm16_short_stock
+[vartree_bm16_dovodka]
+elements = up_bm16_barrel_dovodka
+[vartree_bm16_tsevie]
+elements = up_bm16_light_tsevie
+[vartree_bm16_calibration]
+elements = up_bm16_calibration
+[vartree_bm16_kurki]
+elements = up_bm16_kurki
+[vartree_bm16_sharnir]
+elements = up_bm16_sharnir
+[vartree_bm16_korobka]
+elements = up_bm16_korobka
+[vartree_bm16_barrel_inside]
+elements = up_bm16_barrel_narezka, up_bm16_barrel_break_speed

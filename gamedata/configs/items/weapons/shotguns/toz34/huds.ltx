@@ -1,0 +1,635 @@
+[wpn_toz34_hud]:default_hud
+
+zoom_dof_near = 0.25
+zoom_dof_focus = 0.5
+
+;������
+hud_move_jump_offset_pos = 0,0.0,0.03
+hud_move_jump_offset_pos_16x9 = 0,0.0,0.03
+
+;�������
+hud_move_fall_offset_pos = 0,0.0,0.06
+hud_move_fall_offset_pos_16x9 = 0,0.0,0.06
+
+;����������� - ������ ����
+hud_move_landing_offset_pos = 0,-0.2,0.03
+hud_move_landing_offset_pos_16x9 = 0,-0.15,0.03
+
+additional_ammo_bone_when_jammed = false
+
+hud_fov_factor = 1.25
+
+ammo_params_toggle_shooting = false			; ��������� ��������� �������� ��� ���������; ��� ���������� �������� false, ��� �������� � ���������� ��������� true
+ammo_params_changing_when_reload_starts = false 	; ����� ��������� ����� ��� �����������: ���� ����� ����� ������ �����, ��������� true, ���� � ��������, ������ �� ��������� - false (������ ��� ��������)
+ammo_params_use_last_cartridge_type = true		; ����� �� �������������� ��� ���������� ������� (true) ��� ���, ������� ������ ��������; ������ true � �� �������
+ammo_params_section_0 = wpn_toz34_ammo_bones_blue
+ammo_params_section_1 = wpn_toz34_ammo_bones_red
+
+inertion_aim_default_origin_offset = 0.025
+inertion_aim_default_speed = 8
+
+zoom_hide_crosshair				= true
+
+hands_position				= 0.01,-0.032,0.045
+hands_orientation			= 0.0,0.0,0.0
+
+hands_position_16x9			= 0.01,-0.032,0.045
+hands_orientation_16x9			= 0.0,0.0,0.0
+
+item_position				= 0.0,0.0,0.0
+item_orientation			= 0.0,0.0,0.0
+
+aim_hud_offset_pos = -0.010000,0.019000,0.0
+aim_hud_offset_rot = -0.006000,0.000000,0.000000
+
+aim_hud_offset_pos_16x9 = -0.010000,0.018000,0.0
+aim_hud_offset_rot_16x9 = -0.006000,0.000000,0.000000
+
+gl_hud_offset_pos_16x9     = 0,0,0
+gl_hud_offset_rot_16x9     = 0,0,0
+
+shell_point		      = 0, 0.01, 0.443
+shell_dir                     = 0.0, 1.0, 0.0
+shell_bone		      = wpn_body
+
+fire_point		      = 0, 0.01, 0.443
+fire_bone                     = wpn_body
+
+attach_place_idx	      = 0
+item_visual                   = dynamics\weapons\wpn_toz34\wpn_toz34_hud.ogf
+
+disable_bore = true                                            ;���������� �������� �����
+mix_shoot_after_idle = true                                    ;���� ������� �������� � ���������� idle
+no_jam_fire = true                                             ;������ ��� ��������
+
+use_advanced_ammo_bones = true
+ammo_params_section = wpn_toz34_ammo_bones
+
+
+lock_time_start_anm_reload = 1.7
+lock_time_end_anm_reload = 2.30
+
+lock_time_start_anm_reload_1 = 1.7
+lock_time_end_anm_reload_1 = 2.30
+
+lock_time_start_anm_reload_2 = 1.7
+lock_time_end_anm_reload_2 = 2.30
+
+lock_time_start_anm_reload_only_0 = 1.7
+lock_time_end_anm_reload_only_0 = 2.30
+
+lock_time_start_anm_reload_0 = 1.7
+lock_time_end_anm_reload_0 = 3.10
+
+lock_time_start_anm_reload_ammochange_1 = 1.7
+lock_time_end_anm_reload_ammochange_1 = 2.30
+
+lock_time_start_anm_reload_ammochange_2 = 1.7
+lock_time_end_anm_reload_ammochange_2 = 2.30
+
+lock_time_start_anm_reload_ammochange_only_1 = 1.7
+lock_time_end_anm_reload_ammochange_only_1 = 3.10
+
+lock_time_start_anm_reload_ammochange_only_2 = 1.7
+lock_time_end_anm_reload_ammochange_only_2 = 2.30
+
+lock_time_start_anm_reload_only_ammochange_0 = 1.7
+lock_time_end_anm_reload_only_ammochange_0 = 2.30
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+prohibit_suicide = false		;�������� ������
+suicide_by_animation=true		;����� �������� ����� �������� ��������
+custom_suicide_shot = true		; ����������, ��� ���������� ������ �������� ����������������� ��������
+
+anm_suicide_1			= toz34_suicide
+lock_time_anm_suicide_1 	= 7.37
+anm_stop_suicide_1		= toz34_suicide_end
+lock_time_anm_stop_suicide_1 	= 1.37
+anm_suicide_2			= toz34_suicide
+lock_time_anm_suicide_2 	= 7.37
+anm_stop_suicide_2		= toz34_suicide_end
+lock_time_anm_stop_suicide_2 	= 1.37
+suicide_delay = 0.25 ;0.5
+
+anm_shoot_suicide_1              = toz34_suicide_shoot
+anm_shoot_suicide_2              = toz34_suicide_shoot
+
+hud_move_suicide_offset_pos = 0, 0, 0
+hud_move_suicide_offset_rot = 0,0,0
+
+hud_move_suicide_offset_pos_16x9 = 0, 0, 0
+hud_move_suicide_offset_rot_16x9 = 0,0,0
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+anm_show_0                    = toz34_draw
+anm_show_1                    = toz34_draw
+anm_show_2                    = toz34_draw
+anm_show_jammed_0             = toz34_draw
+anm_show_jammed_1             = toz34_draw
+anm_show_jammed_2             = toz34_draw
+
+anm_hide_0		      = toz34_hide
+anm_hide_1		      = toz34_hide
+anm_hide_2		      = toz34_hide
+anm_hide_jammed_0             = toz34_hide
+anm_hide_jammed_1	      = toz34_hide
+anm_hide_jammed_2	      = toz34_hide
+
+
+anm_idle_0		      = toz34_idle
+anm_idle_1		      = toz34_idle
+anm_idle_2		      = toz34_idle
+anm_idle_jammed_0	      = toz34_idle
+anm_idle_jammed_1	      = toz34_idle
+anm_idle_jammed_2	      = toz34_idle
+anm_idle_crouch_0             = toz34_idle
+anm_idle_crouch_slow_0        = toz34_idle
+anm_idle_slow_0               = toz34_idle
+anm_idle_crouch_1             = toz34_idle
+anm_idle_crouch_slow_1        = toz34_idle
+anm_idle_slow_1               = toz34_idle
+anm_idle_crouch_2             = toz34_idle
+anm_idle_crouch_slow_2        = toz34_idle
+anm_idle_slow_2               = toz34_idle
+anm_idle_crouch_jammed_0      = toz34_idle
+anm_idle_crouch_slow_jammed_0 = toz34_idle
+anm_idle_slow_jammed_0        = toz34_idle
+anm_idle_crouch_jammed_1      = toz34_idle
+anm_idle_crouch_slow_jammed_1 = toz34_idle
+anm_idle_slow_jammed_1        = toz34_idle
+anm_idle_crouch_jammed_2      = toz34_idle
+anm_idle_crouch_slow_jammed_2 = toz34_idle
+anm_idle_slow_jammed_2        = toz34_idle
+
+
+
+autoshoot_anm_idle_aim_start_0 = true  
+autoshoot_anm_idle_aim_start_1 = true
+autoshoot_anm_idle_aim_start_2 = true
+autoshoot_anm_idle_aim_start_jammed_0 = true
+autoshoot_anm_idle_aim_start_jammed_1 = true
+autoshoot_anm_idle_aim_start_jammed_2 = true       
+lock_time_anm_idle_aim_start_0 = 0.2 
+lock_time_anm_idle_aim_start_1 = 0.2 
+lock_time_anm_idle_aim_start_2 = 0.2 
+lock_time_anm_idle_aim_start_jammed_0 = 0.2 
+lock_time_anm_idle_aim_start_jammed_1 = 0.2 
+lock_time_anm_idle_aim_start_jammed_2 = 0.2         
+
+anm_idle_aim_start_0	      = toz34_aim_start
+anm_idle_aim_start_1	      = toz34_aim_start
+anm_idle_aim_start_2	      = toz34_aim_start
+anm_idle_aim_start_jammed_0   = toz34_aim_start
+anm_idle_aim_start_jammed_1   = toz34_aim_start
+anm_idle_aim_start_jammed_2   = toz34_aim_start
+
+anm_idle_aim_0	              = toz34_aim
+anm_idle_aim_1		      = toz34_aim
+anm_idle_aim_2		      = toz34_aim
+anm_idle_aim_jammed_0	      = toz34_aim
+anm_idle_aim_jammed_1         = toz34_aim
+anm_idle_aim_jammed_2	      = toz34_aim
+
+anm_idle_aim_scope_0	              = toz34_aim
+anm_idle_aim_scope_1		      = toz34_aim
+anm_idle_aim_scope_2		      = toz34_aim
+anm_idle_aim_scope_jammed_0	      = toz34_aim
+anm_idle_aim_scope_jammed_1         = toz34_aim
+anm_idle_aim_scope_jammed_2	      = toz34_aim
+
+autoshoot_anm_idle_aim_end_0 = true  
+autoshoot_anm_idle_aim_end_1 = true
+autoshoot_anm_idle_aim_end_2 = true
+autoshoot_anm_idle_aim_end_jammed_0 = true
+autoshoot_anm_idle_aim_end_jammed_1 = true
+autoshoot_anm_idle_aim_end_jammed_2 = true       
+lock_time_anm_idle_aim_end_0 = 0.25 
+lock_time_anm_idle_aim_end_1 = 0.25 
+lock_time_anm_idle_aim_end_2 = 0.25 
+lock_time_anm_idle_aim_end_jammed_0 = 0.25 
+lock_time_anm_idle_aim_end_jammed_1 = 0.25 
+lock_time_anm_idle_aim_end_jammed_2 = 0.25      
+
+anm_idle_aim_end_0	      = toz34_aim_end
+anm_idle_aim_end_1            = toz34_aim_end
+anm_idle_aim_end_2	      = toz34_aim_end
+anm_idle_aim_end_jammed_0     = toz34_aim_end
+anm_idle_aim_end_jammed_1     = toz34_aim_end
+anm_idle_aim_end_jammed_2     = toz34_aim_end
+
+;enable_directions_anm_idle = true
+enable_directions_anm_idle_aim = true
+
+anm_idle_moving_0		     = toz34_walk
+anm_idle_moving_1		     = toz34_walk
+anm_idle_moving_2		     = toz34_walk
+anm_idle_moving_jammed_0             = toz34_walk
+anm_idle_moving_jammed_1             = toz34_walk
+anm_idle_moving_jammed_2	     = toz34_walk
+anm_idle_moving_crouch_0             = toz34_slow_down
+anm_idle_moving_crouch_slow_0        = toz34_slow_super
+anm_idle_moving_slow_0               = toz34_slow
+anm_idle_moving_crouch_1             = toz34_slow_down
+anm_idle_moving_crouch_slow_1        = toz34_slow_super
+anm_idle_moving_slow_1               = toz34_slow
+anm_idle_moving_crouch_2             = toz34_slow_down
+anm_idle_moving_crouch_slow_2        = toz34_slow_super
+anm_idle_moving_slow_2               = toz34_slow
+anm_idle_moving_crouch_jammed_0      = toz34_slow_down
+anm_idle_moving_crouch_slow_jammed_0 = toz34_slow_super
+anm_idle_moving_slow_jammed_0        = toz34_slow
+anm_idle_moving_crouch_jammed_1      = toz34_slow_down
+anm_idle_moving_crouch_slow_jammed_1 = toz34_slow_super
+anm_idle_moving_slow_jammed_1        = toz34_slow
+anm_idle_moving_crouch_jammed_2      = toz34_slow_down
+anm_idle_moving_crouch_slow_jammed_2 = toz34_slow_super
+anm_idle_moving_slow_jammed_2        = toz34_slow
+
+;������ � ������������ ������//////////////////////////////////////////////////////////////////
+anm_idle_aim_moving_forward_0                   = toz34_aim_walk
+anm_idle_aim_moving_forward_1                   = toz34_aim_walk
+anm_idle_aim_moving_forward_2                   = toz34_aim_walk
+anm_idle_aim_moving_forward_jammed_0            = toz34_aim_walk
+anm_idle_aim_moving_forward_jammed_1            = toz34_aim_walk
+anm_idle_aim_moving_forward_jammed_2            = toz34_aim_walk
+
+;������ � ������������ �����//////////////////////////////////////////////////////////////////
+anm_idle_aim_moving_back_0                   = toz34_aim_walk
+anm_idle_aim_moving_back_1                   = toz34_aim_walk
+anm_idle_aim_moving_back_2                   = toz34_aim_walk
+anm_idle_aim_moving_back_jammed_0            = toz34_aim_walk
+anm_idle_aim_moving_back_jammed_1            = toz34_aim_walk
+anm_idle_aim_moving_back_jammed_2            = toz34_aim_walk
+
+;������ � ������������ �����//////////////////////////////////////////////////////////////////
+anm_idle_aim_moving_left_0                   = toz34_aim_walk_left
+anm_idle_aim_moving_left_1                   = toz34_aim_walk_left
+anm_idle_aim_moving_left_2                   = toz34_aim_walk_left
+anm_idle_aim_moving_left_jammed_0            = toz34_aim_walk_left
+anm_idle_aim_moving_left_jammed_1            = toz34_aim_walk_left
+anm_idle_aim_moving_left_jammed_2            = toz34_aim_walk_left
+
+;������ � ������������ ������//////////////////////////////////////////////////////////////////
+anm_idle_aim_moving_right_0                   = toz34_aim_walk_right
+anm_idle_aim_moving_right_1                   = toz34_aim_walk_right
+anm_idle_aim_moving_right_2                   = toz34_aim_walk_right
+anm_idle_aim_moving_right_jammed_0            = toz34_aim_walk_right
+anm_idle_aim_moving_right_jammed_1            = toz34_aim_walk_right
+anm_idle_aim_moving_right_jammed_2            = toz34_aim_walk_right
+
+;������ � ������������ ������+�����////////////////////////////////////////////////////////////
+anm_idle_aim_moving_forward_left_0                   = toz34_aim_walk_left
+anm_idle_aim_moving_forward_left_1                   = toz34_aim_walk_left
+anm_idle_aim_moving_forward_left_2                   = toz34_aim_walk_left
+anm_idle_aim_moving_forward_left_jammed_0            = toz34_aim_walk_left
+anm_idle_aim_moving_forward_left_jammed_1            = toz34_aim_walk_left
+anm_idle_aim_moving_forward_left_jammed_2            = toz34_aim_walk_left
+
+;������ � ������������ ������+������///////////////////////////////////////////////////////////
+anm_idle_aim_moving_forward_right_0                   = toz34_aim_walk_right
+anm_idle_aim_moving_forward_right_1                   = toz34_aim_walk_right
+anm_idle_aim_moving_forward_right_2                   = toz34_aim_walk_right
+anm_idle_aim_moving_forward_right_jammed_0            = toz34_aim_walk_right
+anm_idle_aim_moving_forward_right_jammed_1            = toz34_aim_walk_right
+anm_idle_aim_moving_forward_right_jammed_2            = toz34_aim_walk_right
+
+;������ � ������������ �����+�����/////////////////////////////////////////////////////////////
+anm_idle_aim_moving_back_left_0                   = toz34_aim_walk_left
+anm_idle_aim_moving_back_left_1                   = toz34_aim_walk_left
+anm_idle_aim_moving_back_left_2                   = toz34_aim_walk_left
+anm_idle_aim_moving_back_left_jammed_0            = toz34_aim_walk_left
+anm_idle_aim_moving_back_left_jammed_1            = toz34_aim_walk_left
+anm_idle_aim_moving_back_left_jammed_2            = toz34_aim_walk_left
+
+;������ � ������������ �����+������////////////////////////////////////////////////////////////
+anm_idle_aim_moving_back_right_0                   = toz34_aim_walk_right
+anm_idle_aim_moving_back_right_1                   = toz34_aim_walk_right
+anm_idle_aim_moving_back_right_2                   = toz34_aim_walk_right
+anm_idle_aim_moving_back_right_jammed_0            = toz34_aim_walk_right
+anm_idle_aim_moving_back_right_jammed_1            = toz34_aim_walk_right
+anm_idle_aim_moving_back_right_jammed_2            = toz34_aim_walk_right
+
+;������ � ������������ ��� ������� �������////////////////////////////////////////////////////
+anm_idle_aim_scope_moving_0	              = toz34_aim_walk_scope, toz34_aim
+anm_idle_aim_scope_moving_1		      = toz34_aim_walk_scope, toz34_aim
+anm_idle_aim_scope_moving_2		      = toz34_aim_walk_scope, toz34_aim
+anm_idle_aim_scope_moving_jammed_0	      = toz34_aim_walk_scope, toz34_aim
+anm_idle_aim_scope_moving_jammed_1            = toz34_aim_walk_scope, toz34_aim
+anm_idle_aim_scope_moving_jammed_2	      = toz34_aim_walk_scope, toz34_aim
+
+
+
+lock_time_anm_idle_sprint_start_0 = 0.15
+lock_time_anm_idle_sprint_start_1 = 0.15
+lock_time_anm_idle_sprint_start_2 = 0.15
+lock_time_anm_idle_sprint_start_jammed_0 = 0.15
+lock_time_anm_idle_sprint_start_jammed_1 = 0.15
+lock_time_anm_idle_sprint_start_jammed_2 = 0.15
+anm_idle_sprint_start_0        = toz34_sprint_start
+anm_idle_sprint_start_1        = toz34_sprint_start
+anm_idle_sprint_start_2        = toz34_sprint_start
+anm_idle_sprint_start_jammed_0 = toz34_sprint_start
+anm_idle_sprint_start_jammed_1 = toz34_sprint_start
+anm_idle_sprint_start_jammed_2 = toz34_sprint_start
+
+anm_idle_sprint_0	       = toz34_sprint
+anm_idle_sprint_1	       = toz34_sprint
+anm_idle_sprint_2	       = toz34_sprint
+anm_idle_sprint_jammed_0       = toz34_sprint
+anm_idle_sprint_jammed_1       = toz34_sprint
+anm_idle_sprint_jammed_2       = toz34_sprint
+
+lock_time_anm_idle_sprint_end_0  = 0.35
+lock_time_anm_idle_sprint_end_1  = 0.35
+lock_time_anm_idle_sprint_end_2  = 0.35
+lock_time_anm_idle_sprint_end_jammed_0 = 0.35
+lock_time_anm_idle_sprint_end_jammed_1 = 0.35
+lock_time_anm_idle_sprint_end_jammed_2 = 0.35
+anm_idle_sprint_end_0          = toz34_sprint_end
+anm_idle_sprint_end_1          = toz34_sprint_end
+anm_idle_sprint_end_2          = toz34_sprint_end
+anm_idle_sprint_end_jammed_0   = toz34_sprint_end
+anm_idle_sprint_end_jammed_1   = toz34_sprint_end
+anm_idle_sprint_end_jammed_2   = toz34_sprint_end
+
+
+anm_reload				= toz34_reload_full
+anm_reload_0				= toz34_reload_full
+anm_reload_only_0		        = toz34_reload_last
+anm_reload_1				= toz34_reload
+anm_reload_2				= toz34_reload_full
+
+snd_anm_reload				= weapons\toz34\toz34_reload_full
+snd_anm_reload_0				= weapons\toz34\toz34_reload_full
+snd_anm_reload_only_0		        = weapons\toz34\toz34_reload
+snd_anm_reload_1				= weapons\toz34\toz34_reload
+snd_anm_reload_2				= weapons\toz34\toz34_reload_full
+
+
+anm_reload_ammochange_1			= toz34_reload_full
+anm_reload_ammochange_2			= toz34_reload_full
+
+snd_anm_reload_ammochange_1			= weapons\toz34\toz34_reload_full
+snd_anm_reload_ammochange_2			= weapons\toz34\toz34_reload_full
+
+anm_reload_ammochange_only_1			= toz34_reload_full
+anm_reload_ammochange_only_2			= toz34_reload_full
+anm_reload_only_ammochange_0			= toz34_reload_full
+
+snd_anm_reload_ammochange_only_1			= weapons\toz34\toz34_reload_full
+snd_anm_reload_ammochange_only_2			= weapons\toz34\toz34_reload_full
+snd_anm_reload_only_ammochange_0			= weapons\toz34\toz34_reload_full
+
+
+anm_reload_jammed_1			= toz34_revival
+anm_reload_jammed_2			= toz34_revival
+
+
+anm_shoot_1				= toz34_shoot
+anm_shoot_2				= toz34_shoot_last
+anm_shoot_jammed_1		        = toz34_dry_empty
+anm_shoot_jammed_2			= toz34_dry_empty
+anm_shoot_aim_1				= toz34_aim_shoot
+anm_shoot_aim_2				= toz34_aim_shoot
+anm_shoot_aim_jammed_1		        = toz34_aim_dry
+anm_shoot_aim_jammed_2			= toz34_aim_dry
+
+anm_shoot_aim_scope_1				= toz34_aim_shoot_scope, toz34_aim_shoot
+anm_shoot_aim_scope_2				= toz34_aim_shoot_scope, toz34_aim_shoot
+anm_shoot_aim_scope_jammed_1		        = toz34_aim_dry_scope, toz34_aim_dry
+anm_shoot_aim_scope_jammed_2			= toz34_aim_dry_scope, toz34_aim_dry
+
+;��������//////////////////////////////////////////////////////////////////////////
+use_unloadmag_anim = true
+lock_time_anm_unload_mag_0 = 0.8
+anm_unload_mag_0                                  = toz34_draw
+lock_time_anm_unload_mag_1 = 0.8
+anm_unload_mag_1                                  = toz34_draw
+lock_time_anm_unload_mag_2 = 0.8
+anm_unload_mag_2                                  = toz34_draw
+
+lock_time_anm_fakeshoot_0 = 0.20
+anm_fakeshoot_0				        = toz34_dry_empty
+lock_time_anm_fakeshoot_1 = 0.20
+anm_fakeshoot_1				        = toz34_dry_empty
+lock_time_anm_fakeshoot_2 = 0.20
+anm_fakeshoot_2				        = toz34_dry_empty
+lock_time_anm_fakeshoot_jammed_0 = 1.0
+anm_fakeshoot_jammed_0				= toz34_dry
+lock_time_anm_fakeshoot_jammed_1 = 1.0
+anm_fakeshoot_jammed_1				= toz34_dry
+lock_time_anm_fakeshoot_jammed_2 = 1.0
+anm_fakeshoot_jammed_2				= toz34_dry
+lock_time_anm_fakeshoot_aim_0 = 0.20
+anm_fakeshoot_aim_0				= toz34_aim_dry
+lock_time_anm_fakeshoot_aim_jammed_0 = 0.20
+anm_fakeshoot_aim_jammed_0			= toz34_aim_dry
+lock_time_anm_fakeshoot_aim_jammed_1 = 0.20
+anm_fakeshoot_aim_jammed_1			= toz34_aim_dry
+lock_time_anm_fakeshoot_aim_jammed_2 = 0.20
+anm_fakeshoot_aim_jammed_2			= toz34_aim_dry
+
+anm_bore_0								= toz34_reload
+anm_bore_1								= toz34_reload
+anm_bore_2                                                              = toz34_reload
+
+
+;��������� ���������//////////////////////////////////////////////////////////////////////////
+anm_headlamp_on_0 = toz34_headflash
+lock_time_start_anm_headlamp_on_0 = 0.58
+lock_time_end_anm_headlamp_on_0 = 0.5
+
+anm_headlamp_on_1 = toz34_headflash
+lock_time_start_anm_headlamp_on_1 = 0.58
+lock_time_end_anm_headlamp_on_1 = 0.5
+
+anm_headlamp_on_2 = toz34_headflash
+lock_time_start_anm_headlamp_on_2 = 0.58
+lock_time_end_anm_headlamp_on_2 = 0.5
+
+anm_headlamp_on_jammed_1 = toz34_headflash
+lock_time_start_anm_headlamp_on_jammed_1 = 0.58
+lock_time_end_anm_headlamp_on_jammed_1 = 0.5
+
+anm_headlamp_on_jammed_2 = toz34_headflash
+lock_time_start_anm_headlamp_on_jammed_2 = 0.58
+lock_time_end_anm_headlamp_on_jammed_2 = 0.5
+
+;���������� ���������//////////////////////////////////////////////////////////////////////////
+anm_headlamp_off_0 = toz34_headflash
+lock_time_start_anm_headlamp_off_0 = 0.58
+lock_time_end_anm_headlamp_off_0 = 0.5
+
+anm_headlamp_off_1 = toz34_headflash
+lock_time_start_anm_headlamp_off_1 = 0.58
+lock_time_end_anm_headlamp_off_1 = 0.5
+
+anm_headlamp_off_2 = toz34_headflash
+lock_time_start_anm_headlamp_off_2 = 0.58
+lock_time_end_anm_headlamp_off_2 = 0.5
+
+anm_headlamp_off_jammed_1 = toz34_headflash
+lock_time_start_anm_headlamp_off_jammed_1 = 0.58
+lock_time_end_anm_headlamp_off_jammed_1 = 0.5
+
+anm_headlamp_off_jammed_2 = toz34_headflash
+lock_time_start_anm_headlamp_off_jammed_2 = 0.58
+lock_time_end_anm_headlamp_off_jammed_2 = 0.5
+
+
+;��������� ���//////////////////////////////////////////////////////////////////////////
+anm_nv_on_0 = toz34_nv_on
+lock_time_start_anm_nv_on_0 = 0.58
+lock_time_end_anm_nv_on_0 = 0.5
+
+anm_nv_on_1 = toz34_nv_on
+lock_time_start_anm_nv_on_1 = 0.58
+lock_time_end_anm_nv_on_1 = 0.5
+
+anm_nv_on_2 = toz34_nv_on
+lock_time_start_anm_nv_on_2 = 0.58
+lock_time_end_anm_nv_on_2 = 0.5
+
+anm_nv_on_jammed_1 = toz34_nv_on
+lock_time_start_anm_nv_on_jammed_1 = 0.58
+lock_time_end_anm_nv_on_jammed_1 = 0.5
+
+anm_nv_on_jammed_2 = toz34_nv_on
+lock_time_start_anm_nv_on_jammed_2 = 0.58
+lock_time_end_anm_nv_on_jammed_2 = 0.5
+
+
+;���������� ���//////////////////////////////////////////////////////////////////////////
+anm_nv_off_0 = toz34_nv_off
+lock_time_start_anm_nv_off_0 = 0.58
+lock_time_end_anm_nv_off_0 = 0.5
+
+anm_nv_off_1 = toz34_nv_off
+lock_time_start_anm_nv_off_1 = 0.58
+lock_time_end_anm_nv_off_1 = 0.5
+
+anm_nv_off_2 = toz34_nv_off
+lock_time_start_anm_nv_off_2 = 0.58
+lock_time_end_anm_nv_off_2 = 0.5
+
+anm_nv_off_jammed_1 = toz34_nv_off
+lock_time_start_anm_nv_off_jammed_1 = 0.58
+lock_time_end_anm_nv_off_jammed_1 = 0.5
+
+anm_nv_off_jammed_2 = toz34_nv_off
+lock_time_start_anm_nv_off_jammed_2 = 0.58
+lock_time_end_anm_nv_off_jammed_2 = 0.5
+
+
+;��� � ���������� ������ ��� ���������
+
+mark_anm_nv_on = 0.55
+
+use_ppe_effector_anm_nv_on_0 = true
+ppe_effector_anm_nv_on_0 = black.ppe
+ppe_start_anm_nv_on_0 = 0.35
+ppe_end_anm_nv_on_0 = 0.6
+lock_time_start_anm_nv_on_0 = 0.55
+lock_time_end_anm_nv_on_0 = 0.75
+
+use_ppe_effector_anm_nv_on_1 = true
+ppe_effector_anm_nv_on_1 = black.ppe
+ppe_start_anm_nv_on_1 = 0.35
+ppe_end_anm_nv_on_1 = 0.6
+lock_time_start_anm_nv_on_1 = 0.55
+lock_time_end_anm_nv_on_1 = 0.75
+
+use_ppe_effector_anm_nv_on_2 = true
+ppe_effector_anm_nv_on_2 = black.ppe
+ppe_start_anm_nv_on_2 = 0.35
+ppe_end_anm_nv_on_2 = 0.6
+lock_time_start_anm_nv_on_2 = 0.55
+lock_time_end_anm_nv_on_2 = 0.75
+
+use_ppe_effector_anm_nv_on_jammed_1 = true
+ppe_effector_anm_nv_on_jammed_1 = black.ppe
+ppe_start_anm_nv_on_jammed_1 = 0.35
+ppe_end_anm_nv_on_jammed_1 = 0.6
+lock_time_start_anm_nv_on_jammed_1 = 0.55
+lock_time_end_anm_nv_on_jammed_1 = 0.75
+
+use_ppe_effector_anm_nv_on_jammed_2 = true
+ppe_effector_anm_nv_on_jammed_2 = black.ppe
+ppe_start_anm_nv_on_jammed_2 = 0.35
+ppe_end_anm_nv_on_jammed_2 = 0.6
+lock_time_start_anm_nv_on_jammed_2 = 0.55
+lock_time_end_anm_nv_on_jammed_2 = 0.75
+
+mark_anm_nv_off = 0.3
+
+use_ppe_effector_anm_nv_off_0 = true
+ppe_effector_anm_nv_off_0 = black.ppe
+ppe_start_anm_nv_off_0 = 0.2
+ppe_end_anm_nv_off_0 = 0.5
+lock_time_start_anm_nv_off_0 = 0.3
+lock_time_end_anm_nv_off_0 = 1.0
+
+use_ppe_effector_anm_nv_off_1 = true
+ppe_effector_anm_nv_off_1 = black.ppe
+ppe_start_anm_nv_off_1 = 0.2
+ppe_end_anm_nv_off_1 = 0.5
+lock_time_start_anm_nv_off_1 = 0.3
+lock_time_end_anm_nv_off_1 = 1.0
+
+use_ppe_effector_anm_nv_off_2 = true
+ppe_effector_anm_nv_off_2 = black.ppe
+ppe_start_anm_nv_off_2 = 0.2
+ppe_end_anm_nv_off_2 = 0.5
+lock_time_start_anm_nv_off_2 = 0.3
+lock_time_end_anm_nv_off_2 = 1.0
+
+use_ppe_effector_anm_nv_off_jammed_1 = true
+ppe_effector_anm_nv_off_jammed_1 = black.ppe
+ppe_start_anm_nv_off_jammed_1 = 0.2
+ppe_end_anm_nv_off_jammed_1 = 0.5
+lock_time_start_anm_nv_off_jammed_1 = 0.3
+lock_time_end_anm_nv_off_jammed_1 = 1.0
+
+use_ppe_effector_anm_nv_off_jammed_2 = true
+ppe_effector_anm_nv_off_jammed_2 = black.ppe
+ppe_start_anm_nv_off_jammed_2 = 0.2
+ppe_end_anm_nv_off_jammed_2 = 0.5
+lock_time_start_anm_nv_off_jammed_2 = 0.3
+lock_time_end_anm_nv_off_jammed_2 = 1.0
+
+[wpn_toz34_fast_hud]:wpn_toz34_hud
+
+ammo_params_section_0 = wpn_toz34_ammo_bones_red
+ammo_params_section_1 = wpn_toz34_ammo_bones_blue
+
+anm_reload				= toz34_reload_full_fast
+anm_reload_0				= toz34_reload_full_fast
+anm_reload_only_0		        = toz34_reload_last_fast
+anm_reload_1				= toz34_reload_fast
+anm_reload_2				= toz34_reload_full_fast
+
+snd_anm_reload				= weapons\toz34\toz34_reload_full_fast
+snd_anm_reload_0				= weapons\toz34\toz34_reload_full_fast
+snd_anm_reload_only_0		        = weapons\toz34\toz34_reload_fast
+snd_anm_reload_1				= weapons\toz34\toz34_reload_fast
+snd_anm_reload_2				= weapons\toz34\toz34_reload_full_fast
+
+anm_reload_ammochange_1			= toz34_reload_full_fast
+anm_reload_ammochange_2			= toz34_reload_full_fast
+
+snd_anm_reload_ammochange_1			= weapons\toz34\toz34_reload_full_fast
+snd_anm_reload_ammochange_2			= weapons\toz34\toz34_reload_full_fast
+
+anm_reload_ammochange_only_1			= toz34_reload_full_fast
+anm_reload_ammochange_only_2			= toz34_reload_full_fast
+anm_reload_only_ammochange_0			= toz34_reload_full_fast
+
+snd_anm_reload_ammochange_only_1			= weapons\toz34\toz34_reload_full_fast
+snd_anm_reload_ammochange_only_2			= weapons\toz34\toz34_reload_full_fast
+snd_anm_reload_only_ammochange_0			= weapons\toz34\toz34_reload_full_fast
+
+[wpn_toz34_fast_hud_invertedammo]:wpn_toz34_fast_hud
+ammo_params_section_0 = wpn_toz34_ammo_bones_blue
+ammo_params_section_1 = wpn_toz34_ammo_bones_red

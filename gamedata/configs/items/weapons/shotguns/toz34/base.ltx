@@ -1,0 +1,221 @@
+[wpn_toz34]:identity_immunities,weapon_probability,default_weapon_params
+GroupControlSection			= spawn_group
+$spawn                   = "weapons\toz-34"              ; option for Level Editor
+$npc			 			= on				; option for Level Editor
+$prefetch 		 			= 8
+scheduled                	= off              ; option for ALife Simulator
+cform                    	= skeleton
+class                    	= WP_BM16
+description          		= gunsl_wpn_toz34_descr
+ef_main_weapon_type			= 1
+ef_weapon_type				= 9
+
+kind                    = w_shotgun
+
+script_binding = bind_weapon.bind
+def_hide_bones = stock_short, barrel_short, rail, sight, scope2, scope3, scope4
+def_show_bones = stock, barrel
+
+actor_camera_speed_factor = 0.7
+
+repair_group = toz
+
+;-----------------------------------------------------------------------------
+cost            = 1200
+weapon_class	= shotgun
+inv_weight     	= 3.2
+
+upgrades = 
+installed_upgrades = 
+upgrade_scheme = 
+
+;--TTX----------------------------------------------------------------------------
+hit_power       = 1.1, 1.1, 1.1, 1.1
+hit_impulse     = 100
+hit_type 		= fire_wound
+fire_distance           = 100
+bullet_speed         	= 280 ;��������� �������� ����
+rpm                     = 1000
+rpm_empty_click 	= 200
+
+hud                        = wpn_toz34_hud
+
+misfire_probability        = 0.005 ;����������� ������ ��� ������������ ������  !!!old - now not working
+;������������, ��� ������� ���������� ���� ������
+misfire_start_condition		= 0.6
+;����������� ��� ������� ���� ������ ���������� �����������
+misfire_end_condition		= 0.1
+;���� ������ ��� ����������� ������ ��� misfireStartCondition
+misfire_start_prob	     	= 0.002
+;���� ������ ��� ����������� ������ ��� misfireEndCondition
+misfire_end_prob	     	= 0.08
+;���������� ����������� ��� ��������� ��������
+condition_shot_dec      	= 0.0045
+;���������� ����������� ��� �������� ��������
+condition_queue_shot_dec	= 0.0045
+
+tri_state_reload			= off
+
+ammo_elapsed		 		= 2
+ammo_mag_size      			= 2
+ammo_class		 			= ammo_12x76_zhekan, ammo_12x70_buck
+
+;---���������---------------------------------------------------------------------------
+;������� ���������
+fire_dispersion_base    = 0.23  ;���� (� ��������) ������� ��������� ������ (������ �������� � ������)
+control_inertion_factor = 2.0f
+crosshair_inertion		= 6.0
+
+;������
+cam_return				= 1
+cam_relax_speed         = 9.0 ;�������� �������� � �������� ���������
+cam_relax_speed_ai      = 360
+cam_dispersion          = 5.0 ;���������� ���� (� ��������) � ������ ���������
+cam_dispersion_inc      = 5.0 ;���������e cam_dispersion � ������ ���������
+cam_dispersion_frac		= 0.7	;����� ����� ���������� �� cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
+cam_max_angle        	= 10.0 ;������������ ���� ������
+cam_max_angle_horz      = 10.0   ;(degree) maximum shot horizontal degree
+cam_step_angle_horz     = 1.0 ;(degree) size of step camera moved in horizontal position while shooting
+
+PDM_disp_base 				= 2.0
+PDM_disp_vel_factor 		= 1.7
+PDM_disp_accel_factor 		= 1.7
+PDM_disp_crouch	 			= 1.0
+PDM_disp_crouch_no_acc 		= 1.0
+
+zoom_cam_relax_speed        = 5.0    ; scope & ironsight
+zoom_cam_relax_speed_ai     = 120.75
+zoom_cam_dispersion         = 3.0
+zoom_cam_dispersion_inc     = 3.0
+zoom_cam_dispersion_frac    = 0.7
+zoom_cam_max_angle          = 10.0
+zoom_cam_max_angle_horz     = 10.0
+zoom_cam_step_angle_horz    = 1.0
+
+fire_dispersion_condition_factor = 1.5	;���������� ��������� � ��������� ��� ������������ ������
+
+;---DOF-------------------------------------------------------------------------
+zoom_dof				= 0.5, 1.0, 180
+;reload_dof				= 0.0, 0.5, 5, 3.2
+;-------------------------------------------------------------------------------
+holder_range_modifier	= 1.0               ; �� ������� ��� ������������� eye_range
+holder_fov_modifier		= 1.0              ; �� ������� ��� ������������� eye_fov
+
+min_radius               	= 0
+max_radius               	= 50
+
+hit_probability_gd_novice	= 0.80
+hit_probability_gd_stalker	= 0.80
+hit_probability_gd_veteran	= 0.80
+hit_probability_gd_master	= 0.80
+
+;-------------------------------------------------------------------------------
+position                   = -0.025,-0.11,0.06
+orientation                = 0, 30, 0      ;�������� ��������������� � ��������
+
+shell_point      = 0.0, -0.007, 0.756     ;�����   0.0, -0.007, 0.411
+fire_point       = 0.0, -0.007, 0.756     ;�����   0.0, -0.007, 0.411
+fire_point2      = 0.0, -0.007, 0.756     ;�����   0.0, -0.007, 0.411
+shell_dir	 = 0.0, 0.0, 0.0
+
+hand_dependence = 1
+single_handed	= 0
+
+slot 			= 2		; // secondary
+animation_slot  = 3     ; type of the animation that will be used
+
+inv_name        = gunsl_wpn_toz34
+inv_name_short  = gunsl_wpn_toz34
+icons_texture       = ui\ui_icon_equipment_guns
+inv_grid_width  = 6
+inv_grid_height	= 2
+inv_grid_x		= 20
+inv_grid_y      = 8
+
+upgr_icon_x			= 2
+upgr_icon_y			= 815
+upgr_icon_width		= 295
+upgr_icon_height   	= 88
+
+kill_msg_x       = 127
+kill_msg_y       = 82
+kill_msg_width   = 97
+kill_msg_height  = 23
+
+flame_particles		   	= 
+smoke_particles		   	= weapons\generic_shoot_00 
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+;��� ������
+strap_position             = -0.26,-0.11,0.15         ; position (offset) and orientation of the weapon when it is strapped
+strap_orientation      		= -15,-9,110				; (3rd person view in degrees)
+strap_bone0					= bip01_spine2
+strap_bone1					= bip01_spine1
+
+startup_ammo             	= 10
+visual                   	= dynamics\weapons\wpn_toz34\wpn_toz34.ogf
+
+light_color		 			= 0.6,0.5,0.3
+light_range		 			= 6.0
+light_var_color		 		= 0.05
+light_var_range		 		= 0.5
+light_time 		 			= 0.2
+
+ph_mass			 			= 3
+
+;addons
+scope_status				= 2  
+silencer_status				= 0
+grenade_launcher_status		= 0
+
+zoom_enabled			= true
+zoom_rotate_time                = 0.26
+scope_zoom_factor	    	= 0
+
+scopes_sect = scope_pu_toz34
+
+;�����
+snd_draw		= weapons\toz34\toz34_draw
+snd_holster		= weapons\toz34\toz34_hide
+snd_shoot         	= weapons\toz34\toz34_shoot, -1.1
+snd_empty		= weapons\glock17\glock17_dry
+
+snd_shoot_duplet  	= weapons\toz34\toz34_shoot1, -1.1
+snd_jammed_click        = $silent
+snd_jam                 = weapons\generic_empty 
+snd_shoot_1             = weapons\toz34\toz34_shoot1, -1.1
+snd_close_weapon	= weapons\spas12_close
+snd_add_cartridge	= weapons\w1300_load		;was gen_grenload
+snd_open_weapon		= weapons\spas12_close
+snd_jamned              = weapons\toz34\toz34_revival
+snd_jamned_last         = weapons\toz34\toz34_revival
+snd_reload_jammed       = weapons\toz34\toz34_revival
+snd_reload_jammed_last  = weapons\toz34\toz34_revival
+
+;snd_changecartridgetype          = weapons\toz34\toz34_reload_full_fast
+;snd_reload_empty	          = weapons\toz34\toz34_reload_full_fast
+;snd_reload                       = weapons\toz34\toz34_reload_fast
+;snd_changecartridgetype_only     = weapons\toz34\toz34_reload_full_fast
+;snd_changecartridgetype_one_only = weapons\toz34\toz34_reload_full_fast
+;snd_changecartridgetype_one      = weapons\toz34\toz34_reload_full_fast
+;snd_reload_only_ammochange       = weapons\toz34\toz34_reload_full_fast
+;snd_reload_only                  = weapons\toz34\toz34_reload_fast
+snd_headlamp_on                  = weapons\headflash_on
+snd_headlamp_off                 = weapons\headflash_off
+snd_nv_on                        = weapons\nv_act
+snd_nv_off                       = weapons\nv_deact
+snd_suicide	        = weapons\suicide_start
+snd_stop_suicide	= weapons\suicide_end
+
+
+[wpn_toz34_obrez1]:wpn_toz34
+installed_upgrades = up_toz34_barrel
+
+[wpn_toz34_obrez2]:wpn_toz34
+installed_upgrades = up_toz34_stock
+
+[wpn_toz34_obrez_full]:wpn_toz34
+installed_upgrades = up_toz34_barrel, up_toz34_stock
+
+[wpn_toz34_scoped]:wpn_toz34
+installed_upgrades = up_toz34_weaver

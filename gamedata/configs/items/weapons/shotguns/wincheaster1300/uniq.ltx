@@ -1,0 +1,44 @@
+;-----------------------------------------------------------------------------
+; "������" ��������
+;-----------------------------------------------------------------------------
+[wpn_wincheaster1300_trapper]:wpn_wincheaster1300
+$spawn                   	= "weapons\wpn_wincheaster1300_trapper"					; option for Level Editor
+inv_name					= gunsl_wpn_wincheaster1300_trapper
+description					= gunsl_wpn_wincheaster1300_trapper_descr
+
+upgrades = 
+installed_upgrades = 
+upgrade_scheme = 
+
+def_hide_bones = scope1, scope2, scope3, scope4, barrel_short, flash, laser, bolt_foregrip_rail, handler, stock_tactical, sight, sight_short, handler, magazine, rail
+def_show_bones = barrel, bolt_foregrip, magazine_short, stock
+
+hud = wpn_wincheaster1300_trapper_hud
+
+cost					 	= 10000
+
+rpm                      	= 85  ;60 = 1 �������
+hit_power        			= 1.4, 1.4, 1.4, 1.4
+hit_impulse      			= 150
+
+misfire_start_condition		= 0.6
+condition_shot_dec      	= 0.003
+
+inv_grid_width				= 5
+inv_grid_height				= 2
+inv_grid_x					= 20
+inv_grid_y					= 2
+
+upgr_icon_x			= 2
+upgr_icon_y			= 540
+upgr_icon_width		= 298
+upgr_icon_height   	= 39
+
+silencer_x = 200
+silencer_y  = 18
+
+cam_dispersion          = 4.5
+cam_dispersion_inc		= 2.0
+
+zoom_cam_dispersion			= 3.0
+zoom_cam_dispersion_inc		= 2.5

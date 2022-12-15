@@ -1,0 +1,549 @@
+;------------------------------------------wincheaster1300_barrel_short------------------------------------------
+[up_sect_wincheaster1300_barrel_short]
+cost = 5000
+value = -1
+inv_weight = -1.0
+fire_dispersion_base = +0.1
+PDM_disp_base = +0.5
+
+show_bones = barrel_short
+hide_bones = barrel
+
+silencer_status = 0
+
+inv_grid_x = +5
+
+[up_wincheaster1300_barrel_short]
+scheme_index = 0, 0
+known = 1
+effects = 
+section = up_sect_wincheaster1300_barrel_short
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_barrel_short_name
+description =gunsl_wincheaster1300_up_barrel_short_descr
+icon = ui_gunsl_up_wincheaster1300_barrel_short
+;------------------------------------------wincheaster1300_barrel_voronenie------------------------------------------
+[up_sect_wincheaster1300_barrel_voronenie]
+cost = 1500
+value = +10
+misfire_start_condition = -0.05
+condition_shot_dec = -0.0003
+
+[up_wincheaster1300_barrel_voronenie]
+scheme_index = 0, 1
+known = 1
+effects = vartree_wincheaster1300_barrel_speed
+section = up_sect_wincheaster1300_barrel_voronenie
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_barrel_voronenie_name
+description =gunsl_wincheaster1300_up_barrel_voronenie_descr
+icon = ui_gunsl_up_wincheaster1300_barrel_voronenie
+;------------------------------------------wincheaster1300_barrel_speed------------------------------------------
+[up_sect_wincheaster1300_barrel_speed]
+cost = 3000
+value = +20
+bullet_speed = +40
+
+[up_wincheaster1300_barrel_speed]
+scheme_index = 0, 2
+known = 1
+effects = vartree_wincheaster1300_barrel_length
+section = up_sect_wincheaster1300_barrel_speed
+property = prop_bullet_speed
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_barrel_speed_name
+description =gunsl_wincheaster1300_up_barrel_speed_descr
+icon = ui_gunsl_up_wincheaster1300_barrel_speed
+;------------------------------------------wincheaster1300_body_reliability------------------------------------------
+[up_sect_wincheaster1300_body_reliability]
+cost = 3000
+value = +20
+condition_shot_dec = -0.0008
+misfire_end_prob = -0.02
+misfire_start_condition = -0.1
+
+[up_wincheaster1300_body_reliability]
+scheme_index = 0, 3
+known = 1
+effects = vartree_wincheaster1300_usm
+section = up_sect_wincheaster1300_body_reliability
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_body_reliability_name
+description =gunsl_wincheaster1300_up_body_reliability_descr
+icon = ui_gunsl_up_wincheaster1300_body_reliability
+;------------------------------------------wincheaster1300_usm_reliability_details------------------------------------------
+[up_sect_wincheaster1300_usm_reliability_details]
+cost = 4000
+value = +30
+misfire_start_condition = -0.1
+condition_shot_dec = -0.0012
+misfire_end_prob = -0.08
+
+[up_wincheaster1300_usm_reliability_details]
+scheme_index = 0, 4
+known = 1
+effects = 
+section = up_sect_wincheaster1300_usm_reliability_details
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_usm_reliability_details_name
+description =gunsl_wincheaster1300_up_usm_reliability_details_descr
+icon = ui_gunsl_up_wincheaster1300_usm_reliability_details
+;------------------------------------------wincheaster1300_tactical_handle------------------------------------------
+[up_sect_wincheaster1300_tactical_handle]
+cost = 4000
+inv_weight = +0.2
+hide_bones = bolt_foregrip
+show_bones = bolt_foregrip_rail
+
+control_inertion_factor = -0.35
+crosshair_inertion = -3.0
+cam_relax_speed = +1
+cam_dispersion = -0.4 
+cam_dispersion_inc = -0.2
+cam_max_angle = -5.0     
+cam_max_angle_horz = -5
+
+zoom_cam_relax_speed = +1
+zoom_cam_dispersion = -0.4
+zoom_cam_dispersion_inc = -0.2
+zoom_cam_max_angle = -5
+zoom_cam_max_angle_horz = -5
+
+PDM_disp_base = -0.23
+PDM_disp_vel_factor = -0.3
+PDM_disp_accel_factor = -0.2
+
+hud = wpn_winchester1300_tac_hud
+
+[up_wincheaster1300_tactical_handle]
+scheme_index = 0, 5
+known = 1
+effects = vartree_wincheaster1300_flashlaser
+section = up_sect_wincheaster1300_tactical_handle
+property = prop_tacticalhandle
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_tactical_handle_name
+description =gunsl_wincheaster1300_up_tactical_handle_descr
+icon = ui_gunsl_up_wincheaster1300_tactical_handle
+;------------------------------------------wincheaster1300_usm_accuracy------------------------------------------
+[up_sect_wincheaster1300_usm_accuracy]
+cost = 5000
+value = +30
+fire_dispersion_base = -0.06
+bullet_speed = +10
+
+PDM_disp_base = -0.6
+PDM_disp_vel_factor 		= -0.05
+PDM_disp_accel_factor 		= -0.05
+PDM_disp_crouch	 		= -0.05
+PDM_disp_crouch_no_acc 		= -0.05
+
+cam_dispersion = -0.03
+zoom_cam_dispersion = -0.02
+
+cam_dispersion_inc      = -0.03
+zoom_cam_dispersion_inc     = -0.03
+
+[up_wincheaster1300_usm_accuracy]
+scheme_index = 0, 6
+known = 1
+effects = 
+section = up_sect_wincheaster1300_usm_accuracy
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_usm_accuracy_name
+description =gunsl_wincheaster1300_up_usm_accuracy_descr
+icon = ui_gunsl_up_wincheaster1300_usm_accuracy
+;------------------------------------------wincheaster1300_flashlaser------------------------------------------
+[up_sect_wincheaster1300_flashlaser]:red_laser, tactical_torch
+cost = 7000
+crosshair_inertion = -0.3
+show_bones = flash, laser
+inv_weight              = +0.3
+
+laserdot_world_attach_offset_x = 0.010
+laserdot_world_attach_offset_y = 0.087
+laserdot_world_attach_offset_z = 0.506
+
+torch_world_attach_offset_x = -0.004
+torch_world_attach_offset_y = 0.074
+torch_world_attach_offset_z = 0.506
+
+torch_omni_world_attach_offset_x = -0.004
+torch_omni_world_attach_offset_y = 0.074
+torch_omni_world_attach_offset_z = 0.506
+
+torch_attach_offset_x = -0.008
+torch_attach_offset_y = 0.048
+torch_attach_offset_z = 0.1
+torch_omni_attach_offset_x = 0.0 
+torch_omni_attach_offset_y = 0.0
+torch_omni_attach_offset_z = 0.0
+torch_range = 50
+torch_r2_range = 50
+torch_omni_range = 0.2
+torch_r2_omni_range = 0.2
+
+[up_wincheaster1300_flashlaser]
+scheme_index = 0, 7
+known = 1
+effects = 
+section = up_sect_wincheaster1300_flashlaser
+property = prop_laser
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_flashlaser_name
+description =gunsl_wincheaster1300_up_flashlaser_descr
+icon = ui_gunsl_up_wincheaster1300_flashlaser
+;------------------------------------------wincheaster1300_mag------------------------------------------
+[up_sect_wincheaster1300_mag]
+cost = 4000
+value = +3
+ammo_mag_size = +3
+inv_weight = +0.05
+show_bones = magazine
+hide_bones = magazine_short 
+
+[up_wincheaster1300_mag]
+scheme_index = 0, 8
+known = 1
+effects = 
+section = up_sect_wincheaster1300_mag
+property = prop_ammo_size
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_mag_name
+description =gunsl_wincheaster1300_up_mag_descr
+icon = ui_gunsl_up_wincheaster1300_mag
+;------------------------------------------wincheaster1300_rail------------------------------------------
+[up_sect_wincheaster1300_rail]
+cost = 1500
+inv_weight = +0.2
+show_bones = rail, scope1, scope2, scope3, scope4
+scope_status = 2
+scopes_sect = scope_eotech_winchester1300, scope_aimpoint_winchester1300, scope_elcan_winchester1300, scope_pn23_winchester1300
+
+[up_wincheaster1300_rail]
+scheme_index = 0, 9
+known = 1
+effects = 
+section = up_sect_wincheaster1300_rail
+property = prop_scope_attach
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_rail_name
+description =gunsl_wincheaster1300_up_rail_descr
+icon = ui_gunsl_up_wincheaster1300_rail
+;------------------------------------------wincheaster1300_pompa_kompensator------------------------------------------
+[up_sect_wincheaster1300_pompa_kompensator]
+cost = 1500
+value = -10
+cam_dispersion = -0.5
+zoom_cam_dispersion = -0.3
+PDM_disp_base = -0.3
+
+[up_wincheaster1300_pompa_kompensator]
+scheme_index = 0, 10
+known = 1
+effects = vartree_wincheaster1300_handle
+section = up_sect_wincheaster1300_pompa_kompensator
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_pompa_kompensator_name
+description =gunsl_wincheaster1300_up_pompa_kompensator_descr
+icon = ui_gunsl_up_wincheaster1300_pompa_kompensator
+;------------------------------------------wincheaster1300_usm_recoil------------------------------------------
+[up_sect_wincheaster1300_usm_recoil]
+cost = 4000
+value = -25
+zoom_cam_dispersion          = -0.8
+zoom_cam_dispersion_inc = -0.44
+
+cam_dispersion          = -1.5
+cam_dispersion_inc = -0.6
+
+PDM_disp_base = -0.1
+
+[up_wincheaster1300_usm_recoil]
+scheme_index = 0, 11
+known = 1
+effects = 
+section = up_sect_wincheaster1300_usm_recoil
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_usm_recoil_name
+description =gunsl_wincheaster1300_up_usm_recoil_descr
+icon = ui_gunsl_up_wincheaster1300_usm_recoil
+;------------------------------------------wincheaster1300_shell_ejector------------------------------------------
+[up_sect_wincheaster1300_shell_ejector]
+cost = 1500
+value = +10
+misfire_start_prob = -0.0005
+misfire_end_prob = -0.03
+
+[up_wincheaster1300_shell_ejector]
+scheme_index = 0, 12
+known = 1
+effects = vartree_wincheaster1300_patronnik
+section = up_sect_wincheaster1300_shell_ejector
+property = prop_reliability
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_shell_ejector_name
+description =gunsl_wincheaster1300_up_shell_ejector_descr
+icon = ui_gunsl_up_wincheaster1300_shell_ejector
+;------------------------------------------wincheaster1300_sights------------------------------------------
+[up_sect_wincheaster1300_sights]
+cost = 1000
+crosshair_inertion = -1
+control_inertion_factor = -0.05
+show_bones = sight, sight_short
+
+[up_wincheaster1300_sights]
+scheme_index = 0, 13
+known = 1
+effects = 
+section = up_sect_wincheaster1300_sights
+property = prop_lightingsights
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_sights_name
+description =gunsl_wincheaster1300_up_sights_descr
+icon = ui_gunsl_up_wincheaster1300_sights
+;------------------------------------------wincheaster1300_stock------------------------------------------
+[up_sect_wincheaster1300_stock]
+cost = 5000
+value = -30
+cam_dispersion          = -0.6
+cam_dispersion_inc      = -0.4
+inv_weight              = +0.1
+
+
+zoom_cam_dispersion = -0.5
+zoom_cam_dispersion_inc = -0.4
+show_bones = stock_tactical
+hide_bones = handler
+
+[up_wincheaster1300_stock]
+scheme_index = 0, 14
+known = 1
+effects = 
+section = up_sect_wincheaster1300_stock
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_stock_name
+description =gunsl_wincheaster1300_up_stock_descr
+icon = ui_gunsl_up_wincheaster1300_stock
+;------------------------------------------wincheaster1300_soft_trigger------------------------------------------
+[up_sect_wincheaster1300_soft_trigger]
+cost = 2500
+value = -20
+cam_dispersion = -0.7
+cam_dispersion_inc = -0.2
+zoom_cam_dispersion = -0.6
+zoom_cam_dispersion_inc = -0.4
+PDM_disp_base =-0.2
+
+[up_wincheaster1300_soft_trigger]
+scheme_index = 0, 15
+known = 1
+effects = vartree_wincheaster1300_usm
+section = up_sect_wincheaster1300_soft_trigger
+property = prop_recoil
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_soft_trigger_name
+description =gunsl_wincheaster1300_up_soft_trigger_descr
+icon = ui_gunsl_up_wincheaster1300_soft_trigger
+;------------------------------------------wincheaster1300_usm_light_details------------------------------------------
+[up_sect_wincheaster1300_usm_light_details]
+cost = 5000
+value = -1.3
+inv_weight = -1.3
+
+[up_wincheaster1300_usm_light_details]
+scheme_index = 0, 16
+known = 1
+effects = 
+section = up_sect_wincheaster1300_usm_light_details
+property = prop_weight
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_usm_light_details_name
+description =gunsl_wincheaster1300_up_usm_light_details_descr
+icon = ui_gunsl_up_wincheaster1300_usm_light_details
+;------------------------------------------wincheaster1300_patronnik_accuracy------------------------------------------
+[up_sect_wincheaster1300_patronnik_accuracy]
+cost = 3500
+value = +20
+fire_dispersion_base = -0.04
+PDM_disp_base = -0.5
+
+cam_dispersion = -0.05
+zoom_cam_dispersion = -0.01
+
+[up_wincheaster1300_patronnik_accuracy]
+scheme_index = 0, 17
+known = 1
+effects = vartree_wincheaster1300_usm
+section = up_sect_wincheaster1300_patronnik_accuracy
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_patronnik_accuracy_name
+description =gunsl_wincheaster1300_up_patronnik_accuracy_descr
+icon = ui_gunsl_up_wincheaster1300_patronnik_accuracy
+;------------------------------------------wincheaster1300_barrel_dispersion------------------------------------------
+[up_sect_wincheaster1300_barrel_dispersion]
+cost = 3000
+value = +20
+fire_dispersion_base = -0.06
+PDM_disp_base = -0.6
+zoom_cam_dispersion = -0.1
+zoom_cam_dispersion = -0.1
+
+[up_wincheaster1300_barrel_dispersion]
+scheme_index = 0, 18
+known = 1
+effects = vartree_wincheaster1300_barrel_length
+section = up_sect_wincheaster1300_barrel_dispersion
+property = prop_dispersion
+precondition_functor = inventory_upgrades.precondition_functor_a
+precondition_parameter = true
+effect_functor = inventory_upgrades.effect_functor_a
+effect_parameter  = something_here
+prereq_functor  = inventory_upgrades.prereq_functor_a
+prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
+prereq_params  = 
+name =gunsl_wincheaster1300_up_barrel_dispersion_name
+description =gunsl_wincheaster1300_up_barrel_dispersion_descr
+icon = ui_gunsl_up_wincheaster1300_barrel_dispersion
+;------------------------------------------------------------------------------------
+[vartree_wincheaster1300_voronenie]
+elements = up_wincheaster1300_barrel_voronenie
+[vartree_wincheaster1300_barrel_speed]
+elements = up_wincheaster1300_barrel_speed, up_wincheaster1300_barrel_dispersion
+[vartree_wincheaster1300_barrel_length]
+elements = up_wincheaster1300_barrel_short, up_wincheaster1300_mag
+[vartree_wincheaster1300_ejector]
+elements = up_wincheaster1300_shell_ejector
+[vartree_wincheaster1300_patronnik]
+elements = up_wincheaster1300_body_reliability, up_wincheaster1300_soft_trigger, up_wincheaster1300_patronnik_accuracy
+[vartree_wincheaster1300_usm]
+elements = up_wincheaster1300_usm_reliability_details, up_wincheaster1300_usm_accuracy, up_wincheaster1300_usm_recoil, up_wincheaster1300_usm_light_details
+[vartree_wincheaster1300_pompa]
+elements = up_wincheaster1300_pompa_kompensator
+[vartree_wincheaster1300_handle]
+elements = up_wincheaster1300_tactical_handle
+[vartree_wincheaster1300_flashlaser]
+elements = up_wincheaster1300_flashlaser
+[vartree_wincheaster1300_rail]
+elements = up_wincheaster1300_rail
+[vartree_wincheaster1300_sights]
+elements = up_wincheaster1300_sights
+[vartree_wincheaster1300_stock]
+elements = up_wincheaster1300_stock
