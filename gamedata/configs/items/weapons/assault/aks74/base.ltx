@@ -15,7 +15,6 @@ ef_weapon_type          = 8
 default_to_ruck         = false
 sprint_allowed          = true
 
-kind                    = w_rifle
 
 ;autoaim_time = -1
 ;autoaim_only_alive= true
@@ -36,7 +35,7 @@ upgrades =
 installed_upgrades = 
 upgrade_scheme =
 
-;-пїЅпїЅпїЅ---------------------------------------------------------------------------
+;-ТТХ---------------------------------------------------------------------------
 hit_power            = 1.0, 1.0, 1.0, 1.0
 hit_impulse          = 100    ; size of physic impulse by bullet
 hit_type             = fire_wound            ; [] type of the wound
@@ -45,31 +44,31 @@ bullet_speed            = 550                ; starting bullet speed
 rpm                     = 600    ; max round per minute
 rpm_empty_click         = 200
 
-;пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+;настройки для глушителя
 silencer_hit_power      = 0.9, 0.9, 0.9, 0.9
 silencer_hit_impulse    = 100
 silencer_fire_distance  = 200
 silencer_bullet_speed   = 400
 
-use_aim_bullet          = false                ;пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+use_aim_bullet          = false                ;Поддерживается ли первая суппер пуля
 time_to_aim             = 3.0
 
 ammo_in_chamber = true
 
 hud                     = wpn_ak74_hud
 
-misfire_probability        = 0.005 ;пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ  !!!old - now not working
-;пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+misfire_probability        = 0.005 ;вероятность осечки при максимальном износе  !!!old - now not working
+;изношенность, при которой появляется шанс осечки
 misfire_start_condition		= 0.5
-;пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+;изношеность при которой шанс осечки становится константным
 misfire_end_condition		= 0.1
-;пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ misfireStartCondition
+;шанс осечки при изношености больше чем misfireStartCondition
 misfire_start_prob	     	= 0.003
-;пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ misfireEndCondition
+;шанс осечки при изношености больше чем misfireEndCondition
 misfire_end_prob	     	= 0.033
-;пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+;увеличение изношености при одиночном выстреле
 condition_shot_dec      	= 0.0002
-;пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+;увеличение изношености при выстреле очередью
 condition_queue_shot_dec	= 0.0005
 
 ammo_elapsed         = 31           ; obsolete
@@ -83,24 +82,24 @@ launch_speed            = 0
 hand_dependence         = 1
 single_handed           = 0
 
-;-пїЅпїЅпїЅ----------------------------------------------------------------------
+;-Доф----------------------------------------------------------------------
 zoom_dof             = 0.5, 1.0, 180
 reload_dof           = 0.0, 0.5, 5, 2;1.7
 
-;-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ----------------------------------------------------------------------
+;-Дисперсия----------------------------------------------------------------------
 ;params of weapon recoil
-fire_dispersion_base       	= 0.19    ;пїЅпїЅпїЅпїЅ (пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ) пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ)
+fire_dispersion_base       	= 0.19    ;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
 control_inertion_factor    	= 1.2f
 crosshair_inertion			= 6
 
-;пїЅпїЅпїЅпїЅпїЅпїЅ
+;отдача
 cam_return					= 0
-cam_relax_speed             = 10		;пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+cam_relax_speed             = 10		;скорость возврата в исходное положение
 cam_relax_speed_ai      	= 360
-cam_dispersion              = 0.8		;пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ (пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ) пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
-cam_dispersion_inc         	= 0.5		;пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅe cam_dispersion пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
-cam_dispersion_frac        	= 1.0	    ;пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
-cam_max_angle				= 50.0      ;пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+cam_dispersion              = 0.8		;увеличения угла (в градусах) с первым выстрелом
+cam_dispersion_inc         	= 0.5		;увеличениe cam_dispersion с каждым выстрелом
+cam_dispersion_frac        	= 1.0	    ;ствол будет подыматься на cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
+cam_max_angle				= 50.0      ;максимальный угол отдачи
 cam_max_angle_horz         	= 5.0      ;(degree) maximum shot horizontal degree
 cam_step_angle_horz        	= 0.35		;(degree) size of step camera moved in horizontal position while shooting
 
@@ -119,11 +118,11 @@ PDM_disp_accel_factor 		= 1.8
 PDM_disp_crouch	 			= 1.0
 PDM_disp_crouch_no_acc 		= 1.0
 
-fire_dispersion_condition_factor    = 15         ;пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+fire_dispersion_condition_factor    = 15         ;увеличение дисперсии в процентах при максимальном износе
 
 ;-------------------------------------------------------------------------------
-holder_range_modifier   = 1.0                       ; пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ eye_range
-holder_fov_modifier     = 1.0              ; пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ eye_fov
+holder_range_modifier   = 1.0                       ; во сколько раз увеличивается eye_range
+holder_fov_modifier     = 1.0              ; во сколько раз увеличивается eye_fov
 
 min_radius           = 3           ; [] for AI
 max_radius           = 100          ; [] for AI
@@ -154,7 +153,6 @@ shell_particles         = weapons\generic_shells_r   ; name of the particles for
 inv_name          = gunsl_wpn_ak74                    ; name in inventory
 inv_name_short    = gunsl_wpn_ak74
 
-icons_texture        = ui\ui_icon_equipment_guns
 inv_grid_width       = 5    ; position and size of the icon that will be used to display weapon in the inventory menu
 inv_grid_height      = 2    ; all icons are on the texture ui_icon_equipment.dds,
 inv_grid_x           = 5  ; position and size are in terms of 64x64 squares
@@ -171,7 +169,7 @@ kill_msg_width    = 84
 kill_msg_height   = 28
 
 ;--STRAP PARAMETERS-----------------------------------------------------------------
-;пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+;под мишкой
 strap_position          = -0.26,-0.11,0.25                                ; position (offset) and orientation of the weapon when it is strapped
 strap_orientation       = -15,-9,110                                        ; (3rd person view in degrees)
 strap_bone0             = bip01_spine2
@@ -207,7 +205,7 @@ grenade_launcher_x      = 117
 grenade_launcher_y      = 24
 scopes_sect		= scope_kashtan_ak74m, scope_nvas_ak74m, scope_cobra_ak74m, scope_pka_ak74m, scope_pso1m2x1_ak74m, scope_pso1_ak74m, scope_nvsn_ak74m
 
-;пїЅпїЅпїЅпїЅпїЅ
+;звуки
 snd_draw		= weapons\ak74\ak74_draw
 snd_holster		= weapons\p90\p90_hide
 snd_shoot		= weapons\ak74\ak74_shoot, -0.9
