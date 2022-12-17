@@ -10,10 +10,12 @@ local function press(key)
 	if key ~= ui_mcm.get("gunslinger_extended/knife_kick") then
 		return
 	end
-	local w = db.actor:active_item()
+	printf("kick press")
 	if not KICK_FINISHED then
+		printf("kick not finished")
 		return
 	end
+	local w = db.actor:active_item()
 	--Если в руках нету прдемета или на оружии нет ножа
 	if not w or not gwr.allow_knife_kick(w) then
 		local k = db.actor:item_in_slot(1)
@@ -46,6 +48,7 @@ local function press(key)
 		return
 	end
 	if not gwr.allow_knife_kick(w) then
+		printf("close 4")
 		return
 	end
 	printf("All checks have been passed!")
@@ -58,19 +61,13 @@ local function press(key)
 	--Через 170 мс происходит хит объекта, на которого наведена мышь
 	KICK_FINISHED = false
 	gwr.event(170,function()
-		local trg = level.get_target_obj()
-		if trg and w:bone_position("knife"):distance_to(trg:position()) < 1.5 then
-			printf("Hit target object [%s] by knife kick",trg:name())
-			local h=hit()
-			h.type = hit.fire_wound
-			h.power = 0.5
-			h.impulse = 0.2
-			h.direction = w:direction()
-			h.draftsman = db.actor
-			h.weapon_id = w:id()
-			trg:hit(h)
-		end
-		--Реализация воллмарков через ray_pick
+		local pos = device().cam_pos
+		pos.y = pos.y - 0.05
+		local dir = device().cam_dir
+		dir.z = dir.z + 0.015
+		game.knife_kick(
+			pos,dir,w:id(),1.965
+		)
 	end)
 end
 

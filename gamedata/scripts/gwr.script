@@ -50,11 +50,11 @@ local avail_states =
 --Проверка на то, можно ли сделать удар ножом, который НАЦЕПЛЕН НА ОРУЖИЕ
 --Эта проверка не используется если по алгоритмам будет произведён удар ножом из инвентаря
 function allow_knife_kick(w)
-	if DEV_DEBUG then
-		return true
-	end
 	if not avail_states[w:get_state()] then
 		return false
+	end
+	if DEV_DEBUG then
+		return true
 	end
 	local allow = false
 	--Если все проверки пройдены то allow будет иметь значение true
